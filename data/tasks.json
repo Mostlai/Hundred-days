@@ -108,7 +108,7 @@
 			"money": 0.6
 		},
 		"result": {
-			"cu_coper": 2,
+			"cu_copper": 2,
 			"time": 0.1
 		}
 	},
@@ -189,6 +189,9 @@
 		"verb": "写作中",
 		"require": "g.reading>0",
 		"length": 10,
+		"fill": [
+			"exe_paper"
+		],
 		"cost": {
 			"paper": 1,
 			"ganwu": 2
@@ -208,6 +211,9 @@
 		"verb": "绘制中",
 		"require": "g.xiulian_astro_zhuji_2>=1",
 		"length": 5,
+		"fill": [
+			"star_map"
+		],
 		"cost": {
 			"paper": 2,
 			"ganwu": 1
@@ -301,6 +307,9 @@
 		"perpetual": true,
 		"require": "g.farmer>=1",
 		"length": 10,
+		"fill": [
+			"money"
+		],
 		"cost": {
 			"money": 0.1
 		},
@@ -327,6 +336,9 @@
 		"perpetual": true,
 		"require": "g.businessman>=1",
 		"length": 10,
+		"fill": [
+			"money"
+		],
 		"cost": {
 			"money": 0.1
 		},
