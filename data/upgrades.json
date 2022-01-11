@@ -185,9 +185,11 @@
 		"max": 1,
 		"require": "g.reading>=3",
 		"cost": {
-			"Knowledge_class_1": true,
 			"money": 30,
 			"exe_paper": 1
+		},
+		"mod": {
+			"Knowledge_class_1": true
 		}
 	},
 	{
