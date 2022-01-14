@@ -283,7 +283,7 @@
 		"hide": true,
 		"group": "修行",
 		"tags": "",
-		"locked":true,
+		"locked":false,
 		"max": 1
 	},
 	{
@@ -293,7 +293,7 @@
 		"hide": true,
 		"group": "修行",
 		"tags": "",
-		"locked":true,
+		"locked":false,
 		"max": 1
 	},
 	{
@@ -303,7 +303,7 @@
 		"hide": true,
 		"group": "修行",
 		"tags": "",
-		"locked":true,
+		"locked":false,
 		"max": 1
 	},
 	{
