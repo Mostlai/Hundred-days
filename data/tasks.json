@@ -16,6 +16,20 @@
 		"flavor": "按TAB打开指引页,警告没别的意思,放心点"
 	},
 	{
+		"id": "diejia",
+		"name": "叠甲",
+		"desc": "叠甲",
+		"verb": "",
+		"max": 4,
+		"locked": false,
+		"cost": {
+			"tili": 0.1
+		},
+		"result": {
+			"self.hardiness": 0.2
+		}
+	},
+	{
 		"id": "clean",
 		"name": "扫地",
 		"desc": "给大户人家做仆役...",
