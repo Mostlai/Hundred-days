@@ -1,0 +1,252 @@
+[
+	{
+		"id": "blood_jihun_fu",
+		"name": "纯净血魂升级",
+		"desc": "纯净血魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"blood_jihun.scost.blood_soulcore_pice": 0.3,
+			"blood_jihun.mod.max_rs": 1,
+			"blood_jihun.mod.hp.max": 20
+		}
+	},
+	{
+		"id": "elect_jihun_fu",
+		"name": "电闪真魂升级",
+		"desc": "电闪真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"elect_jihun.scost.elect_soulcore_pice": 0.3,
+			"elect_jihun.mod.max_rs": 1,
+			"elect_jihun.mod.elect.rate": 10
+		}
+	},
+	{
+		"id": "skill_jihun_fu",
+		"name": "智识真魂升级",
+		"desc": "智识真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"skill_jihun.scost.skill_soulcore_pice": 0.3,
+			"skill_jihun.mod.max_rs": 1,
+			"skill_jihun.mod.skill.rate": 10
+		}
+	},
+	{
+		"id": "money_jihun_fu",
+		"name": "贪婪真魂升级",
+		"desc": "贪婪真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"money_jihun.scost.money_soulcore_pice": 0.3,
+			"money_jihun.mod.max_rs": 1,
+			"money_jihun.mod.money.rate": 15
+		}
+	},
+	{
+		"id": "white_jihun_fu",
+		"name": "碎白真魂升级",
+		"desc": "碎白真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"white_jihun.scost.white_soulcore_pice": 1,
+			"white_jihun.mod.max_rs": 1,
+			"white_jihun.mod.max_rs_mod": 2
+		}
+	},
+	{
+		"id": "ranshao_jihun_fu",
+		"name": "燃烧真魂升级",
+		"desc": "燃烧真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"ranshao_jihun.scost.ranshao_soulcore_pice": 0.3,
+			"ranshao_jihun.mod.max_rs": 1,
+			"ranshao_jihun.mod.heiyan.max": 2,
+			"ranshao_jihun.mod.heiyan.rate": 1
+		}
+	},
+	{
+		"id": "stone_jihun_fu",
+		"name": "坚石真魂升级",
+		"desc": "坚石真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"stone_jihun.scost.stone_soulcore_pice": 0.3,
+			"stone_jihun.mod.max_rs": 1,
+			"stone_jihun.mod.player.defense": 5
+		}
+	},
+	{
+		"id": "floor_jihun_fu",
+		"name": "界中真魂升级",
+		"desc": "界中真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"floor_jihun.scost.floor_soulcore_pice": 0.3,
+			"floor_jihun.mod.max_rs": 1,
+			"floor_jihun.mod.space.max": 100
+		}
+	},
+	{
+		"id": "command_jihun_fu",
+		"name": "率兵真魂升级",
+		"desc": "率兵真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"command_jihun.scost.command_soulcore_pice": 0.3,
+			"command_jihun.mod.max_rs": 1,
+			"command_jihun.mod.command_code.max": 5,
+			"command_jihun.mod.human_power.max": 300,
+			"command_jihun.mod.alculation.max": 100
+		}
+	},
+	{
+		"id": "heli_jihun_fu",
+		"name": "合理真魂升级",
+		"desc": "合理真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"heli_jihun.scost.heli_soulcore_pice": 0.3,
+			"heli_jihun.mod.max_rs": 1,
+			"heli_jihun.mod.player.bonuses.heli": 0.5
+		}
+	},
+	{
+		"id": "hundun_jihun_fu",
+		"name": "混沌真魂升级",
+		"desc": "混沌真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"chaos_jihun.scost.hundun_soulcore_pice": 0.3,
+			"chaos_jihun.mod.max_rs": 1,
+			"chaos_jihun.mod.player.bonuses.chaos": 0.5
+		}
+	},
+	{
+		"id": "fire_jihun_fu",
+		"name": "真火真魂升级",
+		"desc": "真火真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"fire_jihun.scost.fire_soulcore_pice": 0.3,
+			"fire_jihun.mod.max_rs": 1,
+			"fire_jihun.mod.player.bonuses.fire": 0.5
+		}
+	},
+	{
+		"id": "water_jihun_fu",
+		"name": "真水真魂升级",
+		"desc": "真水真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"water_jihun.scost.water_soulcore_pice": 0.3,
+			"water_jihun.mod.max_rs": 1,
+			"water_jihun.mod.player.bonuses.water": 0.5
+		}
+	},
+	{
+		"id": "land_jihun_fu",
+		"name": "厚土真魂升级",
+		"desc": "厚土真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"land_jihun.scost.land_soulcore_pice": 0.3,
+			"land_jihun.mod.max_rs": 1,
+			"land_jihun.mod.player.bonuses.land": 0.5
+		}
+	},
+	{
+		"id": "gold_jihun_fu",
+		"name": "锐金真魂升级",
+		"desc": "锐金真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"gold_jihun.scost.gold_soulcore_pice": 0.3,
+			"gold_jihun.mod.max_rs": 1,
+			"gold_jihun.mod.player.bonuses.gold": 0.5
+		}
+	},
+	{
+		"id": "wood_jihun_fu",
+		"name": "源泉真魂升级",
+		"desc": "源泉真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"wood_jihun.scost.wood_soulcore_pice": 0.3,
+			"wood_jihun.mod.max_rs": 1,
+			"wood_jihun.mod.player.bonuses.wood": 0.5
+		}
+	},
+	{
+		"id": "body_jihun_fu",
+		"name": "归藏真魂升级",
+		"desc": "归藏真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"body_jihun.scost.body_soulcore_pice": 0.3,
+			"body_jihun.mod.max_rs": 1,
+			"body_jihun.mod.player.bonuses.body": 0.5
+		}
+	},
+	{
+		"id": "speed_jihun_fu",
+		"name": "疾速真魂升级",
+		"desc": "疾速真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"speed_jihun.scost.speed_soulcore_pice": 0.3,
+			"speed_jihun.mod.max_rs": 1,
+			"speed_jihun.mod.speed": 0.3
+		}
+	},
+	{
+		"id": "spell_jihun_fu",
+		"name": "记忆真魂升级",
+		"desc": "记忆真魂",
+		"require": "g.hp>=1",
+		"val":0,
+		"max": 1000000000000,
+		"mod":{
+			"spell_jihun.scost.spell_soulcore_pice": 0.3,
+			"spell_jihun.mod.max_rs": 1,
+			"spell_jihun.mod.spelllist.max": 1
+		}
+	}
+]

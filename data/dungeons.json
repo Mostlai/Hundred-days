@@ -1,5 +1,1193 @@
 [
 	{
+		"id": "under_dreaam",
+		"name": "底层梦境[黄泉前置]",
+		"desc": "梦境的深处,实界的边缘,这里的时间流速更快,环境更危险",
+		"require": "evt_hq",
+		"level": 1,
+		"length": 50,
+		"run": {
+			"back_dream": 0.1,
+			"hp": 0.9,
+			"stamina": 0.9,
+			"tili": 0.9,
+			"time": -0.8
+		},
+		"result": {
+			"snp_data": "2~7",
+			"zero_crystal": "2~7"
+		},
+		"boss": "dreamloot",
+		"spawns": [
+			[
+				"smz",
+				"smz"
+			],
+			[
+				"smz",
+				"smz",
+				"noshadow"
+			],
+			"balckwu",
+			[
+				"noshadow",
+				"balckwu"
+			]
+		]
+	},
+	{
+		"id": "hq_1",
+		"name": "荒芜边境[黄泉]",
+		"desc": "不存在于现实的地点,或许这里可以破解永生之密。这里的时间流速更快,环境更危险",
+		"require": "g.under_dreaam>=1",
+		"level": 1,
+		"length": 25,
+		"run": {
+			"back_dream": 0.1,
+			"hp": 0.3,
+			"stamina": 1,
+			"tili": 1,
+			"time": -0.8
+		},
+		"result": {
+			"shuaibai_core": "1~3",
+			"snp_data": "3~7",
+			"zero_crystal": "3~7"
+		},
+		"boss": "death_ling",
+		"spawns": [
+			[
+				"death_ling",
+				"death_ling"
+			],
+			[
+				"smz",
+				"smz"
+			],
+			[
+				"smz",
+				"smz",
+				"noshadow"
+			],
+			"death_ling",
+			"balckwu",
+			[
+				"noshadow",
+				"balckwu"
+			]
+		]
+	},
+	{
+		"id": "hq_2",
+		"name": "荒芜大河[黄泉]",
+		"desc": "不存在于现实的地点,或许这里可以破解永生之密。这里的时间流速更快,环境更危险",
+		"require": "g.under_dreaam>=1",
+		"level": 1,
+		"length": 15,
+		"run": {
+			"back_dream": 0.2,
+			"hp": 0.3,
+			"stamina": 1,
+			"tili": 1,
+			"time": -1
+		},
+		"result": {
+			"lxue": "2~3",
+			"snp_data": "1~3",
+			"zero_crystal": "1~5"
+		},
+		"boss": "river_wheel",
+		"spawns": [
+			[
+				"death_ling",
+				"river_ghost",
+				"river_ghost"
+			],
+			[
+				"smdeath_lingz",
+				"river_ghost",
+				"smz"
+			],
+			[
+				"death_ling",
+				"smz",
+				"noshadow"
+			],
+			"death_ling",
+			"river_ghost",
+			"balckwu",
+			[
+				"noshadow",
+				"balckwu"
+			]
+		]
+	},
+	{
+		"id": "hq_3",
+		"name": "黄泉瀚海[黄泉]",
+		"desc": "无际沙漠。这里的时间流速更快,环境更危险",
+		"require": "g.evt_huangquansc>=1",
+		"level": 25,
+		"dist": 500,
+		"length": 40,
+		"run": {
+			"back_dream": 0.4,
+			"hp": 1,
+			"stamina": 1,
+			"tili": 1,
+			"time": -2
+		},
+		"result": {
+			"hunti_core": "1~2",
+			"lxue": "3~7",
+			"shuaibai_core": "3~6",
+			"snp_data": "9~12",
+			"zero_crystal": "5~12"
+		},
+		"boss": "hanhai_juxiang",
+		"spawns": [
+			[
+				"hqsl_1",
+				"hqsl_1",
+				"hqsl_1",
+				"hqsl_1",
+				"hqsl_1"
+			],
+			[
+				"river_wheel",
+				"dreamloot",
+				"hanhai_youl"
+			],
+			[
+				"hanhai_youl",
+				"dreamloot"
+			]
+		]
+	},
+	{
+		"id": "hq_4",
+		"name": "荒芜气旋层[黄泉]",
+		"desc": "",
+		"require": "g.evt_huangwuqixuan>=1",
+		"level": 35,
+		"dist": 600,
+		"length": 40,
+		"run": {
+			"back_dream": 0.4,
+			"hp": 1,
+			"stamina": 1,
+			"tili": 1,
+			"time": -2
+		},
+		"result": {
+			"floor_soulcore_pice": 1,
+			"hunti_core": "3~4",
+			"lxue": "3~7",
+			"shuaibai_core": "3~6",
+			"snp_data": "9~12",
+			"zero_crystal": "5~12"
+		},
+		"boss": {"40":["huian_fashi_1","huian_fashi_2","huian_fashi_3","huian_fashi_3"]},
+		"spawns": [
+			[
+				"huian_fashi_2",
+				"huian_fashi_1"
+			]
+		]
+	},
+	{
+		"id": "hq_5",
+		"name": "穷究雪原[黄泉]",
+		"desc": "",
+		"require": "g.evt_xunqiuty>=1",
+		"level": 35,
+		"dist": 600,
+		"length": 40,
+		"run": {
+			"back_dream": 0.4,
+			"hp": 1,
+			"stamina": 1,
+			"tili": 1,
+			"time": -2
+		},
+		"result": {
+			"command_soulcore_pice": 1,
+			"hunti_core": "3~4",
+			"lxue": "3~7",
+			"shuaibai_core": "3~6",
+			"snp_data": "9~12",
+			"zero_crystal": "5~12"
+		},
+		"boss": {"40":["xueguosb_4","xueguosb_3","xueguosb_2","xueguosb_5"]},
+		"spawns": [
+			[
+				"xueguosb_4",
+				"xueguosb_4"
+			],
+			[
+				"xueguosb_1",
+				"xueguosb_2",
+				"xueguosb_3",
+				"xueguosb_4"
+			],
+			[
+				"xueguosb_2",
+				"xueguosb_3",
+				"xueguosb_3"
+			],
+			[
+				"xueguosb_2",
+				"xueguosb_2"
+			]
+		]
+	},
+	{
+		"id": "hq_mo_1",
+		"name": "无光平原[魔导]",
+		"desc": "无法看见光明。这里的时间流速更快,环境更危险",
+		"require": "g.evt_modao>=1",
+		"level": 1,
+		"length": 30,
+		"run": {
+			"back_dream": 0.2,
+			"hp": 1,
+			"shuaibai": -0.1,
+			"tili": 1,
+			"time": -3
+		},
+		"result": {
+			"lxue": "0~3",
+			"shuaibai_core": "0~3",
+			"nolight_core": "1~3"
+		},
+		"boss": "huian_fashi",
+		"spawns": [
+			[
+				"noshadow",
+				"noshadow",
+				"noshadow",
+				"noshadow",
+				"noshadow"
+			],
+			[
+				"haojiaozhe",
+				"haojiaozhe",
+				"haojiaozhe"
+			],
+			[
+				"bujiezhe",
+				"haojiaozhe",
+				"noshadow"
+			]
+		]
+	},
+	{
+		"id": "yysl",
+		"name": "月影森林",
+		"desc": "繁茂的森林,地表常年处于阴影之中。",
+		"require": "evt_zcx",
+		"level": 20,
+		"dist": 200,
+		"length": 40,
+		"run": {
+			"stamina": 0.9,
+			"tili": 0.9,
+			"time": -1
+		},
+		"result": {
+			"snp_data": 5,
+			"yqlm": "3~7"
+		},
+		"boss": "tree_man",
+		"spawns": [
+			[
+				"xg",
+				"muling"
+			],
+			[
+				"yyx",
+				"small_tree_man"
+			],
+			"yyx",
+			"xg",
+			[
+				"muling",
+				"muling"
+			],
+			"small_tree_man"
+		]
+	},
+	{
+		"id": "slsc",
+		"name": "森林深处[滴露花,灵壤,阳露珠]",
+		"desc": "繁茂的森林,地表常年处于阴影之中。",
+		"require": "g.yysl>=1 && g.evt_tansuo_1>=1",
+		"level": 20,
+		"dist": 250,
+		"length": 20,
+		"run": {
+			"stamina": 0.9,
+			"tili": 0.9,
+			"time": -1
+		},
+		"result": {
+			"yqlm": 3,
+			"diluhua": 5,
+			"lingrang": "2~4",
+			"yangluzhu": 5
+		},
+		"boss": ["tree_man","tree_man"],
+		"spawns": [
+			[
+				"small_tree_man",
+				"small_tree_man"
+			],
+			[
+				"yyx",
+				"yyx"
+			],
+			"yyx",
+			"xg",
+			[
+				"muling",
+				"muling"
+			],
+			"small_tree_man"
+		]
+	},
+	{
+		"id": "jlss",
+		"name": "巨灵山",
+		"desc": "最巍峨的山脉，最纯正的金石之力",
+		"require": "evt_zcx",
+		"level": 20,
+		"dist": 200,
+		"length": 40,
+		"run": {
+			"stamina": 0.9,
+			"tili": 0.9,
+			"time": -1
+		},
+		"result": {
+			"snp_data": 5,
+			"cbjs": "2~5"
+		},
+		"boss": "gold_man",
+		"spawns": [
+			[
+				"sy",
+				"sy"
+			],
+			[
+				"fjian",
+				"yanj"
+			],
+			"yanj",
+			"sy",
+			[
+				"sy",
+				"fjian"
+			]
+		]
+	},
+	{
+		"id": "dmhs",
+		"name": "地脉火山",
+		"desc": "喷发着岩浆,散发着恐怖的高温",
+		"require": "evt_zcx",
+		"level": 20,
+		"dist": 200,
+		"length": 40,
+		"run": {
+			"stamina": 0.9,
+			"tili": 0.9,
+			"time": -1
+		},
+		"result": {
+			"snp_data": 5,
+			"yxls": "3~7"
+		},
+		"boss": "fire_bird",
+		"spawns": [
+			[
+				"fireb",
+				"huoj"
+			],
+			[
+				"fireb",
+				"huoj"
+			],
+			"hls",
+			"fireb",
+			[
+				"hls",
+				"huoj"
+			]
+		]
+	},
+	{
+		"id": "hsby",
+		"name": "火山边缘[红衫,火伤藤]",
+		"desc": "喷发着岩浆,散发着恐怖的高温",
+		"require": "g.dmhs>=1 && g.evt_tansuo_1>=1",
+		"level": 20,
+		"dist": 200,
+		"length": 18,
+		"run": {
+			"stamina": 0.9,
+			"tili": 2,
+			"time": -1
+		},
+		"result": {
+			"snp_data": 5,
+			"yxls": "1~3",
+			"hongshan": 4,
+			"huoshangteng": 5
+		},
+		"boss": "fire_bird",
+		"spawns": [
+			[
+				"fireb",
+				"fire_bird"
+			],
+			[
+				"fireb",
+				"huoj"
+			],
+			"fire_bird",
+			"fireb",
+			[
+				"hls",
+				"huoj"
+			]
+		]
+	},
+	{
+		"id": "lzdh",
+		"name": "劳泽大湖",
+		"desc": "泥泞的沼泽,庞大的湖泊",
+		"require": "evt_zcx",
+		"level": 20,
+		"dist": 200,
+		"length": 40,
+		"run": {
+			"stamina": 0.9,
+			"tili": 0.9,
+			"time": -1
+		},
+		"result": {
+			"snp_data": 5,
+			"wgys": "4~5"
+		},
+		"boss": "lake_wheel",
+		"spawns": [
+			[
+				"waterj",
+				"syu"
+			],
+			[
+				"syu",
+				"waterj"
+			],
+			"sls",
+			"syu",
+			[
+				"waterj",
+				"sls"
+			]
+		]
+	},
+	{
+		"id": "glpd",
+		"name": "古老盆地",
+		"desc": "存在几万年的古老盆地,有着纯粹的厚土之力",
+		"require": "evt_zcx",
+		"level": 20,
+		"dist": 200,
+		"length": 40,
+		"run": {
+			"stamina": 0.9,
+			"tili": 0.9,
+			"time": -1
+		},
+		"result": {
+			"snp_data": 5,
+			"zdht": "5~6"
+		},
+		"boss": "tu_bird",
+		"spawns": [
+			[
+				"wggg",
+				"tuj"
+			],
+			[
+				"wggg",
+				"tls"
+			],
+			"tls",
+			"tuj",
+			[
+				"tuj",
+				"tls"
+			]
+		]
+	},
+	{
+		"id": "pendizx",
+		"name": "盆地中心[土金,岩火,水银花]",
+		"desc": "存在几万年的古老盆地,有着纯粹的厚土之力",
+		"require": "g.glpd>=1 && g.evt_tansuo_1>=1",
+		"level": 20,
+		"dist": 250,
+		"length": 18,
+		"run": {
+			"stamina": 0.9,
+			"tili": 0.9,
+			"time": -2
+		},
+		"result": {
+			"zdht": "5~6",
+			"tujin": 5,
+			"yanhuo": 4,
+			"shuiyinhua": 5
+		},
+		"boss": "tu_bird",
+		"spawns": [
+			[
+				"wggg",
+				"tu_bird"
+			],
+			[
+				"wggg",
+				"tls"
+			],
+			"tu_bird",
+			[
+				"tu_bird",
+				"tls"
+			]
+		]
+	},
+	{
+		"id": "zxzc",
+		"name": "中型战场",
+		"desc": "曾经发生战争",
+		"require": "evt_zxzc",
+		"level": 20,
+		"dist": 200,
+		"length": 40,
+		"run": {
+			"stamina": 0.9,
+			"tili": 0.9,
+			"time": -1
+		},
+		"result": {
+			"shenglingshi": 0.7,
+			"snp_data": 5,
+			"zero_crystal": 7,
+			"lxue": 5
+		},
+		"boss": "xiantianzhuji",
+		"spawns": [
+			[
+				"m_solid_2",
+				"m_solid_4",
+				"m_solid_4"
+			],
+			[
+				"m_solid_2",
+				"m_solid_3"
+			],
+			[
+				"xiantianzhuji",
+				"m_solid_4"
+			],
+			[
+				"xiantianzhuji",
+				"m_solid_4",
+				"m_solid_4"
+			],
+			"m_solid_3",
+			"m_solid_4",
+			[
+				"m_solid_3",
+				"m_solid_4"
+			]
+		]
+	},
+	{
+		"id": "daxzc",
+		"name": "大型战场",
+		"desc": "曾经发生战争",
+		"require": "evt_zhengzhan",
+		"level": 30,
+		"dist": 600,
+		"length": 40,
+		"run": {
+			"hp": 2,
+			"stamina": 1,
+			"tili": 2,
+			"time": -2
+		},
+		"result": {
+			"snp_data": 10,
+			"zero_crystal": 20,
+			"shenglingshi":2,
+			"dirty_lingti": 5
+		},
+		"boss": "huzhenshi",
+		"spawns": [
+			[
+				"m_solid_4",
+				"m_solid_4",
+				"m_solid_4",
+				"baifuzhang"
+			],
+			[
+				"m_solid_4",
+				"baifuzhang",
+				"xiantianzhuji"
+			],
+			[
+				"xiantianzhuji",
+				"m_solid_4"
+			],
+			[
+				"baifuzhang",
+				"baifuzhang"
+			]
+		]
+	},
+	{
+		"id": "yichongyuesheng_fuben",
+		"name": "基魂跃升",
+		"sym": "☯⚡",
+		"desc": "完成跃升获得【一重跃升】",
+		"require": "evt_zhujiyuesheng",
+		"max": 1,
+		"dist":1,
+		"level": 40,
+		"length": 3,
+		"run": {
+			"time": -20
+		},
+		"result": {
+			"yichongyuesheng": 1
+		},
+		"boss": "yueshengshike_1",
+		"spawns": [
+			"shengmen_1",
+			"simen_1"
+		]
+	},
+	{
+		"id": "zhujijie",
+		"name": "五环之劫[五环-普通]",
+		"sym": "☯⚡",
+		"desc": "通过此副本来渡过天劫。你可以重复尝试。通关后获得【筑基-命玄】前置。【如果通关了则无法进入[本源劫]】",
+		"require": "evt_zjztj",
+		"title": "应劫者",
+		"max": 1,
+		"dist":1,
+		"level": 30,
+		"length": 5,
+		"run": {
+			"time": -20
+		},
+		"result": {
+			"zhuji_tianjie_1": 1
+		},
+		"boss": "shuijie_1",
+		"spawns": [
+			"mujie_1",
+			"huojie_1",
+			"tujie_1",
+			"jinjie_1"
+		]
+	},
+	{
+		"id": "zhujijie_1",
+		"name": "本源之劫[五环-困难]",
+		"sym": "☯⚡",
+		"desc": "通过此副本来渡过天劫。你可以重复尝试。通关后获得【筑基-破道】前置",
+		"require": "evt_benyuanjie",
+		"title": "破劫者",
+		"max": 1,
+		"dist":1,
+		"level": 30,
+		"length": 4,
+		"run": {
+			"time": -26
+		},
+		"result": {
+			"zhuji_tianjie_3": 1
+		},
+		"boss": "zhenyang",
+		"spawns": [
+			[
+				"wuxiangmo",
+				"wuxiangling"
+			],
+			[
+				"mujie_1",
+				"huojie_1"
+			],
+			[
+				"tujie_1",
+				"jinjie_1"
+			],
+			[
+				"huojie_1",
+				"shuijie_1"
+			]
+		]
+	},
+	{
+		"id": "wuguangjie_1",
+		"name": "无光深渊[混沌-普通]",
+		"sym": "☯⚡",
+		"desc": "通过此副本来渡过天劫。你可以重复尝试。通关后获得【筑基-落日】前置",
+		"require": "evt_wgsy",
+		"title": "应劫者",
+		"max": 1,
+		"dist":1,
+		"level": 30,
+		"length": 2,
+		"run": {
+			"time": -26
+		},
+		"result": {
+			"zhuji_tianjie_2": 1
+		},
+		"boss": "luor",
+		"spawns": [
+			[
+				"wuxiangmo",
+				"wuxiangling"
+			]
+		]
+	},
+	{
+		"id": "weijiancun",
+		"name": "未见之村[渴血]",
+		"sym": "🕯",
+		"desc": "",
+		"require": "evt_quanxiangren",
+		"dist":600,
+		"level": 39,
+		"length": 35,
+		"run": {
+			"hp": 0.99,
+			"time": -1
+		},
+		"result": {
+			"zhenhun_pice_1": 10,
+			"blood_soulcore_pice":1
+		},
+		"boss": "kexuebeast",
+		"spawns": [
+			[
+				"chiduncunm",
+				"chiduncunm"
+			],
+			[
+				"weijiandog",
+				"chiduncunm"
+			],
+			[
+				"weijiandog",
+				"weijiandog",
+				"weijiandog"
+			],
+			[
+				"weijiancunm",
+				"weijiancunm"
+			],
+			[
+				"weijiancunm",
+				"chiduncunm"
+			],
+			[
+				"kexuecunm",
+				"kexuecunm"
+			]
+		]
+	},
+	{
+		"id": "stormya",
+		"name": "风暴崖",
+		"sym": "",
+		"desc": "",
+		"require": "evt_xunqiusl",
+		"dist":600,
+		"level": 39,
+		"length": 35,
+		"run": {
+			"elect": -10,
+			"time": -1
+		},
+		"result": {
+			"zhenhun_pice_1": 10,
+			"elect_soulcore_pice":1
+		},
+		"boss": {"35":["air_light","air_bird","air_bird","air_fish","storm_egal"]},
+		"spawns": [
+			[
+				"air_fish",
+				"air_fish",
+				"air_bird"
+			],
+			[
+				"air_fish",
+				"air_bird",
+				"air_bird"
+			],
+			[
+				"air_light",
+				"air_bird",
+				"air_light"
+			]
+		]
+	},
+	{
+		"id": "lostlib",
+		"name": "失落图书馆",
+		"sym": "",
+		"desc": "",
+		"require": "evt_xunqiuzh",
+		"dist":600,
+		"level": 30,
+		"length": 35,
+		"run": {
+			"ganwu": -10,
+			"time": -1
+		},
+		"result": {
+			"zhenhun_pice_1": 10,
+			"skill_soulcore_pice":1
+		},
+		"boss": {"35":["qijuanzhe","qijuanzhe","qijuanzhe","qijuanzhe","lost_soul_man"]},
+		"spawns": [
+			[
+				"qishuzhe",
+				"qishuzhe"
+			],
+			[
+				"qishuzhe",
+				"qishuzhe",
+				"qishuzhe"
+			],
+			[
+				"qijuanzhe",
+				"qijuanzhe",
+				"qishuzhe"
+			]
+		]
+	},
+	{
+		"id": "silverwood",
+		"name": "银色森林",
+		"sym": "",
+		"desc": "",
+		"require": "evt_xunqiuhj",
+		"dist":600,
+		"level": 30,
+		"length": 35,
+		"run": {
+			"money": 5,
+			"time": -1
+		},
+		"result": {
+			"zhenhun_pice_1": 10,
+			"money_soulcore_pice":1
+		},
+		"boss": {"35":["gold_snake","gold_snake","mu_snake","sliver_snake"]},
+		"spawns": [
+			[
+				"white_lion",
+				"white_lion"
+			],
+			[
+				"mu_snake",
+				"mu_snake"
+			],
+			[
+				"gold_snake",
+				"gold_snake"
+			]
+		]
+	},
+	{
+		"id": "whitelake",
+		"name": "白色诵读团",
+		"sym": "",
+		"desc": "",
+		"require": "evt_xunqiukb",
+		"dist":600,
+		"level": 30,
+		"length": 25,
+		"run": {
+			"ganwu": -10,
+			"time": -1
+		},
+		"result": {
+			"zhenhun_pice_1": 10,
+			"white_soulcore_pice":1
+		},
+		"boss": {"25":["baiyiren","baiyiren","baiyiren","baiyiren","baiyiren","baiyiren","baiyiren_flag"]},
+		"spawns": [
+			[
+				"baiyiren",
+				"baiyiren"
+			]
+		]
+	},
+	{
+		"id": "blacklake",
+		"name": "黑色诵读团",
+		"sym": "",
+		"desc": "",
+		"require": "evt_xunqiuhy",
+		"dist":600,
+		"level": 30,
+		"length": 25,
+		"run": {
+			"ganwu": -10,
+			"time": -1
+		},
+		"result": {
+			"zhenhun_pice_1": 10,
+			"ranshao_soulcore_pice":1
+		},
+		"boss": {"25":["heiyiren","heiyiren","heiyiren","heiyiren","heiyiren","heiyiren","heiyiren_flag"]},
+		"spawns": [
+			[
+				"heiyiren",
+				"heiyiren"
+			]
+		]
+	},
+	{
+		"id": "wiyanxiaowu",
+		"name": "无言小屋",
+		"sym": "",
+		"desc": "",
+		"require": "evt_xunqiupans",
+		"dist":600,
+		"level": 30,
+		"length": 25,
+		"run": {
+			"time": -1
+		},
+		"result": {
+			"zhenhun_pice_1": 10,
+			"stone_soulcore_pice":1
+		},
+		"boss": "wuyangezhe",
+		"spawns": [
+			[
+				"rengui",
+				"rengui"
+			],
+			[
+				"rengui",
+				"shanyao"
+			],
+			[
+				"shanyao",
+				"shanyao"
+			]
+		]
+	},
+	{
+		"id": "gubenjiyouxuwei",
+		"name": "古本纪有序位",
+		"sym": "",
+		"desc": "古本纪中相对稳定的空间，此处探索需要[碎隙凡膜]",
+		"require": "g.gubenlvtu>=1",
+		"dist":1,
+		"level": 35,
+		"length": 30,
+		"run": {
+			"time": -2,
+			"suixifanmo": 0.4
+		},
+		"result": {
+			"gubenxianling": "1~3",
+			"shenglingshi": 10,
+			"money": 500,
+			"ganwu": 1000,
+			"qiyiyeti": "10~12"
+		},
+		"boss": "gubenmonster_4",
+		"spawns": [
+			[
+				"gubenmonster_1",
+				"gubenmonster_1"
+			],
+			[
+				"gubenmonster_2",
+				"gubenmonster_2"
+			],
+			[
+				"gubenmonster_3",
+				"gubenmonster_3"
+			],
+			[
+				"gubenmonster_1",
+				"gubenmonster_2",
+				"gubenmonster_3"
+			]
+		]
+	},
+	{
+		"id": "zhuohunzhiling_dug",
+		"name": "灼魂之灵",
+		"sym": "",
+		"desc": "炽热灵魂",
+		"require": "g.evt_zhuohunzhiling>=1",
+		"dist":700,
+		"level": 35,
+		"length": 30,
+		"run": {
+			"back_dream": 0.5,
+			"time": -0.5
+		},
+		"result": {
+			"money": 500,
+			"ganwu": 1000,
+			"qiyiyeti": "4~9",
+			"body_soulcore_pice": 2,
+			"hunti_core": 4
+		},
+		"boss": {"30":["zhuohun_1","zhuohun_1","zhuohun_1","zhuohun_2"]},
+		"spawns": [
+			[
+				"zhuohun_1"
+			],
+			[
+				"zhuohun_1",
+				"zhuohun_1"
+			]
+		],
+		"flavor": "归藏秘术将很难造成伤害"
+	},
+	{
+		"id": "gongweizhiling_dug",
+		"name": "共位之灵",
+		"sym": "",
+		"desc": "二素之灵",
+		"require": "g.evt_gongweizhiling>=1",
+		"dist":700,
+		"level": 35,
+		"length": 30,
+		"run": {
+			"back_dream": 0.5,
+			"time": -0.5
+		},
+		"result": {
+			"money": 500,
+			"ganwu": 1000,
+			"qiyiyeti": "4~9",
+			"heli_soulcore_pice": 1,
+			"hundun_soulcore_pice":  1
+		},
+		"boss": {"30":["gongwei_3","gongwei_3"]},
+		"spawns": [
+			[
+				"gongwei_1"
+			],
+			[
+				"gongwei_1",
+				"gongwei_2"
+			],
+			[
+				"gongwei_2"
+			]
+		],
+		"flavor": "混沌与合理将很难造成伤害"
+	},
+	{
+		"id": "tiaoxiezhiling_dug",
+		"name": "调谐之灵",
+		"sym": "",
+		"desc": "调谐正灵",
+		"require": "g.evt_tiaoxiezhiling>=1",
+		"dist":700,
+		"level": 35,
+		"length": 2,
+		"run": {
+			"back_dream": 0.5,
+			"time": -0.5
+		},
+		"result": {
+			"money": 500,
+			"ganwu": 1000,
+			"qiyiyeti": "4~9",
+			"fire_soulcore_pice":2,
+			"gold_soulcore_pice":2,
+			"water_soulcore_pice":2,
+			"wood_soulcore_pice":2,
+			"land_soulcore_pice":2
+		},
+		"boss": "tiaoxiezhiling",
+		"spawns": [
+			[
+				"tiaoxiezhiling_0"
+			]
+		],
+		"flavor": "五环元素将很难造成伤害"
+	},
+	{
+		"id": "zaodongzhiling_dug",
+		"name": "躁动之灵",
+		"sym": "",
+		"desc": "躁动不安",
+		"require": "g.evt_zaodongzhiling>=1",
+		"dist":700,
+		"level": 35,
+		"length": 50,
+		"run": {
+			"back_dream": 0.5,
+			"time": -0.5
+		},
+		"result": {
+			"money": 500,
+			"ganwu": 1000,
+			"qiyiyeti": "4~9",
+			"element_blood": 30,
+			"speed_soulcore_pice": 2,
+			"spell_soulcore_pice": 2
+		},
+		"boss": "zaodongzhiling",
+		"spawns": [
+			[
+				"zaodongzhiling"
+			],
+			[
+				"zaodongzhiling",
+				"zaodongzhiling"
+			],
+			[
+				"zaodongzhiling",
+				"zaodongzhiling",
+				"zaodongzhiling",
+				"zaodongzhiling"
+			],
+			[
+				"zaodongzhiling",
+				"zaodongzhiling",
+				"zaodongzhiling",
+				"zaodongzhiling",
+				"zaodongzhiling",
+				"zaodongzhiling",
+				"zaodongzhiling",
+				"zaodongzhiling"
+			]
+		],
+		"flavor": ""
+	},
+	{
 		"id": "sunnyfield",
 		"name": "Sunny Field",
 		"level": 1,
@@ -137,70 +1325,6 @@
 			],
 			"bigstone",
 			"hawk"
-		]
-	},
-	{
-		"id": "ettinmarchcamp",
-		"name": "Ettinmarch Camp",
-		"desc": "The perilous wilds of the Ettinmarch are a cherished home to bands of merry rangers and virtuous druids.",
-		"require": "evt_rangers",
-		"title": "Forest Scourge",
-		"max": 1,
-		"level": 15,
-		"length": 200,
-		"run": {
-			"stamina": 2
-		},
-		"result": {
-			"herbs": "3~7",
-			"gems": "0~2"
-		},
-		"boss": {"200":[
-			"eledin",
-			"gildella"
-		]},
-		"spawns": [
-			[
-				"ranger",
-				"ranger"
-			],
-			[
-				"elf",
-				"elf",
-				"elf",
-				"elf"
-			],
-			"beserker",
-			[
-				"roc",
-				"m_druid",
-				"roc"
-			],
-			[
-				"ranger",
-				"gryffon"
-			],
-			[
-				"m_druid",
-				"m_druid"
-			],
-			"ent",
-			[
-				"bear",
-				"bear",
-				"bear",
-				"ranger"
-			],
-			"direbear",
-			"highranger",
-			[
-				"elf",
-				"highelf"
-			],
-			[
-				"slinger",
-				"direbear"
-			]
 		]
 	},
 	{
@@ -540,225 +1664,6 @@
 			"earthelemental",
 			"airelemental",
 			"lightningelemental"
-		]
-	},
-	{
-		"id": "veldransstorehouse",
-		"name": "Veldran's Storehouse",
-		"desc": "Veldran never did manage to carve a kingdom from the wreck of Bodias' reign. But he did accrue a sizeable hoard.",
-		"level": 9,
-		"run": {
-			"stamina": 2
-		},
-		"length": 60,
-		"result": {
-			"gems": "3~5",
-			"gold": "80~150"
-		},
-		"spawns": [
-			[
-				"claygolem",
-				"claygolem",
-				"claygolem"
-			],
-			"hobgoblin",
-			"doppelganger",
-			"masterswordsman",
-			"irongolem",
-			"quasit",
-			[
-				"slime",
-				"slime",
-				"slime",
-				"slime"
-			],
-			[
-				"stonegolem",
-				"stonegolem"
-			],
-			"banditlord",
-			"magicmirror",
-			"woodgolem"
-		]
-	},
-	{
-		"id": "desillagrotto",
-		"name": "Desilla's Grotto",
-		"desc": "In all the world, the most enjoyable place to die.",
-		"locked":true,
-		"level": 15,
-		"run": {
-			"stamina": 2.5
-		},
-		"length": 75,
-		"result": {
-			"gems": "3~5",
-			"gold": "50~100",
-			"ichor": 1
-		},
-		"boss": "desillaconcubine",
-		"spawns": [
-			"masterswordsman",
-			[
-				"magicblade",
-				"magicblade"
-			],
-			[
-				"magicmirror",
-				"magicmirror"
-			],
-			"unicorn",
-			[
-				"pegasus",
-				"pegasus"
-			],
-			"quasit",
-			[
-				"stalker",
-				"willowisp"
-			],
-			[
-				"elf",
-				"elf",
-				"elf"
-			],
-			"incubus",
-			[
-				"imp",
-				"imp",
-				"imp"
-			],
-			"succubus"
-		],
-		"flavor": "Desilla was known as much for her entertainments as her ruthlessness."
-	},
-	{
-		"id": "charredkeep",
-		"name": "Charred Keep",
-		"desc": "Its smouldering ruins once more begin to burn.",
-		"level": 18,
-		"run": {
-			"stamina": 3
-		},
-		"length": 100,
-		"result": {
-			"title": "Lock Slayer",
-			"gold": "300~500",
-			"ichor": 3
-		},
-		"boss": {"100":[
-			"reddragon",
-			"karnivex",
-			"reddragon"
-		]},
-		"spawns": [
-			"mithrilgolem",
-			[
-				"bloodgolem",
-				"bloodgolem"
-			],
-			[
-				"magicmirror",
-				"magicmirror"
-			],
-			"maturereddragon",
-			[
-				"manticore",
-				"manticore"
-			],
-			"reddragon",
-			"demon",
-			"jazid",
-			[
-				"greendragon",
-				"greendragon"
-			],
-			"balrog",
-			"ancientvampire",
-			[
-				"masterswordsman",
-				"masterswordsman",
-				"masterswordsman"
-			]
-		],
-		"flavor": "Burned black by its own denizens"
-	},
-	{
-		"id": "belowgorborung",
-		"name": "Below Mt Gorborung",
-		"desc": "They say the roots of the mountain extend deeper than its heights.",
-		"level": 25,
-		"length": 100,
-		"locked": true,
-		"dist": 1200,
-		"run": {
-			"stamina": 3
-		},
-		"result": {
-			"title": "Lightless",
-			"earthgem": 5,
-			"gems": 10,
-			"tomes": 2
-		},
-		"boss": {
-			"50": "cthulhu",
-			"100": "gorborung"
-		},
-		"spawns": [
-			[
-				"stonegolem",
-				"stonegolem"
-			],
-			[
-				"magmaelemental",
-				"magmaelemental"
-			],
-			[
-				"earthelemental",
-				"earthelemental",
-				"earthelemental"
-			],
-			[
-				"dwarp",
-				"dwarp"
-			],
-			[
-				"callodiper",
-				"callodiper",
-				"callodiper"
-			],
-			[
-				"cavetroll",
-				"cavetroll"
-			],
-			[
-				"skellord",
-				"skellord"
-			],
-			[
-				"wyvern",
-				"wyvern"
-			],
-			"behemoth",
-			[
-				"trow",
-				"trow"
-			],
-			"reddragon",
-			"balrog",
-			"jazid",
-			"m_lichlord",
-			[
-				"shade",
-				"shade"
-			],
-			"beholder",
-			[
-				"ogre",
-				"ogre",
-				"ogre"
-			],
-			"cavetroll"
 		]
 	},
 	{

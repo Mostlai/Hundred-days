@@ -15,6 +15,11 @@
 		"require": "g.ganwu>0"
 	},
 	{
+		"id": "sect_techo",
+		"name": "研究",
+		"require": "g.xl_lj_konwledege_1>=1"
+	},
+	{
 		"id": "sect_market",
 		"name": "交易",
 		"require": "g.market_un>0"
@@ -28,6 +33,21 @@
 		"id": "sect_home",
 		"name": "居所",
 		"require": "g.home_un>=1"
+	},
+	{
+		"id": "sect_humanr",
+		"name": "人力",
+		"require": "g.rlgl>=1"
+	},
+	{
+		"id": "sect_mode",
+		"name": "模型",
+		"require": "g.shengchanlun>=1"
+	},
+	{
+		"id": "sect_svehicle",
+		"name": "构造",
+		"locked": true
 	},
 	{
 		"id": "sect_raid",
@@ -50,14 +70,19 @@
 		"require": "g.market_un>0"
 	},
 	{
+		"id": "sect_conquer",
+		"name": "征服",
+		"require": "g.shenshi_3>=3"
+	},
+	{
 		"id": "sect_bestiary",
 		"name": "bestiary",
 		"require": "g.bestiary>0||g.lore>=11"
 	},
 	{
 		"id": "sect_enchant",
-		"name": "enchanting",
-		"require": "enchanting"
+		"name": "铭刻",
+		"require": "g.mwxue>=1"
 	},
 	{
 		"id": "sect_craft",
@@ -65,12 +90,17 @@
 	},
 	{
 		"id": "sect_potions",
-		"name": "potions",
-		"require": "g.potions>0"
+		"name": "元素",
+		"require": "g.yaolixue>=1"
 	},
 	{
 		"id": "sect_minions",
-		"name": "minions",
-		"require": "g.minions>0"
+		"name": "随从",
+		"require": "g.shenshi_4>=999"
+	},
+	{
+		"id": "sect_achievement",
+		"name": "成就",
+		"require": "g.hp>=1"
 	}
 ]

@@ -1,0 +1,444 @@
+[
+	{
+		"id": "yjjqzl",
+		"name": "金钱指令",
+		"desc": "派遣人力获取钱财",
+		"require": "g.xiulian_xxh_mtcb>=1",
+		"max": 5,
+		"need": "g.human_power>=200",
+		"startcost":{
+			"alculation": 500,
+			"human_power": 200,
+			"money": 80,
+			"heli": 30,
+			"chaos": 30,
+			"elect": 30,
+			"shenshi": 5
+		},
+		"mod":{
+			"command_code":1,
+			"space.max": -20,
+			"human_power.max": -200,
+			"alculation.max": -150,
+			"alculation.rate": -1,
+			"human_power.rate": -0.4,
+			"money.rate": 1.5
+		}
+	},
+	{
+		"id": "rgdzl",
+		"name": "人工电指令",
+		"desc": "派遣人力产生电力,撤销指令不返还建筑",
+		"require": "g.pingfandiann>=1 && g.chaozuoguifan>=1",
+		"max": 4,
+		"need": "g.human_power>=200",
+		"startcost":{
+			"bxrldlchang": 1,
+			"human_power": 200,
+			"money": 1000,
+			"shenshi": 10
+		},
+		"mod":{
+			"command_code":5,
+			"space.max": -35,
+			"human_power.max": -200,
+			"human_power.rate": -0.4,
+			"money.rate": -0.8,
+			"elect.rate": 10
+		}
+	},
+	{
+		"id": "rndzl",
+		"name": "热能电指令",
+		"desc": "派遣人力产生电力,撤销指令不返还建筑",
+		"require": "g.pingfandiann>=1 && g.chaozuoguifan>=1 && g.yuanzirexue>=5",
+		"max": 4,
+		"need": "g.human_power>=200",
+		"startcost":{
+			"jcrelichang": 1,
+			"human_power": 200,
+			"money": 1000,
+			"shenshi": 10
+		},
+		"mod":{
+			"command_code":5,
+			"space.max": -35,
+			"human_power.max": -200,
+			"human_power.rate": -0.4,
+			"money.rate": -0.8,
+			"elect.rate": 17
+		}
+	},
+	{
+		"id": "ljjzl",
+		"name": "零结晶指令",
+		"desc": "派遣人力挖掘零结晶",
+		"require": "g.rlgl>=1",
+		"max": 5,
+		"need": "g.human_power>=100",
+		"startcost":{
+			"alculation": 200,
+			"human_power": 100,
+			"money": 300
+		},
+		"mod":{
+			"command_code":1,
+			"space.max": -10,
+			"human_power.max": -100,
+			"alculation.max": -50,
+			"alculation.rate": -1,
+			"human_power.rate": -0.1,
+			"zero_crystal.rate": 0.4
+		}
+	},
+	{
+		"id": "gzhizl",
+		"name": "稿纸指令",
+		"desc": "派遣人力获取稿纸",
+		"require": "g.rlgl>=1",
+		"max": 5,
+		"need": "g.human_power>=100",
+		"startcost":{
+			"alculation": 200,
+			"human_power": 100,
+			"money": 100
+		},
+		"mod":{
+			"command_code":1,
+			"space.max": -10,
+			"ganwu.rate": -1,
+			"human_power.max": -100,
+			"alculation.max": -50,
+			"alculation.rate": -1,
+			"human_power.rate": -0.1,
+			"paper.rate": 1
+		}
+	},
+	{
+		"id": "jyjlzl",
+		"name": "经验记录指令",
+		"desc": "派遣人力抄写经验记录",
+		"require": "g.rlgl>=1",
+		"max": 5,
+		"need": "g.human_power>=100",
+		"startcost":{
+			"alculation": 200,
+			"human_power": 100,
+			"money": 300
+		},
+		"mod":{
+			"command_code":1,
+			"space.max": -10,
+			"ganwu.rate": -2,
+			"human_power.max": -100,
+			"alculation.max": -50,
+			"alculation.rate": -1,
+			"human_power.rate": -0.1,
+			"exe_paper.rate": 0.3
+		}
+	},
+	{
+		"id": "twjlzl",
+		"name": "天文记录指令",
+		"desc": "派遣人力制取天文记录",
+		"require": "g.rlgl>=1",
+		"max": 5,
+		"need": "g.human_power>=100",
+		"startcost":{
+			"alculation": 200,
+			"human_power": 100,
+			"money": 300
+		},
+		"mod":{
+			"command_code":1,
+			"space.max": -10,
+			"ganwu.rate": -2,
+			"human_power.max": -100,
+			"alculation.max": -50,
+			"alculation.rate": -1,
+			"human_power.rate": -0.3,
+			"star_map.rate": 0.3
+		}
+	},
+	{
+		"id": "fczl",
+		"name": "FC合金指令",
+		"desc": "派遣人力制作FC合金",
+		"require": "g.fcclpx>=1",
+		"max": 2,
+		"need": "g.human_power>=300",
+		"startcost":{
+			"alculation": 300,
+			"iron_copper": 2,
+			"human_power": 300,
+			"money": 300
+		},
+		"mod":{
+			"command_code":1,
+			"space.max": -20,
+			"human_power.max": -300,
+			"alculation.max": -100,
+			"alculation.rate": -1.5,
+			"human_power.rate": -0.2,
+			"iron_copper.rate": 0.3
+		}
+	},
+	{
+		"id": "sjclzl",
+		"name": "神经材料指令",
+		"desc": "派遣人力制作神经材料",
+		"require": "g.sjclpx>=1",
+		"max": 2,
+		"need": "g.human_power>=300",
+		"startcost":{
+			"alculation": 400,
+			"sj_met": 2,
+			"human_power": 300,
+			"money": 300
+		},
+		"mod":{
+			"command_code":2,
+			"space.max": -20,
+			"human_power.max": -300,
+			"alculation.max": -100,
+			"alculation.rate": -2,
+			"human_power.rate": -0.3,
+			"sj_met.rate": 0.3
+		}
+	},
+	{
+		"id": "taibanzl",
+		"name": "钛板指令",
+		"desc": "派遣人力制作钛板",
+		"require": "g.taibanpx>=1",
+		"max": 2,
+		"need": "g.human_power>=300",
+		"startcost":{
+			"alculation": 400,
+			"tian": 2,
+			"human_power": 300,
+			"money": 300
+		},
+		"mod":{
+			"command_code":2,
+			"space.max": -20,
+			"human_power.max": -300,
+			"alculation.max": -100,
+			"alculation.rate": -2,
+			"human_power.rate": -0.5,
+			"tian.rate": 0.3
+		}
+	},
+	{
+		"id": "pyjzl",
+		"name": "培养基指令",
+		"desc": "派遣人力制作培养基",
+		"require": "g.pyjpx>=1",
+		"max": 2,
+		"need": "g.human_power>=300",
+		"startcost":{
+			"alculation": 400,
+			"fypyj": 1,
+			"human_power": 300,
+			"money": 300
+		},
+		"mod":{
+			"command_code":2,
+			"space.max": -25,
+			"human_power.max": -300,
+			"alculation.max": -200,
+			"alculation.rate": -3,
+			"human_power.rate": -0.7,
+			"fypyj.rate": 0.2
+		}
+	},
+	{
+		"id": "pyyzl",
+		"name": "培养液指令",
+		"desc": "派遣人力制作培养液",
+		"require": "g.pyypx>=1",
+		"max": 2,
+		"need": "g.human_power>=300",
+		"startcost":{
+			"alculation": 400,
+			"pyy": 1,
+			"human_power": 300,
+			"money": 300
+		},
+		"mod":{
+			"command_code":2,
+			"space.max": -25,
+			"yqlm.rate": -0.1,
+			"human_power.max": -300,
+			"alculation.max": -200,
+			"alculation.rate": -3,
+			"human_power.rate": -0.7,
+			"pyy.rate": 0.3
+		}
+	},
+	{
+		"id": "tjswybzl",
+		"name": "一阶生物样本",
+		"desc": "派遣人力制作一阶生物样本",
+		"require": "g.yjswybpx>=1",
+		"max": 3,
+		"need": "g.human_power>=300",
+		"startcost":{
+			"alculation": 400,
+			"yjswyb": 1,
+			"human_power": 300,
+			"money": 300
+		},
+		"mod":{
+			"command_code":3,
+			"space.max": -25,
+			"pyy.rate": -0.01,
+			"fypyj.rate": -0.01,
+			"human_power.max": -300,
+			"alculation.max": -200,
+			"alculation.rate": -3,
+			"human_power.rate": -0.7,
+			"yjswyb.rate": 0.1
+		}
+	},
+	{
+		"id": "cbclzl",
+		"name": "纯白材料指令",
+		"desc": "派遣人力制作纯白材料包",
+		"require": "g.cbclbpx>=1",
+		"max": 2,
+		"need": "g.human_power>=300",
+		"startcost":{
+			"alculation": 400,
+			"cbclb": 1,
+			"human_power": 300,
+			"money": 300
+		},
+		"mod":{
+			"command_code":2,
+			"space.max": -25,
+			"sj_met.rate": -0.1,
+			"tian.rate": -0.1,
+			"human_power.max": -300,
+			"alculation.max": -200,
+			"alculation.rate": -2.5,
+			"human_power.rate": -0.7,
+			"cbclb.rate": 0.4
+		}
+	},
+	{
+		"id": "yjdlzl",
+		"name": "亚极电缆指令",
+		"desc": "派遣人力制作亚极电缆",
+		"require": "g.yjdlpx>=1",
+		"max": 3,
+		"need": "g.human_power>=400",
+		"startcost":{
+			"alculation": 400,
+			"yjdl": 1,
+			"human_power": 400,
+			"money": 300
+		},
+		"mod":{
+			"command_code":2,
+			"space.max": -30,
+			"gwl.rate": -0.1,
+			"human_power.max": -400,
+			"alculation.max": -200,
+			"alculation.rate": -2.5,
+			"human_power.rate": -0.7,
+			"yjdl.rate": 0.3
+		}
+	},
+	{
+		"id": "gwlzl",
+		"name": "高温流指令",
+		"desc": "派遣人力制作高温流",
+		"require": "g.gwlpx>=1",
+		"max": 6,
+		"need": "g.human_power>=500",
+		"startcost":{
+			"alculation": 500,
+			"gwl": 1,
+			"human_power": 500,
+			"money": 300
+		},
+		"mod":{
+			"command_code":2,
+			"space.max": -35,
+			"human_power.max": -400,
+			"alculation.max": -200,
+			"alculation.rate": -2.5,
+			"human_power.rate": -0.7,
+			"gwl.rate": 0.8
+		}
+	},
+	{
+		"id": "bdhxzl",
+		"name": "冰冻核心指令",
+		"desc": "派遣人力获取冰冻核心",
+		"require": "g.rengqh>=1 && g.ningjiebd>=1",
+		"max": 10,
+		"need": "g.human_power>=400",
+		"startcost":{
+			"alculation": 400,
+			"cold_core": 1,
+			"human_power": 400,
+			"money": 300
+		},
+		"mod":{
+			"command_code":4,
+			"space.max": -25,
+			"gwl.rate": -0.1,
+			"human_power.max": -400,
+			"alculation.max": -200,
+			"alculation.rate": -2.5,
+			"human_power.rate": -0.7,
+			"cold_core.rate": 0.5
+		}
+	},
+	{
+		"id": "hr_xuetuggong",
+		"name": "学徒工坊",
+		"desc": "消耗指令获取人力",
+		"require": "g.alculation>=5000",
+		"max": 20,
+		"need": "g.human_power>=2000",
+		"startcost":{
+			"alculation": 400,
+			"books": 50,
+			"snp_data": 50,
+			"human_power": 2000,
+			"money": 2000
+		},
+		"mod":{
+			"command_code":7,
+			"space.max": -25,
+			"human_power.max": 500,
+			"alculation.max": -200,
+			"alculation.rate": -2.5
+		}
+	},
+	{
+		"id": "hr_suanzheggong",
+		"name": "算者工坊",
+		"desc": "消耗指令获取计算力",
+		"require": "g.human_power>=5000",
+		"max": 20,
+		"need": "g.human_power>=2000",
+		"startcost":{
+			"alculation": 400,
+			"books": 50,
+			"snp_data": 50,
+			"human_power": 2000,
+			"money": 2000
+		},
+		"mod":{
+			"command_code":7,
+			"space.max": -25,
+			"human_power.max": -100,
+			"alculation.max": 290,
+			"alculation.rate": -2.5
+		}
+	}
+]

@@ -1,0 +1,532 @@
+[
+	{
+		"id": "techo_soc_sls",
+		"name": "生灵石收敛",
+		"tags": "社会域",
+		"desc": "自动获取生灵石",
+		"require": "g.xl_lj_konwledege_1>=1",
+		"research_need_point": 1000,
+		"run":{
+			"money": 100,
+			"ganwu": 50
+		},
+		"mod":{
+			"shenglingshi.max": 20,
+			"shenglingshi.rate": 0.1
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_eng_space_1",
+		"name": "土地扩张I",
+		"tags": "工程域",
+		"desc": "提高空间和工业用地上限",
+		"require": "g.xl_lj_konwledege_1>=1",
+		"research_need_point": 1000,
+		"run":{
+			"money": 100,
+			"ganwu": 50
+		},
+		"mod":{
+			"space.max": 500,
+			"industry_space.max": 20
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_eng_space_2",
+		"name": "土地扩张II",
+		"tags": "工程域",
+		"desc": "提高空间和工业用地上限",
+		"require": "g.xl_lj_konwledege_1>=1",
+		"research_need_point": 3000,
+		"run":{
+			"money": 100,
+			"ganwu": 50
+		},
+		"mod":{
+			"space.max": 1000,
+			"industry_space.max": 30
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_elc_1",
+		"name": "电力增长I",
+		"tags": "物理域",
+		"desc": "提高电能和工业用电上限",
+		"require": "g.xl_lj_konwledege_1>=1",
+		"research_need_point": 1000,
+		"run":{
+			"money": 100,
+			"ganwu": 50
+		},
+		"mod":{
+			"elect.max": 10,
+			"elect.rate": 20,
+			"industry_elect.max": 10
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_elc_2",
+		"name": "电力增长II",
+		"tags": "物理域",
+		"desc": "提高电能和工业用电上限",
+		"require": "g.techo_phy_elc_1>=1",
+		"research_need_point": 3000,
+		"run":{
+			"money": 100,
+			"ganwu": 50
+		},
+		"mod":{
+			"elect.max": 10,
+			"elect.rate": 25,
+			"industry_elect.max": 15
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_elc_3",
+		"name": "电力增长III",
+		"tags": "物理域",
+		"desc": "提高电能和工业用电上限",
+		"require": "g.techo_phy_elc_2>=1",
+		"research_need_point": 6500,
+		"run":{
+			"money": 100,
+			"ganwu": 50
+		},
+		"mod":{
+			"elect.max": 10,
+			"elect.rate": 30,
+			"industry_elect.max": 25
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_thr_1",
+		"name": "线程控制",
+		"tags": "物理域",
+		"desc": "提高指令和工业线程上限",
+		"require": "g.xl_lj_konwledege_1>=1",
+		"research_need_point": 1000,
+		"run":{
+			"money": 100,
+			"ganwu": 50
+		},
+		"mod":{
+			"command_code.max": 10,
+			"industry_thread.max": 10
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_soul_1",
+		"name": "真魂扩容",
+		"tags": "物理域",
+		"desc": "提高真魂容量上限",
+		"require": "g.xl_lj_konwledege_1>=1",
+		"research_need_point": 1600,
+		"run":{
+			"money": 100,
+			"ganwu": 50
+		},
+		"mod":{
+			"max_rs_mod": 10
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_soc_thr_1",
+		"name": "先进指挥",
+		"tags": "社会域",
+		"desc": "提高指令和工业线程上限",
+		"require": "g.xl_lj_konwledege_1>=1",
+		"research_need_point": 1000,
+		"run":{
+			"money": 100,
+			"ganwu": 50
+		},
+		"mod":{
+			"command_code.max": 10,
+			"industry_thread.max": 10
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_eng_assemble_1",
+		"name": "组装优化I",
+		"tags": "工程域",
+		"desc": "提高组装机的建造上限",
+		"require": "g.zhenzyyjjx>=1",
+		"research_need_point": 6000,
+		"run":{
+			"xuanmuye": 1,
+			"ind_water": 2,
+			"shenglingshi": 1,
+			"money": 300,
+			"ganwu": 100
+		},
+		"mod":{
+			"factory_zuzhuangji.max": 25
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_eng_assemble_2",
+		"name": "组装优化II",
+		"tags": "工程域",
+		"desc": "提高组装机的建造上限",
+		"require": "g.zhenzyyjjx>=1",
+		"research_need_point": 6000,
+		"run":{
+			"xuanmuye": 1,
+			"ind_water": 2,
+			"shenglingshi": 1,
+			"money": 300,
+			"ganwu": 100
+		},
+		"mod":{
+			"factory_zuzhuangji.max": 15
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_eng_conquer_1",
+		"name": "武器拆解",
+		"tags": "工程域",
+		"desc": "得益于强大的工业体系，军工学的发展得到了有力的推进",
+		"require": "g.zhenzyyjjx>=1",
+		"research_need_point": 6000,
+		"run":{
+			"zhenzhi_spindle": 1,
+			"yinjing": 1,
+			"money": 300,
+			"ganwu": 100
+		},
+		"mod":{
+			"space.max": 100,
+			"industry_space.max": 5,
+			"jungongxue.max": 5
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_eng_conquer_2",
+		"name": "武器组装",
+		"tags": "工程域",
+		"desc": "自动化组装先进武器成为可能",
+		"require": "g.techo_eng_conquer_1>=1 && g.jungongxue>=10",
+		"research_need_point": 8000,
+		"run":{
+			"zhenzhi_spindle": 1,
+			"yinjing": 1,
+			"money": 300,
+			"ganwu": 100
+		},
+		"mod":{
+			"space.max": 100,
+			"industry_elect.max": 20,
+			"industry_space.max": 5
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_soc_conquer_1",
+		"name": "地区指挥",
+		"tags": "社会域",
+		"desc": "更进一步扩大征服上限",
+		"require": "g.zhenzyyjjx>=1",
+		"research_need_point": 6000,
+		"run":{
+			"zhenzhi_spindle": 1,
+			"yinjing": 1,
+			"money": 300,
+			"ganwu": 100
+		},
+		"mod":{
+			"1级.max": 20,
+			"2级.max": 10,
+			"3级.max": 10,
+			"4级.max": 10,
+			"5级.max": 10
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_soc_conquer_2",
+		"name": "扩张学说",
+		"tags": "社会域",
+		"desc": "解锁新的对外扩张对象",
+		"require": "g.jungongxue>=10",
+		"research_need_point": 8000,
+		"run":{
+			"money": 300,
+			"ganwu": 100
+		},
+		"mod":{
+			"1级.max": 1,
+			"2级.max": 1,
+			"3级.max": 1,
+			"4级.max": 1,
+			"5级.max": 1
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_soc_ap_1",
+		"name": "里程升级",
+		"tags": "社会域",
+		"desc": "解锁里程点升级",
+		"require": "g.socia_point>=100",
+		"research_need_point": 20000,
+		"run":{
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"mod":{
+			"ganwu.max": 100
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_juhe_1",
+		"name": "玄牝聚合",
+		"tags": "物理域",
+		"desc": "新的研究方向揭示了玄牝液如何聚合为五环点",
+		"require": "g.juhexue_1>=10",
+		"research_need_point": 10000,
+		"run":{
+			"zhenzhi_spindle": 1,
+			"yinjing": 1,
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"mod":{
+			"ganwu.max": 100
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_juhe_2",
+		"name": "生物质聚合",
+		"tags": "物理域",
+		"desc": "新的研究方向揭示了玄牝液如何聚合为生物质",
+		"require": "g.juhexue_1>=10",
+		"research_need_point": 10000,
+		"run":{
+			"zhenzhi_spindle": 1,
+			"yinjing": 1,
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"mod":{
+			"ganwu.max": 100
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_eng_juhe_1",
+		"name": "玄牝仓储",
+		"tags": "工程域",
+		"desc": "新的技术使得玄牝液不再依赖分体柱存储",
+		"require": "g.juhexue_1>=5",
+		"research_need_point": 8000,
+		"run":{
+			"zhenzhi_spindle": 1,
+			"yinjing": 1,
+			"money": 300,
+			"ganwu": 100
+		},
+		"mod":{
+			"space.max": 100
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_zhenhu_0",
+		"name": "同构异位真魂",
+		"tags": "物理域",
+		"desc": "新的物理数据提供了分形真魂的研究方向",
+		"require": "g.physic_point>=0.1",
+		"research_need_point": 5000,
+		"run":{
+			"shenshi": 10,
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"mod":{
+			"max_rs_mod": 5,
+			"shenshi.max": 3
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_zhenhu_1",
+		"name": "单体魂分形",
+		"tags": "物理域",
+		"desc": "关于归藏学的真魂分形研究",
+		"require": "g.techo_phy_zhenhu_0>=1 && g.guixuan>=1",
+		"research_need_point": 6300,
+		"run":{
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"mod":{
+			"hunti_core.max": 18,
+			"body_soulcore_pice.max": 10
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_zhenhu_2",
+		"name": "二素魂分形",
+		"tags": "物理域",
+		"desc": "关于合理与混沌的真魂分形研究",
+		"require": "g.techo_phy_zhenhu_0>=1",
+		"research_need_point": 6300,
+		"run":{
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"mod":{
+			"heli.max": 2,
+			"chaos.max": 2,
+			"heli_soulcore_pice.max": 10,
+			"hundun_soulcore_pice.max": 10
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_zhenhu_3",
+		"name": "五位魂分形",
+		"tags": "物理域",
+		"desc": "关于五元素的真魂分形研究",
+		"require": "g.techo_phy_zhenhu_0>=1",
+		"research_need_point": 6300,
+		"run":{
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"mod":{
+			"gold.max": 5,
+			"wood.max": 5,
+			"water.max": 5,
+			"fire.max": 5,
+			"land.max": 5,
+			"fire_soulcore_pice.max": 10,
+			"water_soulcore_pice.max": 10,
+			"wood_soulcore_pice.max": 10,
+			"land_soulcore_pice.max": 10,
+			"gold_soulcore_pice.max": 10
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_zhenhu_4",
+		"name": "忆风魂分形",
+		"tags": "物理域",
+		"desc": "关于速度与记忆的真魂分形研究",
+		"require": "g.techo_phy_zhenhu_0>=1",
+		"research_need_point": 4000,
+		"run":{
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"mod":{
+			"speed_soulcore_pice.max": 10,
+			"spell_soulcore_pice.max": 10
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_soc_tm_1",
+		"name": "成果扩展",
+		"tags": "社会域",
+		"desc": "容纳更多的成果！",
+		"require": "g.xl_lj_konwledege_1>=1",
+		"research_need_point": 4000,
+		"run":{
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"mod":{
+			"normal_data_box.max": 15
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_eng_zyzz_1",
+		"name": "专业性真直应用",
+		"tags": "工程域",
+		"desc": "解锁真直锭更广泛的运用，倾向于自动化技术",
+		"require": "g.xl_siwei_jxswei>=1",
+		"research_need_point": 5800,
+		"run":{
+			"zhenzhi_spindle": 1,
+			"xuanmuye": 1,
+			"yinjing": 1,
+			"elect": 5,
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_eng_yjyy_1",
+		"name": "专业性萤晶应用",
+		"tags": "工程域",
+		"desc": "解锁萤晶更广泛的运用，倾向于能量与空间控制",
+		"require": "g.xl_siwei_jxswei>=1",
+		"research_need_point": 5800,
+		"run":{
+			"zhenzhi_spindle": 1,
+			"xuanmuye": 1,
+			"yinjing": 1,
+			"elect": 5,
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"max": 1
+	},
+	{
+		"id": "techo_phy_sszdyy",
+		"name": "神识战斗应用",
+		"tags": "物理域",
+		"desc": "解锁神识法术",
+		"require": "g.xl_siwei_jxswei>=1",
+		"research_need_point": 200,
+		"run":{
+			"xuanmuye": 1,
+			"elect": 5,
+			"money": 300,
+			"heli": 30,
+			"chaos": 20,
+			"ganwu": 100
+		},
+		"max": 1
+	}
+]

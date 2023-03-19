@@ -1,5 +1,7 @@
 {
 	"core": [
+		"tags",
+		"gfx_config",
 		"resources",
 		"upgrades",
 		"tasks",
@@ -20,13 +22,34 @@
 		"sections",
 		"potions",
 		"market",
+		"adv_weapon",
+		"conquer",
 		"xiulian",
+		"humanr",
 		"encounters",
 		"locales",
 		"stressors",
 		"rares",
 		"reagents",
-		"properties"
+		"properties",
+		"element",
+		"herbal",
+		"achievement",
+		"missions",
+		"metal",
+		"fight",
+		"obstacles",
+		"weapon_factory",
+		"realsoul",
+		"realsoul_fu",
+		"soulpice",
+		"factclass",
+		"factclass_fu",
+		"factrecipe",
+		"factory",
+		"player_res",
+		"techo",
+		"ap_upgrade"
 	],
 	"modules": [
 		"patrons",
@@ -38,6 +61,10 @@
 		"extramats",
 		"extraaction",
 		"winter",
-		"legacy"
+		"legacy",
+		"officialdom",
+		"blackcat_extend",
+		"old_swamp",
+		"thatwood"
 	]
 }

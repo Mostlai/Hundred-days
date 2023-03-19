@@ -3,6 +3,7 @@
 		"id": "pl_workbench",
 		"name": "工作台",
 		"desc": "一张工作台让你可以从事生产工作",
+		"max": 1,
 		"tags": "work_space",
 		"locked": false,
 		"repeat": true,
@@ -17,6 +18,7 @@
 		"id": "pl_reasherbench",
 		"name": "研究台",
 		"desc": "一张足够大的桌子让你可以铺满各种稿纸",
+		"max": 1,
 		"tags": "research_space",
 		"locked": false,
 		"repeat": true,
@@ -32,6 +34,7 @@
 		"id": "smallchest",
 		"name": "小箱子",
 		"desc": "小型箱子",
+		"max": 10,
 		"require": "g.money>50",
 		"repeat": true,
 		"cost": {
@@ -48,13 +51,14 @@
 		"name": "结晶盒",
 		"desc": "能够存放结晶",
 		"require": "g.zcry_box>=1",
+		"max": 20,
 		"repeat": true,
 		"cost": {
 			"money": 30,
 			"zero_crystal": 8
 		},
 		"mod": {
-			"zero_crystal.max": 4,
+			"zero_crystal.max": 5,
 			"space": 2
 		}
 	},
@@ -62,6 +66,7 @@
 		"id": "ironchest",
 		"name": "铁箱子",
 		"desc": "更大容量的箱子",
+		"max": 10,
 		"require": "g.money.max>=125",
 		"repeat": true,
 		"cost": {
@@ -74,16 +79,100 @@
 		}
 	},
 	{
+		"id": "fcchest",
+		"name": "合金箱子",
+		"desc": "更大容量的箱子",
+		"max": 10,
+		"require": "g.iron_copper>=10",
+		"repeat": true,
+		"cost": {
+			"cu_iron": 20,
+			"cu_copper":20,
+			"iron_copper": 10,
+			"paper": 20,
+			"money": 150
+		},
+		"mod": {
+			"inv.max": 5,
+			"money.max": 200,
+			"space": 2
+		}
+	},
+	{
+		"id": "cangku",
+		"name": "仓库",
+		"desc": "存放大量金钱",
+		"max": 5,
+		"require": "g.yjdl>=1",
+		"repeat": true,
+		"cost": {
+			"yjdl": 10,
+			"gwl": 10,
+			"cbclb": 20,
+			"paper": 130,
+			"money": 1500
+		},
+		"mod": {
+			"inv.max": 5,
+			"money.max": 300,
+			"space": 15
+		}
+	},
+	{
+		"id": "lifeitable",
+		"name": "生命柜",
+		"desc": "低温环境保存生物样本",
+		"max": 5,
+		"require": "g.yjswyb>=1",
+		"repeat": true,
+		"cost": {
+			"yjdl": 10,
+			"cold_core": 25,
+			"yjswyb": 10,
+			"gwl": 10,
+			"cbclb": 20,
+			"paper": 130,
+			"money": 1500
+		},
+		"mod": {
+			"elect.rate": -3,
+			"fypyj.max": 5,
+			"pyy.max": 5,
+			"yjswyb.max": 5,
+			"space": 15
+		}
+	},
+	{
+		"id": "dream_ctc",
+		"name": "捕梦仪",
+		"desc": "捕获梦境",
+		"max": 1,
+		"require": "g.dream_1>=5",
+		"repeat": true,
+		"cost": {
+			"ganwu": 30,
+			"lg": 2,
+			"money": 100
+		},
+		"mod": {
+			"shenshi.max": 1,
+			"shenshi.rate": 0.01,
+			"space": 2
+		}
+	},
+	{
 		"id": "bed_1",
 		"name": "软床",
 		"desc": "柔软的床铺",
 		"tags": "bed",
 		"slot": "bed",
+		"max": 1,
 		"require": "g.stamina>=11",
 		"cost": {
 			"money": 40
 		},
 		"mod": {
+			"bed.max": -1,
 			"rest.effect.stamina": 0.27,
 			"space": 2
 		}
@@ -93,6 +182,7 @@
 		"name": "天文仪",
 		"desc": "简单的天文仪器",
 		"tags": "astro",
+		"max": 1,
 		"require": "g.money.max>=50&&g.reading>=1&&g.crafting_1>=1",
 		"repeat": true,
 		"cost": {
@@ -100,7 +190,7 @@
 		},
 		"mod": {
 			"exe_paper.max": 1,
-			"exe_paper.rate": 0.0001,
+			"exe_paper.rate": 0.01,
 			"astronomy.max": 2,
 			"astronomy.rate": 0.2,
 			"space": 2
@@ -111,6 +201,7 @@
 		"name": "简单培养皿",
 		"desc": "一块玻璃盘,供你进行小型的生物实验",
 		"tags": "bio",
+		"max": 1,
 		"require": "g.money.max>=50&&g.reading>=1&&g.crafting_1>=1",
 		"repeat": true,
 		"cost": {
@@ -129,6 +220,7 @@
 		"name": "紫外观察镜片",
 		"desc": "允许你观察从未见过的紫外线",
 		"tags": "ultraviolet_rays",
+		"max": 1,
 		"require": "g.reading>=3&&g.crafting_1>=3&&g.astronomy>=2",
 		"repeat": true,
 		"cost": {
@@ -149,6 +241,7 @@
 		"name": "书架",
 		"desc": "木制书架",
 		"tags": "",
+		"max": 20,
 		"require": "g.books>=1",
 		"repeat": true,
 		"cost": {
@@ -157,10 +250,52 @@
 		"mod": {
 			"books.max": 2,
 			"paper.max":10,
-			"snp_data.max":3,
-			"exe_paper.max": 2,
-			"star_map.max": 2,
+			"snp_data.max":4.5,
+			"exe_paper.max": 4.5,
+			"star_map.max": 4,
 			"space": 3
+		}
+	},
+	{
+		"id": "heisezhist",
+		"name": "黑色置书台",
+		"desc": "能引导黑焰",
+		"tags": "",
+		"max": 1,
+		"require": "g.xunqiuhy>=1",
+		"repeat": true,
+		"cost": {
+			"heiyan": 10,
+			"booktable": 10,
+			"tian": 60
+		},
+		"mod": {
+			"books.max": 20,
+			"paper.max":100,
+			"snp_data.max": 20,
+			"exe_paper.max": 40,
+			"star_map.max": 30,
+			"space": 20
+		}
+	},
+	{
+		"id": "bantiaox",
+		"name": "板条箱",
+		"desc": "一个小型板条箱给你存放寻常金属",
+		"tags": "",
+		"max": 20,
+		"require": "g.cu_iron>=10",
+		"repeat": true,
+		"cost": {
+			"cu_iron": 10,
+			"paper": 20,
+			"money": 100
+		},
+		"mod": {
+			"cu_iron.max": 10,
+			"cu_copper.max":10,
+			"iron_copper.max":5,
+			"space": 2
 		}
 	},
 	{
@@ -168,6 +303,7 @@
 		"name": "熔炉",
 		"desc": "一台简单的能冶炼金属的熔炉",
 		"tags": "metal",
+		"max": 1,
 		"require": "g.money.max>=50&&g.reading>=2&&g.crafting_1>=3",
 		"repeat": true,
 		"cost": {
@@ -175,6 +311,7 @@
 		},
 		"mod": {
 			"cu_iron.max": 5,
+			"cu_copper.max":5,
 			"cu_iron.rate": 0.001,
 			"space": 5
 		}
@@ -182,6 +319,7 @@
 	{
 		"id": "elect_mod_1",
 		"name": "感应线圈I",
+		"max": 5,
 		"desc": "用零结晶,铜板,铁板做的小型线圈",
 		"tags": "",
 		"require": "g.elect_expand>=1",
@@ -200,1361 +338,7596 @@
 		}
 	},
 	{
-		"id": "ornatechest",
-		"name": "ornate chest",
-		"desc": "Treasure chest.",
-		"require": "g.gold.max>=500",
-		"repeat": true,
-		"cost": {
-			"gold": 350,
-			"gems": 5
-		},
-		"mod": {
-			"inv.max": 2,
-			"gold.max": 500,
-			"space": 3
-		}
-	},
-	{
-		"id": "cot",
-		"desc": "Slightly better than sleeping on the floor",
-		"require": "apprentice",
-		"tags": "bed",
-		"slot": "bed",
+		"id": "light_1",
+		"name": "光学底座",
+		"desc": "一个占地大的光学研究平台",
+		"tags": "slight",
 		"max": 1,
-		"cost": {
-			"gold": 10
-		},
-		"mod": {
-			"rest.effect.stamina": 0.23,
-			"space": 1
-		}
-	},
-	{
-		"id": "magiccircle",
-		"name": "magic circle",
-		"desc": "Magic circle",
-		"locked": true,
-		"max": 3,
-		"cost": {
-			"research": 40,
-			"mana": 5
-		},
-		"mod": {
-			"research.max": 10,
-			"research.rate": 0.01,
-			"arcana.rate": 0.0001,
-			"space": 1
-		}
-	},
-	{
-		"id": "smcage",
-		"name": "rusty cage",
-		"desc": "A cramped cage for keeping tiny test subjects.",
-		"tags": "t_pets,shadowsource",
-		"locked": true,
-		"max": 3,
-		"cost": {
-			"gold": 50,
-			"research": 100
-		},
-		"flavor": "It doesn't seem very nice.",
-		"mod": {
-			"animals.max": 1,
-			"shadowlore.max": 1,
-			"evilamt": 1,
-			"space": 1
-		}
-	},
-	{
-		"id": "terrarium",
-		"desc": "A glass enclosure of dirt, insects, and wormy things.",
-		"tags": "earthsource,t_pets",
-		"locked": true,
+		"require": "g.rlt_guancha>=4&&g.crafting_1>=8&&g.building_1>=2",
 		"repeat": true,
 		"cost": {
-			"research": 40,
-			"gold": 40
-		},
-		"mod": {
-			"research.max": 5,
-			"earth.rate": 0.01,
-			"space": 1
-		}
-	},
-	{
-		"id": "vivarium",
-		"desc": "A glass enclosure for small reptiles, snakes, and frogs.",
-		"tags": "earthsource,t_pets,naturesource",
-		"locked": true,
-		"cost": {
-			"research": 300,
-			"gold": 500
-		},
-		"mod": {
-			"research.max": 10,
-			"animals.max": 1,
-			"animals.rate": 0.3,
-			"naturelore.max": 1,
-			"naturelore.rate": "0.3+1%",
-			"space": 2
-		}
-	},
-	{
-		"id": "workbench",
-		"desc": "A small bench for arts and crafts. Necessary for many wizard studies.",
-		"tags": "workspace",
-		"locked": true,
-		"repeat": true,
-		"cost": {
-			"gold": 15
-		},
-		"mod": {
-			"research.max": 5,
-			"space": 1
-		}
-	},
-	{
-		"id": "writingdesk",
-		"name": "writing desk",
-		"desc": "A desk for working and scribing.",
-		"locked": true,
-		"tags": "workspace",
-		"cost": {
-			"gold": 100
-		},
-		"mod": {
-			"scrolls.rate": 0.001,
-			"research.max": 5,
-			"languages.max": 1,
-			"scrolls.max": 10,
-			"space": 2
-		}
-	},
-	{
-		"id": "crafttable",
-		"name": "crafting table",
-		"tags": "workspace",
-		"desc": "Wide table for crafting projects.",
-		"locked": true,
-		"cost": {
-			"gold": 100
-		},
-		"mod": {
-			"crafting.max": 1,
-			"crafting.rate": 0.2,
-			"space": 2
-		}
-	},
-	{
-		"id": "enchanttable",
-		"name": "enchanting table",
-		"tags": "workspace,enchantsource",
-		"desc": "Runed table for enchanting",
-		"locked": true,
-		"cost": {
-			"gold": 200,
-			"research": 200,
-			"gems": 5
-		},
-		"mod": {
-			"enchanting.max": 1,
-			"enchanting.rate": 0.2,
-			"space": 2
-		}
-	},
-	{
-		"id": "plant",
-		"name": "potted milkweed",
-		"locked": true,
-		"desc": "Really brightens up the place.",
-		"tags": "plantsource",
-		"repeat": true,
-		"cost": {
-			"gold": 25
-		},
-		"mod": {
-			"research.max": 5,
-			"space": 1
-		}
-	},
-	{
-		"id": "creepingvine",
-		"name": "creeping vine",
-		"desc": "A quickly growing plant",
-		"tags": "plantsource",
-		"locked": true,
-		"max": 5,
-		"cost": {
-			"gold": 75
-		},
-		"mod": {
-			"herbs.max": 1,
-			"herbalism.max": 1,
-			"herbs.rate": 0.2,
-			"space": 1
-		}
-	},
-	{
-		"id": "birdcage",
-		"desc": "Perfect for robins.",
-		"tags": "t_pets",
-		"require": "apprentice",
-		"repeat": true,
-		"cost": {
-			"gold": 25
-		},
-		"mod": {
-			"research.max": 5,
-			"space": 1
-		}
-	},
-	{
-		"id": "pedestal",
-		"desc": "A pedestal for reading magic tomes. Improves study habits.",
-		"require": "evt_helper",
-		"cost": {
-			"gold": 50
-		},
-		"mod": {
-			"research.max": 10,
-			"study.effect.research": 0.1,
-			"space": 1
-		}
-	},
-	{
-		"id": "loom",
-		"desc": "Unlocks the art of weaving",
-		"tags": "weavesource",
-		"require": "g.crafting>=6",
-		"cost": {
-			"gold": 50,
-			"research": 100
-		},
-		"mod": {
-			"crafting.max": 1,
-			"crafting.rate": 0.1,
-			"space": 1
-		}
-	},
-	{
-		"id": "spinwheel",
-		"name": "spinning wheel",
-		"desc": "Eases tasks related to weaving.",
-		"tags": "weavesource",
-		"require": "g.weaving>=5",
-		"cost": {
-			"gold": 1000,
-			"research": 5000,
-			"gems": 50
-		},
-		"mod": {
-			"weaving.max": 2,
-			"weaving.rate": "10%",
-			"space": 1
-		}
-	},
-	{
-		"id": "sextant",
-		"desc": "Measure the stars.",
-		"require": "neophyte",
-		"tags": "starsource",
-		"cost": {
-			"gold": 75,
-			"research": 50
-		},
-		"mod": {
-			"arcana.max": 1,
-			"arcana.rate": 0.0001,
-			"space": 2
-		}
-	},
-	{
-		"id": "scrollrack",
-		"name": "scroll rack",
-		"repeat": true,
-		"desc": "Latticed shelves for easy scroll storage.",
-		"require": "g.apprentice>0&&g.scrolls>=20",
-		"cost": {
-			"gold": 75,
-			"research": 100
-		},
-		"mod": {
-			"scrolls.max": 15,
-			"space": 1
-		}
-	},
-	{
-		"id": "bookshelf",
-		"name": "bookshelf",
-		"repeat": true,
-		"desc": "A single bookshelf for your books.",
-		"require": "g.codices>=5&&g.scrolls.max>=15",
-		"cost": {
-			"gold": 100
-		},
-		"mod": {
-			"codices.max": 5,
-			"scrolls.max": 10,
-			"space": 1
-		}
-	},
-	{
-		"id": "bookcase",
-		"name": "bookcase",
-		"repeat": true,
-		"desc": "A rough but sturdy bookcase.",
-		"require": "g.codices>=20",
-		"max": 20,
-		"cost": {
-			"gold": 200
-		},
-		"mod": {
-			"starcharts.max": 1,
-			"codices": {
-				"max": 15,
-				"mod.research.max": 0.5
-			},
-			"tomes.max": 1,
-			"space": 2
-		}
-	},
-	{
-		"id": "cloudchamber",
-		"name": "cloud chamber",
-		"tags": "airsource",
-		"desc": "A chamber of swirling vapours for study.",
-		"require": "g.tier0>0&&g.airlore>=5",
-		"max": 3,
-		"cost": {
-			"gold": 500,
-			"research": 500,
-			"air": 5
-		},
-		"mod": {
-			"airlore.max": 1,
-			"airlore.rate": 0.2,
-			"space": 1
-		}
-	},
-	{
-		"id": "brasscandelabra",
-		"name": "brass candelabra",
-		"desc": "Candle holder.",
-		"require": "g.waxcandle>0&&g.gold.max>=200",
-		"repeat": false,
-		"cost": {
-			"gold": 200
-		},
-		"mod": {
-			"candle.max": 4,
-			"space": 1
-		}
-	},
-	{
-		"id": "bonecandelabra",
-		"name": "bone candelabra",
-		"desc": "Creepy",
-		"require": "g.necromancer>0||g.witch>0||g.bonemonger>0",
-		"repeat": false,
-		"cost": {
-			"bones": 10,
-			"research": 50,
-			"gold": 50
-		},
-		"mod": {
-			"candle.max": 4,
-			"shadow.rate": 0.03,
-			"space": 1
-		}
-	},
-	{
-		"id": "basin",
-		"name": "basin",
-		"tags": "watersource",
-		"desc": "Basin of water.",
-		"require": "apprentice",
-		"repeat": true,
-		"cost": {
-			"gold": 50
-		},
-		"mod": {
-			"water.rate": 0.02,
-			"space": 1
-		}
-	},
-	{
-		"id": "brazier",
-		"desc": "Stand of burning hot coals.",
-		"tags": "firesource,spiritsource",
-		"require": "g.tier0>0",
-		"max": 3,
-		"repeat": true,
-		"cost": {
-			"gold": 150
-		},
-		"mod": {
-			"firelore.max": 1,
-			"fire.rate": 0.02,
-			"space": 1
-		}
-	},
-	{
-		"id": "campfire",
-		"tags": "firesource",
-		"need": "outdoors",
-		"cost": {},
-		"mod": {
-			"naturelore.max": 1,
-			"firelore.max": 1,
-			"fire.rate": 0.05,
-			"space": 1
-		}
-	},
-	{
-		"id": "bonfire",
-		"tags": "firesource",
-		"locked": true,
-		"desc": "A burning pyre for the practice of pyromancy.",
-		"cost": {
-			"fire": 4
-		},
-		"mod": {
-			"firelore.max": 1,
-			"fire.rate": 0.05,
-			"space": 2
-		},
-		"flavor": "Be careful where you put it."
-	},
-	{
-		"id": "clepsydra",
-		"desc": "Crude measure of time",
-		"require": "tier3",
-		"tags": "timesource",
-		"repeat": true,
-		"cost": {
-			"gold": 100,
-			"research": 100
-		},
-		"mod": {
-			"tempus.max": 1,
-			"tempus.rate": 0.01,
-			"water.rate": 0.01,
-			"space": 1
-		},
-		"flavor": "What is gone is gone"
-	},
-	{
-		"id": "fireplace",
-		"desc": "A cozy place for cooking food and brewing potions.",
-		"tags": "firesource",
-		"locked": true,
-		"repeat": true,
-		"cost": {
-			"gold": 175
-		},
-		"mod": {
-			"fire.rate": 0.01,
-			"space": 1
-		}
-	},
-	{
-		"id": "grotesque",
-		"tags": "earthsource",
-		"require": "g.tier1>0&&(g.earthlore>3||g.shadowlore>3)",
-		"desc": "A grim, disfigured stone statue",
-		"max": 4,
-		"cost": {
-			"gold": 750
-		},
-		"mod": {
-			"earthlore.rate": 0.2,
-			"earthlore.max": 1,
-			"shadowlore.rate": 0.1,
-			"shadowlore.max": 1,
-			"space": 5
-		}
-	},
-	{
-		"id": "gargoyle",
-		"tags": "watersource",
-		"require": "g.tier1>0&&(g.waterlore>3||g.shadowlore>3)",
-		"desc": "A fountain issues from the stone demon's mouth",
-		"max": 4,
-		"cost": {
-			"gold": 750
-		},
-		"mod": {
-			"waterlore.rate": 0.2,
-			"shadowlore.rate": 0.1,
-			"shadowlore.max": 1,
-			"waterlore.max": 1,
-			"space": 5
-		}
-	},
-	{
-		"id": "fountain",
-		"desc": "Water Fountain",
-		"tags": "watersource",
-		"locked": true,
-		"cost": {
-			"gold": 500
-		},
-		"mod": {
-			"water.rate": 0.1,
-			"waterlore.max": 1,
-			"space": 5
-		}
-	},
-	{
-		"id": "smstables",
-		"name": "stables",
-		"require": "g.tier2>0||(g.tier1>0&&g.animals>=6)",
-		"tags": "stables",
-		"cost": {
-			"gold": 500,
-			"research": 800
-		},
-		"mod": {
-			"animals.max": 1,
-			"animals.rate": 0.2,
-			"space": 10
-		}
-	},
-	{
-		"id": "menagerie",
-		"require": "g.tier1>0&&g.animals>=10&&g.magicbeasts>=5",
-		"tags": "stables",
-		"cost": {
-			"gold": 500,
-			"gems": 10,
-			"research": 500
-		},
-		"mod": {
-			"magicbeasts.max": 2,
-			"magicbeasts.rate": 0.4,
-			"animals.rate": "15%",
-			"space": 20
-		}
-	},
-	{
-		"id": "ossuary",
-		"desc": "Receptacle for bones.",
-		"tags": "shadowsource,spiritsource",
-		"require": "evil",
-		"max": 4,
-		"cost": {
-			"gold": 300,
-			"bones": 5
-		},
-		"mod": {
-			"bonedust.max": 10,
-			"bones.max": 20,
-			"shadowlore.max": 1,
-			"spiritlore.max": 1,
-			"spiritlore.rate": 0.3,
-			"space": 1
-		}
-	},
-	{
-		"id": "elemsiphon",
-		"name": "elemental siphon",
-		"desc": "A crystal apparatus to siphon elemental energies into mana.",
-		"require": "g.tier4>0&&g.mana.max>30",
-		"need": "workshop",
-		"max": 2,
-		"cost": {
-			"gold": 2500,
-			"managem": 25,
-			"firegem": 50,
-			"watergem": 50,
-			"airgem": 50,
-			"earthgem": 50
-		},
-		"mod": {
-			"mana.rate": 0.5,
-			"arcana.rate": -0.002,
-			"element.rate": -0.75,
-			"space": 5
-		}
-	},
-	{
-		"id": "elemflux",
-		"name": "elemental flux",
-		"desc": "Gems draw in pure mana and disperse it into elemental forms.",
-		"require": "g.tier4>0&&g.mana.max>30",
-		"max": 2,
-		"cost": {
-			"gold": 2500,
-			"managem": 50,
-			"firegem": 25,
-			"watergem": 25,
-			"airgem": 25,
-			"earthgem": 25
-		},
-		"mod": {
-			"mana.rate": -2,
-			"arcana.rate": -0.002,
-			"element.rate": 0.25,
-			"space": 5
-		}
-	},
-	{
-		"id": "cairn",
-		"desc": "Mystic Rock Pile",
-		"tags": "spiritsource",
-		"require": "g.spirit.max>=10",
-		"cost": {
-			"gold": 200,
-			"spirit": 5
-		},
-		"mod": {
-			"runestones.max": 5,
-			"spiritgem.max": 4,
-			"spiritlore.max": 2,
-			"spirit.rate": 0.02,
-			"nature.rate": 0.01,
-			"space": 10
-		}
-	},
-	{
-		"id": "reliquary",
-		"desc": "Saferoom for ancient sources of magic.",
-		"tags": "spiritsource",
-		"require": "g.spirit.max>=5",
-		"cost": {
-			"gold": 250
-		},
-		"mod": {
-			"tapestries.max": 3,
-			"souls.max": 1,
-			"spiritgem.max": 2,
-			"spirit.max": 1,
-			"spirit.rate": 0.01,
-			"space": 5
-		}
-	},
-	{
-		"id": "darkshrine",
-		"name": "dark shrine",
-		"desc": "A shrine to EVIL.",
-		"tags": "shadowsource",
-		"require": "g.evilamt>2",
-		"cost": {
-			"gold": 30,
-			"bones": 10,
-			"shadow": 10
-		},
-		"mod": {
-			"evilamt": 1,
-			"shadowgem.max": 2,
-			"shadow.rate": 0.01,
-			"shadow.max": 1,
-			"space": 1
-		},
-		"flavor": "Zhakul Ihnaac."
-	},
-	{
-		"id": "ironcell",
-		"name": "iron cell",
-		"desc": "A simple, bare cell.",
-		"tags": "prison,shadowsource",
-		"repeat": true,
-		"locked": true,
-		"cost": {
-			"gold": 400
-		},
-		"mod": {
-			"shadow.max": 1,
-			"bodies.max": 2,
-			"dissection.rate": 0.1,
-			"space": 5
-		}
-	},
-	{
-		"id": "armory",
-		"desc": "A storeroom of arms.",
-		"tags": "armssource",
-		"require": "g.tier0>0&&g.player.defense>=10",
-		"repeat": true,
-		"cost": {
-			"gold": 400
-		},
-		"mod": {
-			"tapestries.max": 1,
-			"inv.max": 1,
-			"player.defense": 1,
-			"player.tohit": 1,
-			"space": 10
-		}
-	},
-	{
-		"id": "mineshaft",
-		"tags": "t_mine",
-		"require": "g.earthlore>=10&&g.planeslore>=20",
-		"max": 1,
-		"cost": {
-			"earth": 25,
-			"earthrune": 5,
-			"gold": 7000,
-			"research": 2500,
-			"gate": 1
-		},
-		"mod": {
-			"earthlore.max": 1,
-			"earthlore.rate": 0.2,
-			"gold.rate": 0.1,
-			"space": 20
-		}
-	},
-	{
-		"id": "weaponrack",
-		"name": "weapon rack",
-		"desc": "Holds equipment you aren't using",
-		"require": "g.player.level>=5&&g.armory>0",
-		"tags": "armssource",
-		"max": 3,
-		"cost": {
-			"gold": 400,
-			"research": 100
-		},
-		"mod": {
-			"inv.max": 5,
-			"space": 2
-		}
-	},
-	{
-		"id": "archive",
-		"name": "arcane archive",
-		"desc": "A good archive does your research for you.",
-		"require": "g.lore.max>=15",
-		"max": 3,
-		"cost": {
-			"gold": 400,
-			"research": 400
-		},
-		"mod": {
-			"tapestries.max": 4,
-			"scrolls.max": 50,
-			"tomes.max": 20,
-			"codices.max": 50,
-			"codices.rate": 0.01,
-			"tomes.rate": 0.002,
-			"starcharts.max": 25,
-			"space": 10
-		}
-	},
-	{
-		"id": "shrine",
-		"desc": "A shrine to divine forces.",
-		"require": "good",
-		"tags": "lightsource",
-		"cost": {
-			"gold": 30,
-			"gems": 5,
-			"light": 2
-		},
-		"mod": {
-			"virtue": 1,
-			"lightgem.max": 2,
-			"light.rate": 0.01,
-			"light.max": 1,
-			"space": 1
-		}
-	},
-	{
-		"id": "bloodfountain",
-		"name": "blood fountain",
-		"desc": "Fountain of blood",
-		"tags": "shadowsource",
-		"require": "g.evil>0&&g.shadowlore>=3",
-		"cost": {
-			"gold": 300,
-			"shadow": 20,
-			"bones": 20
-		},
-		"mod": {
-			"regen": 0.1,
-			"shadow.rate": 0.05,
-			"shadow.max": 1,
-			"space": 5
-		}
-	},
-	{
-		"id": "casket",
-		"desc": "Simple container for preserving bodies.",
-		"require": "g.tier0>0&&g.embalming>=5&&g.crafting>=5",
-		"repeat": true,
-		"cost": {
-			"research": 100,
-			"gold": 75
-		},
-		"mod": {
-			"bodies.max": 1,
-			"space": 1
-		}
-	},
-	{
-		"id": "vat",
-		"desc": "Grows bodies from raw materials",
-		"require": "g.tier1>0&&g.anatomy>=5&&g.embalming>=5&&g.crafting>=10",
-		"repeat": true,
-		"cost": {
-			"research": 300,
-			"gold": 100
-		},
-		"mod": {
-			"anatomy.rate": 0.3,
-			"embalming.rate": 0.3,
-			"bodies.rate": 0.01,
-			"bodies.max": 1,
-			"space": 2
-		}
-	},
-	{
-		"id": "portaalchemica",
-		"name": "porta alchemica",
-		"require": "g.alchemy>=5&&g.planeslore>=5&&g.crafting>=10",
-		"desc": "A monument inscribed with alchemical runes",
-		"cost": {
-			"gems": 20
-		},
-		"mod": {
-			"managem.max": 2,
-			"alchemy.max": 2,
-			"potions.max": 1,
-			"potionessence.rate": 0.0002,
-			"potionessence.max": 1,
-			"alchemy.rate": 0.1,
-			"arcana.rate": 0.0001,
-			"space": 5
-		}
-	},
-	{
-		"id": "studyroom",
-		"name": "study",
-		"desc": "A place for reading and research",
-		"require": "g.codices>=100",
-		"cost": {
-			"gold": 200,
-			"research": 100
-		},
-		"mod": {
-			"tapestries.max": 1,
-			"starcharts.max": 50,
-			"codices.max": 100,
-			"lore.rate": 0.2,
-			"research.max": 100,
-			"scrolls.rate": 0.05,
-			"space": 20
-		}
-	},
-	{
-		"id": "arcanestudy",
-		"name": "enchanted study",
-		"desc": "A study enchanted with magic.",
-		"require": "g.codices>=100&&g.enchanting>=6",
-		"cost": {
-			"studyroom": 1,
-			"gold": 1000,
-			"research": 1000
-		},
-		"mod": {
-			"tapestries.max": 3,
-			"tomes.rate": 0.002,
-			"codices.rate": -0.001,
-			"starcharts.max": 50,
-			"codices.max": 100,
-			"scrolls.rate": 0.05,
-			"space": 20
-		}
-	},
-	{
-		"id": "orrery",
-		"desc": "A vast mechanical model of existence",
-		"require": "g.codices>=80&&g.astronomy>7",
-		"tags": "starsource",
-		"repeat": false,
-		"cost": {
-			"gold": 500,
-			"research": 900
-		},
-		"mod": {
-			"starcharts.max": 50,
-			"chronomancy.max": 1,
-			"chronomancy.rate": 0.01,
-			"astronomy.max": 3,
-			"astronomy.rate": 0.1,
-			"planeslore.max": 2,
-			"planeslore.rate": 0.1,
-			"divination.max": 2,
-			"divination.rate": 0.1,
-			"space": 50
-		}
-	},
-	{
-		"id": "garden",
-		"desc": "A small garden by your home.",
-		"tags": "naturesource,plantsource",
-		"require": "(g.witch+g.druid+g.fey+g.kell)>0",
-		"max": 3,
-		"cost": {
-			"gold": 300,
-			"research": 550
-		},
-		"mod": {
-			"herbs.max": 15,
-			"herbs.rate": 1,
-			"herbalism.rate": 0.2,
-			"herbalism.max": 3,
-			"nature.max": 1,
-			"nature.rate": 0.3,
-			"naturelore.rate": 0.2,
-			"space": 10
-		}
-	},
-	{
-		"id": "liquifier",
-		"name": "arcane alembic",
-		"repeat": true,
-		"require": "solidifier",
-		"desc": "A complex alchemical process drips arcane energy onto gemstones.",
-		"cost": {
-			"research": 1000,
-			"gold": 500
-		},
-		"mod": {
-			"arcana.rate": -0.001,
-			"managem.rate": 0.01,
-			"gems.rate": -0.01,
-			"space": 5
-		}
-	},
-	{
-		"id": "starweb",
-		"desc": "Motes of stars fall daily from the sky. One need only collect them.",
-		"require": "tier5",
-		"max": 5,
-		"cost": {
-			"research": 10000,
-			"starcharts": 25,
-			"arcana": 20
-		},
-		"mod": {
-			"sindel.rate": 0.0001,
-			"arcana.rate": 0.0001,
-			"airlore.max": 1,
-			"airlore.rate": "1%",
-			"space": 5
-		}
-	},
-	{
-		"id": "starwell",
-		"name": "star well",
-		"desc": "Pools of light congeal softly in the basin.",
-		"require": "tier5",
-		"max": 3,
-		"cost": {
-			"research": 30000,
-			"starcharts": 50,
-			"arcana": 30
-		},
-		"mod": {
-			"sindel.rate": 0.0005,
-			"waterlore.max": 1,
-			"arcana.rate": 0.0003,
-			"waterlore.rate": "1%",
-			"space": 10
-		}
-	},
-	{
-		"id": "runechest",
-		"name": "rune chest",
-		"desc": "A box carved from idrasil to hold the most potent runes",
-		"require": "g.runelore>=5",
-		"repeat": true,
-		"cost": {
-			"gold": 2000,
-			"research": 5000,
-			"gems": 75
-		},
-		"mod": {
-			"t_runes.max": 5,
-			"space": 5
-		}
-	},
-	{
-		"id": "latticefence",
-		"name": "lattice fence",
-		"desc": "Latticed fence for growing vines",
-		"require": "g.tier0>0&&g.naturelore>=7",
-		"cost": {
-			"gold": 200,
-			"research": 250
-		},
-		"mod": {
-			"herbs.max": 5,
-			"herbalism.max": 1,
-			"herbalism.rate": 0.3,
-			"nature.rate": 0.2,
-			"space": 2
-		}
-	},
-	{
-		"id": "pond",
-		"desc": "Pond",
-		"tags": "watersource",
-		"locked": true,
-		"cost": {
-			"gold": 500
-		},
-		"mod": {
-			"water.rate": 0.01,
-			"nature.rate": 0.01,
-			"naturelore.max": 1,
-			"naturelore.rate": "0.2+5%",
-			"waterlore.max": 2,
-			"waterlore.rate": "0.3+5%",
-			"space": 25
-		}
-	},
-	{
-		"id": "sandgarden",
-		"name": "sand garden",
-		"tags": "earthsource",
-		"desc": "Rocks and sand form patterns of intricate design.",
-		"locked": true,
-		"cost": {
-			"gold": 100,
-			"research": 100
-		},
-		"mod": {
-			"earthlore.max": 2,
-			"earthlore.rate": "5%",
-			"earth.rate": 0.02,
-			"space": 20
-		}
-	},
-	{
-		"id": "banquethall",
-		"name": "banquet hall",
-		"desc": "A grand hall to entertain guests and supplicants",
-		"require": "tier2",
-		"cost": {
-			"gems": 20,
-			"gold": 5000
-		},
-		"mod": {
-			"tapestries.max": 5,
-			"minions.max": "10%",
-			"allies.max": "10%",
-			"space": 50
-		}
-	},
-	{
-		"id": "lakeoffire",
-		"name": "lake of fire",
-		"desc": "A lake of burning fire.",
-		"tags": "firesource",
-		"locked": true,
-		"cost": {
-			"fire": 10,
-			"gold": 100,
-			"firegem": 10,
-			"research": 200
-		},
-		"mod": {
-			"fire.max": 2,
-			"fire.rate": 0.02,
-			"firegem.rate": 0.01,
-			"space": 20
-		}
-	},
-	{
-		"id": "bottomlesspit",
-		"name": "bottomless pit",
-		"desc": "An endless hole in the ground.",
-		"locked": true,
-		"cost": {
-			"gems": 10,
-			"research": 500,
-			"arcana": 1
-		},
-		"mod": {
-			"air.max": 1,
-			"air.rate": 0.01,
-			"earth.max": 1,
-			"earth.rate": 0.01,
-			"void.max": 3,
-			"void.rate": 0.1,
-			"shadow.max": 1,
-			"shadow.rate": 0.01,
-			"space": 5
-		}
-	},
-	{
-		"id": "potroom",
-		"name": "potions room",
-		"desc": "Room for preparing and brewing potions",
-		"require": "potions",
-		"tags": "potsource",
-		"cost": {
-			"gold": 3000,
-			"research": 3000
-		},
-		"mod": {
-			"herbs.max": 10,
-			"potions.max": 2,
-			"potionessence.rate": 0.0002,
-			"potionessence.max": 1,
-			"potions.rate": 0.5,
-			"alchemy.max": 1,
-			"alchemy.rate": 1,
-			"space": 20
-		}
-	},
-	{
-		"id": "torturechamber",
-		"name": "torture chamber",
-		"desc": "A room for inquisitions and research.",
-		"locked": true,
-		"tags": "shadowsource",
-		"cost": {
-			"gold": 400,
-			"research": 250
-		},
-		"mod": {
-			"tapestries.max": 1,
-			"dissection.max": 3,
-			"dissection.rate": 0.4,
-			"shadow.max": 5,
-			"shadow.rate": 0.1,
-			"space": 50
-		}
-	},
-	{
-		"id": "graveyard",
-		"desc": "A resting place for the dead.",
-		"locked": true,
-		"tags": "shadowsource,spiritsource",
-		"cost": {
-			"gold": 700,
-			"spiritgem": 20,
-			"research": 1000
-		},
-		"mod": {
-			"bonedust.max": 10,
-			"souls.rate": 0.01,
-			"bodies.max": 20,
-			"bones.max": 50,
-			"souls.max": 20,
-			"reanimation.max": 1,
-			"reanimation.rate": "10%",
-			"spiritlore.rate": "20%",
-			"spiritlore.max": 1,
-			"space": 50
-		}
-	},
-	{
-		"id": "workshop",
-		"tags": "workspace",
-		"desc": "A space suitable for crafting and enchanting items.",
-		"locked": true,
-		"cost": {
-			"gold": 1000,
-			"research": 2500
-		},
-		"mod": {
-			"tapestries.max": 1,
-			"sp.rate": 0.001,
-			"ichor.rate": 0.0005,
-			"liquifier.mod.managem.rate": "10%",
-			"enchanting.max": 1,
-			"crafting.max": 2,
-			"crafting.rate": 0.4,
-			"space": 50
-		}
-	},
-	{
-		"id": "library",
-		"desc": "The most important part of a proper wizard's stronghold.",
-		"require": "g.codices>=100",
-		"cost": {
-			"gold": 500,
-			"research": 750
-		},
-		"mod": {
-			"tapestries.max": 2,
-			"starcharts.max": 50,
-			"codices.max": 400,
-			"tomes.max": 75,
-			"codices.mod.research.max": 10,
-			"research.max": 50,
-			"lore.rate": "0.3+5%",
-			"research.rate": 0.1,
-			"space": 75
-		}
-	},
-	{
-		"id": "lexyrinth",
-		"desc": "All libraries hold hidden doors into its halls. Unlocking them is the hard bit.",
-		"require": "g.library>0&&g.planeslore>=20",
-		"max": 1,
-		"cost": {
-			"gate": 1,
-			"gold": 5000,
-			"research": 10000
-		},
-		"mod": {
-			"tapestries.max": 3,
-			"tomes.rate": 0.01,
-			"starcharts.max": 50,
-			"tomes.mod.research.max": "3%",
-			"tomes.mod.arcana.max": "0.5",
-			"codices.max": 100,
-			"scrolls.max": 100,
-			"tomes.max": 100,
-			"space": 100
-		},
-		"flavor": "Its shelves extend beyond all sight."
-	},
-	{
-		"id": "gate",
-		"desc": "Dhrunic Gate",
-		"require": "g.planeslore>=20&&g.tier4>0",
-		"max": 3,
-		"cost": {
-			"gold": 5000,
-			"tomes": 25,
-			"runestones": 20,
-			"arcana": 10
-		},
-		"mod": {
-			"arcana.rate": 0.001,
-			"voidlore.max": 1,
-			"planeslore.max": 1,
-			"space": 25
-		}
-	},
-	{
-		"id": "nexus",
-		"desc": "A nexus between all worlds",
-		"max": 1,
-		"cost": {
-			"gate": 3,
-			"tomes": 50,
-			"runestones": 25
-		},
-		"mod": {
-			"arcana.rate": 0.005,
-			"prismaticgems.rate": 0.01,
-			"space": 50
-		}
-	},
-	{
-		"id": "ziggurat",
-		"desc": "A vast mound of earth dedicated to occult practices.",
-		"require": "tier4",
-		"tags": "starsource",
-		"cost": {
-			"gold": 300,
-			"research": 4000,
-			"arcana": 5
-		},
-		"mod": {
-			"voidlore.max": 1,
-			"astronomy.max": 2,
-			"astronomy.rate": 0.2,
-			"airlore.max": 1,
-			"airlore.rate": "1%",
-			"earthlore.max": 3,
-			"earthlore.rate": 0.4,
-			"planeslore.max": 2,
-			"planeslore.rate": "1%",
-			"scrying.max": 1,
-			"scrying.rate": "5%",
-			"space": 100
-		}
-	},
-	{
-		"id": "bindcircle",
-		"name": "binding circle",
-		"desc": "Magic circle for binding summoned entities",
-		"tags": "prison",
-		"require": "g.summoning>=6||g.demonology>=7",
-		"cost": {
-			"gold": 500,
-			"gems": 25,
-			"bloodgem": 10,
-			"spiritgem": 10
-		},
-		"mod": {
-			"summoning.max": 2,
-			"summoning.rate": "5%",
-			"demonology.max": 1,
-			"demonology.rate": "5%",
+			"zero_crystal": 6,
+			"iron_copper": 10,
+			"cu_iron": 20,
+			"cu_copper": 20,
+			"super_mind": 3,
+			"star_map": 30,
+			"sj_met": 5,
+			"money": 320
+		},
+		"mod": {
+			"rlt_guancha.rate": "1%",
+			"ult_guancha.rate": "1%",
 			"space": 6
 		}
 	},
 	{
-		"id": "pentagram",
-		"name": "demonic pentagram",
-		"desc": "Used for summoning demonic entities.",
-		"tags": "prison",
-		"require": "g.demonology>=12",
+		"id": "sta_energ_output",
+		"name": "稳定能输送机",
+		"desc": "能稳定提供10V级电能",
+		"tags": "TENV",
+		"max":1,
+		"require": "g.energ_high_1>=8&&g.crafting_1>=10",
+		"repeat": true,
 		"cost": {
-			"gold": 1500,
-			"gems": 50,
-			"bloodgem": 10,
-			"spiritgem": 10,
-			"shadowgem": 10
+			"zero_crystal": 6,
+			"iron_copper": 5,
+			"cu_copper": 15,
+			"super_mind": 3,
+			"star_map": 30,
+			"sj_met": 5,
+			"money": 260
 		},
 		"mod": {
-			"summoning.max": 1,
-			"summoning.rate": "2%",
-			"demonology.max": 2,
-			"demonology.rate": "10%",
+			"elect.rate": -0.7,
+			"rlt_guancha.rate": "1%",
+			"ult_guancha.rate": "1%",
+			"space": 6
+		}
+	},
+	{
+		"id": "small_tian_well",
+		"name": "小型钛矿场",
+		"desc": "花费人力帮你生产钛板",
+		"tags": "",
+		"max": 10,
+		"require": "g.land_wa>=3 &&g.metal_1>=8",
+		"repeat": true,
+		"cost": {
+			"human_power": 5,
+			"iron_copper": 5,
+			"cu_iron": 30,
+			"cu_copper": 30,
+			"zero_crystal": 10,
+			"paper": 30,
+			"exe_paper": 10,
+			"sj_met": 5,
+			"money": 320
+		},
+		"mod": {
+			"elect.rate": -0.2,
+			"tian.max":5,
+			"tian.rate": 0.01,
+			"human_power.max": -2,
+			"space": 12
+		}
+	},
+	{
+		"id": "bzshcao",
+		"name": "标准伤害槽",
+		"desc": "",
+		"tags": "",
+		"max": 5,
+		"require": "g.upd_shanghaicao>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 5,
+			"iron_copper": 5,
+			"cu_iron": 30,
+			"cu_copper": 30,
+			"zero_crystal": 10,
+			"paper": 30,
+			"exe_paper": 10,
+			"sj_met": 5,
+			"money": 320
+		},
+		"mod": {
+			"elect.rate": -0.2,
+			"wuzhuo.max":5,
+			"bingdong.max":5,
+			"space": 6
+		}
+	},
+	{
+		"id": "bzshouyucao",
+		"name": "标准守御槽",
+		"desc": "",
+		"tags": "",
+		"max": 5,
+		"require": "g.upd_hujiarlkr>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 7,
+			"r_adv_bzzj":5,
+			"r_adv_bzhj":3,
+			"money": 400,
+			"zero_crystal": 20,
+			"snp_data": 10,
+			"exe_paper": 14,
+			"star_map": 55,
+			"ganwu": 250
+		},
+		"mod": {
+			"qingjia.max":5,
+			"zhongjia.max":5,
+			"heavyjia.max":5,
+			"space": 6
+		}
+	},
+	{
+		"id": "yisuanzi",
+		"name": "一算子",
+		"desc": "一段计算核心",
+		"tags": "",
+		"max": 5,
+		"require": "g.hjyj_1>=50 && g.wqyj_1>=1 && g.shrlyj_1>=50 && g.zsrlyj_1>=50",
+		"repeat": true,
+		"cost": {
+			"alculation": 400,
+			"money": 600,
+			"sj_met": 5,
+			"cold_core": 20,
+			"zero_crystal": 40,
+			"snp_data": 25,
+			"exe_paper": 25,
+			"star_map": 25,
+			"ganwu": 250
+		},
+		"mod": {
+			"alculation.max":40,
 			"space": 10
 		}
 	},
 	{
-		"id": "crypt",
-		"require": "g.necromancy>0&&g.ruinedcrypt>0",
-		"tags": "prison",
+		"id": "helidianzuo",
+		"name": "合理电座",
+		"desc": "改良的磁刷线圈",
+		"tags": "",
+		"max": 10,
+		"require": "g.yisuanzi>=1",
+		"repeat": true,
 		"cost": {
-			"research": 5000,
-			"gold": 500,
-			"bodies": 5,
-			"bones": 20,
-			"arcana": 1
+			"yisuanzi": 2,
+			"cishuadianquan": 1,
+			"sj_met": 20,
+			"cold_core": 20,
+			"zero_crystal": 40,
+			"snp_data": 50,
+			"exe_paper": 54,
+			"star_map": 55
 		},
 		"mod": {
-			"tapestries.max": 2,
-			"bodies.max": 25,
-			"bones.max": 30,
-			"bonedust.max": 20,
-			"necromancy.max": 2,
-			"embalming.max": 1,
-			"reanimation.max": 1,
+			"heli.rate": 1,
+			"elect.rate":10,
+			"space": 5
+		}
+	},
+	{
+		"id": "ertongzhe",
+		"name": "二同轴",
+		"desc": "二段计算轴心",
+		"tags": "",
+		"max": 3,
+		"require": "g.yisuanzi>=10",
+		"repeat": true,
+		"cost": {
+			"yisuanzi": 10,
+			"alculation": 400,
+			"money": 1800,
+			"sj_met": 20,
+			"cbclb": 30,
+			"yjdl": 30,
+			"star_map_1": 15,
+			"cold_core": 40,
+			"zero_crystal": 40,
+			"snp_data": 50,
+			"exe_paper": 54,
+			"star_map": 55,
+			"ganwu": 250
+		},
+		"mod": {
+			"alculation.max":80,
+			"space": 15
+		}
+	},
+	{
+		"id": "kewangtian",
+		"name": "刻望天",
+		"desc": "一算子基础上的星空计算结果",
+		"tags": "",
+		"max": 10,
+		"require": "g.xingtusuanzi>=1",
+		"repeat": true,
+		"cost": {
+			"yisuanzi": 5,
+			"alculation": 400,
+			"money": 3000,
+			"shenglingshi": 1.5,
+			"star_map_1": 20,
+			"cold_core": 40,
+			"exe_paper": 60,
+			"star_map": 55,
+			"ganwu": 600
+		},
+		"mod": {
+			"alculation.max":50,
+			"space": 12
+		}
+	},
+	{
+		"id": "jingxingshi",
+		"name": "静心室",
+		"desc": "快速保持冷静",
+		"tags": "",
+		"max": 1,
+		"require": "g.xingtusuanzi>=1",
+		"repeat": true,
+		"cost": {
+			"yisuanzi": 5,
+			"kewangtian": 1,
+			"human_power": 2000,
+			"money": 3000,
+			"ganwu": 600
+		},
+		"mod": {
+			"stress.rate": -0.5,
+			"skill.rate": 40,
+			"space": 20
+		}
+	},
+	{
+		"id": "helicjdj",
+		"name": "合理差极模块",
+		"desc": "使用刻望天与合理的相差性质进行发电",
+		"tags": "",
+		"max": 15,
+		"require": "g.xingtusuanzi>=1",
+		"repeat": true,
+		"cost": {
+			"helibengji": 1,
+			"kewangtian": 4,
+			"human_power": 2000,
+			"money": 3000,
+			"ganwu": 600
+		},
+		"mod": {
+			"heli.rate": -0.5,
+			"elect.rate": 4.2,
+			"space": 12
+		}
+	},
+	{
+		"id": "jlcjmk",
+		"name": "混乱差极模块",
+		"desc": "使用刻望天与混沌的无序性进行发电",
+		"tags": "",
+		"max": 15,
+		"require": "g.xingtusuanzi>=1",
+		"repeat": true,
+		"cost": {
+			"element_luor": 10,
+			"qiyiyeti": 5,
+			"kewangtian": 3,
+			"human_power": 2000,
+			"money": 3000,
+			"ganwu": 600
+		},
+		"mod": {
+			"ele_confusion.rate": 0.01,
+			"chaos.rate": -0.5,
+			"elect.rate": 5,
+			"space": 9
+		}
+	},
+	{
+		"id": "sweisys",
+		"name": "思维实验室",
+		"desc": "专注于研究思维的实验室",
+		"tags": "",
+		"max": 1,
+		"require": "g.xingtusuanzi>=1",
+		"repeat": true,
+		"cost": {
+			"shenglingshi": 10,
+			"jlcjmk": 3,
+			"helicjdj": 3,
+			"qiyiyeti": 10,
+			"kewangtian": 5,
+			"human_power": 2000,
+			"money": 3000,
+			"ganwu": 600
+		},
+		"mod": {
+			"skill.rate": 20,
+			"ele_confusion.rate": -0.3,
+			"elect.rate": -6,
 			"space": 30
 		}
 	},
 	{
-		"id": "dungeon",
-		"desc": "A vast complex to lock away hazardous experiments, deadly creatures, and all those who displease you.",
-		"tags": "prison",
-		"require": "tier3",
+		"id": "ldlxw_1",
+		"name": "劳动力募集小屋1",
+		"desc": "募集劳动力",
+		"tags": "",
+		"require": "g.rlgl>=1",
+		"max": 5,
+		"repeat": true,
 		"cost": {
-			"gold": 1000
+			"human_power": 10,
+			"iron_copper": 5,
+			"cu_iron": 30,
+			"cu_copper": 30,
+			"zero_crystal": 5,
+			"paper": 30,
+			"exe_paper": 10,
+			"money": 200
 		},
 		"mod": {
-			"tapestries.max": 1,
-			"bodies.max": 20,
-			"bones.max": 20,
-			"shadowlore.max": 1,
-			"shadow.rate": 0.01,
-			"demonology.max": 1,
-			"space": 100
+			"human_power.max": 15,
+			"space": 7
+		}
+	},
+	{
+		"id": "ldlxw_2",
+		"name": "劳动力募集小屋2",
+		"desc": "募集劳动力",
+		"tags": "",
+		"require": "g.rlgl>=1 && g.human_power>=100",
+		"max": 4,
+		"repeat": true,
+		"cost": {
+			"human_power": 50,
+			"iron_copper": 10,
+			"cu_iron": 30,
+			"super_mind": 6,
+			"cu_copper": 30,
+			"tian": 10,
+			"zero_crystal": 10,
+			"paper": 30,
+			"exe_paper": 10,
+			"money": 300
+		},
+		"mod": {
+			"human_power.max": 25,
+			"space": 10
+		}
+	},
+	{
+		"id": "ldlxw_3",
+		"name": "劳动力募集小屋3",
+		"desc": "募集劳动力",
+		"tags": "",
+		"require": "g.rlgl>=1 && g.human_power>=200",
+		"max": 3,
+		"repeat": true,
+		"cost": {
+			"human_power": 150,
+			"iron_copper": 10,
+			"super_mind": 8,
+			"tian": 10,
+			"zero_crystal": 10,
+			"cold_core": 5,
+			"dirty_core": 5,
+			"paper": 30,
+			"exe_paper": 10,
+			"money": 400
+		},
+		"mod": {
+			"human_power.max": 50,
+			"space": 15
+		}
+	},
+	{
+		"id": "ldlxw_4",
+		"name": "劳动力募集小屋4",
+		"desc": "募集劳动力",
+		"tags": "",
+		"require": "g.spare_parts>=1",
+		"max": 10,
+		"repeat": true,
+		"cost": {
+			"spare_parts": 40,
+			"tian": 100,
+			"zero_crystal": 50,
+			"exe_paper": 40,
+			"snp_data": 50,
+			"adv_snp_data": 1,
+			"money": 1500
+		},
+		"mod": {
+			"human_power.max": 500,
+			"space": 15
+		}
+	},
+	{
+		"id": "swcl_1",
+		"name": "事务处理点1",
+		"desc": "使用人力帮助处理事务",
+		"tags": "",
+		"require": "g.rlgl>=1",
+		"max": 5,
+		"repeat": true,
+		"cost": {
+			"human_power": 50,
+			"iron_copper": 10,
+			"zero_crystal": 5,
+			"paper": 30,
+			"exe_paper": 10,
+			"alculation": 10,
+			"money": 200
+		},
+		"mod": {
+			"human_power.max": -5,
+			"alculation.max": 10,
+			"space": 10
+		}
+	},
+	{
+		"id": "swcl_2",
+		"name": "事务处理点2",
+		"desc": "使用人力帮助处理事务",
+		"tags": "",
+		"require": "g.rlgl>=1 && g.alculation>=50",
+		"max": 3,
+		"repeat": true,
+		"cost": {
+			"human_power": 100,
+			"iron_copper": 10,
+			"super_mind": 8,
+			"zero_crystal": 10,
+			"paper": 30,
+			"tian": 10,
+			"dirty_core": 10,
+			"exe_paper": 10,
+			"alculation": 40,
+			"money": 300
+		},
+		"mod": {
+			"human_power.max": -15,
+			"alculation.max": 30,
+			"space": 10
+		}
+	},
+	{
+		"id": "swcl_3",
+		"name": "事务处理点3",
+		"desc": "使用人力帮助处理事务",
+		"tags": "",
+		"require": "g.spare_parts>=1",
+		"max": 10,
+		"repeat": true,
+		"cost": {
+			"spare_parts": 40,
+			"tian": 100,
+			"zero_crystal": 50,
+			"exe_paper": 40,
+			"snp_data": 50,
+			"adv_snp_data": 1,
+			"money": 1500
+		},
+		"mod": {
+			"human_power.max": -30,
+			"alculation.max": 300,
+			"space": 10
+		}
+	},
+	{
+		"id": "small_yiliao",
+		"name": "小型医疗站",
+		"desc": "安排人力来治愈自己的伤口",
+		"tags": "",
+		"require": "g.rlgl>=1 && g.lnylx>=2",
+		"max": 5,
+		"repeat": true,
+		"cost": {
+			"human_power": 100,
+			"iron_copper": 10,
+			"super_mind": 8,
+			"zero_crystal": 10,
+			"paper": 30,
+			"tian": 10,
+			"sj_met":10,
+			"dirty_core": 10,
+			"dirty_lingti":10,
+			"exe_paper": 10,
+			"alculation": 40,
+			"money": 300
+		},
+		"mod": {
+			"human_power.max": -20,
+			"hp.rate": 0.7,
+			"space": 10
+		}
+	},
+	{
+		"id": "xxcls",
+		"name": "信息处理所",
+		"desc": "消耗人力和计算力来处理更多的知识",
+		"tags": "",
+		"require": "g.rlgl>=1",
+		"max": 2,
+		"repeat": true,
+		"cost": {
+			"human_power": 100,
+			"iron_copper": 10,
+			"super_mind": 8,
+			"zero_crystal": 10,
+			"paper": 30,
+			"tian": 10,
+			"sj_met":10,
+			"dirty_core": 10,
+			"dirty_lingti":10,
+			"exe_paper": 10,
+			"alculation": 40,
+			"money": 500
+		},
+		"mod": {
+			"ganwu.max": 50,
+			"books.max": 9,
+			"paper.max": 50,
+			"exe_paper.max": 15,
+			"star_map.max": 20,
+			"star_map_1.max": 6,
+			"snp_data.max": 10,
+			"alculation.max": -10,
+			"human_power.max": -20,
+			"space": 25
+		}
+	},
+	{
+		"id": "small_jlz",
+		"name": "聚灵仪",
+		"desc": "消耗计算力来更快的凝聚能量",
+		"tags": "",
+		"require": "g.rlgl>=1",
+		"max": 9,
+		"repeat": true,
+		"cost": {
+			"human_power": 100,
+			"iron_copper": 10,
+			"super_mind": 8,
+			"zero_crystal": 10,
+			"paper": 30,
+			"tian": 10,
+			"sj_met":10,
+			"exe_paper": 10,
+			"alculation": 40,
+			"money": 300
+		},
+		"mod": {
+			"alculation.max": -20,
+			"human_power.max": -50,
+			"heli.max":2,
+			"chaos.max":2,
+			"heli.rate": 0.5,
+			"chaos.rate": 0.5,
+			"space": 6
+		}
+	},
+	{
+		"id": "small_jlz_1",
+		"name": "聚灵仪改",
+		"desc": "消耗计算力来更快的凝聚能量",
+		"tags": "",
+		"require": "g.spare_parts>=1",
+		"max": 10,
+		"repeat": true,
+		"cost": {
+			"spare_parts": 50,
+			"tian": 100,
+			"zero_crystal": 50,
+			"exe_paper": 40,
+			"snp_data": 50,
+			"adv_snp_data": 1,
+			"money": 1500
+		},
+		"mod": {
+			"alculation.max": -20,
+			"human_power.max": -50,
+			"heli.max":2,
+			"chaos.max":2,
+			"heli.rate": 0.5,
+			"chaos.rate": 0.5,
+			"space": 16
+		}
+	},
+	{
+		"id": "diwen_rongqi",
+		"name": "低温容器",
+		"desc": "这个容器内保持着低温,适合保存低温物品",
+		"tags": "",
+		"max": 20,
+		"require": "g.cold_core>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 45,
+			"zero_crystal": 10,
+			"cu_iron": 25,
+			"cu_copper": 20,
+			"paper": 40,
+			"exe_paper": 10,
+			"sj_met": 5,
+			"snp_data": 10,
+			"tian": 10,
+			"cold_core": 4,
+			"money": 340
+		},
+		"mod": {
+			"elect.rate": -0.6,
+			"jls.max": 20,
+			"frs.max": 30,
+			"cold_core.max": 10,
+			"space": 4
+		}
+	},
+	{
+		"id": "sj_lnx",
+		"name": "神经冷凝箱",
+		"desc": "让普通水在冰冻核心作用下转化为晶流水,这个装置需求一个稳定的电能供给才能修建【稳定能输送机】",
+		"tags": "",
+		"need": "TENV",
+		"max": 20,
+		"require": "g.cold_core>=1",
+		"repeat": true,
+		"cost": {
+			"heli": 5,
+			"chaos": 5,
+			"human_power": 50,
+			"zero_crystal": 13,
+			"cu_iron": 25,
+			"cu_copper": 20,
+			"paper": 40,
+			"exe_paper": 10,
+			"snp_data": 10,
+			"sj_met": 5,
+			"tian": 10,
+			"cold_core": 15,
+			"money": 450
+		},
+		"mod": {
+			"heli.rate": -0.01,
+			"elect.rate": -0.3,
+			"jls.rate": 0.2,
+			"frs.rate": 0.1,
+			"cold_core.rate": -0.005,
+			"space": 5
+		}
+	},
+	{
+		"id": "bnfzscd",
+		"name": "保暖服装生产点",
+		"desc": "生产可以在极寒下保暖的服装",
+		"tags": "warm_clothe",
+		"need": "",
+		"max": 1,
+		"require": "g.cold_core>=1 && g.rlgl>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 50,
+			"super_mind": 5,
+			"zero_crystal": 13,
+			"iron_copper": 10,
+			"paper": 30,
+			"snp_data": 10,
+			"exe_paper": 10,
+			"sj_met": 8,
+			"tian": 4,
+			"cold_core": 2,
+			"money": 200
+		},
+		"mod": {
+			"bdhxbjd.max": 5,
+			"human_power.max": -5,
+			"human_power.rate": 0.1,
+			"space": 10
+		}
+	},
+	{
+		"id": "small_fram",
+		"name": "小型农场",
+		"desc": "生产粮食来加快人力恢复",
+		"tags": "",
+		"max": 5,
+		"require": "g.rlgl>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 50,
+			"zero_crystal": 10,
+			"iron_copper": 10,
+			"snp_data": 10,
+			"paper": 30,
+			"exe_paper": 10,
+			"star_map": 40,
+			"money": 200
+		},
+		"mod": {
+			"human_power.max": -5,
+			"human_power.rate": 1,
+			"space": 8
+		}
+	},
+	{
+		"id": "med_fram",
+		"name": "农场",
+		"desc": "生产粮食来加快人力恢复",
+		"tags": "",
+		"max": 10,
+		"require": "g.zhenliedianbota>=1",
+		"repeat": true,
+		"cost": {
+			"small_fram": 3,
+			"human_power": 1000,
+			"money": 2000
+		},
+		"mod": {
+			"human_power.max": -5,
+			"human_power.rate": 8,
+			"space": 20
+		}
+	},
+	{
+		"id": "small_cow",
+		"name": "小型牧场",
+		"desc": "花费人力经营一个小型牧场来获取钱币",
+		"tags": "",
+		"max": 5,
+		"require": "g.rlgl>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 50,
+			"zero_crystal": 10,
+			"iron_copper": 10,
+			"snp_data": 10,
+			"paper": 30,
+			"exe_paper": 10,
+			"star_map": 40,
+			"money": 200
+		},
+		"mod": {
+			"human_power.max": -15,
+			"money.rate": 0.4,
+			"space":8
+		}
+	},
+	{
+		"id": "med_cow",
+		"name": "牧场",
+		"desc": "花费人力经营一个牧场来获取钱币",
+		"tags": "",
+		"max": 10,
+		"require": "g.zhenliedianbota>=1",
+		"repeat": true,
+		"cost": {
+			"small_cow": 3,
+			"human_power": 1000,
+			"money": 2000
+		},
+		"mod": {
+			"human_power.max": -30,
+			"money.rate": 1,
+			"space":20
+		}
+	},
+	{
+		"id": "ysclz",
+		"name": "远山测量站",
+		"desc": "在远山建立一个测量站并安排人员定期获取测绘资料",
+		"tags": "",
+		"max": 5,
+		"require": "g.rlgl>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 50,
+			"zero_crystal": 10,
+			"snp_data": 10,
+			"super_mind": 5,
+			"iron_copper": 10,
+			"paper": 30,
+			"exe_paper": 10,
+			"star_map": 40,
+			"money": 200
+		},
+		"mod": {
+			"human_power.max": -15,
+			"snp_data.rate": 0.5,
+			"space": 15
+		}
+	},
+	{
+		"id": "sjsxy",
+		"name": "书籍筛选员",
+		"desc": "安排人力对大量书籍进行筛选并购买",
+		"tags": "",
+		"max": 5,
+		"require": "g.rlgl>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 50,
+			"zero_crystal": 10,
+			"books": 5,
+			"super_mind": 5,
+			"iron_copper": 10,
+			"paper": 30,
+			"exe_paper": 10,
+			"star_map": 40,
+			"money": 100
+		},
+		"mod": {
+			"human_power.max": -10,
+			"books.rate": 0.4,
+			"money.rate": -0.1,
+			"space": 10
+		}
+	},
+	{
+		"id": "bcgmy",
+		"name": "板材购买员",
+		"desc": "安排人力采购优质板材",
+		"tags": "",
+		"max": 5,
+		"require": "g.rlgl>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 50,
+			"zero_crystal": 10,
+			"books": 5,
+			"cu_iron":10,
+			"super_mind": 5,
+			"cu_copper": 10,
+			"iron_copper": 10,
+			"paper": 30,
+			"exe_paper": 10,
+			"star_map": 40,
+			"money": 300
+		},
+		"mod": {
+			"human_power.max": -15,
+			"cu_iron.rate": 0.5,
+			"cu_copper.rate": 0.5,
+			"money.rate": -0.3,
+			"space": 5
+		}
+	},
+	{
+		"id": "mbxlc",
+		"name": "民兵训练场",
+		"desc": "划分出一部分人力来训练成民兵",
+		"tags": "",
+		"max": 2,
+		"require": "g.rlgl>=1 && g.r_adv_w_sj1>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 70,
+			"zero_crystal": 10,
+			"books": 5,
+			"super_mind": 5,
+			"iron_copper": 10,
+			"r_adv_w_sj1": 4,
+			"tian": 10,
+			"sj_met": 10,
+			"paper": 30,
+			"exe_paper": 10,
+			"star_map": 40,
+			"money": 300
+		},
+		"mod": {
+			"human_power.max": -20,
+			"f_power": 15,
+			"money.rate": -0.2,
+			"space": 15
+		}
+	},
+	{
+		"id": "bdhxbjd",
+		"name": "冰冻核心补给点",
+		"desc": "花费人力前往冰冻核心矿点挖取核心,这个建筑需要一个保暖服装生产点",
+		"tags": "",
+		"max": 15,
+		"need": "warm_clothe",
+		"require": "g.cold_core>=1 && g.rlgl>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 50,
+			"zero_crystal": 15,
+			"iron_copper": 10,
+			"super_mind": 6,
+			"paper": 40,
+			"exe_paper": 10,
+			"sj_met": 10,
+			"tian": 10,
+			"cold_core": 5,
+			"money": 450
+		},
+		"mod": {
+			"human_power.max": -30,
+			"cold_core.rate": 0.07,
+			"space": 15
+		}
+	},
+	{
+		"id": "small_zlk",
+		"name": "小型蒸馏口",
+		"desc": "缓慢净化废热水,这个装置需求一个稳定的电能供给才能修建【稳定能输送机】",
+		"tags": "",
+		"max":10,
+		"need": "TENV",
+		"require": "g.frs>=1",
+		"repeat": true,
+		"cost": {
+			"human_power": 20,
+			"zero_crystal": 4,
+			"cu_iron": 10,
+			"cu_copper": 10,
+			"paper": 20,
+			"exe_paper": 5,
+			"sj_met": 5,
+			"tian": 10,
+			"cold_core": 4,
+			"money": 190
+		},
+		"mod": {
+			"elect.rate": -0.2,
+			"frs.rate": -0.5,
+			"space": 3
+		}
+	},
+	{
+		"id": "death_fatan",
+		"name": "向死法坛",
+		"desc": "将高能混沌导引到一点来研究死亡,建造此装置对健康有害....这个装置需求一个稳定的电能供给才能修建【稳定能输送机】",
+		"tags": "Fdeath",
+		"need": "TENV",
+		"max": 1,
+		"require": "g.xiulian_death_1>=1",
+		"repeat": true,
+		"cost": {
+			"heli": 2,
+			"chaos": 5,
+			"shenshi": 1,
+			"zero_crystal": 13,
+			"super_mind": 3,
+			"human_power": 100,
+			"cu_iron": 25,
+			"cu_copper": 20,
+			"paper": 40,
+			"exe_paper": 10,
+			"sj_met": 5,
+			"money": 450
+		},
+		"mod": {
+			"lingti_xue.max": 5,
+			"hp.max": -2,
+			"hp.rate": -0.4,
+			"space": 5
+		}
+	},
+	{
+		"id": "liuguangboli",
+		"name": "流光玻璃瓶",
+		"desc": "摄人心魄的玻璃瓶,存放着不得安息的灵体....这个装置需求一个稳定的电能供给才能修建【稳定能输送机】",
+		"tags": "",
+		"need": "TENV",
+		"max": 2,
+		"require": "g.xiulian_death_2>=1",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 2,
+			"heli": 2,
+			"chaos": 5,
+			"shenshi": 1,
+			"zero_crystal": 13,
+			"super_mind": 5,
+			"alculation": 50,
+			"human_power": 80,
+			"cu_iron": 25,
+			"cu_copper": 20,
+			"paper": 40,
+			"exe_paper": 10,
+			"sj_met": 5,
+			"money": 450
+		},
+		"mod": {
+			"dirty_lingti.max": 8,
+			"dirty_lingti.rate": 0.001,
+			"hp.max": -1,
+			"hp.rate": -0.1,
+			"space": 2
+		}
+	},
+	{
+		"id": "zbxdq",
+		"name": "浊波洗涤器",
+		"desc": "能降低永久废热水[修建需废热水大于20]",
+		"tags": "",
+		"need": "g.frs>=20",
+		"max": 10,
+		"require": "g.guifaxue>=5",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 20,
+			"zero_crystal": 30,
+			"super_mind": 10,
+			"alculation": 200,
+			"iron_copper": 30,
+			"tian":10,
+			"paper": 40,
+			"exe_paper": 15,
+			"sj_met": 5,
+			"money": 600
+		},
+		"mod": {
+			"frs": -20,
+			"elect.rate": -0.3,
+			"space": 10
+		}
+	},
+	{
+		"id": "chunzhuoyanzt",
+		"name": "纯浊演奏台",
+		"desc": "纯浊灵体附着的乐器....这个装置需求一个稳定的电能供给才能修建【稳定能输送机】",
+		"tags": "",
+		"need": "TENV",
+		"max": 2,
+		"require": "g.dirty_lingti>=10",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 20,
+			"zero_crystal": 13,
+			"super_mind": 5,
+			"alculation": 50,
+			"human_power": 80,
+			"cu_iron": 25,
+			"cu_copper": 20,
+			"paper": 40,
+			"exe_paper": 10,
+			"sj_met": 5,
+			"money": 450
+		},
+		"mod": {
+			"skill.rate": 2,
+			"stress.rate": -0.1,
+			"hp.max": -1,
+			"hp.rate": -0.1,
+			"space": 2
+		}
+	},
+	{
+		"id": "huanjyanjiu",
+		"name": "环境研究台",
+		"desc": "更为高效的研究环境工程....这个装置需求一个稳定的电能供给才能修建【稳定能输送机】",
+		"tags": "",
+		"need": "TENV",
+		"max": 1,
+		"require": "g.huanjing_xue>=2",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 3,
+			"zero_crystal": 18,
+			"super_mind": 5,
+			"alculation": 50,
+			"human_power": 80,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"exe_paper": 10,
+			"sj_met": 9,
+			"money": 460
+		},
+		"mod": {
+			"huanjing_xue.max": 3,
+			"elect.rate": -0.3,
+			"hp.max": 1,
+			"hp.rate": 0.1,
+			"space": 3
+		}
+	},
+	{
+		"id": "twenty_sorce",
+		"name": "20V配电器",
+		"desc": "能稳定提供20V级电源",
+		"tags": "TENTYV",
+		"max":1,
+		"require": "g.fanshe_building>=2&&g.fanshe_math>=4&&g.xiulian_energ_cold_1>=1",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"zero_crystal": 29,
+			"super_mind": 5,
+			"alculation": 50,
+			"human_power": 80,
+			"paper": 40,
+			"elect":30,
+			"snp_data": 12,
+			"tian": 10,
+			"iron_copper": 10,
+			"exe_paper": 10,
+			"sj_met": 9,
+			"money": 520
+		},
+		"mod": {
+			"elect.max":-1,
+			"elect.rate": -0.7,
+			"space": 10
+		}
+	},
+	{
+		"id": "yibaiwu_sorce",
+		"name": "150V配电器",
+		"desc": "能稳定提供150V级电源",
+		"tags": "OHFV",
+		"max":1,
+		"require": "g.xl_lj_konwledege_1>=1",
+		"repeat": true,
+		"cost": {
+			"coil_1": 400,
+			"spare_parts": 200,
+			"dirty_lingti": 10,
+			"zero_crystal": 100,
+			"super_mind": 5,
+			"alculation": 1000,
+			"human_power": 1000,
+			"adv_snp_data": 20,
+			"tian": 100,
+			"money": 520
+		},
+		"mod": {
+			"elect.max":-1,
+			"elect.rate": -15,
+			"space": 10
+		}
+	},
+	{
+		"id": "normal_lab",
+		"name": "通用实验室",
+		"tags": "",
+		"desc": "对各个领域均可进行研究的实验室,此建筑需要接通150V级电源",
+		"need": "OHFV",
+		"max":10,
+		"require": "g.xl_lj_konwledege_1>=1",
+		"cost": {
+			"coil_1": 400,
+			"spare_parts": 200,
+			"glass": 300,
+			"ind_water": 400,
+			"blank_unit": 200,
+			"fsbdsj": 20,
+			"adv_snp_data": 20,
+			"money": 5000
+		},
+		"mod": {
+			"elect.rate": -6,
+			"physic_rate": 1,
+			"socia_rate": 1,
+			"engineer_rate": 1,
+			"space": 30
+		}
+	},
+	{
+		"id": "normal_data_box",
+		"name": "通用数据屉",
+		"tags": "",
+		"desc": "对各个领域的数据均可进行存储,此建筑需要接通150V级电源",
+		"need": "OHFV",
+		"max":20,
+		"require": "g.xl_lj_konwledege_1>=1",
+		"cost": {
+			"coil_1": 100,
+			"spare_parts": 100,
+			"glass": 100,
+			"temp_1_unit": 50,
+			"yjdl": 80,
+			"fsbdsj": 20,
+			"adv_snp_data": 20,
+			"money": 5000
+		},
+		"mod": {
+			"elect.rate": -2,
+			"socia_point.max": 200,
+			"physic_point.max": 200,
+			"engineer_point.max": 200,
+			"space": 15
+		}
+	},
+	{
+		"id": "enchanttable_pl",
+		"name": "铭刻工作台",
+		"tags": "workspace,enchantsource",
+		"desc": "提供用于铭刻的工具和区域,此建筑需要接通20V级电源",
+		"need": "TENTYV",
+		"max":1,
+		"require": "g.mwxue>=1",
+		"cost": {
+			"cold_core": 10,
+			"dirty_core": 5,
+			"jls":30,
+			"zero_crystal": 30,
+			"super_mind": 15,
+			"alculation": 50,
+			"human_power": 150,
+			"iron_copper": 10,
+			"exe_paper": 30,
+			"money": 500
+		},
+		"mod": {
+			"mwxue.max": 1,
+			"mwxue.rate": 0.2,
+			"space": 5
+		}
+	},
+	{
+		"id": "wangyuanj_diz",
+		"name": "望远镜底座",
+		"desc": "一台低温望远镜的底座,此建筑需要接通20V级电源",
+		"tags": "TelescopeBase",
+		"max":1,
+		"require": "g.fanshe_building>=2&&g.xiulian_struct_cold_1>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"cold_core": 11,
+			"dirty_core": 5,
+			"jls":30,
+			"zero_crystal": 30,
+			"super_mind": 5,
+			"alculation": 50,
+			"human_power": 70,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"iron_copper": 10,
+			"exe_paper": 10,
+			"sj_met": 9,
+			"money": 400
+		},
+		"mod": {
+			"elect.rate": -0.3,
+			"space": 18
+		}
+	},
+	{
+		"id": "wangyuanj_jp",
+		"name": "望远镜镜片",
+		"desc": "一台低温望远镜的主镜片",
+		"tags": "Telescope",
+		"max":1,
+		"require": "g.fanshe_building>=2&&g.xiulian_info_cold_1>=1&&g.xiulian_eye_adv_astro>=1",
+		"need": "TelescopeBase",
+		"repeat": true,
+		"cost": {
+			"cold_core": 11,
+			"jls":30,
+			"zero_crystal": 35,
+			"super_mind": 5,
+			"alculation": 50,
+			"human_power": 80,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"iron_copper": 10,
+			"exe_paper": 10,
+			"sj_met": 9,
+			"money": 400
+		},
+		"mod": {
+			"star_map_1.rate": 0.001,
+			"elect.rate": -1.2,
+			"space": 18
+		}
+	},
+	{
+		"id": "cold_bio_lab",
+		"name": "低温生物实验室",
+		"desc": "小型生物实验室,此建筑需要接通20V级电源",
+		"tags": "ColdBio",
+		"max":1,
+		"require": "g.fanshe_building>=2&&g.xiulian_bio_cold_1>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 11,
+			"dirty_core": 10,
+			"jls":30,
+			"zero_crystal": 35,
+			"super_mind": 5,
+			"alculation": 50,
+			"human_power": 70,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"iron_copper": 10,
+			"exe_paper": 10,
+			"sj_met": 9,
+			"money": 500
+		},
+		"mod": {
+			"life_crystal.rate": 0.001,
+			"elect.rate": -0.9,
+			"space": 20
+		}
+	},
+	{
+		"id": "small_gbz",
+		"name": "小型广播站",
+		"desc": "一个小型的广播站,用于在两地交换信息。此建筑需要接通20V级电源",
+		"tags": "small_broadcast",
+		"max":1,
+		"require": "g.info_switch_1>=4",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 20,
+			"dirty_core": 10,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 70,
+			"human_power": 240,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"iron_copper": 20,
+			"exe_paper": 10,
+			"sj_met": 10,
+			"money": 700
+		},
+		"mod": {
+			"dist": 100,
+			"elect.rate": -0.3,
+			"space": 20
+		}
+	},
+	{
+		"id": "xibeizhutai",
+		"name": "西北烛台",
+		"desc": "指向西北",
+		"tags": "candlestick",
+		"max":1,
+		"require": "g.xiulian_shifangzhutai>=1",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 22,
+			"dirty_core": 20,
+			"lxue": 10,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 70,
+			"human_power": 200,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"sj_met": 10,
+			"money": 500
+		},
+		"mod": {
+			"age.max": 4600,
+			"age": 4600,
+			"chaos.max": 1,
+			"space": 15
+		}
+	},
+	{
+		"id": "dongbeizhutai",
+		"name": "东北烛台",
+		"desc": "指向东北",
+		"tags": "candlestick",
+		"max":1,
+		"require": "g.xiulian_shifangzhutai>=1",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 22,
+			"dirty_core": 20,
+			"lxue": 10,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 70,
+			"human_power": 200,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"sj_met": 10,
+			"money": 500
+		},
+		"mod": {
+			"age.max": 4600,
+			"age": 4600,
+			"chaos.max": 1,
+			"space": 15
+		}
+	},
+	{
+		"id": "xinanzhutai",
+		"name": "西南烛台",
+		"desc": "指向西南",
+		"tags": "candlestick",
+		"max":1,
+		"require": "g.xiulian_shifangzhutai>=1",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 22,
+			"dirty_core": 20,
+			"lxue": 10,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 70,
+			"human_power": 200,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"sj_met": 10,
+			"money": 500
+		},
+		"mod": {
+			"age.max": 4600,
+			"age": 4600,
+			"chaos.max": 1,
+			"space": 15
+		}
+	},
+	{
+		"id": "dongnanzhutai",
+		"name": "东南烛台",
+		"desc": "指向东南",
+		"tags": "candlestick",
+		"max":1,
+		"require": "g.xiulian_shifangzhutai>=1",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 22,
+			"dirty_core": 20,
+			"lxue": 10,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 70,
+			"human_power": 200,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"sj_met": 10,
+			"money": 500
+		},
+		"mod": {
+			"age.max": 4600,
+			"age": 4600,
+			"chaos.max": 1,
+			"space": 15
+		}
+	},
+	{
+		"id": "ranshaojuls",
+		"name": "燃烧具灵树",
+		"desc": "燃烧的源泉",
+		"tags": "",
+		"max":1,
+		"require": "g.candlestick>=4",
+		"repeat": true,
+		"cost": {
+			"yqlm": 20,
+			"lxue": 10,
+			"shuaibai_core": 10,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 500,
+			"human_power": 600,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"sj_met": 10,
+			"money": 500
+		},
+		"mod": {
+			"age.max": 36500,
+			"age": 36500,
+			"heli.rate": -2,
+			"shuaibai.rate": 1,
+			"space": 15
+		}
+	},
+	{
+		"id": "ltzy",
+		"name": "灵体指引",
+		"desc": "灵体指引方向",
+		"tags": "spirit_mo",
+		"max":1,
+		"require": "g.wuhenlingtixue>=5",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 22,
+			"dirty_core": 20,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 70,
+			"human_power": 200,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"iron_copper": 20,
+			"exe_paper": 10,
+			"sj_met": 10,
+			"money": 500
+		},
+		"mod": {
+			"chaos.max": 2,
+			"space": 5
+		}
+	},
+	{
+		"id": "ltzy",
+		"name": "灵体指引",
+		"desc": "灵体指引方向",
+		"tags": "spirit_mo",
+		"max":1,
+		"require": "g.wuhenlingtixue>=5",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 22,
+			"dirty_core": 20,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 70,
+			"human_power": 200,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"iron_copper": 20,
+			"exe_paper": 10,
+			"sj_met": 10,
+			"money": 500
+		},
+		"mod": {
+			"chaos.max": 2,
+			"space": 5
+		}
+	},
+	{
+		"id": "ltdengta",
+		"name": "灵体灯塔",
+		"desc": "灵体指引方向",
+		"tags": "spirit_light",
+		"max":1,
+		"require": "g.wuhenlingtixue>=5",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 22,
+			"dirty_core": 20,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 70,
+			"human_power": 200,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"iron_copper": 20,
+			"exe_paper": 10,
+			"sj_met": 10,
+			"money": 500
+		},
+		"mod": {
+			"chaos.max": 2,
+			"space": 5
+		}
+	},
+	{
+		"id": "ltxb",
+		"name": "黄泉灵体信标",
+		"desc": "灵体主导的地面发射信标,用于在非实界建立地面航标,此建筑需要接通20V级电源",
+		"tags": "spirit_beacon",
+		"max":1,
+		"require": "g.info_switch_1>=3&&g.stand_chejian>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 22,
+			"dirty_core": 10,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 70,
+			"human_power": 200,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"iron_copper": 20,
+			"exe_paper": 10,
+			"sj_met": 10,
+			"money": 700
+		},
+		"mod": {
+			"elect.rate": -2,
+			"space": 5
+		}
+	},
+	{
+		"id": "ltwdq",
+		"name": "灵体稳定器",
+		"desc": "用于稳固灵体信标中的灵体",
+		"tags": "spirit_stable",
+		"max":1,
+		"require": "g.info_switch_1>=3&&g.stand_chejian>=1",
+		"need": "spirit_beacon",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 22,
+			"dirty_core": 10,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 70,
+			"human_power": 200,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"cu_iron":30,
+			"cu_copper":30,
+			"iron_copper": 20,
+			"exe_paper": 10,
+			"sj_met": 10,
+			"money": 700
+		},
+		"mod": {
+			"elect.rate": -2,
+			"space": 15
+		}
+	},
+	{
+		"id": "huangquan_well",
+		"name": "黄泉稳流井",
+		"desc": "一个能引导你稳定前往非实界的稳流结构",
+		"tags": "hq_well",
+		"max":1,
+		"require": "g.ltwdq>=1 && g.ltxb>=1 && g.huangquandy>=1 && g.xiulian_jizhun_2>=1 && g.xiulian_jizhun_3>=1 && g.xiulian_jihun_1>=1",
+		"need": "spirit_stable",
+		"repeat": true,
+		"cost": {
+			"money": 700,
+			"jihun": 1,
+			"dirty_lingti": 10,
+			"cold_core": 22,
+			"dirty_core": 10,
+			"life_crystal": 5,
+			"jls":40,
+			"zero_crystal": 30,
+			"super_mind": 9,
+			"alculation": 85,
+			"human_power": 250,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"cu_iron":30,
+			"cu_copper":30,
+			"iron_copper": 20,
+			"exe_paper": 10,
+			"sj_met": 10
+		},
+		"mod": {
+			"hp.max": -20,
+			"elect.max": -10,
+			"elect.rate": -2,
+			"space": 4
+		}
+	},
+	{
+		"id": "elect_gen",
+		"name": "灵体线圈",
+		"desc": "借助灵体获取电能",
+		"tags": "",
+		"max":10,
+		"require": "g.stand_chejian>=1",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 10,
+			"cold_core": 5,
+			"dirty_core": 5,
+			"jls":30,
+			"zero_crystal": 25,
+			"super_mind": 6,
+			"alculation": 70,
+			"human_power": 200,
+			"paper": 40,
+			"snp_data": 12,
+			"tian": 10,
+			"cu_copper":30,
+			"iron_copper": 20,
+			"exe_paper": 10,
+			"sj_met": 10,
+			"money": 500
+		},
+		"mod": {
+			"elect.rate": 3,
+			"space": 3
+		}
+	},
+	{
+		"id": "syxfc",
+		"name": "实验性方寸",
+		"desc": "神奇的结构,能扩展地板面积",
+		"tags": "",
+		"max":2,
+		"require": "g.htgcx>=1",
+		"repeat": true,
+		"cost": {
+			"zdht": 20,
+			"cbjs": 20,
+			"yqlm": 20,
+			"lg": 20,
+			"cold_core": 30,
+			"jls":50,
+			"zero_crystal": 50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"tian": 20,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"space": 1,
+			"extra_space": 11
+		}
+	},
+	{
+		"id": "syxjz",
+		"name": "实验性芥子",
+		"desc": "神奇的结构,能扩展地板面积",
+		"tags": "",
+		"max":2,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1 && g.xiulian_jihe_fansheliut>=1",
+		"repeat": true,
+		"cost": {
+			"zdht": 20,
+			"cbjs": 20,
+			"yqlm": 20,
+			"lg": 20,
+			"cold_core": 30,
+			"jls":50,
+			"zero_crystal": 50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"tian": 20,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"space": 1,
+			"extra_space": 16
+		}
+	},
+	{
+		"id": "qingshi",
+		"name": "琴室",
+		"desc": "一间琴室",
+		"tags": "music_1",
+		"max":1,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1",
+		"repeat": true,
+		"cost": {
+			"cbclb": 20,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"space": 20
+		}
+	},
+	{
+		"id": "huashi",
+		"name": "画室",
+		"desc": "一间画室",
+		"tags": "paint_1",
+		"max":1,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1",
+		"repeat": true,
+		"cost": {
+			"cbclb": 20,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"space": 20
+		}
+	},
+	{
+		"id": "qishi",
+		"name": "棋室",
+		"desc": "一间棋室",
+		"tags": "chess_1",
+		"max":1,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1",
+		"repeat": true,
+		"cost": {
+			"cbclb": 20,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"space": 20
+		}
+	},
+	{
+		"id": "shufang",
+		"name": "书房",
+		"desc": "一间书房",
+		"tags": "book_1",
+		"max":1,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1",
+		"repeat": true,
+		"cost": {
+			"cbclb": 20,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"space": 20
+		}
+	},
+	{
+		"id": "sjztsmall",
+		"name": "设计总台",
+		"desc": "工程设计的总工作台",
+		"tags": "design_core",
+		"max":1,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1",
+		"repeat": true,
+		"cost": {
+			"zdht": 20,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"tian": 20,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"space": 10
+		}
+	},
+	{
+		"id": "lingtishahe",
+		"name": "灵体沙盒",
+		"desc": "灵体沙盒能帮助建造复杂建筑",
+		"tags": "design_sand",
+		"max":1,
+		"require": "g.xiulian_siwei_bzhpx>=1 && g.xiulian_jihe_fansheliut>=1",
+		"repeat": true,
+		"cost": {
+			"zdht": 20,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"tian": 20,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"space": 5
+		}
+	},
+	{
+		"id": "yuansumming",
+		"name": "元素皿",
+		"desc": "容纳细微的元素",
+		"tags": "element_dish",
+		"max":2,
+		"require": "g.xiulian_eye_yshyj>=1",
+		"repeat": true,
+		"cost": {
+			"money": 1500,
+			"cbclb": 10,
+			"lg": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"tian": 10,
+			"exe_paper": 30
+		},
+		"mod": {
+			"element_gold.max": 1,
+			"element_wood.max": 1,
+			"element_water.max": 1,
+			"element_fire.max": 1,
+			"element_land.max": 1,
+			"space": 4
+		}
+	},
+	{
+		"id": "yuanshuchi",
+		"name": "元素池",
+		"desc": "容纳细微的元素",
+		"tags": "",
+		"max":4,
+		"require": "g.yuansuxue>=3",
+		"repeat": true,
+		"cost": {
+			"money": 1500,
+			"cbclb": 30,
+			"yjdl": 20,
+			"yjswyb": 10,
+			"lg": 20,
+			"jls":50,
+			"zero_crystal": 50,
+			"super_mind": 30,
+			"alculation": 800,
+			"exe_paper": 50
+		},
+		"mod": {
+			"element_wuhuan.max": 3,
+			"element_gold.max": 5,
+			"element_wood.max": 5,
+			"element_water.max": 5,
+			"element_fire.max": 5,
+			"element_land.max": 5,
+			"space": 20
+		}
+	},
+	{
+		"id": "hunluanjhq",
+		"name": "混乱净化器",
+		"desc": "净化元素带来的混乱度，需要接通20V电源",
+		"tags": "",
+		"max":2,
+		"require": "g.yuansuxue>=3",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"money": 1600,
+			"cbclb": 20,
+			"yjdl": 10,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"elect.rate": -5,
+			"ele_confusion.rate": -0.5,
+			"space": 20
+		}
+	},
+	{
+		"id": "heliyuesushi",
+		"name": "合理约束室",
+		"desc": "用合理来最大程度的抑制不稳定元素的自然衰败，需要接通20V电源",
+		"tags": "",
+		"max":2,
+		"require": "g.yuansuxue>=3",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"element_wuhuan": 5,
+			"lxue": 10,
+			"money": 1600,
+			"cbclb": 20,
+			"yjdl": 10,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"elect.rate": -6,
+			"heli.rate": -1,
+			"qiyiyeti.max": 14,
+			"element_luor.max": 5,
+			"space": 20
+		}
+	},
+	{
+		"id": "qiyifyb",
+		"name": "奇异反应壁",
+		"desc": "奇异反应壁能够提高五环扭曲的效率，需要接通20V电源",
+		"tags": "",
+		"max":1,
+		"require": "g.qiyiyeti>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"qiyiyeti": 10,
+			"element_wuhuan": 10,
+			"lxue": 10,
+			"money": 1600,
+			"cbclb": 20,
+			"yjdl": 20,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 1000,
+			"human_power": 100,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"elect.rate": -5,
+			"element_wuhuan_niuqu.cost.money": -400,
+			"element_wuhuan_niuqu.cost.life_crystal": -1,
+			"element_wuhuan_niuqu.cost.zero_crystal": -10,
+			"element_wuhuan_niuqu.cost.jls": -30,
+			"element_wuhuan_niuqu.cost.gwl": -10,
+			"element_wuhuan_niuqu.cost.cbclb": -8,
+			"element_wuhuan_niuqu.cost.element_wuhuan": -2,
+			"element_wuhuan_niuqu.cost.qiyiyeti": -3,
+			"space": 15
+		}
+	},
+	{
+		"id": "niuqufyt",
+		"name": "扭曲反射台",
+		"desc": "扭曲反射台能够降低五环扭曲的成本,但会增加加工时间，需要接通20V电源",
+		"tags": "",
+		"max":1,
+		"require": "g.element_luor>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"element_luor": 5,
+			"qiyiyeti": 7,
+			"element_wuhuan": 10,
+			"lxue": 20,
+			"money": 1600,
+			"cbclb": 30,
+			"yjdl": 20,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 1000,
+			"human_power": 100,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"elect.rate": -2,
+			"element_wuhuan_niuqu.cost.money": -500,
+			"element_wuhuan_niuqu.cost.life_crystal": -1,
+			"element_wuhuan_niuqu.cost.zero_crystal": -10,
+			"element_wuhuan_niuqu.cost.jls": -10,
+			"element_wuhuan_niuqu.cost.gwl": -2,
+			"element_wuhuan_niuqu.cost.element_wuhuan": -2,
+			"element_wuhuan_niuqu.cost.qiyiyeti": -3,
+			"element_wuhuan_niuqu.result.time": 11,
+			"space": 15
+		}
+	},
+	{
+		"id": "yaocaigui",
+		"name": "药材柜",
+		"desc": "能长久保存一些植物药材，需要接通20V电源",
+		"tags": "",
+		"max":8,
+		"require": "g.yuansuxue>=3",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"money": 1600,
+			"cbclb": 20,
+			"yjdl": 5,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"elect.rate": -1,
+			"药材1级.max": 5,
+			"space": 15
+		}
+	},
+	{
+		"id": "cailaiogui",
+		"name": "材料柜",
+		"desc": "能长久保存一些金属材料，需要接通20V电源",
+		"tags": "",
+		"max":8,
+		"require": "g.tansuo>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"money": 1600,
+			"cbclb": 30,
+			"tian": 15,
+			"yjdl": 10,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 1000,
+			"human_power": 500,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"elect.rate": -2,
+			"材料1级.max": 5,
+			"space": 10
+		}
+	},
+	{
+		"id": "kangyaohuanjiebao",
+		"name": "抗药缓解包",
+		"desc": "能帮助你减少抗药性，需要接通20V电源",
+		"tags": "",
+		"max":5,
+		"require": "g.yuansuxue>=2",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"money": 1600,
+			"cbclb": 20,
+			"yjdl": 5,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"elect.rate": -1,
+			"drug_resist.rate": -0.01,
+			"space": 5
+		}
+	},
+	{
+		"id": "jichulianhuatai",
+		"name": "基础炼化台",
+		"desc": "允许炼化1级材料，需要接通20V电源",
+		"tags": "artifice_1",
+		"max":1,
+		"require": "g.xiulian_str_clhianh>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"yjswyb": 5,
+			"money": 600,
+			"cbclb": 20,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"tian": 10,
+			"exe_paper": 30
+		},
+		"mod": {
+			"space": 10
+		}
+	},
+	{
+		"id": "yuansuhunheqi",
+		"name": "元素混合器",
+		"desc": "允许制作1级药剂，需要接通20V电源",
+		"tags": "mix_1",
+		"max":1,
+		"require": "g.yuansuxue>=2",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"yjswyb": 5,
+			"money": 600,
+			"cbclb": 20,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"tian": 10,
+			"exe_paper": 30
+		},
+		"mod": {
+			"space": 20
+		}
+	},
+	{
+		"id": "jiujishiyans",
+		"name": "纠集实验室",
+		"desc": "允许制作1级衍生元素，需要接通20V电源",
+		"tags": "adv_mix_1",
+		"max":1,
+		"require": "g.xiulian_space_ysys>=1 && g.xiulian_space_yswd>=1 && g.xiulian_space_ysch>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"yjswyb": 10,
+			"money": 1600,
+			"cbclb": 30,
+			"yjdl": 20,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 900,
+			"human_power": 1000,
+			"paper": 100,
+			"tian": 10,
+			"exe_paper": 30
+		},
+		"mod": {
+			"space": 25
+		}
+	},
+	{
+		"id": "qybzws",
+		"name": "奇异孢子温室",
+		"desc": "自动培育奇异孢子，需要接通20V电源",
+		"tags": "",
+		"max":5,
+		"require": "g.xiulian_jj_qybz>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"qiyiyeti":5,
+			"yxls": 30,
+			"yjswyb": 1,
+			"money": 1600,
+			"cbclb": 30,
+			"yjdl": 20,
+			"lg": 20,
+			"super_mind": 30,
+			"alculation": 900,
+			"human_power": 1000,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"qibaozi.rate": 0.2,
+			"space": 25
+		}
+	},
+	{
+		"id": "qybztc",
+		"name": "奇异孢子筒仓",
+		"desc": "存储奇异孢子",
+		"tags": "",
+		"max":2,
+		"require": "g.xiulian_jj_qybz>=1",
+		"repeat": true,
+		"cost": {
+			"money": 1600,
+			"cbclb": 30,
+			"yjdl": 20,
+			"lg": 20,
+			"super_mind": 30,
+			"alculation": 900,
+			"human_power": 1000,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"qibaozi.max": 3,
+			"space": 15
+		}
+	},
+	{
+		"id": "yuansuzlq",
+		"name": "元素蒸馏器",
+		"desc": "从自然中获取基本元素，需要接通20V电源",
+		"tags": "element_distillation",
+		"max":3,
+		"require": "g.xiulian_space_yspl>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"yjswyb": 5,
+			"money": 600,
+			"cbclb": 20,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"tian": 10,
+			"exe_paper": 30
+		},
+		"mod": {
+			"elect.rate": -3,
+			"element_gold.rate": 0.01,
+			"element_wood.rate": 0.01,
+			"element_water.rate": 0.01,
+			"element_fire.rate": 0.01,
+			"element_land.rate": 0.01,
+			"space": 10
+		}
+	},
+	{
+		"id": "yuansujhq",
+		"name": "元素净化器",
+		"desc": "大而笨重的机器,缓慢净化元素带来的混乱度，需要接通20V电源",
+		"tags": "element_purify",
+		"max":2,
+		"require": "g.xiulian_space_whhcl>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"yjswyb": 10,
+			"money": 1400,
+			"cbclb": 20,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"tian": 10,
+			"exe_paper": 30
+		},
+		"mod": {
+			"elect.rate": -5,
+			"ele_confusion.rate": -0.05,
+			"space": 15
+		}
+	},
+	{
+		"id": "twenty_sorce",
+		"name": "20-10配电器",
+		"desc": "能稳定提供20V级电源和10V级电源",
+		"tags": "TENTYV,TENV",
+		"max":1,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1",
+		"repeat": true,
+		"cost": {
+			"zdht": 5,
+			"wgys": 10,
+			"dirty_lingti": 10,
+			"zero_crystal": 29,
+			"super_mind": 5,
+			"alculation": 50,
+			"human_power": 80,
+			"paper": 40,
+			"elect":30,
+			"snp_data": 12,
+			"tian": 10,
+			"iron_copper": 10,
+			"exe_paper": 10,
+			"sj_met": 9,
+			"money": 520
+		},
+		"mod": {
+			"elect.max":-2,
+			"elect.rate": -1,
+			"space": 10
+		}
+	},
+	{
+		"id": "zhuansifatan",
+		"name": "转死法坛",
+		"desc": "与向死法坛不同的是,这个装置尽力避免你走向死亡。当然这是有副作用的",
+		"tags": "",
+		"max":1,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1",
+		"repeat": true,
+		"cost": {
+			"zdht": 30,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"tian": 20,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"hp.rate": 3,
+			"shuaibai.rate": 0.3,
+			"space": 2
+		}
+	},
+	{
+		"id": "chunbaict",
+		"name": "纯白床榻",
+		"desc": "虽然坚硬,但是舒适",
+		"tags": "bed",
+		"slot": "bed",
+		"max":1,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1",
+		"cost": {
+			"zdht": 30,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"tian": 20,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"bed.max": -1,
+			"rest.effect.stamina": 0.5,
+			"yingchang.effect.stamina": 0.6,
+			"depp_rest.effect.stamina": 0.7,
+			"bdcm.effect.stamina": 0.5,
+			"hp.rate": 1,
+			"space": 5
+		}
+	},
+	{
+		"id": "yangxilazhu",
+		"name": "阳息蜡烛",
+		"desc": "阳息蜡烛可以舒缓情绪",
+		"tags": "",
+		"max":10,
+		"require": "g.gwwlx>=3",
+		"repeat": true,
+		"cost": {
+			"lxue": 10,
+			"yxls": 10,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"tian": 10,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"elect.rate": -1.9,
+			"stress.rate": -0.1,
+			"space": 1
+		}
+	},
+	{
+		"id": "lingxuefangjianbei",
+		"name": "灵血方尖碑",
+		"desc": "灵血方尖碑是为了延长寿命而修建的,他也属于一种方尖碑。当然这是有副作用的",
+		"tags": "obelisk",
+		"max":5,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1",
+		"repeat": true,
+		"cost": {
+			"lxue": 10,
+			"zdht": 20,
+			"cbjs": 20,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"tian": 10,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"age.max": 14600,
+			"age": 14600,
+			"shuaibai.rate": 0.3,
+			"space": 1
+		}
+	},
+	{
+		"id": "shenglingxiexs",
+		"name": "生灵楔形石",
+		"desc": "生灵石打造的巨大楔形石,能让你快速冷静",
+		"tags": "",
+		"max":2,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1 && g.shenglingshi>=1",
+		"repeat": true,
+		"cost": {
+			"shenglingshi": 1,
+			"yqlm": 30,
+			"lxue": 10,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 40,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"tian": 10,
+			"exe_paper": 30,
+			"money": 1600
+		},
+		"mod": {
+			"skill.rate": 5,
+			"stress.rate": -0.2,
+			"shuaibai.rate": -0.1,
+			"space": 1
+		}
+	},
+	{
+		"id": "lingxuekelu",
+		"name": "灵血之刻录",
+		"desc": "生灵楔形石雕琢灵血纹路,彰显生命苍蓝光辉",
+		"tags": "",
+		"max":3,
+		"require": "g.mwxue>=1 && g.canglan>=1",
+		"repeat": true,
+		"cost": {
+			"shenglingxiexs": 1,
+			"lxue": 20,
+			"money": 1500,
+			"ganwu": 700,
+			"zero_crystal": 70,
+			"canglan": 6
+		},
+		"mod": {
+			"elect.rate": 3,
+			"shuaibai.rate": -0.2,
+			"space": 1
+		}
+	},
+	{
+		"id": "huigkdu",
+		"name": "辉光刻度",
+		"desc": "借助魂体核心生产辉光精华",
+		"tags": "",
+		"max":3,
+		"require": "g.hunti_core>=1",
+		"repeat": true,
+		"cost": {
+			"hunti_core": 9,
+			"huiguang": 9,
+			"canglan": 9,
+			"dirty_lingti": 20,
+			"lxue": 20,
+			"money": 1700,
+			"ganwu": 700,
+			"zero_crystal": 70
+		},
+		"mod": {
+			"huiguang.rate": 0.15,
+			"space": 20
+		}
+	},
+	{
+		"id": "huntilianchi",
+		"name": "魂体炼池",
+		"desc": "投入了魂体核心的高温流",
+		"tags": "",
+		"max":1,
+		"require": "g.hunti_core>=1",
+		"repeat": true,
+		"cost": {
+			"hunti_core": 9,
+			"huiguang": 9,
+			"canglan": 9,
+			"dirty_lingti": 20,
+			"gwl": 20,
+			"yjdl": 80,
+			"cbclb": 30,
+			"lxue": 20,
+			"money": 1700,
+			"ganwu": 700,
+			"zero_crystal": 70
+		},
+		"mod": {
+			"space": 15
+		}
+	},
+	{
+		"id": "zhanhuofangjianbei",
+		"name": "战火方尖碑",
+		"desc": "战火方尖碑显示了你的功绩,当然他也属于一种方尖碑。",
+		"tags": "obelisk",
+		"max":5,
+		"require": "g.xiulian_jihe_fuzajianzhu>=1 && g.shenglingshi>=1",
+		"repeat": true,
+		"cost": {
+			"shenglingshi": 1,
+			"yqlm": 5,
+			"lxue": 10,
+			"lg": 20,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"tian": 10,
+			"exe_paper": 30,
+			"money": 800
+		},
+		"mod": {
+			"f_power.max": 10,
+			"f_power":10,
+			"shuaibai.rate": -0.1,
+			"space": 1
+		}
+	},
+	{
+		"id": "chunbaiobelisk",
+		"name": "纯白方尖碑",
+		"desc": "纯白方尖碑指向坚硬的金属,当然他也属于一种方尖碑。",
+		"tags": "obelisk",
+		"max":5,
+		"require": "g.design_sand>=1 && g.design_core>=1 && g.cbclb>=1",
+		"repeat": true,
+		"cost": {
+			"cbclb": 20,
+			"lxue": 10,
+			"lg": 20,
+			"cold_core": 20,
+			"dirty_core": 10,
+			"shuaibai_core": 10,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"self.defense": 2,
+			"shuaibai.rate": -0.1,
+			"space": 2
+		}
+	},
+	{
+		"id": "ciliuobelisk",
+		"name": "磁流方尖碑",
+		"desc": "磁流方尖碑产生大量的电能,当然他也属于一种方尖碑。",
+		"tags": "obelisk",
+		"max":5,
+		"require": "g.design_sand>=1 && g.design_core>=1 && g.yjdl>=1",
+		"repeat": true,
+		"cost": {
+			"yjdl": 10,
+			"cbclb": 20,
+			"lxue": 10,
+			"lg": 20,
+			"cold_core": 20,
+			"dirty_core": 10,
+			"shuaibai_core": 10,
+			"jls":50,
+			"zero_crystal": 15,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"elect.rate": 3,
+			"elect.max": 1,
+			"shuaibai.rate": -0.1,
+			"space": 2
+		}
+	},
+	{
+		"id": "cireobelisk",
+		"name": "炽热方尖碑",
+		"desc": "炽热方尖碑周围的十几米都高达几百度,当然他也属于一种方尖碑。",
+		"tags": "obelisk",
+		"max":5,
+		"require": "g.design_sand>=1 && g.design_core>=1 && g.gwl>=1",
+		"repeat": true,
+		"cost": {
+			"gwl": 10,
+			"cbclb": 20,
+			"lxue": 10,
+			"lg": 20,
+			"cold_core": 20,
+			"dirty_core": 10,
+			"shuaibai_core": 10,
+			"jls":50,
+			"zero_crystal": 15,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"shuaibai.rate": -0.1,
+			"space": 2
+		}
+	},
+	{
+		"id": "jiaoganobelisk",
+		"name": "交感方尖碑",
+		"desc": "交感方尖碑进一步扩展神识,当然他也属于一种方尖碑。",
+		"tags": "obelisk",
+		"max":5,
+		"require": "g.design_sand>=1 && g.design_core>=1 && g.xiulian_zhuji_lizhu_znss>=1",
+		"repeat": true,
+		"cost": {
+			"shenshi": 7,
+			"lg": 20,
+			"cold_core": 10,
+			"dirty_core": 10,
+			"shuaibai_core": 10,
+			"jls":50,
+			"zero_crystal": 10,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 700
+		},
+		"mod": {
+			"shenshi.max": 1,
+			"shuaibai.rate": -0.1,
+			"space": 2
+		}
+	},
+	{
+		"id": "jieziobelisk",
+		"name": "芥子方尖碑",
+		"desc": "芥子方尖碑是一种能扩展面积的结构,当然他也属于一种方尖碑。",
+		"tags": "obelisk",
+		"max":5,
+		"require": "g.design_sand>=1 && g.design_core>=1",
+		"repeat": true,
+		"cost": {
+			"zdht": 3,
+			"shenshi": 7,
+			"lg": 20,
+			"cold_core": 10,
+			"jls":50,
+			"zero_crystal": 10,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 800,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 700
+		},
+		"mod": {
+			"space": 1,
+			"extra_space": 26
+		}
+	},
+	{
+		"id": "yuedutai",
+		"name": "阅读台",
+		"desc": "一个能让你安心读书的书桌",
+		"tags": "",
+		"max":3,
+		"require": "g.stand_jiagong>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 11,
+			"jls": 30,
+			"money": 400,
+			"alculation": 70,
+			"human_power": 250,
+			"cold_core": 10,
+			"dirty_core": 10,
+			"super_mind": 5,
+			"heli": 1,
+			"chaos": 5,
+			"zero_crystal":20,
+			"paper": 40,
+			"books": 6,
+			"exe_paper": 16,
+			"ganwu": 200
+		},
+		"mod": {
+			"skill.rate": 2,
+			"space": 15
+		}
+	},
+	{
+		"id": "sanshimianoblisk",
+		"name": "三十面体构造",
+		"desc": "三十面体构造每六个面显示一种属性,他属于一种机巧构造。",
+		"tags": "dexterous",
+		"max":3,
+		"require": "g.obelisk>=30",
+		"repeat": true,
+		"cost": {
+			"lg": 20,
+			"yjdl": 20,
+			"cbclb": 20,
+			"gwl": 20,
+			"jls":50,
+			"zero_crystal": 40,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 1000,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"space": 15
+		}
+	},
+	{
+		"id": "yuanzhigouzao",
+		"name": "源知构造",
+		"desc": "源知构造显示了深刻的知识,他属于一种机巧构造。",
+		"tags": "dexterous",
+		"max":2,
+		"require": "g.xiulian_jj_benyuanges>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 20,
+			"yjdl": 50,
+			"jls":50,
+			"jingdian": 10,
+			"shufang":1,
+			"alculation": 400,
+			"human_power": 1000
+		},
+		"mod": {
+			"ganwu.rate":2,
+			"space": 10
+		}
+	},
+	{
+		"id": "kongxugouzao",
+		"name": "空序构造",
+		"desc": "空序构造展示了空间艺术,他属于一种机巧构造。",
+		"tags": "dexterous",
+		"max":2,
+		"require": "g.xiulian_jj_benyuanges>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 20,
+			"yjdl": 50,
+			"jls":50,
+			"syxjz":1,
+			"jingdian": 10,
+			"shufang":1,
+			"alculation": 400,
+			"human_power": 1000
+		},
+		"mod": {
+			"ganwu.rate":2,
+			"space": 50,
+			"extra_space": 100
+		}
+	},
+	{
+		"id": "zhanqi",
+		"name": "战旗",
+		"desc": "鼓动战斗",
+		"tags": "",
+		"max":5,
+		"require": "g.xiulian_zhuji_2_1>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 20,
+			"yjdl": 50,
+			"jls":50,
+			"jingdian": 1,
+			"alculation": 400,
+			"human_power": 1000
+		},
+		"mod": {
+			"f_power": 30,
+			"space": 15
+		}
+	},
+	{
+		"id": "xiushizhihuibu",
+		"name": "修士指挥部",
+		"desc": "更多征服",
+		"tags": "",
+		"max":1,
+		"require": "g.xiulian_zhuji_2_1>=1",
+		"repeat": true,
+		"cost": {
+			"shufang":1,
+			"lg": 20,
+			"yjdl": 50,
+			"jls":50,
+			"jingdian": 10,
+			"alculation": 400,
+			"human_power": 1000
+		},
+		"mod": {
+			"shiqi.rate":1,
+			"zhuzhidu.rate":1,
+			"f_power": 50,
+			"space": 25
+		}
+	},
+	{
+		"id": "erjishcao",
+		"name": "二级伤害槽",
+		"desc": "",
+		"tags": "",
+		"max": 5,
+		"require": "g.xiushizhihuibu>=1",
+		"repeat": true,
+		"cost": {
+			"element_wuhuan": 15,
+			"jingdian":1,
+			"paper": 200,
+			"exe_paper": 50,
+			"sj_met": 20,
+			"money": 1300
+		},
+		"mod": {
+			"elect.rate": -0.2,
+			"wuzhuo.max":15,
+			"bingdong.max":15,
+			"space": 10
+		}
+	},
+	{
+		"id": "erjishouyucao",
+		"name": "二级守御槽",
+		"desc": "",
+		"tags": "",
+		"max": 5,
+		"require": "g.xiushizhihuibu>=1",
+		"repeat": true,
+		"cost": {
+			"element_wuhuan": 15,
+			"jingdian":1,
+			"paper": 200,
+			"exe_paper": 50,
+			"sj_met": 20,
+			"money": 1300,
+			"qingjia": 25,
+			"zhongjia": 20
+		},
+		"mod": {
+			"qingjia.max": 10,
+			"zhongjia.max":10,
+			"heavyjia.max":10,
+			"space": 10
+		}
+	},
+	{
+		"id": "helibengji",
+		"name": "合理泵机",
+		"desc": "从大气场中抽取合理",
+		"tags": "heli_pump",
+		"max":3,
+		"require": "g.mijipaixian>=1 && g.ltpl>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 20,
+			"yjdl": 20,
+			"cbclb": 20,
+			"yxls": 20,
+			"jls":50,
+			"zero_crystal": 40,
+			"super_mind": 30,
+			"alculation": 1000,
+			"human_power": 1000,
+			"paper": 100,
+			"exe_paper": 30,
+			"money": 1500
+		},
+		"mod": {
+			"elect.rate": -5,
+			"heli.rate": 3,
+			"space": 20
+		}
+	},
+	{
+		"id": "cishuadianquan",
+		"name": "磁刷线圈",
+		"desc": "更加高效的获取电能",
+		"tags": "meg_1",
+		"max":3,
+		"require": "g.mijipaixian>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 20,
+			"yjdl": 10,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 1000,
+			"human_power": 1000,
+			"exe_paper": 30,
+			"money": 1200
+		},
+		"mod": {
+			"elect.max":1,
+			"elect.rate": 3.5,
+			"space": 15
+		}
+	},
+	{
+		"id": "lingtiyansuanqi",
+		"name": "灵体演算器",
+		"desc": "高效计算",
+		"tags": "alculation_1",
+		"max":3,
+		"require": "g.ltpl>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 20,
+			"cbclb": 10,
+			"yjdl": 5,
+			"jls":50,
+			"dirty_lingti": 20,
+			"zero_crystal": 20,
+			"super_mind": 30,
+			"alculation": 1000,
+			"human_power": 1000,
+			"exe_paper": 30,
+			"money": 1200
+		},
+		"mod": {
+			"alculation.max": 100,
+			"alculation.rate": 5,
+			"space": 20
+		}
+	},
+	{
+		"id": "tjgls",
+		"name": "统计管理所",
+		"desc": "进行数学上的统计，需要接通20V电源",
+		"tags": "statistics_1",
+		"max":1,
+		"require": "g.jisuanshuxue>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"lxue": 10,
+			"money": 1600,
+			"cbclb": 25,
+			"yjdl": 25,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"jisuanshuxue.rate": "2%",
+			"elect.rate": -2,
+			"space": 20
+		}
+	},
+	{
+		"id": "fcjsc",
+		"name": "方程计算处",
+		"desc": "进行大规模的复杂方程计算，需要接通20V电源",
+		"tags": "equation_1",
+		"max":1,
+		"require": "g.jisuanshuxue>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"lxue": 10,
+			"money": 1600,
+			"cbclb": 25,
+			"yjdl": 25,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"jisuanshuxue.rate": "2%",
+			"elect.rate": -2,
+			"space": 20
+		}
+	},
+	{
+		"id": "kjsh",
+		"name": "空间沙盒",
+		"desc": "直观的进行空间计算，需要接通20V电源",
+		"tags": "space_alculation_1",
+		"max":1,
+		"require": "g.jisuanshuxue>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"lxue": 10,
+			"money": 1600,
+			"cbclb": 25,
+			"yjdl": 25,
+			"lg": 20,
+			"jls":50,
+			"super_mind": 30,
+			"alculation": 400,
+			"human_power": 500,
+			"paper": 100,
+			"exe_paper": 30
+		},
+		"mod": {
+			"jisuanshuxue.rate": "2%",
+			"elect.rate": -2,
+			"space": 20
+		}
+	},
+	{
+		"id": "jihunfansheyo",
+		"name": "基魂反射仪",
+		"desc": "对基魂进行反射修正",
+		"tags": "reflex_1",
+		"max":1,
+		"require": "g.alculation_1>=1 && g.meg_1>=1 && g.heli_pump>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 20,
+			"cbclb": 20,
+			"yjdl": 20,
+			"wgys": 30,
+			"yqlm": 30,
+			"jls":50,
+			"dirty_lingti": 20,
+			"zero_crystal": 60,
+			"super_mind": 30,
+			"alculation": 1100,
+			"human_power": 1000,
+			"exe_paper": 110,
+			"money": 2000
+		},
+		"mod": {
+			"exe_paper.max":10,
+			"heli.rate": -5,
+			"jihun.max": 1,
+			"jihun.rate": 0.1,
+			"space": 20
+		}
+	},
+	{
+		"id": "cbclbwg",
+		"name": "材料包网格",
+		"desc": "派遣专人管理并大量存储材料包",
+		"tags": "",
+		"max":10,
+		"require": "g.xiulian_struct_cailiaozuhe>=1",
+		"repeat": true,
+		"cost": {
+			"cbclb": 5,
+			"cold_core": 20,
+			"jls":50,
+			"zero_crystal": 20,
+			"super_mind": 20,
+			"alculation": 70,
+			"human_power": 100,
+			"paper": 40,
+			"tian": 10,
+			"exe_paper": 30,
+			"money": 600
+		},
+		"mod": {
+			"cbclb.max": 10,
+			"cbclb.rate": 0.005,
+			"human_power.max": -20,
+			"space": 5
+		}
+	},
+	{
+		"id": "hjcx",
+		"name": "合金产线",
+		"desc": "自动化的融合铁板和铜板,此建筑需要接通20V级电源",
+		"tags": "",
+		"max":10,
+		"require": "g.xiulian_struct_gaowensl>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"lg": 11,
+			"jls":60,
+			"cu_iron":30,
+			"cu_copper": 30,
+			"human_power": 700,
+			"star_map": 100,
+			"money": 1200,
+			"ganwu": 700,
+			"yxls": 10,
+			"cold_core": 20,
+			"zero_crystal": 40,
+			"super_mind": 30,
+			"alculation": 100
+		},
+		"mod": {
+			"cu_iron.rate": -0.3,
+			"cu_copper.rate": -0.4,
+			"iron_copper.rate": 0.4,
+			"elect.rate": -0.5,
+			"space": 5
+		}
+	},
+	{
+		"id": "dlcc",
+		"name": "电缆仓储",
+		"desc": "派遣专人对电缆进行管理",
+		"tags": "",
+		"max":50,
+		"require": "g.cxdnsy>=10 && g.gwl>=1 && g.ytjn>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 11,
+			"jls":60,
+			"human_power": 700,
+			"star_map": 100,
+			"money": 1200,
+			"ganwu": 700,
+			"cbclb": 10,
+			"cold_core": 20,
+			"life_crystal": 3,
+			"super_mind": 30,
+			"alculation": 100
+		},
+		"mod": {
+			"yjdl.rate": 0.01,
+			"yjdl.max": 10,
+			"space": 5
+		}
+	},
+	{
+		"id": "hot_lab",
+		"name": "高温实验室",
+		"desc": "一个配备了热阻绝和高效冷却的实验室,此建筑需要接通20V级电源",
+		"tags": "hotlab",
+		"max":1,
+		"require": "g.xiulian_struct_gaowensl>=1&&g.xiulian_struct_gaowenpb>=1",
+		"need": "TENTYV",
+		"repeat": true,
+		"cost": {
+			"lg": 11,
+			"jls":60,
+			"human_power": 850,
+			"star_map": 120,
+			"money": 1200,
+			"ganwu": 700,
+			"yxls": 25,
+			"cold_core": 35,
+			"zero_crystal": 40,
+			"super_mind": 30,
+			"alculation": 100,
+			"star_map_1": 10
+		},
+		"mod": {
+			"ganwu.rate": -1,
+			"elect.rate": -2,
+			"space": 15
+		}
+	},
+	{
+		"id": "rpbrq",
+		"name": "热屏蔽容器",
+		"desc": "存放危险的高温流",
+		"tags": "",
+		"max":50,
+		"require": "g.cbclb>=1 &&g.xiulian_struct_gaowenfh>=1 &&g.hotlab>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 11,
+			"jls":60,
+			"human_power": 500,
+			"star_map": 120,
+			"money": 1200,
+			"ganwu": 700,
+			"yxls": 25,
+			"cold_core": 35,
+			"zero_crystal": 40,
+			"super_mind": 30,
+			"alculation": 100,
+			"life_crystal": 5
+		},
+		"mod": {
+			"gwl.max": 10,
+			"gwl.rate": 0.01,
+			"space": 3
+		}
+	},
+	{
+		"id": "hqsjz",
+		"name": "黄泉收集站",
+		"desc": "在黄泉建造一个收集站来获取黄泉资源",
+		"tags": "",
+		"max":50,
+		"require": "g.xiulian_eye_huangquan>=1",
+		"repeat": true,
+		"cost": {
+			"lg": 11,
+			"jls":60,
+			"lxue": 10,
+			"shuaibai_core": 10,
+			"dirty_lingti": 20,
+			"human_power": 850,
+			"star_map": 100,
+			"money": 1200,
+			"ganwu": 700,
+			"cbclb": 10,
+			"cold_core": 20,
+			"life_crystal": 3,
+			"super_mind": 30,
+			"alculation": 400
+		},
+		"mod": {
+			"lxue.rate": 0.01,
+			"shuaibai_core.rate": 0.01,
+			"space": 10
+		}
+	},
+	{
+		"id": "caliaocuncx",
+		"name": "材料存储箱",
+		"desc": "较大的金属箱子",
+		"tags": "",
+		"max":50,
+		"require": "g.xiulian_struct_fenxi>=1",
+		"repeat": true,
+		"cost": {
+			"cbjs": 2,
+			"cu_copper": 30,
+			"cu_iron": 30,
+			"iron_copper": 10,
+			"tian": 5,
+			"paper": 100,
+			"money": 500
+		},
+		"mod": {
+			"cu_iron.max": 30,
+			"cu_copper.max":30,
+			"iron_copper.max":10,
+			"sj_met.max": 5,
+			"tian.max": 10,
+			"space": 5
+		}
+	},
+	{
+		"id": "zhenliedianbota",
+		"name": "阵列电波塔",
+		"desc": "",
+		"tags": "",
+		"max":1,
+		"require": "g.hongguankexue>=1",
+		"repeat": true,
+		"cost": {
+			"cbjs": 25,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"iron_copper": 150,
+			"tian": 65,
+			"paper": 300,
+			"ganwu": 1200,
+			"cishuadianquan":1,
+			"wangyuanj_diz":1,
+			"money": 2200
+		},
+		"mod": {
+			"star_map_1.rate": 0.1,
+			"star_map.rate": 0.6,
+			"elect.rate": -1,
+			"space": 40
+		}
+	},
+	{
+		"id": "guangbotatai",
+		"name": "广播塔台",
+		"desc": "提高指令容量",
+		"tags": "",
+		"max":20,
+		"require": "g.guangbozhil>=1",
+		"repeat": true,
+		"cost": {
+			"zhenliedianbota": 1,
+			"jingdian": 5,
+			"ljdy": 10,
+			"kewangtian": 3,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 2200
+		},
+		"mod": {
+			"elect.rate": -3,
+			"human_power.max": -100,
+			"command_code.max": 5, 
+			"space": 25
+		}
+	},
+	{
+		"id": "jingjietatai",
+		"name": "警戒塔台",
+		"desc": "提高战斗评级",
+		"tags": "",
+		"max":20,
+		"require": "g.guangbozhil>=1",
+		"repeat": true,
+		"cost": {
+			"zhenliedianbota": 1,
+			"jingdian": 5,
+			"ljdy": 10,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 2200
+		},
+		"mod": {
+			"elect.rate": -3,
+			"human_power.max": -50,
+			"f_power": 40, 
+			"space": 15
+		}
+	},
+	{
+		"id": "mujitatai",
+		"name": "募集塔台",
+		"desc": "提高人力上限和恢复速度",
+		"tags": "",
+		"max":10,
+		"require": "g.guangbozhil>=1",
+		"repeat": true,
+		"cost": {
+			"zhenliedianbota": 1,
+			"jingdian": 5,
+			"human_power": 3000,
+			"ljdy": 10,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 2200
+		},
+		"mod": {
+			"elect.rate": -3,
+			"human_power.max": 200,
+			"human_power.rate": 2, 
+			"space": 15
+		}
+	},
+	{
+		"id": "bxrldlchang",
+		"name": "标型人力电力厂",
+		"desc": "本身不进行生产,作为电力指令的启动素材,撤销电力指令不会返还",
+		"tags": "",
+		"max":5,
+		"require": "g.pingfandiann>=1 && g.chaozuoguifan>=1",
+		"repeat": true,
+		"cost": {
+			"jingdian": 5,
+			"human_power": 1000,
+			"tian": 40,
+			"money": 1000
+		},
+		"mod": {
+			"space": 35
+		}
+	},
+	{
+		"id": "jcrelichang",
+		"name": "基础热能电力厂",
+		"desc": "本身不进行生产,作为电力指令的启动素材,撤销电力指令不会返还",
+		"tags": "",
+		"max":5,
+		"require": "g.pingfandiann>=1 && g.chaozuoguifan>=1 && g.yuanzirexue>=5",
+		"repeat": true,
+		"cost": {
+			"yxls": 15,
+			"jingdian": 10,
+			"ljdy": 5,
+			"yangrend": 1,
+			"human_power": 1000,
+			"tian": 40,
+			"money": 1000
+		},
+		"mod": {
+			"space": 35
+		}
+	},
+	{
+		"id": "xinhaoshiyan",
+		"name": "信号实验室",
+		"desc": "",
+		"tags": "signal",
+		"max":1,
+		"require": "g.xinghaokz>=1 && g.luojibo>=1",
+		"repeat": true,
+		"cost": {
+			"cbjs": 25,
+			"wgys": 25,
+			"cbclb": 30,
+			"yjdl": 80,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"iron_copper": 150,
+			"tian": 65,
+			"paper": 300,
+			"ganwu": 1200,
+			"cishuadianquan":1,
+			"money": 2500
+		},
+		"mod": {
+			"ljdy.max": 10,
+			"elect.rate": -4,
+			"space": 30
+		}
+	},
+	{
+		"id": "liziyunshi",
+		"name": "粒子云室",
+		"desc": "",
+		"tags": "nepheloscope",
+		"max":1,
+		"require": "g.cxxwjp>=1",
+		"repeat": true,
+		"cost": {
+			"ljdy": 10,
+			"cxxwjp": 5,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"paper": 300,
+			"ganwu": 1200,
+			"cishuadianquan":1,
+			"money": 2500
+		},
+		"mod": {
+			"elect.rate": -5,
+			"space": 30
+		}
+	},
+	{
+		"id": "cxdljk",
+		"name": "层序电流接口",
+		"desc": "利用微观层面的五环性质产生电流",
+		"tags": "",
+		"max":5,
+		"require": "g.xiulian_eye_weiguanlz>=1",
+		"repeat": true,
+		"cost": {
+			"element_wuhuan": 20,
+			"ljdy": 15,
+			"cxxwjp": 5,
+			"cbclb": 30,
+			"yjdl": 50,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"paper": 300,
+			"ganwu": 1200,
+			"cishuadianquan":2,
+			"money": 1500
+		},
+		"mod": {
+			"elect.rate": 12,
+			"space": 7
+		}
+	},
+	{
+		"id": "piaomiaoxq",
+		"name": "飘渺线圈",
+		"desc": "利用芥子性质的线圈",
+		"tags": "",
+		"max":3,
+		"require": "g.event_kjycds_3_1>=1",
+		"repeat": true,
+		"cost": {
+			"syxfc":1,
+			"element_wuhuan": 20,
+			"cbclb": 30,
+			"yjdl": 50,
+			"paper": 300,
+			"ganwu": 1200,
+			"cishuadianquan":2,
+			"money": 1500
+		},
+		"mod": {
+			"elect.rate": 5,
+			"space": 1,
+			"extra_space": 11
+		}
+	},
+	{
+		"id": "piaomiaooblisk",
+		"name": "飘渺方尖碑",
+		"desc": "飘渺方尖碑是芥子方尖碑的升级版本,需要用电流来稳定。属于一种方尖碑",
+		"tags": "obelisk",
+		"max":3,
+		"require": "g.event_kjycds_3_2>=1",
+		"repeat": true,
+		"cost": {
+			"jieziobelisk":1,
+			"yjdl": 50,
+			"cishuadianquan":1,
+			"paper": 300,
+			"ganwu": 1200,
+			"cishuadianquan":2,
+			"money": 1500
+		},
+		"mod": {
+			"elect.rate": -2,
+			"space": 1,
+			"extra_space": 56
+		}
+	},
+	{
+		"id": "yxhuanrqi",
+		"name": "阳息换热器",
+		"desc": "将热能转化为电能",
+		"tags": "",
+		"max":2,
+		"require": "g.jlhrmoxing>=1",
+		"repeat": true,
+		"cost": {
+			"yangrend":1,
+			"yqlm": 25,
+			"yxls":25,
+			"yjdl": 50,
+			"cbclb": 30,
+			"tian": 10,
+			"cu_copper": 100,
+			"cu_iron": 100,
+			"paper": 300,
+			"ganwu": 1200,
+			"cishuadianquan":2,
+			"money": 900
+		},
+		"mod": {
+			"elect.rate": 15,
+			"space": 20
+		}
+	},
+	{
+		"id": "yangrend",
+		"name": "阳热能堆",
+		"desc": "将灵木与烈石进行可控热反应",
+		"tags": "",
+		"max":2,
+		"require": "g.gaoorebizhang>=1 && g.rezhifenxi>=1",
+		"repeat": true,
+		"cost": {
+			"yqlm": 25,
+			"yxls":25,
+			"ljdy": 15,
+			"cxxwjp": 5,
+			"cbclb": 30,
+			"tian": 65,
+			"cold_core": 50,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 2500
+		},
+		"mod": {
+			"elect.max": 5,
+			"space": 10
+		}
+	},
+	{
+		"id": "cxdrong",
+		"name": "层序电容",
+		"desc": "利用微观层面的五环性质存储电能",
+		"tags": "",
+		"max":5,
+		"require": "g.xiulian_eye_weiguanlz>=1",
+		"repeat": true,
+		"cost": {
+			"element_wuhuan": 20,
+			"ljdy": 15,
+			"cxxwjp": 5,
+			"cbclb": 30,
+			"yjdl": 80,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"paper": 300,
+			"ganwu": 1200,
+			"cishuadianquan":1,
+			"money": 1000
+		},
+		"mod": {
+			"elect.max": 9,
+			"space": 5
+		}
+	},
+	{
+		"id": "lengningshange",
+		"name": "冷凝栅格",
+		"desc": "更高效的获取晶流水",
+		"tags": "",
+		"max":3,
+		"require": "g.changwnelengque1>=1 && g.sanreshange1>=1",
+		"repeat": true,
+		"cost": {
+			"element_wuhuan": 20,
+			"cbclb": 30,
+			"yjdl": 50,
+			"cold_core": 40,
+			"jls": 50,
+			"yxls": 20,
+			"paper": 300,
+			"ganwu": 1200,
+			"cishuadianquan":1,
+			"money": 1000
+		},
+		"mod": {
+			"elect.rate": -0.2,
+			"jls.rate": 1,
+			"space": 5
+		}
+	},
+	{
+		"id": "yanfatai",
+		"name": "衍法台",
+		"desc": "无尽衍生",
+		"tags": "",
+		"max":1,
+		"require": "g.yingmidianji>=1",
+		"repeat": true,
+		"cost": {
+			"jingdian":10,
+			"element_wuhuan": 20,
+			"cbclb": 30,
+			"yjdl": 80,
+			"cu_copper": 200,
+			"sj_met": 30,
+			"tian": 70,
+			"cold_core": 40,
+			"jls": 50,
+			"paper": 300,
+			"ganwu": 1200,
+			"zhuansifatan":1,
+			"money": 2000
+		},
+		"mod": {
+			"elect.rate": -4,
+			"space": 25
+		}
+	},
+	{
+		"id": "zhijiagong",
+		"name": "纸加工",
+		"desc": "自动生产稿纸",
+		"tags": "",
+		"max":5,
+		"require": "g.zhizhangyanhua>=1",
+		"repeat": true,
+		"cost": {
+			"jingdian":1,
+			"element_wuhuan": 20,
+			"cbclb": 30,
+			"yjdl": 80,
+			"cold_core": 40,
+			"jls": 50,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 2000
+		},
+		"mod": {
+			"elect.rate": -2,
+			"paper.rate":1,
+			"space": 10
+		}
+	},
+	{
+		"id": "wzningjus",
+		"name": "污浊凝聚室",
+		"desc": "自动生产污浊核心",
+		"tags": "",
+		"max":5,
+		"require": "g.wuzhuoyanhua>=1",
+		"repeat": true,
+		"cost": {
+			"jingdian":1,
+			"dirty_core": 6,
+			"shuaibai_core": 10,
+			"cbclb": 30,
+			"yjdl": 80,
+			"cold_core": 40,
+			"jls": 50,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 2000
+		},
+		"mod": {
+			"elect.rate": -3,
+			"dirty_core.rate":0.7,
+			"space": 10
+		}
+	},
+	{
+		"id": "relidianji",
+		"name": "热力典籍",
+		"desc": "自动生产经典",
+		"tags": "",
+		"max":3,
+		"require": "g.reliyanhua>=1",
+		"repeat": true,
+		"cost": {
+			"jingdian":10,
+			"ljdy": 15,
+			"cxdljk":2,
+			"cbclb": 30,
+			"yjdl": 80,
+			"cold_core": 40,
+			"jls": 50,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 2000
+		},
+		"mod": {
+			"elect.rate": -5,
+			"jingdian.rate":0.01,
+			"space": 20
+		}
+	},
+	{
+		"id": "tushuguanliy",
+		"name": "图书管理员",
+		"desc": "自动生产书籍",
+		"tags": "",
+		"max":5,
+		"require": "g.shujiyanhua>=1",
+		"repeat": true,
+		"cost": {
+			"jingdian":1,
+			"books": 50,
+			"shuaibai_core": 10,
+			"cbclb": 30,
+			"yjdl": 80,
+			"cold_core": 40,
+			"jls": 50,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 2000
+		},
+		"mod": {
+			"elect.rate": -3,
+			"books.rate":1,
+			"space": 15
+		}
+	},
+	{
+		"id": "red_jgsys",
+		"name": "红极激光实验室",
+		"desc": "对红激光进行研究的实验室,兼具了高温实验室的功能",
+		"tags": "hotlab,laser",
+		"max":1,
+		"require": "g.jgkslq>=1 && g.jujiaozhenlie>=1",
+		"repeat": true,
+		"cost": {
+			"element_wuhuan": 20,
+			"ljdy": 20,
+			"yjdl": 85,
+			"cbclb": 30,
+			"hot_lab":1,
+			"wangyuanj_jp":1,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"paper": 300,
+			"ganwu": 1200,
+			"cxdljk":1,
+			"money": 2500
+		},
+		"mod": {
+			"elect.rate": -12,
+			"space": 30
+		}
+	},
+	{
+		"id": "lengqueshes",
+		"name": "冷却设施",
+		"desc": "热力工程的基础建筑模块",
+		"tags": "",
+		"max":8,
+		"require": "g.religongc>=1",
+		"repeat": true,
+		"cost": {
+			"jls": 30,
+			"element_luor": 5,
+			"qiyiyeti": 1,
+			"ljdy": 5,
+			"yjdl": 20,
+			"cbclb": 10,
+			"cu_copper": 100,
+			"cu_iron": 100,
+			"ganwu": 300,
+			"money": 600
+		},
+		"mod": {
+			"elect.rate": 0.2,
+			"elect.max": 0.5,
+			"jls.rate": 0.5,
+			"space": 15
+		}
+	},
+	{
+		"id": "gaowenronglu_co",
+		"name": "高温熔炉[铜]",
+		"desc": "高效生产铜板",
+		"tags": "",
+		"max":10,
+		"require": "g.adv_meatl_yelian>=1",
+		"repeat": true,
+		"cost": {
+			"jls": 100,
+			"gwl": 50,
+			"ljdy": 5,
+			"yjdl": 60,
+			"cbclb": 50,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"ganwu": 300,
+			"money": 600
+		},
+		"mod": {
+			"elect.rate": -2,
+			"cu_copper.rate": 1.5,
+			"space": 20
+		}
+	},
+	{
+		"id": "gaowenronglu_ir",
+		"name": "高温熔炉[铁]",
+		"desc": "高效生产铁板",
+		"tags": "",
+		"max":10,
+		"require": "g.adv_meatl_yelian>=1",
+		"repeat": true,
+		"cost": {
+			"jls": 100,
+			"gwl": 50,
+			"ljdy": 5,
+			"yjdl": 60,
+			"cbclb": 50,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"ganwu": 300,
+			"money": 600
+		},
+		"mod": {
+			"elect.rate": -2,
+			"cu_iron.rate": 1.5,
+			"space": 20
+		}
+	},
+	{
+		"id": "gaowenronglu_ti",
+		"name": "高温熔炉[钛]",
+		"desc": "高效生产钛板",
+		"tags": "",
+		"max":6,
+		"require": "g.gaoyarongr>=1",
+		"repeat": true,
+		"cost": {
+			"jls": 100,
+			"gwl": 50,
+			"ljdy": 5,
+			"yjdl": 60,
+			"cbclb": 50,
+			"tian": 40,
+			"cu_copper": 240,
+			"cu_iron": 140,
+			"ganwu": 300,
+			"money": 600
+		},
+		"mod": {
+			"elect.rate": -4,
+			"tian.rate": 1,
+			"space": 25
+		}
+	},
+	{
+		"id": "gaowenronglu_sj",
+		"name": "高温熔炉[神经]",
+		"desc": "高效生产神经材料",
+		"tags": "",
+		"max":5,
+		"require": "g.gaoyarongr>=1",
+		"repeat": true,
+		"cost": {
+			"jls": 60,
+			"gwl": 50,
+			"ljdy": 5,
+			"yjdl": 60,
+			"cbclb": 50,
+			"tian": 40,
+			"sj_met": 50,
+			"cu_copper": 240,
+			"cu_iron": 140,
+			"ganwu": 300,
+			"money": 600
+		},
+		"mod": {
+			"elect.rate": -5,
+			"sj_met.rate": 1,
+			"space": 25
+		}
+	},
+	{
+		"id": "gaowenronglu_fc",
+		"name": "高温熔炉[FC]",
+		"desc": "高效生产FC合金",
+		"tags": "",
+		"max":5,
+		"require": "g.gaoyarongr>=1",
+		"repeat": true,
+		"cost": {
+			"jls": 60,
+			"gwl": 50,
+			"ljdy": 5,
+			"yjdl": 60,
+			"cbclb": 50,
+			"tian": 40,
+			"iron_copper": 50,
+			"cu_copper": 240,
+			"cu_iron": 140,
+			"ganwu": 300,
+			"money": 600
+		},
+		"mod": {
+			"elect.rate": -4.5,
+			"iron_copper.rate": 1,
+			"space": 25
+		}
+	},
+	{
+		"id": "ccrlxsys",
+		"name": "冲层热力实验室",
+		"desc": "专注于研究热力冲层的实验室,兼具了高温实验室的功能",
+		"tags": "adv_hot_lab,hotlab",
+		"max":1,
+		"require": "g.religongc>=1",
+		"repeat": true,
+		"cost": {
+			"gwl": 55,
+			"elect_mod_1":2,
+			"lengqueshes": 2,
+			"jls": 100,
+			"element_luor": 10,
+			"qiyiyeti": 5,
+			"ljdy": 15,
+			"yjdl": 85,
+			"cbclb": 50,
+			"sj_met": 50,
+			"tian": 50,
+			"ganwu": 300,
+			"money": 600
+		},
+		"mod": {
+			"elect.rate": -6,
+			"space": 30
+		}
+	},
+	{
+		"id": "gyrlsys",
+		"name": "高压热力实验室",
+		"desc": "专注于研究高压高热环境的实验室,兼具了高温实验室的功能",
+		"tags": "adv_hot_lab,hotlab",
+		"max":1,
+		"require": "g.religongc>=1",
+		"repeat": true,
+		"cost": {
+			"gwl": 50,
+			"elect_mod_1":2,
+			"lengqueshes": 2,
+			"jls": 100,
+			"shuaibai_core": 10,
+			"ljdy": 15,
+			"yjdl": 85,
+			"cbclb": 50,
+			"sj_met": 50,
+			"tian": 50,
+			"ganwu": 300,
+			"money": 600
+		},
+		"mod": {
+			"elect.rate": -8,
+			"space": 30
+		}
+	},
+	{
+		"id": "jxrlsys",
+		"name": "机械热力实验室",
+		"desc": "专注于研究抗高温机械的实验室,兼具了高温实验室的功能",
+		"tags": "adv_hot_lab,hotlab",
+		"max":1,
+		"require": "g.religongc>=1",
+		"repeat": true,
+		"cost": {
+			"gwl": 60,
+			"elect_mod_1":1,
+			"lengqueshes": 2,
+			"jls": 100,
+			"ljdy": 15,
+			"yjdl": 85,
+			"cbclb": 50,
+			"sj_met": 50,
+			"tian": 100,
+			"ganwu": 300,
+			"money": 600
+		},
+		"mod": {
+			"elect.rate": -3,
+			"space": 30
+		}
+	},
+	{
+		"id": "army_laser_charge",
+		"name": "军事激光充能座",
+		"desc": "自动对高能电容进行补充",
+		"tags": "",
+		"max":1,
+		"require": "g.red_jgsys>=1 && g.wqyj_1>=50",
+		"repeat": true,
+		"cost": {
+			"element_wuhuan": 20,
+			"laser_ene": 3,
+			"cxdljk":2,
+			"ljdy": 20,
+			"yjdl": 85,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 2500
+		},
+		"mod": {
+			"elect.rate": -15,
+			"laser_ene.rate": 0.1,
+			"space": 15
+		}
+	},
+	{
+		"id": "army_laser_chest",
+		"name": "军事激光电容",
+		"desc": "提高高能电容的上限",
+		"tags": "",
+		"max":3,
+		"require": "g.red_jgsys>=1 && g.wqyj_1>=50",
+		"repeat": true,
+		"cost": {
+			"element_wuhuan": 20,
+			"laser_ene": 3,
+			"cxdljk":2,
+			"ljdy": 20,
+			"yjdl": 85,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 2500
+		},
+		"mod": {
+			"elect.rate": -5,
+			"laser_ene.max": 2,
+			"space": 15
+		}
+	},
+	{
+		"id": "zhinnegswsys",
+		"name": "智能生物实验室",
+		"desc": "智能生物实验室提供基本的生物仪器和低温生物仪器",
+		"tags": "bio,ColdBio",
+		"max":1,
+		"require": "g.weiguankexue>=1",
+		"repeat": true,
+		"cost": {
+			"yjswyb": 10,
+			"ljdy": 15,
+			"cbclb": 30,
+			"yjdl": 80,
+			"cu_copper": 200,
+			"cu_iron": 200,
+			"iron_copper": 100,
+			"tian": 65,
+			"paper": 300,
+			"ganwu": 1200,
+			"cishuadianquan":1,
+			"money": 1700
+		},
+		"mod": {
+			"yjswyb.rate": 0.007,
+			"elect.rate": -1,
+			"space": 30
+		}
+	},
+	{
+		"id": "ltxwsys",
+		"name": "灵体显微实验室",
+		"desc": "灵体显微实验室提供显微环境",
+		"tags": "bio,microscope",
+		"max":1,
+		"require": "g.xiulian_wgshenwu>=1",
+		"repeat": true,
+		"cost": {
+			"dirty_lingti": 20,
+			"yjswyb": 10,
+			"ljdy": 7,
+			"cbclb": 30,
+			"yjdl": 80,
+			"tian": 65,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 1700
+		},
+		"mod": {
+			"dirty_lingti.rate": 0.1,
+			"dirty_lingti.max": 5,
+			"yjswyb.rate": 0.007,
+			"elect.rate": -5,
+			"space": 30
+		}
+	},
+	{
+		"id": "shengwuyanjsys",
+		"name": "生物研究室",
+		"desc": "生物研究室是智能生物实验室的升级版本",
+		"tags": "bio,ColdBio",
+		"max":1,
+		"require": "g.xiulian_wgshenwu>=1",
+		"repeat": true,
+		"cost": {
+			"zhinnegswsys": 1,
+			"dirty_lingti": 20,
+			"sj_met": 60,
+			"yjswyb": 10,
+			"ljdy": 15,
+			"yjdl": 80,
+			"tian": 65,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 1700
+		},
+		"mod": {
+			"yjswyb.rate": 0.07,
+			"elect.rate": -10,
+			"space": 30
+		}
+	},
+	{
+		"id": "gaowenhgs",
+		"name": "高温烘干室",
+		"desc": "对生物器官进行烘干",
+		"tags": "bio_dry",
+		"max":1,
+		"require": "g.qiguanjiepou>=1 && g.shengwuzhiquyang>=1 && g.jiaqiaoleilxfx>=1",
+		"repeat": true,
+		"cost": {
+			"element_jidingzhi": 20,
+			"yxls": 25,
+			"cishuadianquan": 1,
+			"dirty_lingti": 20,
+			"sj_met": 60,
+			"yjswyb": 20,
+			"ljdy": 15,
+			"yjdl": 80,
+			"tian": 65,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 1700
+		},
+		"mod": {
+			"human_power.max": -500,
+			"element_shengwuqiguan.max": 10,
+			"elect.rate": -3,
+			"space": 15
+		}
+	},
+	{
+		"id": "swzsaixuanji",
+		"name": "生物质筛选机",
+		"desc": "从生物组织中筛选生物质",
+		"tags": "bio_screen",
+		"max":1,
+		"require": "g.qiguanjiepou>=1 && g.shengwuzhiquyang>=1 && g.jiaqiaoleilxfx>=1",
+		"repeat": true,
+		"cost": {
+			"element_jidingzhi": 20,
+			"cold_core": 40,
+			"dirty_lingti": 20,
+			"sj_met": 60,
+			"yjswyb": 20,
+			"ljdy": 15,
+			"yjdl": 80,
+			"tian": 65,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 1700
+		},
+		"mod": {
+			"human_power.max": -500,
+			"element_shengwuzhuzhi.max": 10,
+			"elect.rate": -3,
+			"space": 15
+		}
+	},
+	{
+		"id": "jdzqxymj",
+		"name": "几丁质球形研磨机",
+		"desc": "把不规则的甲壳研磨成粉末",
+		"tags": "bio_grind",
+		"max":1,
+		"require": "g.qiguanjiepou>=1 && g.shengwuzhiquyang>=1 && g.jiaqiaoleilxfx>=1",
+		"repeat": true,
+		"cost": {
+			"jls": 30,
+			"element_jidingzhi": 20,
+			"cold_core": 40,
+			"dirty_lingti": 20,
+			"sj_met": 60,
+			"yjswyb": 20,
+			"ljdy": 15,
+			"yjdl": 80,
+			"tian": 65,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 1700
+		},
+		"mod": {
+			"human_power.max": -500,
+			"element_jidingzhi.max": 10,
+			"elect.rate": -5,
+			"space": 30
+		}
+	},
+	{
+		"id": "swcxc",
+		"name": "生物冲洗床",
+		"desc": "用晶流水冲洗含杂的生物质",
+		"tags": "bio_wash",
+		"max":1,
+		"require": "g.qiguanjiepou>=1 && g.shengwuzhiquyang>=1 && g.jiaqiaoleilxfx>=1",
+		"repeat": true,
+		"cost": {
+			"jls": 100,
+			"element_jidingzhi": 20,
+			"cold_core": 40,
+			"dirty_lingti": 20,
+			"sj_met": 60,
+			"yjswyb": 20,
+			"ljdy": 15,
+			"yjdl": 80,
+			"tian": 65,
+			"paper": 300,
+			"ganwu": 1200,
+			"money": 1700
+		},
+		"mod": {
+			"jls.rate": -0.1,
+			"human_power.max": -300,
+			"elect.rate": -5,
+			"space": 30
+		}
+	},
+	{
+		"id": "jiepushiyans",
+		"name": "解剖实验室",
+		"desc": "提供解剖环境(一级)",
+		"tags": "anatomy_1",
+		"max":1,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"r_adv_w_sj1": 5,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100,
+			"cishuadianquan": 2,
+			"sj_met": 60,
+			"yjswyb": 10,
+			"ljdy": 15
+		},
+		"mod": {
+			"elect.rate": -3,
+			"space": 30
+		}
+	},
+	{
+		"id": "swzzlg",
+		"name": "生物组织冷柜",
+		"desc": "提供生物组织上限",
+		"tags": "",
+		"max":5,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"pyy": 10,
+			"fypyj": 10,
+			"paper": 300,
+			"r_adv_bzzj": 10,
+			"life_crystal": 10,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100,
+			"sj_met": 20,
+			"yjswyb": 5
+		},
+		"mod": {
+			"element_shengwuzhuzhi.max": 10,
+			"elect.rate": -2,
+			"space": 10
+		}
+	},
+	{
+		"id": "swqglg",
+		"name": "生物器官冷柜",
+		"desc": "提供生物器官上限",
+		"tags": "",
+		"max":5,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"pyy": 10,
+			"fypyj": 10,
+			"paper": 300,
+			"r_adv_bzzj": 10,
+			"life_crystal": 10,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100,
+			"sj_met": 20,
+			"yjswyb": 5
+		},
+		"mod": {
+			"element_shengwuqiguan.max": 10,
+			"elect.rate": -2,
+			"space": 10
+		}
+	},
+	{
+		"id": "jdzlg",
+		"name": "几丁质冷柜",
+		"desc": "提供几丁质上限",
+		"tags": "",
+		"max":5,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"pyy": 10,
+			"fypyj": 10,
+			"paper": 300,
+			"r_adv_bzzj": 10,
+			"life_crystal": 10,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100,
+			"sj_met": 20,
+			"yjswyb": 5
+		},
+		"mod": {
+			"element_jidingzhi.max": 10,
+			"elect.rate": -2,
+			"space": 10
+		}
+	},
+	{
+		"id": "baibaishulong",
+		"name": "🐭白白鼠笼",
+		"desc": "提供白白鼠上限",
+		"tags": "",
+		"max":10,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"paper": 300,
+			"r_adv_w_sj1": 2,
+			"r_adv_bzzj": 6,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100,
+			"sj_met": 20,
+			"yjswyb": 5
+		},
+		"mod": {
+			"baibaishu.max": 5,
+			"elect.rate": -2,
+			"space": 10
+		}
+	},
+	{
+		"id": "baibaishupbj",
+		"name": "🐭白白鼠跑步机",
+		"desc": "飞快的轮子",
+		"tags": "",
+		"max":10,
+		"require": "g.baibaishu>=1",
+		"repeat": true,
+		"cost": {
+			"baibaishu": 30,
+			"yjdl": 28,
+			"wgys": 10,
+			"cbclb": 20,
+			"books": 20,
+			"tian": 100,
+			"sj_met": 20,
+			"yjswyb": 4
+		},
+		"mod": {
+			"elect.rate": 1,
+			"space": 7
+		}
+	},
+	{
+		"id": "jbglong",
+		"name": "剑背龟笼",
+		"desc": "提供剑背龟上限",
+		"tags": "",
+		"max":10,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"paper": 300,
+			"r_adv_w_sj1": 2,
+			"r_adv_bzzj": 6,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100,
+			"sj_met": 20,
+			"yjswyb": 5
+		},
+		"mod": {
+			"jbgui.max": 5,
+			"elect.rate": -2,
+			"space": 10
+		}
+	},
+	{
+		"id": "ysxylong",
+		"name": "亚瑟蜥蜴笼",
+		"desc": "提供亚瑟蜥蜴上限",
+		"tags": "",
+		"max":10,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"paper": 300,
+			"r_adv_w_sj1": 2,
+			"r_adv_bzzj": 6,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100,
+			"sj_met": 20,
+			"yjswyb": 5
+		},
+		"mod": {
+			"yasexiyi.max": 5,
+			"elect.rate": -2,
+			"space": 10
+		}
+	},
+	{
+		"id": "qwdclong",
+		"name": "钳尾刀虫笼",
+		"desc": "提供钳尾刀虫上限",
+		"tags": "",
+		"max":10,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"paper": 300,
+			"r_adv_w_sj1": 2,
+			"r_adv_bzzj": 6,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100,
+			"sj_met": 20,
+			"yjswyb": 5
+		},
+		"mod": {
+			"qianwdc.max": 5,
+			"elect.rate": -2,
+			"space": 10
+		}
+	},
+	{
+		"id": "baibaishusyjd",
+		"name": "🐭白白鼠饲育基地",
+		"desc": "饲养白白鼠",
+		"tags": "",
+		"max":5,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"shuiyinhua": 10,
+			"qianniuhua": 10,
+			"paper": 300,
+			"cu_iron": 300,
+			"yjdl": 60,
+			"gwl": 50,
+			"cixinglingtichang": 1,
+			"r_adv_bzzj": 6,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100,
+			"sj_met": 20,
+			"yjswyb": 5
+		},
+		"mod": {
+			"command_code": 4,
+			"human_power.max": -100,
+			"baibaishu.max": 5,
+			"baibaishu.rate": 0.5,
+			"elect.rate": -3.5,
+			"space": 25
+		}
+	},
+	{
+		"id": "jianbeiguisyjd",
+		"name": "剑背龟饲育基地",
+		"desc": "饲养剑背龟",
+		"tags": "",
+		"max":5,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"element_shengwuzhuzhi": 5,
+			"baibaishu": 20,
+			"paper": 300,
+			"cu_iron": 300,
+			"ljdy": 2,
+			"yjdl": 50,
+			"gwl": 50,
+			"cixinglingtichang": 1,
+			"r_adv_bzzj": 6,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100
+		},
+		"mod": {
+			"command_code": 4,
+			"human_power.max": -400,
+			"jbgui.rate": 0.2,
+			"elect.rate": -3.5,
+			"space": 25
+		}
+	},
+	{
+		"id": "ysxysyjd",
+		"name": "亚瑟蜥蜴饲育基地",
+		"desc": "饲养亚瑟蜥蜴",
+		"tags": "",
+		"max":5,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"element_shengwuzhuzhi": 5,
+			"baibaishu": 20,
+			"paper": 300,
+			"cu_iron": 300,
+			"ljdy": 2,
+			"yjdl": 50,
+			"gwl": 50,
+			"cixinglingtichang": 1,
+			"r_adv_bzzj": 6,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100
+		},
+		"mod": {
+			"command_code": 4,
+			"human_power.max": -400,
+			"yasexiyi.rate": 0.2,
+			"elect.rate": -3.5,
+			"space": 25
+		}
+	},
+	{
+		"id": "qwdcsyjd",
+		"name": "钳尾刀虫饲育基地",
+		"desc": "饲养钳尾刀虫",
+		"tags": "",
+		"max":5,
+		"require": "g.suiskcpy>=1",
+		"repeat": true,
+		"cost": {
+			"element_shengwuzhuzhi": 5,
+			"baibaishu": 20,
+			"paper": 300,
+			"cu_iron": 300,
+			"ljdy": 2,
+			"yjdl": 50,
+			"gwl": 50,
+			"cixinglingtichang": 1,
+			"r_adv_bzzj": 6,
+			"books": 40,
+			"tian": 100,
+			"iron_copper": 100
+		},
+		"mod": {
+			"command_code": 4,
+			"human_power.max": -400,
+			"qianwdc.rate": 0.2,
+			"elect.rate": -3.5,
+			"space": 25
+		}
+	},
+	{
+		"id": "cixinglingtichang",
+		"name": "磁性灵体场",
+		"desc": "提供灵体性质生物上限",
+		"tags": "",
+		"max":5,
+		"require": "g.ltsyjs>=1",
+		"repeat": true,
+		"cost": {
+			"hongshan": 5,
+			"yanhuo": 8,
+			"lingrang": 10,
+			"cishuadianquan": 2,
+			"sj_met": 60,
+			"yjswyb": 10,
+			"ljdy": 6
+		},
+		"mod": {
+			"生物1级.max": 1,
+			"elect.rate": -3,
+			"space": 20
+		}
+	},
+	{
+		"id": "qingxkj",
+		"name": "轻型框架",
+		"desc": "轻型框架用于建造部分精密结构",
+		"tags": "",
+		"max":50,
+		"require": "g.shouhunzhemox>=1",
+		"repeat": true,
+		"cost": {
+			"element_blood": 5,
+			"zhenhun_pice_1": 3,
+			"sj_met": 20,
+			"yjswyb": 5,
+			"tian": 50,
+			"cbclb": 10,
+			"ljdy": 6
+		},
+		"mod": {
+			"space": 1
+		}
+	},
+	{
+		"id": "qingxdql",
+		"name": "轻型电曲路",
+		"desc": "轻型电曲路用于建造部分精密结构",
+		"tags": "",
+		"max":50,
+		"require": "g.shouhunzhemox>=1",
+		"repeat": true,
+		"cost": {
+			"element_blood": 10,
+			"zhenhun_pice_1": 1,
+			"sj_met": 20,
+			"tian": 50,
+			"yjdl": 20,
+			"ljdy": 6
+		},
+		"mod": {
+			"elect.rate": 1,
+			"space": 1
+		}
+	},
+	{
+		"id": "bbskzjk",
+		"name": "白白鼠控制接口",
+		"desc": "用于控制与训练白白鼠",
+		"tags": "",
+		"max":5,
+		"require": "g.quntizysw>=1",
+		"repeat": true,
+		"cost": {
+			"baibaishu": 30,
+			"swzhi": 10,
+			"qingxdql": 5,
+			"qingxkj": 3,
+			"sj_met": 50,
+			"tian": 100,
+			"yjdl": 20,
+			"ljdy": 6
+		},
+		"mod": {
+			"baibaishu.rate": 1,
+			"elect.rate": -6,
+			"space": 30
+		}
+	},
+	{
+		"id": "qwdckzjk",
+		"name": "钳尾刀虫控制接口",
+		"desc": "用于控制与训练钳尾刀虫",
+		"tags": "",
+		"max":5,
+		"require": "g.quntijgsw>=1",
+		"repeat": true,
+		"cost": {
+			"qianwdc": 30,
+			"swzhi": 10,
+			"qingxdql": 5,
+			"qingxkj": 3,
+			"sj_met": 50,
+			"tian": 100,
+			"yjdl": 20,
+			"ljdy": 6
+		},
+		"mod": {
+			"qianwdc.rate": 0.3,
+			"elect.rate": -6,
+			"space": 30
+		}
+	},
+	{
+		"id": "jbgckzjk",
+		"name": "剑背龟控制接口",
+		"desc": "用于控制与训练剑背龟",
+		"tags": "",
+		"max":5,
+		"require": "g.quntifysw>=1",
+		"repeat": true,
+		"cost": {
+			"jbgui": 30,
+			"swzhi": 10,
+			"qingxdql": 5,
+			"qingxkj": 3,
+			"sj_met": 50,
+			"tian": 100,
+			"yjdl": 20,
+			"ljdy": 6
+		},
+		"mod": {
+			"jbgui.rate": 0.3,
+			"elect.rate": -6,
+			"space": 30
+		}
+	},
+	{
+		"id": "suihunslkzq",
+		"name": "碎魂散列控制器",
+		"desc": "用于控制与训练碎魂者",
+		"tags": "",
+		"max":1,
+		"require": "g.fuhexsw>=1",
+		"repeat": true,
+		"cost": {
+			"jbgui": 30,
+			"baibaishu": 30,
+			"yasexiyi": 30,
+			"qianwdc": 30,
+			"swzhi": 10,
+			"qingxdql": 5,
+			"qingxkj": 5
+		},
+		"mod": {
+			"elect.rate": -6,
+			"space": 30
+		}
+	},
+	{
+		"id": "swzlenggui",
+		"name": "生物质冷柜",
+		"desc": "提供生物质上限",
+		"tags": "",
+		"max":6,
+		"require": "g.qiguanjiepou>=1 && g.shengwuzhiquyang>=1 && g.jiaqiaoleilxfx>=1",
+		"repeat": true,
+		"cost": {
+			"cold_core": 50,
+			"qiyiyeti": 10,
+			"cishuadianquan": 1,
+			"lifeitable":1,
+			"yjswyb": 10,
+			"ljdy": 5
+		},
+		"mod": {
+			"swzhi.max": 10,
+			"elect.rate": -3,
+			"space": 25
+		}
+	},
+	{
+		"id": "swzhuiszhan",
+		"name": "生物质回收站",
+		"desc": "对【生物质冲刷】产生的废物进行回收,降低资金消耗",
+		"tags": "",
+		"max":1,
+		"require": "g.swzranshao>=1 && g.swzjiliang>=1 && g.wgswx>=3",
+		"repeat": true,
+		"cost": {
+			"star_map_1": 15,
+			"ljdy": 5,
+			"cixinglingtichang":1,
+			"cold_core": 50,
+			"swzhi": 1,
+			"yjswyb": 20
+		},
+		"mod": {
+			"command_code": 2,
+			"human_power.max": -300,
+			"elect.rate": -1,
+			"swztaoxi.cost.money": -1000,
+			"space": 18
+		}
+	},
+	{
+		"id": "swszsxqi",
+		"name": "生物算子筛选器",
+		"desc": "使用一算子来优化【生物质冲刷】，大幅降低生物材料的使用量",
+		"tags": "",
+		"max":1,
+		"require": "g.swzranshao>=1 && g.swzjiliang>=1 && g.wgswx>=3",
+		"repeat": true,
+		"cost": {
+			"ljdy": 10,
+			"yisuanzi": 4,
+			"cixinglingtichang":1,
+			"cold_core": 50,
+			"swzhi": 1,
+			"yjswyb": 20
+		},
+		"mod": {
+			"elect.rate": -8,
+			"swztaoxi.cost.element_jidingzhi": -10,
+			"swztaoxi.cost.element_shengwuqiguan": -10,
+			"swztaoxi.cost.element_shengwuzhuzhi": -10,
+			"space": 25
+		}
+	},
+	{
+		"id": "swhxlqq",
+		"name": "生物回旋冷凝器",
+		"desc": "通过冷却设施来优化【生物质冲刷】，降低晶流水和高温流的消耗",
+		"tags": "",
+		"max":5,
+		"require": "g.swzranshao>=1 && g.swzjiliang>=1 && g.wgswx>=3",
+		"repeat": true,
+		"cost": {
+			"life_crystal": 5,
+			"ljdy": 2,
+			"yjdl": 80,
+			"cbclb": 40,
+			"jls": 150,
+			"lengqueshes": 1,
+			"cold_core": 50,
+			"yjswyb": 20
+		},
+		"mod": {
+			"elect.rate": -5,
+			"swztaoxi.cost.jls": -16,
+			"swztaoxi.cost.gwl": -6,
+			"space": 10
+		}
+	},
+	{
+		"id": "swzjzsys",
+		"name": "生物质精制实验室",
+		"desc": "研究如何降低【生物质冲刷】中的培养材料使用",
+		"tags": "",
+		"max":1,
+		"require": "g.swzranshao>=1 && g.swzjiliang>=1 && g.wgswx>=3",
+		"repeat": true,
+		"cost": {
+			"star_map_1": 5,
+			"life_crystal": 5,
+			"ljdy": 7,
+			"cold_bio_lab":1,
+			"swzhi": 10,
+			"yjdl": 80,
+			"cbclb": 40,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": -10,
+			"swztaoxi.cost.pyy": -14,
+			"swztaoxi.cost.fypyj": -14,
+			"space": 20
+		}
+	},
+	{
+		"id": "swtichunqi",
+		"name": "生物提纯器",
+		"desc": "提高【生物质冲刷】的产量",
+		"tags": "",
+		"max":5,
+		"require": "g.lsesys>=1 && g.wgswx>=4",
+		"repeat": true,
+		"cost": {
+			"ljdy": 5,
+			"lengqueshes":1,
+			"swzhi": 2,
+			"yjdl": 80,
+			"cbclb": 40,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": -5,
+			"swztaoxi.result.swzhi": 0.5,
+			"space": 9
+		}
+	},
+	{
+		"id": "shengwuzhifadianzhan",
+		"name": "生物质发电站",
+		"desc": "生物质发电",
+		"tags": "",
+		"max":7,
+		"require": "g.swdianyanjiu>=2",
+		"repeat": true,
+		"cost": {
+			"ljdy": 5,
+			"gwl": 40,
+			"elect_gen": 2,
+			"swzhi": 15,
+			"yjdl": 80,
+			"cbclb": 40,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": 15,
+			"space": 20
+		}
+	},
+	{
+		"id": "dipydianqi",
+		"name": "低平压电器",
+		"desc": "利用生物质的低位平压电性质进行发电,效率较低",
+		"tags": "",
+		"max":20,
+		"require": "g.swdianyanjiu>=2",
+		"repeat": true,
+		"cost": {
+			"ljdy": 10,
+			"jingdian": 10,
+			"gwl": 40,
+			"swzhi": 15,
+			"yjdl": 80,
+			"cbclb": 40,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": 6,
+			"space": 10
+		}
+	},
+	{
+		"id": "daochongcjt",
+		"name": "刀虫拆解台",
+		"desc": "自动解剖钳尾刀虫",
+		"tags": "",
+		"max":10,
+		"require": "g.swdianyanjiu>=2",
+		"repeat": true,
+		"cost": {
+			"ljdy": 15,
+			"cu_iron": 100,
+			"cu_copper": 100,
+			"dipydianqi": 1,
+			"qianwdc": 20,
+			"jingdian": 10,
+			"gwl": 100,
+			"swzhi": 10,
+			"yjdl": 80,
+			"cbclb": 50,
+			"jls": 150
+		},
+		"mod": {
+			"qianwdc.rate": -0.1,
+			"element_jidingzhi.rate": 0.08,
+			"elect.rate": -2,
+			"space": 15
+		}
+	},
+	{
+		"id": "xiyichaijt",
+		"name": "蜥蜴拆解台",
+		"desc": "自动解剖亚瑟蜥蜴",
+		"tags": "",
+		"max":10,
+		"require": "g.swdianyanjiu>=2",
+		"repeat": true,
+		"cost": {
+			"ljdy": 15,
+			"cu_iron": 100,
+			"cu_copper": 100,
+			"dipydianqi": 1,
+			"yasexiyi": 20,
+			"jingdian": 10,
+			"gwl": 100,
+			"swzhi": 10,
+			"yjdl": 80,
+			"cbclb": 50,
+			"jls": 150
+		},
+		"mod": {
+			"yasexiyi.rate": -0.1,
+			"element_shengwuqiguan.rate": 0.08,
+			"elect.rate": -2,
+			"space": 10
+		}
+	},
+	{
+		"id": "jbguichaijt",
+		"name": "剑背拆解台",
+		"desc": "自动解剖剑背龟",
+		"tags": "",
+		"max":10,
+		"require": "g.swdianyanjiu>=2",
+		"repeat": true,
+		"cost": {
+			"ljdy": 15,
+			"cu_iron": 100,
+			"cu_copper": 100,
+			"dipydianqi": 1,
+			"jbgui": 20,
+			"jingdian": 10,
+			"gwl": 100,
+			"swzhi": 10,
+			"yjdl": 80,
+			"cbclb": 50,
+			"jls": 150
+		},
+		"mod": {
+			"jbgui.rate": -0.1,
+			"element_shengwuzhuzhi.rate": 0.08,
+			"elect.rate": -2,
+			"space": 10
+		}
+	},
+	{
+		"id": "rsswzfdz",
+		"name": "燃烧生物质发电站",
+		"desc": "通过燃烧生物质进行发电",
+		"tags": "",
+		"max":3,
+		"require": "g.shengwurexcueyanj>=3 && g.yanchenchuli>=1",
+		"repeat": true,
+		"cost": {
+			"ljdy": 1,
+			"gwl": 40,
+			"lengqueshes":1,
+			"cishuadianquan":1,
+			"yxls": 20,
+			"swzhi": 20,
+			"yjdl": 50,
+			"cbclb": 40,
+			"jls": 150
+		},
+		"mod": {
+			"swzhi.rate": -0.0001,
+			"elect.rate": 40,
+			"space": 35
+		}
+	},
+	{
+		"id": "hqtanzhen",
+		"name": "黄泉探针",
+		"desc": "承载神识的无人化探针,只能承担简单的勘测与收集任务",
+		"tags": "",
+		"max":10,
+		"require": "g.hqbdtj>=1",
+		"repeat": true,
+		"cost": {
+			"back_dream": 20,
+			"ltxb": 1,
+			"shenshi": 15,
+			"lg": 30,
+			"gwl": 60,
+			"lxue": 30,
+			"shuaibai_core": 30,
+			"human_power": 2000,
+			"money": 2500,
+			"cbclb": 40,
+			"super_mind": 30
+		},
+		"mod": {
+			"shenshi.max": -0.1,
+			"lxue.rate": 0.1,
+			"shuaibai_core.rate": 0.1,
+			"space": 5
+		}
+	},
+	{
+		"id": "yuansurechi",
+		"name": "元素热池",
+		"desc": "小型化的高效发电方案",
+		"tags": "",
+		"max":10,
+		"require": "g.xiulian_chaos_yuansuydong>=1",
+		"repeat": true,
+		"cost": {
+			"element_gold": 10,
+			"element_wood": 10,
+			"element_water": 10,
+			"element_fire": 10,
+			"element_land": 10,
+			"cold_core": 10,
+			"tian": 25,
+			"sj_met": 20,
+			"iron_copper": 30,
+			"human_power": 500,
+			"money": 1000,
+			"cbclb": 20
+		},
+		"mod": {
+			"elect.max": 0.1,
+			"elect.rate": 1,
+			"space": 2
+		}
+	},
+	{
+		"id": "huangquanmao",
+		"name": "黄泉锚",
+		"desc": "稳定现实物体，提供1点黄泉研究基础【需要3点】",
+		"tags": "unreal_point",
+		"max":1,
+		"require": "g.xiulian_huangquanxiul>=4",
+		"repeat": true,
+		"cost": {
+			"back_dream": 10,
+			"yuansurechi":1,
+			"ltxb": 1,
+			"ltwdq":1,
+			"tian": 100,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"jingdian": 20,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"elect.rate": -1,
+			"extra_space": 30,
+			"space": 15
+		}
+	},
+	{
+		"id": "huangquanbujipt",
+		"name": "黄泉补给平台",
+		"desc": "负责长期提高黄泉维护物质，提供1点黄泉研究基础【需要3点】",
+		"tags": "unreal_point",
+		"max":1,
+		"require": "g.xiulian_huangquanxiul>=4",
+		"repeat": true,
+		"cost": {
+			"back_dream": 20,
+			"cangku": 5,
+			"ltxb": 1,
+			"yqlm": 20,
+			"zdht": 20,
+			"tian": 100,
+			"cu_copper": 300,
+			"cu_iron": 300,
+			"jingdian": 20,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"command_code": 2,
+			"human_power.rate": 10,
+			"money.rate": -2,
+			"space": 30
+		}
+	},
+	{
+		"id": "hqzhusd",
+		"name": "黄泉驻守点",
+		"desc": "提供人员在黄泉的居住地，提供1点黄泉研究基础【需要3点】",
+		"tags": "unreal_point",
+		"max":10,
+		"require": "g.xiulian_huangquanxiul>=4",
+		"repeat": true,
+		"cost": {
+			"back_dream": 20,
+			"yuansurechi": 5,
+			"ltxb": 1,
+			"life_crystal": 10,
+			"lxue": 30,
+			"shuaibai_core": 30,
+			"jingdian": 20,
+			"kangyaohuanjiebao": 3,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"human_power.rate": 1,
+			"back_dream.rate": 0.03,
+			"human_power.max": 300,
+			"space": 40
+		}
+	},
+	{
+		"id": "luojiccx",
+		"name": "逻辑存储箱",
+		"desc": "存放逻辑单元",
+		"tags": "",
+		"max":10,
+		"require": "g.ljdy>=1",
+		"repeat": true,
+		"cost": {
+			"life_crystal": 10,
+			"jingdian": 20,
+			"ljdy": 5,
+			"fcchest": 1,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"ljdy.max": 5,
+			"money.max": 300,
+			"space": 10
+		}
+	},
+	{
+		"id": "feirefsq",
+		"name": "芥子废热发生器",
+		"desc": "产生顽固废热水",
+		"tags": "",
+		"max":10,
+		"require": "g.ljdy>=1",
+		"repeat": true,
+		"cost": {
+			"jls": 100,
+			"gwl": 50,
+			"yjdl": 80,
+			"human_power": 2500,
+			"money": 1000
+		},
+		"mod": {
+			"frs": 90,
+			"extra_space": 30,
+			"space": 20
+		}
+	},
+	{
+		"id": "jianyifeirefsq",
+		"name": "简易废热发生器",
+		"desc": "为什么会有人想要顽固废热水",
+		"tags": "",
+		"max":10,
+		"require": "g.frs>=1",
+		"repeat": true,
+		"cost": {
+			"jls": 100,
+			"cu_copper": 100,
+			"cu_iron": 100,
+			"cold_core": 15,
+			"money": 1000
+		},
+		"mod": {
+			"frs": 10,
+			"space": 10
+		}
+	},
+	{
+		"id": "luojijiaohuanji",
+		"name": "逻辑交易机",
+		"desc": "进行自动交易获取钱币",
+		"tags": "",
+		"max":10,
+		"require": "g.ljdy>=1",
+		"repeat": true,
+		"cost": {
+			"jingdian": 20,
+			"ljdy": 5,
+			"yjdl": 50,
+			"cu_copper": 200,
+			"cu_iron": 200,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"money.rate": 2,
+			"space": 20
+		}
+	},
+	{
+		"id": "kwpeidianqi",
+		"name": "千瓦配电器",
+		"desc": "简单的提供工业电力",
+		"tags": "",
+		"max":10,
+		"require": "g.shengchanlun>=1",
+		"repeat": true,
+		"cost": {
+			"zero_crystal":25,
+			"heli":40,
+			"wgys": 20,
+			"jingdian": 20,
+			"ljdy": 20,
+			"yjdl": 50,
+			"paper": 100,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"elect.rate": -4,
+			"industry_elect.max": 1,
+			"space": 5
+		}
+	},
+	{
+		"id": "luojidongliji",
+		"name": "逻辑动力机",
+		"desc": "简单的提供工业电力",
+		"tags": "",
+		"max":13,
+		"require": "g.shengchanlun>=1",
+		"repeat": true,
+		"cost": {
+			"zero_crystal":25,
+			"heli":40,
+			"wgys": 20,
+			"jingdian": 20,
+			"ljdy": 20,
+			"yjdl": 50,
+			"cold_core": 20,
+			"life_crystal": 10,
+			"money": 2000
+		},
+		"mod": {
+			"industry_elect.max": 4,
+			"space": 5
+		}
+	},
+	{
+		"id": "limestone_cang",
+		"name": "石灰石筒仓",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.limestone>=1",
+		"repeat": true,
+		"cost": {
+			"limestone": 5,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 100,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"limestone.max": 80,
+			"space": 5
+		}
+	},
+	{
+		"id": "quartz_cang",
+		"name": "石英砂筒仓",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.limestone>=1",
+		"repeat": true,
+		"cost": {
+			"quartz": 5,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 100,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"quartz.max": 80,
+			"space": 5
+		}
+	},
+	{
+		"id": "ryongpingv_cang",
+		"name": "日用品货柜",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.ryongping>=1",
+		"repeat": true,
+		"cost": {
+			"ryongping": 5,
+			"spare_parts": 50,
+			"steel": 30,
+			"money": 4000
+		},
+		"mod": {
+			"ryongping.max": 80,
+			"space": 7
+		}
+	},
+	{
+		"id": "gaojiwu_cang",
+		"name": "高级物柜",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.gaojihuowu>=1",
+		"repeat": true,
+		"cost": {
+			"gaojihuowu": 5,
+			"ryongping": 100,
+			"spare_parts": 50,
+			"steel": 50,
+			"money": 4000
+		},
+		"mod": {
+			"gaojihuowu.max": 80,
+			"space": 10
+		}
+	},
+	{
+		"id": "shichip_cang",
+		"name": "奢侈品柜",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.shichiping>=1",
+		"repeat": true,
+		"cost": {
+			"shichiping": 5,
+			"gaojihuowu": 50,
+			"ryongping": 100,
+			"spare_parts": 50,
+			"steel": 50,
+			"money": 4000
+		},
+		"mod": {
+			"shichiping.max": 50,
+			"space": 10
+		}
+	},
+	{
+		"id": "ncsju_cang",
+		"name": "泥成数据包",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.spart_zuzhuang>=10 && g.songfeng_jizhi>=1",
+		"repeat": true,
+		"cost": {
+			"nicheng_data": 5,
+			"steel": 100,
+			"xianban": 90,
+			"spare_parts": 100,
+			"steel": 50,
+			"money": 4000
+		},
+		"mod": {
+			"nicheng_data.max": 50,
+			"space": 10
+		}
+	},
+	{
+		"id": "glass_cang",
+		"name": "玻璃仓库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.glass>=1",
+		"repeat": true,
+		"cost": {
+			"glass": 2,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 100,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"glass.max": 80,
+			"space": 5
+		}
+	},
+	{
+		"id": "water_cang",
+		"name": "水塔",
+		"desc": "",
+		"tags": "",
+		"max":25,
+		"require": "g.ind_water>=1",
+		"repeat": true,
+		"cost": {
+			"ind_water": 2,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 30,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"ind_water.max": 80,
+			"space": 10
+		}
+	},
+	{
+		"id": "steam1_cang",
+		"name": "蒸汽箱",
+		"desc": "",
+		"tags": "",
+		"max":25,
+		"require": "g.ind_steam_1>=1",
+		"repeat": true,
+		"cost": {
+			"ind_steam_1": 2,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 30,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"ind_steam_1.max": 80,
+			"space": 10
+		}
+	},
+	{
+		"id": "gubencore_cang",
+		"name": "古本核库",
+		"desc": "",
+		"tags": "",
+		"max":25,
+		"require": "g.guben_core>=1",
+		"repeat": true,
+		"cost": {
+			"guben_core": 2,
+			"zero_crystal":100,
+			"life_crystal": 10,
+			"heli":40,
+			"tian": 30,
+			"yjdl": 50,
+			"human_power": 3000,
+			"money": 8000
+		},
+		"mod": {
+			"guben_core.max": 80,
+			"space": 30
+		}
+	},
+	{
+		"id": "fanmoxiangzi",
+		"name": "凡膜箱",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.suixifanmo>=1",
+		"repeat": true,
+		"cost": {
+			"suixifanmo": 1,
+			"zero_crystal":100,
+			"heli":55,
+			"tian": 30,
+			"yjdl": 50,
+			"human_power": 1000,
+			"money": 3000
+		},
+		"mod": {
+			"hp.max": 0.1,
+			"suixifanmo.max": 50,
+			"space": 25
+		}
+	},
+	{
+		"id": "yinzhiqp",
+		"name": "萤制气瓶",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.yanqi>=1",
+		"repeat": true,
+		"cost": {
+			"yanqi": 1,
+			"yinjing": 2,
+			"zero_crystal":100,
+			"heli":55,
+			"tian": 30,
+			"yjdl": 50,
+			"human_power": 1000,
+			"money": 3000
+		},
+		"mod": {
+			"yanqi.max": 150,
+			"yinjing.max": 20,
+			"space": 10
+		}
+	},
+	{
+		"id": "zhenzhihecti",
+		"name": "真直合成体",
+		"desc": "",
+		"tags": "",
+		"max":20,
+		"require": "g.zhenzhi_ore>=1",
+		"repeat": true,
+		"cost": {
+			"zhenzhi_ore": 1,
+			"zero_crystal":100,
+			"heli":55,
+			"tian": 30,
+			"yjdl": 50,
+			"human_power": 1000,
+			"money": 5000
+		},
+		"mod": {
+			"zhenzhi_ore.max": 30,
+			"zhenzhi_spindle.max": 20,
+			"space": 10
+		}
+	},
+	{
+		"id": "glass_floor_extend",
+		"name": "琉璃步行路",
+		"desc": "",
+		"tags": "",
+		"max":20,
+		"require": "g.glass>=1",
+		"repeat": true,
+		"cost": {
+			"glass": 160,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 30,
+			"yjdl": 50,
+			"limestone": 10,
+			"quartz": 10,
+			"human_power": 1000,
+			"money": 4000
+		},
+		"mod": {
+			"industry_space.max": 3,
+			"space": 7
+		}
+	},
+	{
+		"id": "glass_theard_extend",
+		"name": "琉璃通讯室",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.glass>=1",
+		"repeat": true,
+		"cost": {
+			"glass": 160,
+			"jingdian":10,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 30,
+			"yjdl": 50,
+			"human_power": 1000,
+			"money": 4000
+		},
+		"mod": {
+			"industry_thread.max": 4,
+			"space": 20
+		}
+	},
+	{
+		"id": "stell_floor_extend",
+		"name": "工钢步行路",
+		"desc": "",
+		"tags": "",
+		"max":20,
+		"require": "g.steel>=1",
+		"repeat": true,
+		"cost": {
+			"steel": 100,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 30,
+			"yjdl": 50,
+			"limestone": 10,
+			"quartz": 10,
+			"human_power": 1000,
+			"money": 4000
+		},
+		"mod": {
+			"industry_space.max": 7,
+			"space": 10
+		}
+	},
+	{
+		"id": "steel_theard_extend",
+		"name": "工钢通讯室",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.steel>=1",
+		"repeat": true,
+		"cost": {
+			"steel": 130,
+			"jingdian":10,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 30,
+			"yjdl": 50,
+			"human_power": 1000,
+			"money": 4000
+		},
+		"mod": {
+			"industry_thread.max": 7,
+			"space": 18
+		}
+	},
+	{
+		"id": "yingci_floor_extend",
+		"name": "萤磁步行路",
+		"desc": "",
+		"tags": "",
+		"max":20,
+		"require": "g.techo_eng_yjyy_1>=1",
+		"repeat": true,
+		"cost": {
+			"yingcixian": 100,
+			"spare_parts": 200,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 30,
+			"yjdl": 50,
+			"limestone": 10,
+			"quartz": 10,
+			"human_power": 1000,
+			"money": 4000
+		},
+		"mod": {
+			"industry_space.max": 7,
+			"space": 50
+		}
+	},
+	{
+		"id": "yingci_theard_extend",
+		"name": "萤磁通讯室",
+		"desc": "",
+		"tags": "",
+		"max":20,
+		"require": "g.techo_eng_yjyy_1>=1",
+		"repeat": true,
+		"cost": {
+			"yingcixian": 100,
+			"spare_parts": 200,
+			"zero_crystal":25,
+			"jingdian":10,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 30,
+			"yjdl": 50,
+			"human_power": 1000,
+			"money": 4000
+		},
+		"mod": {
+			"industry_thread.max": 3,
+			"space": 55
+		}
+	},
+	{
+		"id": "coal_cang",
+		"name": "煤炭仓库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.coal>=1",
+		"repeat": true,
+		"cost": {
+			"coal": 1,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 100,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"coal.max": 80,
+			"space": 5
+		}
+	},
+	{
+		"id": "coke_cang",
+		"name": "焦炭仓库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.coal>=1",
+		"repeat": true,
+		"cost": {
+			"coke": 1,
+			"coil_1": 50,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 100,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"coke.max": 70,
+			"space": 5
+		}
+	},
+	{
+		"id": "steel_cang",
+		"name": "工制钢仓库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.steel>=1",
+		"repeat": true,
+		"cost": {
+			"steel": 5,
+			"coil_1": 50,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 100,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 1000
+		},
+		"mod": {
+			"steel.max": 65,
+			"space": 5
+		}
+	},
+	{
+		"id": "coil_1_cang",
+		"name": "工制线圈仓库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.coil_1>=1",
+		"repeat": true,
+		"cost": {
+			"coil_1": 5,
+			"zero_crystal":25,
+			"heli":40,
+			"tian": 100,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 1000
+		},
+		"mod": {
+			"coil_1.max": 80,
+			"space": 5
+		}
+	},
+	{
+		"id": "huangwen_cang",
+		"name": "黄温阻绝仓",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.temper_1>=1",
+		"repeat": true,
+		"cost": {
+			"temper_1": 5,
+			"cold_core": 50,
+			"jls": 100,
+			"gwl": 50,
+			"heli":40,
+			"tian": 100,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 1000
+		},
+		"mod": {
+			"temper_1.max": 50,
+			"space": 5
+		}
+	},
+	{
+		"id": "bunit_cang",
+		"name": "空单元货架",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.blank_unit>=1",
+		"repeat": true,
+		"cost": {
+			"blank_unit": 5,
+			"heli":40,
+			"tian": 100,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 1000
+		},
+		"mod": {
+			"blank_unit.max": 50,
+			"space": 5
+		}
+	},
+	{
+		"id": "temp_1_unit_cang",
+		"name": "黄温单元货架",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.temp_1_unit>=1",
+		"repeat": true,
+		"cost": {
+			"temp_1_unit": 5,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"yjdl": 50,
+			"human_power": 2500,
+			"money": 1000
+		},
+		"mod": {
+			"temp_1_unit.max": 50,
+			"space": 5
+		}
+	},
+	{
+		"id": "spear_part_cang",
+		"name": "零部件仓库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.spare_parts>=1",
+		"repeat": true,
+		"cost": {
+			"ganwu": 100,
+			"spare_parts": 5,
+			"steel": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"human_power": 2500,
+			"money": 2500
+		},
+		"mod": {
+			"spare_parts.max": 50,
+			"space": 6
+		}
+	},
+	{
+		"id": "soft_dirt_cang",
+		"name": "软泥仓",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.smshengchan>=1",
+		"repeat": true,
+		"cost": {
+			"ganwu": 100,
+			"soft_dirt": 5,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 1000
+		},
+		"mod": {
+			"soft_dirt.max": 50,
+			"space": 13
+		}
+	},
+	{
+		"id": "pei_zhi_cang",
+		"name": "培质板",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.smshengchan>=1",
+		"repeat": true,
+		"cost": {
+			"ganwu": 100,
+			"pei_zhi": 5,
+			"glass": 75,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 1000
+		},
+		"mod": {
+			"pei_zhi.max": 50,
+			"space": 13
+		}
+	},
+	{
+		"id": "xianban_cang",
+		"name": "纤板架",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.smshengchan>=1",
+		"repeat": true,
+		"cost": {
+			"xianban": 5,
+			"ganwu": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 1000
+		},
+		"mod": {
+			"xianban.max": 50,
+			"space": 7
+		}
+	},
+	{
+		"id": "songfeng_cang",
+		"name": "松风库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.smshengchan>=1",
+		"repeat": true,
+		"cost": {
+			"songfeng_jizhi": 5,
+			"ganwu": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 1000
+		},
+		"mod": {
+			"songfeng_jizhi.max": 50,
+			"space": 10
+		}
+	},
+	{
+		"id": "wijianbao_cang",
+		"name": "物件包库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.spart_zuzhuang>=10",
+		"repeat": true,
+		"cost": {
+			"wujianbao": 5,
+			"spare_parts": 70,
+			"ganwu": 100,
+			"steel": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 1000
+		},
+		"mod": {
+			"wujianbao.max": 50,
+			"space": 10
+		}
+	},
+	{
+		"id": "zhenxishi_cang",
+		"name": "珍洗石库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.spart_zuzhuang>=10",
+		"repeat": true,
+		"cost": {
+			"zhenxishi": 5,
+			"spare_parts": 70,
+			"ganwu": 100,
+			"steel": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 1000
+		},
+		"mod": {
+			"zhenxishi.max": 50,
+			"space": 10
+		}
+	},
+	{
+		"id": "gongzhiliang_cang",
+		"name": "工制梁库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.spart_zuzhuang>=10",
+		"repeat": true,
+		"cost": {
+			"gongzhiliang": 5,
+			"spare_parts": 70,
+			"ganwu": 100,
+			"steel": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 1000
+		},
+		"mod": {
+			"gongzhiliang.max": 50,
+			"space": 10
+		}
+	},
+	{
+		"id": "xicheng_data_cang",
+		"name": "洗成数据包",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.spart_zuzhuang>=10",
+		"repeat": true,
+		"cost": {
+			"xicheng_data": 5,
+			"spare_parts": 70,
+			"ganwu": 100,
+			"steel": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"tian": 100,
+			"money": 3000
+		},
+		"mod": {
+			"xicheng_data.max": 50,
+			"space": 10
+		}
+	},
+	{
+		"id": "guanggan_data_cang",
+		"name": "光感数据包",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.spart_zuzhuang>=10",
+		"repeat": true,
+		"cost": {
+			"guanggan_data": 5,
+			"spare_parts": 70,
+			"ganwu": 100,
+			"steel": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"tian": 100,
+			"money": 3000
+		},
+		"mod": {
+			"guanggan_data.max": 50,
+			"space": 10
+		}
+	},
+	{
+		"id": "naicixian_cang",
+		"name": "耐磁线库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.spart_zuzhuang>=10",
+		"repeat": true,
+		"cost": {
+			"naicixian": 5,
+			"spare_parts": 70,
+			"ganwu": 100,
+			"steel": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"tian": 100,
+			"money": 3000
+		},
+		"mod": {
+			"naicixian.max": 50,
+			"space": 10
+		}
+	},
+	{
+		"id": "ganguangtj_cang",
+		"name": "感光透镜库",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.spart_zuzhuang>=10",
+		"repeat": true,
+		"cost": {
+			"ganguangtj": 5,
+			"spare_parts": 70,
+			"ganwu": 100,
+			"steel": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"tian": 100,
+			"money": 3000
+		},
+		"mod": {
+			"ganguangtj.max": 50,
+			"space": 10
+		}
+	},
+	{
+		"id": "gubenfenshenzhu",
+		"name": "古本分神柱",
+		"desc": "提高所有固体类资源上限",
+		"tags": "",
+		"max":3,
+		"require": "g.gubenhejiexi>=1",
+		"repeat": true,
+		"cost": {
+			"guben_core": 100,
+			"ganwu": 100,
+			"glass": 200,
+			"coil_1": 200,
+			"tian": 100,
+			"yjdl": 300,
+			"ljdy": 10,
+			"money": 6700
+		},
+		"mod": {
+			"固体.max": 10,
+			"space": 60
+		}
+	},
+	{
+		"id": "gubenfentizhu",
+		"name": "古本分体柱",
+		"desc": "提高所有液体类资源上限",
+		"tags": "",
+		"max":3,
+		"require": "g.gubenhejiexi>=1",
+		"repeat": true,
+		"cost": {
+			"guben_core": 100,
+			"ganwu": 100,
+			"glass": 200,
+			"coil_1": 200,
+			"tian": 100,
+			"yjdl": 300,
+			"ljdy": 10,
+			"money": 6700
+		},
+		"mod": {
+			"液体.max": 10,
+			"space": 60
+		}
+	},
+	{
+		"id": "gubenfenxuanzhu",
+		"name": "古本分旋柱",
+		"desc": "提高所有气体类资源上限",
+		"tags": "",
+		"max":3,
+		"require": "g.gubenhejiexi>=1",
+		"repeat": true,
+		"cost": {
+			"guben_core": 100,
+			"ganwu": 100,
+			"glass": 200,
+			"coil_1": 200,
+			"tian": 100,
+			"yjdl": 300,
+			"ljdy": 10,
+			"money": 6700
+		},
+		"mod": {
+			"气体.max": 10,
+			"space": 60
+		}
+	},
+	{
+		"id": "xuanmuyeping",
+		"name": "玄牝液瓶",
+		"desc": "提高玄牝液上限",
+		"tags": "",
+		"max":5,
+		"require": "g.techo_eng_juhe_1>=1",
+		"repeat": true,
+		"cost": {
+			"xuanmuye": 30,
+			"guben_core": 100,
+			"ganwu": 100,
+			"glass": 200,
+			"coil_1": 200,
+			"tian": 100,
+			"yjdl": 300,
+			"ljdy": 10,
+			"money": 6700
+		},
+		"mod": {
+			"xuanmuye.max": 80,
+			"space": 20
+		}
+	},
+	{
+		"id": "jichuancangku",
+		"name": "机传仓库",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.techo_eng_zyzz_1>=1",
+		"repeat": true,
+		"cost": {
+			"xuanmuye": 30,
+			"guben_core": 100,
+			"ganwu": 100,
+			"ljdy": 10,
+			"money": 4700,
+			"mech_mo_struct": 2
+		},
+		"mod": {
+			"mech_mo_struct.max": 50,
+			"space": 55
+		}
+	},
+	{
+		"id": "taojiancangku",
+		"name": "套件仓库",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.techo_eng_zyzz_1>=1",
+		"repeat": true,
+		"cost": {
+			"xuanmuye": 30,
+			"guben_core": 100,
+			"ganwu": 100,
+			"ljdy": 10,
+			"money": 4700,
+			"emember_unit": 2
+		},
+		"mod": {
+			"emember_unit.max": 50,
+			"space": 55
+		}
+	},
+	{
+		"id": "dk1_cangku",
+		"name": "装卸单元仓库",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.techo_eng_zyzz_1>=1",
+		"repeat": true,
+		"cost": {
+			"xuanmuye": 30,
+			"guben_core": 100,
+			"ganwu": 100,
+			"ljdy": 10,
+			"money": 4700,
+			"emember_unit": 33,
+			"mech_mo_struct": 33
+		},
+		"mod": {
+			"dock_unit_1.max": 30,
+			"space": 55
+		}
+	},
+	{
+		"id": "ycixian_cangku",
+		"name": "萤磁仓库",
+		"desc": "",
+		"tags": "",
+		"max":10,
+		"require": "g.techo_eng_yjyy_1>=1",
+		"repeat": true,
+		"cost": {
+			"xuanmuye": 30,
+			"guben_core": 100,
+			"ganwu": 100,
+			"ljdy": 10,
+			"money": 4700,
+			"yingcixian": 2
+		},
+		"mod": {
+			"yingcixian.max": 30,
+			"space": 55
+		}
+	},
+	{
+		"id": "xianban_jinghua",
+		"name": "纤板净化设施",
+		"desc": "提升净化机上限",
+		"tags": "纤板设施1",
+		"max":10,
+		"require": "g.smshengchan>=1",
+		"repeat": true,
+		"cost": {
+			"soft_dirt": 100,
+			"xianban": 60,
+			"pei_zhi": 50,
+			"ganwu": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 2500
+		},
+		"mod": {
+			"factory_jinghuaji.max": 2,
+			"space": 10
+		}
+	},
+	{
+		"id": "xianban_zhengqi",
+		"name": "纤板蒸汽设施",
+		"desc": "提升蒸汽机上限",
+		"tags": "纤板设施1",
+		"max":10,
+		"require": "g.smshengchan>=1",
+		"repeat": true,
+		"cost": {
+			"soft_dirt": 100,
+			"xianban": 60,
+			"pei_zhi": 50,
+			"ganwu": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 2500
+		},
+		"mod": {
+			"factory_steammech.max": 2,
+			"space": 10
+		}
+	},
+	{
+		"id": "xianban_jishui",
+		"name": "纤板汲水设施",
+		"desc": "提升水泵上限",
+		"tags": "纤板设施1",
+		"max":10,
+		"require": "g.smshengchan>=1",
+		"repeat": true,
+		"cost": {
+			"soft_dirt": 100,
+			"xianban": 60,
+			"pei_zhi": 50,
+			"ganwu": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 2500
+		},
+		"mod": {
+			"factory_pumb.max": 2,
+			"space": 10
+		}
+	},
+	{
+		"id": "xianban_fasan",
+		"name": "纤板发散设施",
+		"desc": "提升工业用地上限",
+		"tags": "纤板设施1",
+		"max":10,
+		"require": "g.smshengchan>=1",
+		"repeat": true,
+		"cost": {
+			"soft_dirt": 100,
+			"xianban": 150,
+			"pei_zhi": 50,
+			"ganwu": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 2500
+		},
+		"mod": {
+			"industry_space.max": 5,
+			"space": 10
+		}
+	},
+	{
+		"id": "xianban_tongxun",
+		"name": "纤板人力小屋",
+		"desc": "提升人力上限",
+		"tags": "纤板设施1",
+		"max":10,
+		"require": "g.smshengchan>=1",
+		"repeat": true,
+		"cost": {
+			"soft_dirt": 100,
+			"xianban": 150,
+			"pei_zhi": 50,
+			"ganwu": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 2500
+		},
+		"mod": {
+			"human_power.max": 250,
+			"space": 25
+		}
+	},
+	{
+		"id": "xianban_kuozhan",
+		"name": "纤板扩展设施",
+		"desc": "提升空间上限",
+		"tags": "纤板设施1",
+		"max":10,
+		"require": "g.smshengchan>=1",
+		"repeat": true,
+		"cost": {
+			"soft_dirt": 100,
+			"xianban": 150,
+			"pei_zhi": 50,
+			"ganwu": 100,
+			"glass": 120,
+			"coil_1": 100,
+			"jls": 100,
+			"heli":40,
+			"tian": 100,
+			"money": 2500
+		},
+		"mod": {
+			"space": 50,
+			"extra_space": 100
+		}
+	},
+	{
+		"id": "xianban_sheshi_e",
+		"name": "纤板重构",
+		"desc": "提升所有纤板设施1级的上限",
+		"tags": "",
+		"require": "g.spare_parts>=1",
+		"max": 10,
+		"repeat": true,
+		"cost": {
+			"spare_parts": 100,
+			"soft_dirt": 100,
+			"xianban": 150,
+			"pei_zhi": 100,
+			"zero_crystal": 50,
+			"exe_paper": 40,
+			"snp_data": 50,
+			"adv_snp_data": 3,
+			"money": 1500
+		},
+		"mod": {
+			"纤板设施1.max": 1,
+			"human_power.max": 100,
+			"space": 15
+		}
+	},
+	{
+		"id": "blood_orb",
+		"name": "血珠",
+		"desc": "存放血响",
+		"tags": "",
+		"max":10,
+		"require": "g.xl_lj_zhenhun_10>=1",
+		"repeat": true,
+		"cost": {
+			"jingdian": 20,
+			"ljdy": 5,
+			"cu_copper": 100,
+			"cu_iron": 150,
+			"hp": 30,
+			"money": 2500
+		},
+		"mod": {
+			"element_blood.max": 5,
+			"space": 20
+		}
+	},
+	{
+		"id": "hunyuren",
+		"name": "魂语刃",
+		"desc": "游空真魂凝聚的利刃，几乎没什么杀伤力",
+		"tags": "",
+		"max":10,
+		"require": "g.xl_lj_zhenhun_10>=1",
+		"repeat": true,
+		"cost": {
+			"lxue":20,
+			"zhenhun_pice_1": 40,
+			"hp": 50,
+			"tili": 30,
+			"dirty_lingti":10,
+			"dirty_core":10
+		},
+		"mod": {
+			"space": 1,
+			"extra_space": 10
+		}
+	},
+	{
+		"id": "shihunren",
+		"name": "试魂刃",
+		"desc": "游空真魂凝聚的利刃，缓慢的伤害修行者本身获取血响",
+		"tags": "",
+		"max":10,
+		"require": "g.xl_lj_zhenhun_10>=1",
+		"repeat": true,
+		"cost": {
+			"hunyuren": 1,
+			"lxue":20,
+			"zhenhun_pice_1": 40,
+			"hp": 50,
+			"tili": 30,
+			"dirty_lingti":10,
+			"dirty_core":10
+		},
+		"mod": {
+			"hp.max":-1,
+			"element_blood.rate": 0.07,
+			"space": 5
+		}
+	},
+	{
+		"id": "quanxiangren",
+		"name": "全向刃",
+		"desc": "游空真魂凝聚的利刃，刀尖指向血液汇聚之处",
+		"tags": "point_blade",
+		"max":1,
+		"require": "g.xl_lj_zhenhun_10>=1",
+		"repeat": true,
+		"cost": {
+			"element_wuhuan":15,
+			"element_luor":10,
+			"hunyuren": 1,
+			"lxue":20,
+			"zhenhun_pice_1": 40,
+			"hp": 50,
+			"tili": 30,
+			"dirty_lingti":10,
+			"dirty_core":10
+		},
+		"mod": {
+			"money.rate": 10,
+			"space": 5
+		}
+	},
+	{
+		"id": "xuevan",
+		"name": "血餐",
+		"desc": "更多血液",
+		"tags": "",
+		"max":10,
+		"require": "g.xl_lj_zhenhun_10>=1",
+		"repeat": true,
+		"cost": {
+			"ganwu":600,
+			"element_blood": 10,
+			"lxue":3,
+			"zhenhun_pice_1": 1,
+			"hp": 50,
+			"tili": 30,
+			"dirty_lingti":10,
+			"dirty_core":10
+		},
+		"mod": {
+			"hp.max":2,
+			"space": 5
+		}
+	},
+	{
+		"id": "xuexiangciquan",
+		"name": "血响磁圈",
+		"desc": "",
+		"tags": "",
+		"max":20,
+		"require": "g.xl_lj_zhenhun_10>=1",
+		"repeat": true,
+		"cost": {
+			"element_blood": 25,
+			"lxue":20,
+			"tian":30,
+			"star_map":55,
+			"star_map_1":10,
+			"zhenhun_pice_1": 30,
+			"hp": 60,
+			"tili": 30
+		},
+		"mod": {
+			"elect.rate":2,
+			"space": 10
+		}
+	},
+	{
+		"id": "xuexiangliudong",
+		"name": "血响流动",
+		"desc": "",
+		"tags": "",
+		"max":20,
+		"require": "g.xueshu>=1",
+		"repeat": true,
+		"cost": {
+			"element_blood": 10,
+			"lxue":20,
+			"tian":30,
+			"star_map":55,
+			"star_map_1":10,
+			"zhenhun_pice_1": 30,
+			"hp": 60,
+			"tili": 30
+		},
+		"mod": {
+			"elect.rate":5,
+			"space": 10
+		}
+	},
+	{
+		"id": "xueqian",
+		"name": "血钱",
+		"desc": "",
+		"tags": "",
+		"max":15,
+		"require": "g.xueshu>=1",
+		"repeat": true,
+		"cost": {
+			"ganwu":1500,
+			"element_blood": 10,
+			"lxue":10,
+			"zhenhun_pice_1": 4,
+			"hp": 50,
+			"tili": 30,
+			"dirty_lingti":10,
+			"dirty_core":10
+		},
+		"mod": {
+			"money.rate":2,
+			"space": 5
+		}
+	},
+	{
+		"id": "xueling",
+		"name": "血灵",
+		"desc": "提供感悟速率",
+		"tags": "",
+		"max":20,
+		"require": "g.xl_lj_zhenhun_10>=1",
+		"repeat": true,
+		"cost": {
+			"ganwu":600,
+			"element_blood": 25,
+			"lxue":20,
+			"paper":100,
+			"jingdian":10,
+			"super_mind":10,
+			"zhenhun_pice_1": 30,
+			"hp": 60,
+			"tili": 30
+		},
+		"mod": {
+			"ganwu.rate":1,
+			"space": 10
+		}
+	},
+	{
+		"id": "yizhirongqi",
+		"name": "抑制容器",
+		"desc": "能够存放更多灵血和衰败核心",
+		"tags": "",
+		"max":5,
+		"require": "g.hqbdtj>=1",
+		"repeat": true,
+		"cost": {
+			"ljdy": 4,
+			"lg": 30,
+			"gwl": 60,
+			"yjdl": 70,
+			"paper": 300,
+			"lxue": 10,
+			"shuaibai_core": 10,
+			"human_power": 2000,
+			"money": 2500,
+			"cbclb": 40,
+			"super_mind": 30
+		},
+		"mod": {
+			"lxue.max": 8,
+			"shuaibai_core.max": 8,
+			"space": 15
+		}
+	},
+	{
+		"id": "zhishimailuo",
+		"name": "知识脉络",
+		"desc": "快速处理与高效容纳知识",
+		"tags": "",
+		"max":5,
+		"require": "g.gaosuxxgl>=1 && g.zshiwangge>=1",
+		"repeat": true,
+		"cost": {
+			"elect": 10,
+			"xxcls": 1,
+			"books": 60,
+			"ljdy": 15,
+			"cxdljk": 1,
+			"tian": 60,
+			"cu_iron": 350,
+			"cu_copper": 350,
+			"iron_copper": 100,
+			"shenshi": 15,
+			"yjdl": 80,
+			"cbclb": 40,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": -4,
+			"command_code": 3,
+			"jingdian.max": 2,
+			"ganwu.max": 50,
+			"fsbdsj.max": 6,
+			"ganwu.max": 50,
+			"books.max": 6,
+			"paper.max": 30,
+			"exe_paper.max": 15,
+			"star_map.max": 10,
+			"star_map_1.max": 5,
+			"snp_data.max": 10,
+			"alculation.max": -100,
+			"human_power.max": -200,
+			"space": 30
+		}
+	},
+	{
+		"id": "cbgzqi",
+		"name": "纯白构造器",
+		"desc": "自动生产纯白材料包",
+		"tags": "",
+		"max":5,
+		"require": "g.gaosuxxgl>=1 && g.zshiwangge>=1",
+		"repeat": true,
+		"cost": {
+			"elect": 10,
+			"ljdy": 5,
+			"cxdljk": 1,
+			"tian": 60,
+			"cu_iron": 350,
+			"cu_copper": 350,
+			"iron_copper": 100,
+			"shenshi": 15,
+			"yjdl": 80,
+			"cbclb": 50,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": -4,
+			"cbclb.rate": 0.4,
+			"space": 30
+		}
+	},
+	{
+		"id": "jingdianyuelans",
+		"name": "经典阅览室",
+		"desc": "提高经典上限",
+		"tags": "",
+		"max":5,
+		"require": "g.jingdian>=5",
+		"repeat": true,
+		"cost": {
+			"ljdy": 5,
+			"jingdian": 5,
+			"tian": 60,
+			"cu_iron": 120,
+			"cu_copper": 150,
+			"iron_copper": 100,
+			"yjdl": 80,
+			"cbclb": 50,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": -4,
+			"jingdian.max": 4,
+			"space": 20
+		}
+	},
+	{
+		"id": "fsyanjius",
+		"name": "非实研究所",
+		"desc": "专注于研究非实黄泉的实验室",
+		"tags": "unreal_lab",
+		"max":1,
+		"require": "g.gaosuxxgl>=1 && g.zshiwangge>=1 && g.hqbdtj>=1",
+		"repeat": true,
+		"cost": {
+			"lxue": 20,
+			"shuaibai_core": 20,
+			"star_map_1": 15,
+			"life_crystal": 10,
+			"ljdy": 18,
+			"cxdljk": 1,
+			"army_laser_chest":1,
+			"cu_iron": 350,
+			"cu_copper": 350,
+			"yjdl": 80,
+			"cbclb": 40,
+			"gwl": 100,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": -5,
+			"lxue.rate": 0.1,
+			"shuaibai_core.rate": 0.1,
+			"shuaibai.rate": 0.1,
+			"space": 30
+		}
+	},
+	{
+		"id": "fifty_sorce",
+		"name": "50V配电器",
+		"desc": "能稳定提供50V级电源",
+		"tags": "FIFTYV",
+		"max":1,
+		"require": "g.jiezikwjk>=1",
+		"repeat": true,
+		"cost": {
+			"yuansurechi": 10,
+			"cxdljk": 2,
+			"ljdy": 20,
+			"cxdrong":2,
+			"zero_crystal": 70,
+			"super_mind": 25,
+			"human_power": 3000,
+			"money": 3000
+		},
+		"mod": {
+			"elect.max":-1,
+			"elect.rate": -3,
+			"space": 20
+		}
+	},
+	{
+		"id": "bxjgy",
+		"name": "波形解构仪",
+		"desc": "解构非实波段数据中的波形,需要接通【50V配电器】",
+		"tags": "wave_ana",
+		"need":"FIFTYV",
+		"max":1,
+		"require": "g.jiezikwjk>=1",
+		"repeat": true,
+		"cost": {
+			"lxue": 20,
+			"shuaibai_core": 20,
+			"star_map_1": 15,
+			"fsbdsj": 10,
+			"ljdy": 10,
+			"cu_iron": 350,
+			"cu_copper": 350,
+			"yjdl": 80,
+			"cbclb": 40,
+			"gwl": 100,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": -5,
+			"space": 30
+		}
+	},
+	{
+		"id": "ppzsq",
+		"name": "频谱指示器",
+		"desc": "解构非实波段数据中的频率,需要接通【50V配电器】",
+		"tags": "spect_ind",
+		"need":"FIFTYV",
+		"max":1,
+		"require": "g.jiezikwjk>=1",
+		"repeat": true,
+		"cost": {
+			"lxue": 40,
+			"shuaibai_core": 40,
+			"star_map_1": 15,
+			"fsbdsj": 10,
+			"ljdy": 10,
+			"cu_iron": 350,
+			"cu_copper": 350,
+			"yjdl": 80,
+			"cbclb": 40,
+			"gwl": 100,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": -5,
+			"space": 25
+		}
+	},
+	{
+		"id": "rgjxban",
+		"name": "人工接线板",
+		"desc": "自动生产逻辑单元,需要接通【50V配电器】",
+		"tags": "",
+		"need":"FIFTYV",
+		"max":5,
+		"require": "g.fsbdsj>=1",
+		"repeat": true,
+		"cost": {
+			"gwl": 100,
+			"books": 60,
+			"star_map_1": 20,
+			"fsbdsj": 20,
+			"ljdy": 20,
+			"cxdljk": 2,
+			"yuansurechi": 5,
+			"cu_iron": 350,
+			"cu_copper": 350,
+			"yjdl": 80,
+			"cbclb": 40,
+			"gwl": 100,
+			"jls": 150
+		},
+		"mod": {
+			"ljdy.rate": 0.1,
+			"human_power.max": -600,
+			"yjdl.rate": -0.1,
+			"cbclb.rate": -0.2,
+			"iron_copper.rate": -0.2,
+			"elect.rate": -5,
+			"money.rate": -0.7,
+			"space": 28
+		}
+	},
+	{
+		"id": "wuqikj",
+		"name": "武器控件",
+		"desc": "提高先进武器上限,需要接通【50V配电器】",
+		"tags": "",
+		"need":"FIFTYV",
+		"max":10,
+		"require": "g.fsbdsj>=1",
+		"repeat": true,
+		"cost": {
+			"gwl": 100,
+			"books": 60,
+			"star_map_1": 20,
+			"fsbdsj": 5,
+			"ljdy": 10,
+			"yuansurechi": 5,
+			"cu_iron": 350,
+			"cu_copper": 350,
+			"yjdl": 80,
+			"cbclb": 40,
+			"gwl": 100,
+			"jls": 150
+		},
+		"mod": {
+			"r_adv_bzzj.max": 5,
+			"r_adv_bzhj.max": 5,
+			"r_adv_w_sj1.max": 5,
+			"r_adv_w_sj2.max": 5,
+			"r_adv_w_sj3.max": 5,
+			"space": 13
+		}
+	},
+	{
+		"id": "lsesys",
+		"name": "绿色实验室",
+		"desc": "基于生物质的新型生物实验室",
+		"tags": "green_lab,bio,ColdBio",
+		"max":1,
+		"require": "g.swzhi>=1",
+		"repeat": true,
+		"cost": {
+			"star_map_1": 15,
+			"life_crystal": 10,
+			"ljdy": 18,
+			"cold_bio_lab":1,
+			"cxdljk": 2,
+			"tian": 60,
+			"cu_iron": 350,
+			"cu_copper": 350,
+			"iron_copper": 100,
+			"swzhi": 15,
+			"yjdl": 80,
+			"cbclb": 40,
+			"gwl": 100,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": -15,
+			"pyy.rate": 0.1,
+			"fypyj.rate": 0.1,
+			"yjswyb.rate": 0.1,
+			"space": 27
+		}
+	},
+	{
+		"id": "wushectc",
+		"name": "无涉控制中心",
+		"desc": "为了应对级址发现成果成立的控制中心,[玻璃的获取需要对工业模式进行探索]",
+		"tags": "ntctc,bio",
+		"max":1,
+		"require": "g.jizhibenlu>=1",
+		"repeat": true,
+		"cost": {
+			"glass": 100,
+			"star_map_1": 15,
+			"life_crystal": 10,
+			"ljdy": 18,
+			"obs_hill": 1,
+			"obs_water": 1,
+			"obs_basin": 1,
+			"obs_mount": 1,
+			"tian": 60,
+			"iron_copper": 120,
+			"swzhi": 15,
+			"yjdl": 80,
+			"cbclb": 40,
+			"gwl": 100,
+			"jls": 150
+		},
+		"mod": {
+			"elect.rate": -30,
+			"space": 55
+		}
+	},
+	{
+		"id": "suanliuzipt",
+		"name": "算留子平台",
+		"desc": "有着高速运算能力的平台层，用于组合成钻井",
+		"tags": "",
+		"max":2,
+		"require": "g.fengyunbence>=1",
+		"repeat": true,
+		"cost": {
+			"ertongzhe": 1,
+			"glass": 100,
+			"life_crystal": 30,
+			"tian": 60,
+			"iron_copper": 120,
+			"yjdl": 80,
+			"cbclb": 40,
+			"gwl": 100,
+			"jls": 150
+		},
+		"mod": {
+			"alculation.max": 40,
+			"elect.rate": -8,
+			"space": 50
+		}
+	},
+	{
+		"id": "keliuzilengzhu",
+		"name": "克流子棱柱",
+		"desc": "重型组合支撑梁，用于组合成钻井",
+		"tags": "",
+		"max":2,
+		"require": "g.shidaiyancengbence>=1",
+		"repeat": true,
+		"cost": {
+			"yisuanzi": 5,
+			"yxls": 20,
+			"cbjs": 20,
+			"life_crystal": 10,
+			"ljdy": 18,
+			"tian": 100,
+			"iron_copper": 50,
+			"yjdl": 80,
+			"cbclb": 40,
+			"gwl": 100,
+			"jls": 150
+		},
+		"mod": {
+			"alculation.max": 20,
+			"elect.rate": -8,
+			"space": 20
+		}
+	},
+	{
+		"id": "shengxuchongjizuan",
+		"name": "生序冲击钻",
+		"desc": "对一座山脉进行改造用于成为突破级址粘膜的冲击钻头，用于组合成钻井",
+		"tags": "",
+		"max":1,
+		"require": "g.shidaiyancengbence>=1",
+		"repeat": true,
+		"cost": {
+			"keliuzilengzhu": 2,
+			"obs_hill": 1,
+			"laser_ene": 4,
+			"gwl": 130,
+			"jls": 200
+		},
+		"mod": {
+			"human_power.max": -200,
+			"alculation.max": 400,
+			"elect.rate": -40,
+			"space": 250
+		}
+	},
+	{
+		"id": "yanxuhumo",
+		"name": "掩序护膜",
+		"desc": "对一座湖泊进行改造成为用于扰乱钻头存在感的护膜，用于组合成钻井",
+		"tags": "",
+		"max":1,
+		"require": "g.weijibence>=1",
+		"repeat": true,
+		"cost": {
+			"cold_core": 160,
+			"gwl": 100,
+			"suanliuzipt": 1,
+			"obs_water": 1,
+			"laser_ene": 4,
+			"jls": 200
+		},
+		"mod": {
+			"human_power.max": -200,
+			"alculation.max": 400,
+			"elect.rate": -40,
+			"space": 85
+		}
+	},
+	{
+		"id": "qlingzzy",
+		"name": "丘陵种植园",
+		"desc": "在丘陵上建造特殊的种植园",
+		"tags": "",
+		"max":10,
+		"require": "g.liticehui_hill>=1",
+		"need": "g.obs_hill>=1",
+		"repeat": true,
+		"cost": {
+			"money": 2000,
+			"yqlm": 20,
+			"tian": 40,
+			"cu_iron": 100,
+			"cu_copper": 100,
+			"iron_copper": 30,
+			"swzhi": 15,
+			"yjdl": 20
+		},
+		"mod": {
+			"shuiyinhua.rate": 0.1,
+			"huohua.rate": 0.1,
+			"diluhua.rate": 0.1,
+			"shuiteng.rate": 0.1,
+			"hongshan.rate": 0.1,
+			"money.rate": 0.8,
+			"obs_hill": 0.2,
+			"hill_res": 0.2,
+			"space": 15
+		}
+	},
+	{
+		"id": "qlctkzhan",
+		"name": "丘陵赤铁矿站",
+		"desc": "在丘陵上挖掘赤铁",
+		"tags": "",
+		"max":10,
+		"require": "g.liticehui_hill>=1",
+		"need": "g.obs_hill>=1",
+		"repeat": true,
+		"cost": {
+			"money": 2000,
+			"zdht": 20,
+			"tian": 40,
+			"cu_iron": 100,
+			"cu_copper": 100,
+			"iron_copper": 30,
+			"swzhi": 15,
+			"yjdl": 20
+		},
+		"mod": {
+			"command_code": 3,
+			"human_power.max": -400,
+			"citie.rate": 0.2,
+			"cu_iron.rate": 0.7,
+			"obs_hill": 0.2,
+			"hill_res": 0.2,
+			"space": 15
+		}
+	},
+	{
+		"id": "tongkcjc",
+		"name": "铜矿采掘场",
+		"desc": "获取铜板",
+		"tags": "",
+		"max":20,
+		"require": "g.ind_caijuechang>=1",
+		"need": "g.obs_hill>=1",
+		"repeat": true,
+		"cost": {
+			"money": 2000,
+			"zdht": 20,
+			"factory_caijue": 10,
+			"iron_copper": 50,
+			"swzhi": 15,
+			"yjdl": 20
+		},
+		"mod": {
+			"human_power.max": -500,
+			"cu_copper.rate": 2,
+			"obs_hill": 0.2,
+			"hill_res": 0.2,
+			"space": 15
+		}
+	},
+	{
+		"id": "tiekkcjc",
+		"name": "铁矿采掘场",
+		"desc": "获取铁板",
+		"tags": "",
+		"max":20,
+		"require": "g.ind_caijuechang>=1",
+		"need": "g.obs_hill>=1",
+		"repeat": true,
+		"cost": {
+			"money": 2000,
+			"zdht": 20,
+			"factory_caijue": 10,
+			"iron_copper": 50,
+			"swzhi": 15,
+			"yjdl": 20
+		},
+		"mod": {
+			"human_power.max": -500,
+			"cu_iron.rate": 2,
+			"obs_hill": 0.2,
+			"hill_res": 0.2,
+			"space": 15
+		}
+	},
+	{
+		"id": "hupoyuwu",
+		"name": "湖泊渔屋",
+		"desc": "设置渔屋获取财富",
+		"tags": "",
+		"max":30,
+		"require": "g.liticehui_water>=1",
+		"need": "g.obs_water>=1",
+		"repeat": true,
+		"cost": {
+			"money": 1500,
+			"wgys": 20,
+			"tian": 40,
+			"baibaishu": 30,
+			"ljdy": 1,
+			"swzhi": 10,
+			"yjdl": 50
+		},
+		"mod": {
+			"command_code": 1,
+			"money.rate": 0.5,
+			"obs_water": 0.1,
+			"water_res": 0.1,
+			"space": 10
+		}
+	},
+	{
+		"id": "pendiyanksjz",
+		"name": "盆地岩块收集站",
+		"desc": "收集岩块和岩火",
+		"tags": "",
+		"max":10,
+		"require": "g.liticehui_basin>=1",
+		"need": "g.obs_basin>=1",
+		"repeat": true,
+		"cost": {
+			"money": 1500,
+			"zdht": 20,
+			"tian": 40,
+			"yankuai": 5,
+			"ljdy": 1,
+			"swzhi": 10,
+			"yjdl": 50
+		},
+		"mod": {
+			"command_code": 1,
+			"human_power.max": -200,
+			"yanhuo.rate": 0.1,
+			"yankuai.rate": 0.1,
+			"obs_basin": 0.1,
+			"basin_res": 0.1,
+			"space": 10
+		}
+	},
+	{
+		"id": "smtongkzd",
+		"name": "山脉铜矿站点",
+		"desc": "自动获取铜板",
+		"tags": "",
+		"max":10,
+		"require": "g.liticehui_mount>=1",
+		"need": "g.obs_mount>=1",
+		"repeat": true,
+		"cost": {
+			"money": 1500,
+			"cu_iron": 100,
+			"cu_copper": 100,
+			"zdht": 20,
+			"tian": 40,
+			"ljdy": 5,
+			"swzhi": 10,
+			"yjdl": 50
+		},
+		"mod": {
+			"command_code": 2,
+			"human_power.max": -300,
+			"cu_copper.rate": 0.5,
+			"obs_mount": 0.1,
+			"mount_res": 0.1,
+			"space": 15
+		}
+	},
+	{
+		"id": "cehuizxz",
+		"name": "测绘中心站",
+		"desc": "存放进阶测绘资料",
+		"tags": "",
+		"max":5,
+		"require": "g.hjgcx>=1",
+		"repeat": true,
+		"cost": {
+			"fsbdsj": 10,
+			"snp_data": 150,
+			"money": 3600,
+			"cu_iron": 350,
+			"cu_copper": 350,
+			"tian": 100,
+			"ljdy": 20,
+			"swzhi": 20,
+			"yjdl": 50
+		},
+		"mod": {
+			"snp_data.rate": 0.5,
+			"adv_snp_data.max": 8,
+			"space": 21
 		}
 	}
 ]

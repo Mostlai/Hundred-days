@@ -1,5 +1,3221 @@
 [
 	{
+		"id": "m_solid_1",
+		"tags": "soldiers_1",
+		"name": "侍卫",
+		"level": 10,
+		"kind": "人力",
+		"noproc": true,
+		"hp": 40,
+		"tohit": 10,
+		"defense": 7,
+		"attack": {
+			"name": "攻击",
+			"kind": "pierce",
+			"dmg": "10~20"
+		}
+	},
+	{
+		"id": "m_solid_2",
+		"tags": "soldiers_1",
+		"name": "士兵",
+		"level": 10,
+		"kind": "人力",
+		"noproc": true,
+		"hp": 55,
+		"tohit": 10,
+		"defense": 10,
+		"attack": {
+			"name": "攻击",
+			"kind": "pierce",
+			"dmg": "15~20"
+		}
+	},
+	{
+		"id": "zhiyushu",
+		"name": "治愈鼠",
+		"level": 35,
+		"desc": "",
+		"kind": "heli",
+		"hp": 450,
+		"speed": 29,
+		"tohit": 33,
+		"defense": 110,
+		"attack": [
+			{
+				"name": "攻击",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "30~50",
+				"targets": "enemies"
+			},
+			{
+				"name": "恢复",
+				"targets": "ally",
+				"result": {
+					"hp": 50
+				}
+			}
+		]
+	},
+	{
+		"id": "shouyugui",
+		"name": "守御龟",
+		"level": 35,
+		"desc": "",
+		"kind": "heli",
+		"hp": 600,
+		"speed": 29,
+		"tohit": 33,
+		"defense": 150,
+		"attack": [
+			{
+				"name": "攻击",
+				"kind": "heli",
+				"dmg": "10~40",
+				"targets": "enemies"
+			},
+			{
+				"name": "守护",
+				"targets": "ally",
+				"dot": {
+					"duration": 20,
+					"mod": {
+						"defense": 40
+					}
+				}
+			}
+		]
+	},
+	{
+		"id": "mgtangl",
+		"name": "猛攻螳螂",
+		"level": 35,
+		"desc": "",
+		"kind": "heli",
+		"hp": 300,
+		"speed": 45,
+		"tohit": 33,
+		"defense": 150,
+		"attack": [
+			{
+				"name": "攻击",
+				"kind": "heli",
+				"dmg": "89~100",
+				"targets": "enemies"
+			}
+		]
+	},
+	{
+		"id": "suihunqunzi",
+		"name": "碎魂子个体",
+		"level": 35,
+		"desc": "",
+		"kind": "heli",
+		"hp": 200,
+		"speed": 39,
+		"tohit": 33,
+		"defense": 130,
+		"attack": [
+			{
+				"name": "攻击",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "55~77",
+				"targets": "enemies"
+			},
+			{
+				"name": "守护",
+				"targets": "ally",
+				"dot": {
+					"duration": 20,
+					"mod": {
+						"defense": 16
+					}
+				}
+			},
+			{
+				"name": "恢复",
+				"targets": "ally",
+				"result": {
+					"hp": 20
+				}
+			}
+		]
+	},
+	{
+		"id": "m_solid_3",
+		"tags": "soldiers_1",
+		"name": "披甲士兵",
+		"level": 10,
+		"kind": "人力",
+		"noproc": true,
+		"hp": 55,
+		"tohit": 10,
+		"defense": 20,
+		"attack": {
+			"name": "攻击",
+			"kind": "pierce",
+			"dmg": "15~20"
+		}
+	},
+	{
+		"id": "m_solid_4",
+		"tags": "soldiers_1",
+		"name": "重装士兵",
+		"level": 10,
+		"kind": "人力",
+		"noproc": true,
+		"hp": 55,
+		"tohit": 10,
+		"defense": 30,
+		"attack": {
+			"name": "攻击",
+			"kind": "pierce",
+			"dmg": "20~25"
+		}
+	},
+	{
+		"id": "baifuzhang",
+		"name": "百夫长[筑基]",
+		"level": 25,
+		"desc": "",
+		"kind": "heli",
+		"hp": 140,
+		"tohit": 16,
+		"defense": 31,
+		"attack": {
+			"name": "攻击",
+			"kind": "heli",
+			"dmg": "44~45"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"dirty_lingti": 0.3
+		}
+	},
+	{
+		"id": "xueguosb_1",
+		"name": "雪国士兵",
+		"level": 35,
+		"desc": "",
+		"kind": "heli",
+		"hp": 250,
+		"tohit": 16,
+		"defense": 22,
+		"attack": {
+			"name": "攻击",
+			"kind": "heli",
+			"dmg": "55~56"
+		},
+		"shiled_max": 30,
+		"loot": {
+			"shenglingshi": 0.1,
+			"dirty_lingti": 0.3
+		}
+	},
+	{
+		"id": "xueguosb_2",
+		"name": "雪国重甲士兵",
+		"level": 35,
+		"desc": "",
+		"kind": "heli",
+		"hp": 250,
+		"tohit": 16,
+		"defense": 44,
+		"attack": {
+			"name": "攻击",
+			"kind": "heli",
+			"dmg": "55~56"
+		},
+		"shiled_max": 30,
+		"loot": {
+			"shenglingshi": 0.1,
+			"dirty_lingti": 0.3
+		}
+	},
+	{
+		"id": "xueguosb_3",
+		"name": "雪国长枪士兵",
+		"level": 35,
+		"desc": "",
+		"kind": "heli",
+		"hp": 100,
+		"tohit": 99,
+		"defense": 0,
+		"attack": {
+			"name": "攻击",
+			"kind": "heli",
+			"dmg": "66~67"
+		},
+		"shiled_max": 30,
+		"loot": {
+			"shenglingshi": 0.1,
+			"dirty_lingti": 0.3
+		}
+	},
+	{
+		"id": "xueguosb_4",
+		"name": "雪国弓箭手",
+		"level": 35,
+		"desc": "",
+		"kind": "heli",
+		"hp": 55,
+		"speed": 55,
+		"tohit": 99,
+		"defense": 0,
+		"attack": {
+			"name": "攻击",
+			"kind": "heli",
+			"dmg": "77~88"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"dirty_lingti": 0.3
+		}
+	},
+	{
+		"id": "xueguosb_5",
+		"name": "逝去的将军",
+		"level": 40,
+		"desc": "",
+		"kind": "heli",
+		"hp": 1500,
+		"speed": 55,
+		"tohit": 99,
+		"defense": 100,
+		"attack": {
+			"name": "攻击",
+			"bonus_class": 1,
+			"kind": "heli",
+			"dmg": "123~156"
+		},
+		"loot": {
+			"shenglingshi": 10,
+			"dirty_lingti": 10
+		}
+	},
+	{
+		"id": "weijiancunm",
+		"name": "未见村民",
+		"level": 37,
+		"desc": "",
+		"kind": "heli",
+		"hp": 180,
+		"tohit": 16,
+		"defense": 21,
+		"attack": {
+			"name": "攻击",
+			"kind": "heli",
+			"dmg": "76~78"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		}
+	},
+	{
+		"id": "weijiandog",
+		"name": "未见狼",
+		"level": 37,
+		"desc": "",
+		"kind": "chaos",
+		"hp": 120,
+		"tohit": 16,
+		"defense": 22,
+		"attack": {
+			"name": "爪击",
+			"kind": "chaos",
+			"dmg": "76~78",
+			"dot": {
+				"kind": "chaos",
+				"name": "流血",
+				"dmg": "9~12",
+				"duration": 10
+			}
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		}
+	},
+	{
+		"id": "chiduncunm",
+		"name": "持盾村民",
+		"level": 37,
+		"desc": "",
+		"kind": "chaos",
+		"hp": 250,
+		"tohit": 99,
+		"defense": 44,
+		"attack": {
+			"name": "拍击",
+			"kind": "chaos",
+			"dmg": "33~36"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		}
+	},
+	{
+		"id": "kexuecunm",
+		"name": "咳血村民",
+		"level": 37,
+		"desc": "",
+		"kind": "chaos",
+		"hp": 60,
+		"tohit": 99,
+		"defense": 22,
+		"attack": {
+			"name": "剑击",
+			"kind": "chaos",
+			"dmg": "45~56",
+			"dot": {
+				"kind": "chaos",
+				"name": "咳血",
+				"dmg": "14~15",
+				"duration": 3
+			}
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		}
+	},
+	{
+		"id": "kexuebeast",
+		"name": "渴血野兽",
+		"level": 40,
+		"desc": "",
+		"kind": "chaos",
+		"hp": 900,
+		"speed": 55,
+		"tohit": 99,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "渴血攻击",
+				"kind": "chaos",
+				"bonus_class": 1,
+				"dmg": "66~77",
+				"targets": "enemies"
+			},
+			{
+				"name": "毒雾",
+				"kind": "chaos",
+				"dmg": "0~1",
+				"dot": {
+					"kind": "chaos",
+					"name": "！中剧毒 ！",
+					"dmg": "10~17",
+					"duration": 10
+				}
+			},
+			{
+				"name": "深度伤口",
+				"kind": "chaos",
+				"bonus_class": 1,
+				"dmg": "10~15",
+				"dot": {
+					"kind": "chaos",
+					"name": "！出血 ！",
+					"dmg": "10~17",
+					"duration": 2
+				}
+			}
+		],
+		"loot": {
+			"shenglingshi": 10,
+			"lxue": 15,
+			"money": 500
+		}
+	},
+	{
+		"id": "storm_egal",
+		"name": "风暴鹰",
+		"level": 40,
+		"desc": "",
+		"kind": "elect",
+		"hp": 850,
+		"speed": 33,
+		"tohit": 33,
+		"defense": 50,
+		"attack": [
+			{
+				"name": "风暴",
+				"kind": "elect",
+				"bonus_class": 1,
+				"dmg": "119~120",
+				"targets": "enemies"
+			},
+			{
+				"name": "风暴",
+				"kind": "elect",
+				"dmg": "101~119",
+				"dot": {
+					"kind": "elect",
+					"name": "失衡",
+					"dmg": "10~17",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"shenglingshi": 10,
+			"lxue": 15,
+			"money": 500
+		}
+	},
+	{
+		"id": "lost_soul_man",
+		"name": "丢失灵魂的人",
+		"level": 40,
+		"desc": "",
+		"kind": "heli",
+		"hp": 1700,
+		"speed": 10,
+		"tohit": 33,
+		"defense": -100,
+		"attack": [
+			{
+				"name": "弃魂",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "119~120",
+				"targets": "enemies"
+			},
+			{
+				"name": "弃魂",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "130~149",
+				"dot": {
+					"kind": "heli",
+					"name": "束缚",
+					"dmg": "10~17",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"books": 30,
+			"shenglingshi": 10,
+			"lxue": 15,
+			"money": 500
+		}
+	},
+	{
+		"id": "sliver_snake",
+		"name": "银色蛇",
+		"level": 40,
+		"desc": "",
+		"kind": "heli",
+		"hp": 3000,
+		"speed": 33,
+		"tohit": 33,
+		"defense": 60,
+		"attack": [
+			{
+				"name": "咬",
+				"kind": "heli",
+				"dmg": "119~120",
+				"targets": "enemies"
+			},
+			{
+				"name": "啃",
+				"kind": "heli",
+				"dmg": "130~149",
+				"dot": {
+					"kind": "heli",
+					"name": "流血",
+					"dmg": "10~17",
+					"duration": 10
+				}
+			},
+			{
+				"name": "毒雾",
+				"kind": "chaos",
+				"dmg": "0~1",
+				"dot": {
+					"kind": "chaos",
+					"name": "！中剧毒 ！",
+					"dmg": "10~17",
+					"duration": 10
+				}
+			},
+			{
+				"name": "失钱",
+				"kind": "chaos",
+				"dmg": "1~2",
+				"log": {
+					"%": "100%",
+					"desc": "你开始失去钱币"
+				},
+				"dot": {
+					"id": "shiqianbf",
+					"name":"失钱",
+					"duration": 5,
+					"dmg": "0~1",
+					"mod": {
+						"money.rate": -50
+					}
+				}
+			}
+		],
+		"loot": {
+			"shenglingshi": 10,
+			"lxue": 15,
+			"money": 1000
+		},
+		"resist": {
+			"fire": -60,
+			"gold": -60,
+			"wood": -60,
+			"water": -60,
+			"land": -60
+		}
+	},
+	{
+		"id": "kexuebeast_player",
+		"name": "渴血野兽【残】",
+		"level": 40,
+		"desc": "",
+		"kind": "chaos",
+		"hp": 650,
+		"tohit": 99,
+		"defense": 10,
+		"attack": [
+			{
+				"name": "渴血攻击",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "30~40",
+				"targets": "enemies"
+			},
+			{
+				"name": "毒雾",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "0~1",
+				"dot": {
+					"kind": "chaos",
+					"name": "！中剧毒 ！",
+					"dmg": "8~9",
+					"duration": 10
+				}
+			},
+			{
+				"name": "深度伤口",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "10~15",
+				"dot": {
+					"kind": "chaos",
+					"name": "！出血 ！",
+					"dmg": "8~9",
+					"duration": 2
+				}
+			}
+		]
+	},
+	{
+		"id": "air_fish",
+		"name": "透明鱼",
+		"level": 37,
+		"desc": "",
+		"kind": "elect",
+		"hp": 250,
+		"tohit": 16,
+		"defense": 4,
+		"attack": {
+			"name": "泡泡",
+			"bonus_class": 1,
+			"kind": "elect",
+			"dmg": "95~120"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		}
+	},
+	{
+		"id": "air_bird",
+		"name": "带状鸟",
+		"level": 37,
+		"desc": "",
+		"kind": "elect",
+		"hp": 200,
+		"tohit": 16,
+		"defense": 44,
+		"attack": {
+			"name": "喙击",
+			"kind": "elect",
+			"dmg": "95~100"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		}
+	},
+	{
+		"id": "air_light",
+		"name": "闪电球",
+		"level": 37,
+		"desc": "",
+		"kind": "elect",
+		"hp": 60,
+		"tohit": 99,
+		"defense": 100,
+		"attack": {
+			"name": "闪电",
+			"bonus_class": 1,
+			"kind": "elect",
+			"dmg": "89~98",
+			"dot": {
+				"kind": "elect",
+				"name": "麻痹",
+				"dmg": "14~15",
+				"duration": 3
+			}
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		}
+	},
+	{
+		"id": "qishuzhe",
+		"name": "弃书者",
+		"level": 37,
+		"desc": "",
+		"kind": "heli",
+		"hp": 250,
+		"shiled": 250,
+		"shiled_max": 250,
+		"tohit": 99,
+		"defense": 83,
+		"attack": {
+			"name": "拍击",
+			"kind": "heli",
+			"dmg": "55~57"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		}
+	},
+	{
+		"id": "qijuanzhe",
+		"name": "弃眷者",
+		"level": 37,
+		"desc": "",
+		"kind": "heli",
+		"hp": 500,
+		"tohit": 10,
+		"defense": -100,
+		"attack": {
+			"name": "弃眷",
+			"bonus_class": 1,
+			"kind": "heli",
+			"dmg": "160~170"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		}
+	},
+	{
+		"id": "white_lion",
+		"name": "白狮",
+		"level": 37,
+		"desc": "",
+		"kind": "heli",
+		"hp": 250,
+		"tohit": 99,
+		"defense": 25,
+		"attack": {
+			"name": "撕咬",
+			"kind": "heli",
+			"dmg": "67~77"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		}
+	},
+	{
+		"id": "mu_snake",
+		"name": "木鳞蛇",
+		"level": 37,
+		"desc": "",
+		"kind": "heli",
+		"hp": 300,
+		"tohit": 99,
+		"defense": 25,
+		"attack": {
+			"name": "撕咬",
+			"kind": "heli",
+			"dmg": "67~77"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		},
+		"resist": {
+			"wood": 50,
+			"gold": -100
+		}
+	},
+	{
+		"id": "gold_snake",
+		"name": "金鳞蛇",
+		"level": 37,
+		"desc": "",
+		"kind": "heli",
+		"hp": 300,
+		"tohit": 99,
+		"defense": 25,
+		"attack": {
+			"name": "撕咬",
+			"kind": "heli",
+			"dmg": "67~77"
+		},
+		"loot": {
+			"shenglingshi": 0.1,
+			"lxue": 1,
+			"money": 33
+		},
+		"resist": {
+			"fire": -100,
+			"gold": 50
+		}
+	},
+	{
+		"id": "baiyiren",
+		"name": "白衣人",
+		"level": 39,
+		"desc": "",
+		"kind": "heli",
+		"hp": 400,
+		"speed": 10,
+		"tohit": 33,
+		"defense": 60,
+		"attack": [
+			{
+				"name": "落雪",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "119~120",
+				"targets": "enemies"
+			},
+			{
+				"name": "静止思维",
+				"kind": "chaos",
+				"dmg": "1~2",
+				"log": {
+					"%": "100%",
+					"desc": "你开始丢失感悟"
+				},
+				"dot": {
+					"id": "jzswbf",
+					"name":"静止思维",
+					"duration": 10,
+					"dmg": "0~1",
+					"mod": {
+						"ganwu.rate": -100
+					}
+				}
+			},
+			{
+				"name": "静默",
+				"kind": "chaos",
+				"bonus_class": 1,
+				"dmg": "70~92",
+				"log": {
+					"%": "100%",
+					"desc": "你开始失去力量"
+				},
+				"dot": {
+					"id": "jingmbf",
+					"name":"静默",
+					"duration": 10,
+					"dmg": "0~1",
+					"mod": {
+						"heli.rate": -10,
+						"chaos.rate": -10
+					}
+				}
+			}
+		],
+		"loot": {
+			"shenglingshi": 1,
+			"lxue": 1,
+			"money": 100
+		},
+		"resist": {
+			"fire": 50,
+			"gold": 50,
+			"wood": 50,
+			"water": 50,
+			"land": 50,
+			"wuhuan": 50,
+			"heli": 50,
+			"chaos": 50
+		}
+	},
+	{
+		"id": "heiyiren",
+		"name": "黑衣人",
+		"level": 39,
+		"desc": "",
+		"kind": "heli",
+		"hp": 400,
+		"speed": 10,
+		"tohit": 33,
+		"defense": 60,
+		"attack": [
+			{
+				"name": "黑火",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "129~130",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"shenglingshi": 1,
+			"lxue": 1,
+			"money": 100
+		},
+		"resist": {
+			"fire": 88,
+			"gold": 50,
+			"wood": 50,
+			"water": -120,
+			"land": 50,
+			"wuhuan": 50,
+			"heli": 50,
+			"chaos": 50
+		}
+	},
+	{
+		"id": "gubenmonster_1",
+		"name": "勿言",
+		"level": 39,
+		"desc": "",
+		"kind": "heli",
+		"hp": 400,
+		"speed": 50,
+		"tohit": 33,
+		"defense": 400,
+		"attack": [
+			{
+				"name": "无论",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "129~130",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"shenglingshi": 1,
+			"lxue": 1,
+			"gubenxianling": 0.2,
+			"qiyiyeti": 2,
+			"money": 100
+		},
+		"resist": {
+			"fire": 30,
+			"gold": 30,
+			"wood": 30,
+			"water": 30,
+			"land": 30,
+			"wuhuan": 30,
+			"heli": 30,
+			"chaos": 30
+		}
+	},
+	{
+		"id": "gubenmonster_2",
+		"name": "勿视",
+		"level": 39,
+		"desc": "",
+		"kind": "heli",
+		"hp": 400,
+		"speed": 50,
+		"tohit": 33,
+		"defense": 400,
+		"attack": [
+			{
+				"name": "无观",
+				"bonus_class": 1,
+				"kind": "water",
+				"dmg": "129~130",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"shenglingshi": 1,
+			"lxue": 1,
+			"gubenxianling": 0.1,
+			"qiyiyeti": 2,
+			"money": 100
+		},
+		"resist": {
+			"fire": 30,
+			"gold": 30,
+			"wood": 30,
+			"water": 30,
+			"land": 30,
+			"wuhuan": 30,
+			"heli": 30,
+			"chaos": 30
+		}
+	},
+	{
+		"id": "gubenmonster_3",
+		"name": "勿闻",
+		"level": 39,
+		"desc": "",
+		"kind": "heli",
+		"hp": 400,
+		"speed": 50,
+		"tohit": 33,
+		"defense": 400,
+		"attack": [
+			{
+				"name": "无听",
+				"kind": "land",
+				"dmg": "129~130",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"shenglingshi": 1,
+			"lxue": 1,
+			"gubenxianling": 0.2,
+			"qiyiyeti": 2,
+			"money": 100
+		},
+		"resist": {
+			"fire": 30,
+			"gold": 30,
+			"wood": 30,
+			"water": 30,
+			"land": 30,
+			"wuhuan": 30,
+			"heli": 30,
+			"chaos": 30
+		}
+	},
+	{
+		"id": "gubenmonster_4",
+		"name": "沉重灭轮",
+		"level": 44,
+		"desc": "见此奥秘！",
+		"kind": "heli",
+		"hp": 4300,
+		"speed": 19,
+		"tohit": 200,
+		"defense": 800,
+		"attack": [
+			{
+				"name": "沉默",
+				"kind": "heli",
+				"dmg": "240~300",
+				"targets": "enemies"
+			},
+			{
+				"name": "反河",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "50~730",
+				"targets": "enemies"
+			},
+			{
+				"name": "厚重之环",
+				"targets": "ally",
+				"log": {
+					"%": "100%",
+					"desc": "见此奥秘!"
+				},
+				"dot": {
+					"duration": 60,
+					"mod": {
+						"defense": 100
+					}
+				}
+			},
+			{
+				"name": "沉重生轮",
+				"targets": "self",
+				"result": {
+					"hp": 67
+				}
+			}
+		],
+		"loot": {
+			"gubenxianling": 9,
+			"shenglingshi": 10,
+			"lxue": 10,
+			"money": 1000
+		},
+		"resist": {
+			"fire": 30,
+			"gold": 30,
+			"wood": 30,
+			"water": 30,
+			"land": 30,
+			"wuhuan": 30,
+			"heli": 30,
+			"chaos": -500
+		}
+	},
+	{
+		"id": "shanyao",
+		"name": "山妖",
+		"level": 39,
+		"desc": "",
+		"kind": "heli",
+		"hp": 140,
+		"speed": 10,
+		"tohit": 33,
+		"defense": 150,
+		"attack": [
+			{
+				"name": "打击",
+				"kind": "heli",
+				"dmg": "129~130",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"shenglingshi": 1,
+			"lxue": 1,
+			"money": 100
+		}
+	},
+	{
+		"id": "rengui",
+		"name": "韧龟",
+		"level": 39,
+		"desc": "",
+		"kind": "heli",
+		"hp": 350,
+		"speed": 10,
+		"tohit": 33,
+		"defense": 200,
+		"attack": [
+			{
+				"name": "打击",
+				"kind": "heli",
+				"dmg": "100~110",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"shenglingshi": 1,
+			"lxue": 1,
+			"money": 100
+		}
+	},
+	{
+		"id": "wuyangezhe",
+		"name": "无言歌者",
+		"level": 40,
+		"desc": "",
+		"kind": "heli",
+		"hp": 3500,
+		"speed": 29,
+		"tohit": 33,
+		"defense": 300,
+		"attack": [
+			{
+				"name": "沉默",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "100~110",
+				"targets": "enemies"
+			},
+			{
+				"name": "哭泣",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "120~126",
+				"targets": "enemies"
+			},
+			{
+				"name": "恢复",
+				"targets": "self",
+				"result": {
+					"hp": 50
+				}
+			}
+		],
+		"loot": {
+			"shenglingshi": 10,
+			"lxue": 10,
+			"money": 1000
+		},
+		"resist": {
+			"fire": -500
+		}
+	},
+	{
+		"id": "baiyiren_flag",
+		"name": "白衣主唱者",
+		"level": 40,
+		"desc": "",
+		"kind": "heli",
+		"hp": 1000,
+		"speed": 22,
+		"tohit": 33,
+		"defense": 80,
+		"attack": [
+			{
+				"name": "落雪",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "119~120",
+				"targets": "enemies"
+			},
+			{
+				"name": "落霜",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "119~120"
+			},
+			{
+				"name": "静止思维",
+				"kind": "chaos",
+				"dmg": "1~2",
+				"log": {
+					"%": "100%",
+					"desc": "你开始丢失感悟"
+				},
+				"dot": {
+					"id": "jzswbf_flag",
+					"name":"静止思维",
+					"duration": 10,
+					"dmg": "0~1",
+					"mod": {
+						"ganwu.rate": -500
+					}
+				}
+			},
+			{
+				"name": "静默",
+				"kind": "chaos",
+				"dmg": "70~92",
+				"log": {
+					"%": "100%",
+					"desc": "你开始失去力量"
+				},
+				"dot": {
+					"id": "jingmbf",
+					"name":"静默",
+					"duration": 10,
+					"dmg": "0~1",
+					"mod": {
+						"heli.rate": -10,
+						"chaos.rate": -10
+					}
+				}
+			}
+		],
+		"loot": {
+			"shenglingshi": 10,
+			"lxue": 15,
+			"money": 1000
+		},
+		"resist": {
+			"fire": 70,
+			"gold": 70,
+			"wood": 70,
+			"water": 70,
+			"land": 70,
+			"wuhuan": 70,
+			"heli": 70,
+			"chaos": 70
+		}
+	},
+	{
+		"id": "heiyiren_flag",
+		"name": "黑衣主唱者",
+		"level": 40,
+		"desc": "",
+		"kind": "heli",
+		"hp": 1000,
+		"speed": 22,
+		"tohit": 33,
+		"defense": 80,
+		"spells": "balck_firestorm_cure",
+		"attack": [
+			{
+				"name": "黑焰",
+				"kind": "fire",
+				"bonus_class": 1,
+				"dmg": "129~130",
+				"targets": "enemies"
+			},
+			{
+				"name": "黑焰",
+				"kind": "fire",
+				"bonus_class": 1,
+				"dmg": "129~130",
+				"targets": "enemies",
+				"dot": {
+					"kind": "fire",
+					"name": "燃烧",
+					"dmg": "14~22",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"shenglingshi": 10,
+			"lxue": 15,
+			"money": 1000
+		},
+		"resist": {
+			"fire": 99,
+			"gold": 70,
+			"wood": 70,
+			"water": -100,
+			"land": 70,
+			"wuhuan": 70,
+			"heli": 70,
+			"chaos": 70
+		}
+	},
+	{
+		"id": "huzhenshi",
+		"name": "护阵使者[筑基]",
+		"level": 30,
+		"desc": "",
+		"kind": "heli",
+		"hp": 400,
+		"tohit": 16,
+		"defense": 51,
+		"spells": "sgfszj",
+		"attack": {
+			"name": "攻击",
+			"kind": "heli",
+			"dmg": "55~65"
+		},
+		"loot": {
+			"shenglingshi": 1,
+			"dirty_lingti": 5
+		}
+	},
+	{
+		"id": "xiantianzhuji",
+		"name": "先天生命[筑基]",
+		"level": 25,
+		"desc": "",
+		"kind": "heli",
+		"hp": 120,
+		"tohit": 16,
+		"defense": 31,
+		"attack": {
+			"name": "攻击",
+			"bonus_class": 1,
+			"kind": "heli",
+			"dmg": "44~46",
+			"dot": {
+				"kind": "heli",
+				"name": "疼痛",
+				"dmg": "5~7",
+				"duration": 3
+			}
+		},
+		"loot": {
+			"shenglingshi": 0.1
+		}
+	},
+	{
+		"id": "hqsl_1",
+		"name": "黄泉灵体",
+		"level": 10,
+		"kind": "wood",
+		"noproc": true,
+		"hp": 35,
+		"tohit": 21,
+		"defense": 30,
+		"attack": {
+			"name": "嚎叫",
+			"bonus_class": 1,
+			"kind": "wood",
+			"dmg": "10~14"
+		},
+		"resist": {
+			"wood": 25
+		}
+	},
+	{
+		"id": "smz",
+		"name": "黑色流体",
+		"level": 13,
+		"kind": "chaos",
+		"desc": "一团黑色的流体物质",
+		"hp": 20,
+		"tohit": 2,
+		"defense": 12,
+		"attack": {
+			"name": "包裹",
+			"bonus_class": 1,
+			"kind": "chaos",
+			"dmg": "3~4"
+		}
+	},
+	{
+		"id": "noshadow",
+		"name": "无影者",
+		"level": 15,
+		"desc": "没有影子",
+		"kind": "chaos",
+		"hp": 38,
+		"tohit": 8,
+		"defense": 18,
+		"attack": {
+			"name": "尖叫",
+			"bonus_class": 1,
+			"kind": "chaos",
+			"dmg": "3~4",
+			"dot": {
+				"kind": "chaos",
+				"name": "尖叫",
+				"dmg": "1~2",
+				"duration": 10
+			}
+		}
+	},
+	{
+		"id": "balckwu",
+		"name": "黑色浓雾",
+		"level": 15,
+		"desc": "",
+		"kind": "chaos",
+		"hp": 15,
+		"tohit": 8,
+		"defense": 3,
+		"attack": {
+			"name": "黑色浓雾",
+			"bonus_class": 1,
+			"kind": "chaos",
+			"dmg": "4~6",
+			"dot": {
+				"kind": "chaos",
+				"name": "灼烧",
+				"dmg": "1~3",
+				"duration": 3
+			}
+		}
+	},
+	{
+		"id": "death_ling",
+		"name": "死灵",
+		"level": 16,
+		"desc": "",
+		"kind": "chaos",
+		"hp": 20,
+		"tohit": 3,
+		"defense": 6,
+		"attack": {
+			"name": "攻击",
+			"bonus_class": 1,
+			"kind": "chaos",
+			"dmg": "4~8",
+			"dot": {
+				"kind": "chaos",
+				"name": "疼痛",
+				"dmg": "1~3",
+				"duration": 3
+			}
+		},
+		"loot": {
+			"shuaibai_core": 0.5
+		}
+	},
+	{
+		"id": "haojiaozhe",
+		"name": "嚎叫者",
+		"level": 16,
+		"desc": "",
+		"kind": "chaos",
+		"hp": 50,
+		"tohit": 3,
+		"defense": 15,
+		"attack": {
+			"name": "攻击",
+			"bonus_class": 1,
+			"kind": "chaos",
+			"dmg": "3~9",
+			"dot": {
+				"kind": "chaos",
+				"name": "疼痛",
+				"dmg": "1~4",
+				"duration": 3
+			}
+		},
+		"loot": {
+			"shuaibai_core": 0.5
+		}
+	},
+	{
+		"id": "bujiezhe",
+		"name": "不洁粘液",
+		"level": 16,
+		"desc": "",
+		"kind": "chaos",
+		"hp": 60,
+		"tohit": 3,
+		"defense": 20,
+		"attack": {
+			"name": "攻击",
+			"bonus_class": 1,
+			"kind": "chaos",
+			"dmg": "6~8",
+			"dot": {
+				"kind": "chaos",
+				"name": "疼痛",
+				"dmg": "1~4",
+				"duration": 3
+			}
+		},
+		"loot": {
+			"shuaibai_core": 0.5
+		}
+	},
+	{
+		"id": "huian_fashi",
+		"name": "晦暗法师[筑基]",
+		"level": 20,
+		"kind": "chaos",
+		"desc": "像你一样的人",
+		"hp": 150,
+		"tohit": 10,
+		"defense": 50,
+		"attack": [
+			{
+				"name": "无光",
+				"kind": "chaos",
+				"dmg": "20~25",
+				"targets": "enemies"
+			},
+			{
+				"name": "无光",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "20~25",
+				"dot": {
+					"kind": "chaos",
+					"name": "无光",
+					"dmg": "7~15",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"zero_crystal": 10,
+			"lxue": 5,
+			"shuaibai_core": 5
+		}
+	},
+	{
+		"id": "huian_fashi_1",
+		"name": "晦暗法师[筑基]",
+		"level": 36,
+		"kind": "chaos",
+		"desc": "",
+		"hp": 350,
+		"tohit": 10,
+		"speed": 22,
+		"defense": 70,
+		"attack": [
+			{
+				"name": "无光",
+				"kind": "chaos",
+				"dmg": "60~75",
+				"targets": "enemies"
+			},
+			{
+				"name": "无光",
+				"kind": "chaos",
+				"bonus_class": 1,
+				"dmg": "60~75",
+				"dot": {
+					"kind": "chaos",
+					"name": "无光",
+					"dmg": "7~15",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"zero_crystal": 10,
+			"lxue": 5,
+			"shuaibai_core": 5
+		}
+	},
+	{
+		"id": "huian_fashi_2",
+		"name": "虚幻法师[筑基]",
+		"level": 36,
+		"kind": "heli",
+		"desc": "",
+		"hp": 350,
+		"tohit": 10,
+		"speed": 22,
+		"defense": 70,
+		"attack": [
+			{
+				"name": "光",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "60~75",
+				"targets": "enemies"
+			},
+			{
+				"name": "光",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "60~75",
+				"dot": {
+					"kind": "heli",
+					"name": "光",
+					"dmg": "7~15",
+					"duration": 10
+				}
+			},
+			{
+				"name": "无光",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "60~75",
+				"targets": "enemies"
+			},
+			{
+				"name": "无光",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "60~75",
+				"dot": {
+					"kind": "chaos",
+					"name": "无光",
+					"dmg": "7~15",
+					"duration": 10
+				}
+			}
+			
+		],
+		"loot": {
+			"zero_crystal": 10,
+			"lxue": 5,
+			"shuaibai_core": 5
+		}
+	},
+	{
+		"id": "huian_fashi_3",
+		"name": "构造法师[筑基]",
+		"level": 36,
+		"kind": "heli",
+		"desc": "",
+		"hp": 600,
+		"tohit": 10,
+		"speed": 22,
+		"defense": 100,
+		"attack": [
+			{
+				"name": "光",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "60~75",
+				"targets": "enemies"
+			},
+			{
+				"name": "光",
+				"kind": "heli",
+				"dmg": "60~75",
+				"dot": {
+					"kind": "heli",
+					"name": "光",
+					"dmg": "7~15",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"zero_crystal": 10,
+			"lxue": 5,
+			"shuaibai_core": 5
+		}
+	},
+	{
+		"id": "river_ghost",
+		"name": "水鬼",
+		"level": 13,
+		"desc": "",
+		"kind": "chaos",
+		"hp": 19,
+		"tohit": 3,
+		"defense": 8,
+		"attack": {
+			"name": "攻击",
+			"kind": "chaos",
+			"dmg": "5~7",
+			"dot": {
+				"kind": "chaos",
+				"name": "窒息",
+				"dmg": "1~2",
+				"duration": 10
+			}
+		},
+		"loot": {
+			"shuaibai_core": 0.1
+		}
+	},
+	{
+		"id": "muling",
+		"name": "木灵",
+		"level": 15,
+		"desc": "",
+		"kind": "wood",
+		"hp": 19,
+		"tohit": 3,
+		"defense": 8,
+		"attack": {
+			"name": "飞叶",
+			"kind": "wood",
+			"dmg": "12~19",
+			"dot": {
+				"kind": "wood",
+				"name": "流血",
+				"dmg": "6~9",
+				"duration": 10
+			}
+		},
+		"loot": {
+			"yqlm": 0.1
+		}
+	},
+	{
+		"id": "yyx",
+		"name": "阴暗飞虫",
+		"level": 15,
+		"desc": "",
+		"kind": "wood",
+		"hp": 30,
+		"tohit": 3,
+		"defense": 15,
+		"attack": {
+			"name": "刺击",
+			"kind": "wood",
+			"dmg": "16~17"
+		},
+		"loot": {
+			"yqlm": 0.1
+		}
+	},
+	{
+		"id": "xg",
+		"name": "小鬼",
+		"level": 15,
+		"desc": "",
+		"kind": "wood",
+		"hp": 22,
+		"tohit": 3,
+		"defense": 15,
+		"attack": {
+			"name": "抓挠",
+			"kind": "wood",
+			"dmg": "20~22"
+		},
+		"loot": {
+			"yqlm": 0.1
+		}
+	},
+	{
+		"id": "small_tree_man",
+		"name": "小树人",
+		"level": 15,
+		"kind": "wood",
+		"desc": "小型的树人",
+		"hp": 60,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "树木",
+				"bonus_class": 1,
+				"kind": "wood",
+				"dmg": "14~16",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"zero_crystal": 2,
+			"lxue": 0.8,
+			"yqlm": 0.5
+		}
+	},
+	{
+		"id": "sy",
+		"name": "山猿",
+		"level": 15,
+		"desc": "",
+		"kind": "gold",
+		"hp": 30,
+		"tohit": 3,
+		"defense": 15,
+		"attack": {
+			"name": "抓挠",
+			"kind": "gold",
+			"dmg": "20~25"
+		},
+		"loot": {
+			"cbjs": 0.1
+		}
+	},
+	{
+		"id": "yanj",
+		"name": "岩精",
+		"level": 15,
+		"kind": "gold",
+		"desc": "",
+		"hp": 50,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "金石",
+				"kind": "gold",
+				"dmg": "15~18",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"lxue": 0.2
+		}
+	},
+	{
+		"id": "huoj",
+		"name": "火精",
+		"level": 15,
+		"kind": "fire",
+		"desc": "",
+		"hp": 50,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "火焰",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "15~18",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"lxue": 0.2
+		}
+	},
+	{
+		"id": "fireb",
+		"name": "炎雀",
+		"level": 15,
+		"kind": "fire",
+		"desc": "",
+		"hp": 40,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "火羽",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "12~19",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"lxue": 0.2
+		}
+	},
+	{
+		"id": "hls",
+		"name": "火灵",
+		"level": 20,
+		"kind": "fire",
+		"desc": "",
+		"hp": 50,
+		"tohit": 10,
+		"defense": 10,
+		"attack": [
+			{
+				"name": "火焰",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "20~22",
+				"targets": "enemies"
+			},
+			{
+				"name": "高温",
+				"kind": "fire",
+				"dmg": "20~22",
+				"dot": {
+					"kind": "fire",
+					"name": "高温",
+					"dmg": "3~6",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"yxls": 0.7
+		}
+	},
+	{
+		"id": "syu",
+		"name": "大鱼",
+		"level": 15,
+		"kind": "water",
+		"desc": "",
+		"hp": 40,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "拍击",
+				"bonus_class": 1,
+				"kind": "water",
+				"dmg": "12~19",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"lxue": 0.2
+		}
+	},
+	{
+		"id": "waterj",
+		"name": "水精",
+		"level": 15,
+		"kind": "water",
+		"desc": "",
+		"hp": 40,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "浪花",
+				"bonus_class": 1,
+				"kind": "water",
+				"dmg": "15~17",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"lxue": 0.2
+		}
+	},
+	{
+		"id": "wggg",
+		"name": "移动石块",
+		"level": 15,
+		"kind": "land",
+		"desc": "",
+		"hp": 40,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "重击",
+				"kind": "land",
+				"dmg": "12~19",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"lxue": 0.2
+		}
+	},
+	{
+		"id": "tuj",
+		"name": "土精",
+		"level": 15,
+		"kind": "land",
+		"desc": "",
+		"hp": 40,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "土壤",
+				"kind": "land",
+				"dmg": "15~17",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"lxue": 0.2
+		}
+	},
+	{
+		"id": "sls",
+		"name": "水灵",
+		"level": 20,
+		"kind": "water",
+		"desc": "",
+		"hp": 60,
+		"tohit": 10,
+		"defense": 10,
+		"attack": [
+			{
+				"name": "水流",
+				"bonus_class": 1,
+				"kind": "water",
+				"dmg": "18~20",
+				"targets": "enemies"
+			},
+			{
+				"name": "大水",
+				"bonus_class": 1,
+				"kind": "water",
+				"dmg": "20~22",
+				"dot": {
+					"kind": "water",
+					"name": "窒息",
+					"dmg": "6~7",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"wgys": 0.7
+		}
+	},
+	{
+		"id": "tls",
+		"name": "地灵龟",
+		"level": 20,
+		"kind": "land",
+		"desc": "",
+		"hp": 70,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "壳击",
+				"kind": "land",
+				"dmg": "10~12",
+				"targets": "enemies"
+			},
+			{
+				"name": "喷吐",
+				"kind": "land",
+				"dmg": "10~12",
+				"dot": {
+					"kind": "land",
+					"name": "窒息",
+					"dmg": "10~12",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"zdht": 0.7
+		}
+	},
+	{
+		"id": "fjian",
+		"name": "飞剑",
+		"level": 20,
+		"kind": "gold",
+		"desc": "",
+		"hp": 50,
+		"tohit": 10,
+		"defense": 10,
+		"attack": [
+			{
+				"name": "飞剑",
+				"kind": "gold",
+				"dmg": "20~22",
+				"targets": "enemies"
+			},
+			{
+				"name": "流利剑雨",
+				"kind": "gold",
+				"dmg": "20~22",
+				"dot": {
+					"kind": "gold",
+					"name": "划伤",
+					"dmg": "3~6",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"cbjs": 0.7
+		}
+	},
+	{
+		"id": "tree_man",
+		"name": "沉寂树人[筑基]",
+		"level": 20,
+		"kind": "wood",
+		"desc": "巨大的树人,颤抖的大地",
+		"hp": 200,
+		"tohit": 10,
+		"defense": 40,
+		"attack": [
+			{
+				"name": "树木",
+				"bonus_class": 1,
+				"kind": "wood",
+				"dmg": "20~22",
+				"targets": "enemies"
+			},
+			{
+				"name": "百年木",
+				"bonus_class": 1,
+				"kind": "wood",
+				"dmg": "22~29",
+				"dot": {
+					"kind": "wood",
+					"name": "震撼",
+					"dmg": "6~9",
+					"duration": 5
+				}
+			}
+		],
+		"loot": {
+			"zero_crystal": 4,
+			"lxue": 5,
+			"yqlm": 5
+		}
+	},
+	{
+		"id": "mujie_1",
+		"name": "木劫",
+		"level": 20,
+		"kind": "wood",
+		"desc": "源泉",
+		"hp": 1700,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "源泉震撼",
+				"bonus_class": 1,
+				"kind": "wood",
+				"dmg": "100~160",
+				"targets": "enemies"
+			},
+			{
+				"name": "千年木",
+				"kind": "wood",
+				"dmg": "0~1",
+				"dot": {
+					"kind": "wood",
+					"name": "千年震慑",
+					"dmg": "14~17",
+					"duration": 60
+				}
+			}
+		],
+		"loot": {
+			"lxue": 5,
+			"yqlm": 25
+		},
+		"resist": {
+			"wood": 50,
+			"gold": -20
+		}
+	},
+	{
+		"id": "huojie_1",
+		"name": "火劫",
+		"level": 20,
+		"kind": "fire",
+		"desc": "真火",
+		"hp": 1300,
+		"tohit": 16,
+		"defense": 14,
+		"attack": [
+			{
+				"name": "真火震撼",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "120~160",
+				"targets": "enemies"
+			},
+			{
+				"name": "无端火",
+				"kind": "fire",
+				"dmg": "0~1",
+				"dot": {
+					"kind": "fire",
+					"name": "夕阳",
+					"dmg": "6~20",
+					"duration": 120
+				}
+			}
+		],
+		"loot": {
+			"lxue": 5,
+			"yxls": 25
+		},
+		"resist": {
+			"fire": 50,
+			"water": -20
+		}
+	},
+	{
+		"id": "tujie_1",
+		"name": "土劫",
+		"level": 20,
+		"kind": "land",
+		"desc": "厚土",
+		"hp": 2500,
+		"tohit": 20,
+		"defense": 50,
+		"attack": [
+			{
+				"name": "厚土震撼",
+				"kind": "land",
+				"dmg": "55~101",
+				"targets": "enemies"
+			},
+			{
+				"name": "地隙",
+				"kind": "land",
+				"dmg": "0~1",
+				"dot": {
+					"kind": "land",
+					"name": "地隙",
+					"dmg": "2~11",
+					"duration": 50,
+					"mod":{
+						"defense":-15
+					}
+				}
+			}
+		],
+		"loot": {
+			"lxue": 5,
+			"zdht": 25
+		},
+		"resist": {
+			"land": 50,
+			"wood": -20
+		}
+	},
+	{
+		"id": "jinjie_1",
+		"name": "金劫",
+		"level": 20,
+		"kind": "gold",
+		"desc": "锐金",
+		"hp": 1000,
+		"tohit": 50,
+		"defense": 0,
+		"attack": [
+			{
+				"name": "极意之金",
+				"kind": "gold",
+				"dmg": "220~251",
+				"targets": "enemies"
+			},
+			{
+				"name": "长金破空",
+				"kind": "gold",
+				"dmg": "100~120",
+				"dot": {
+					"kind": "gold",
+					"name": "长金破空",
+					"dmg": "20~21",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"lxue": 5,
+			"cbjs": 25
+		},
+		"resist": {
+			"gold": 50,
+			"fire": -20
+		}
+	},
+	{
+		"id": "shuijie_1",
+		"name": "水劫",
+		"level": 20,
+		"kind": "water",
+		"desc": "真水",
+		"hp": 2500,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "汪洋",
+				"bonus_class": 1,
+				"kind": "water",
+				"dmg": "60~71",
+				"targets": "enemies"
+			},
+			{
+				"name": "无边之海",
+				"kind": "water",
+				"dmg": "30~41",
+				"dot": {
+					"kind": "water",
+					"name": "无边海",
+					"dmg": "10~12",
+					"duration": 70,
+					"mod":{
+						"speed":-2,
+						"defense":-5,
+						"dodge": -10
+					}
+				}
+			}
+		],
+		"loot": {
+			"lxue": 5,
+			"wgys": 25
+		},
+		"resist": {
+			"water": 50,
+			"land": -20
+		}
+	},
+	{
+		"id": "wuxiangmo",
+		"name": "无相真魔[筑基]",
+		"level": 20,
+		"kind": "chaos",
+		"desc": "混沌表示",
+		"hp": 3000,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "无始",
+				"kind": "chaos",
+				"dmg": "40~50",
+				"targets": "enemies"
+			},
+			{
+				"name": "无终",
+				"kind": "chaos",
+				"dmg": "0~1",
+				"dot": {
+					"kind": "chaos",
+					"name": "无终",
+					"dmg": "19~22",
+					"duration": 60
+				}
+			}
+		],
+		"resist": {
+			"chaos": 10,
+			"heli": -20
+		}
+	},
+	{
+		"id": "wuxiangling",
+		"name": "无相真灵[筑基]",
+		"level": 20,
+		"kind": "heli",
+		"desc": "合理表示",
+		"hp": 3000,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "至始",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "40~50",
+				"targets": "enemies"
+			},
+			{
+				"name": "至终",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "0~1",
+				"dot": {
+					"kind": "heli",
+					"name": "至终",
+					"dmg": "19~22",
+					"duration": 60
+				}
+			}
+		],
+		"resist": {
+			"heli": 10,
+			"chaos": -50
+		}
+	},
+	{
+		"id": "shengmen_1",
+		"name": "生门[命玄]",
+		"level": 29,
+		"kind": "heli",
+		"desc": "生表示",
+		"hp": 10000,
+		"tohit": 50,
+		"defense": 50,
+		"spells": "ziranslpd",
+		"attack": [
+			{
+				"name": "生灵呼吸",
+				"kind": "heli",
+				"dmg": "31~45",
+				"targets": "enemies"
+			}
+		],
+		"resist": {
+			"heli": 20,
+			"chaos": 20
+		}
+	},
+	{
+		"id": "simen_1",
+		"name": "死门[落日]",
+		"level": 29,
+		"kind": "chaos",
+		"desc": "死表示",
+		"hp": 4000,
+		"tohit": 50,
+		"defense": 50,
+		"spells": "sgfszj",
+		"attack": [
+			{
+				"name": "死亡边缘",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "64~65",
+				"targets": "enemies"
+			}
+		],
+		"resist": {
+			"heli": 20,
+			"chaos": 20
+		}
+	},
+	{
+		"id": "yueshengshike_1",
+		"name": "跃升时刻",
+		"level": 29,
+		"kind": "holy",
+		"desc": "",
+		"hp": 20000,
+		"tohit": 1000,
+		"defense": 1,
+		"spells": "lzgxs",
+		"attack": [
+			{
+				"name": "平静",
+				"kind": "holy",
+				"dmg": "1~2",
+				"targets": "enemies"
+			},
+			{
+				"name": "感悟",
+				"kind": "holy",
+				"dmg": "1~2",
+				"log": {
+					"%": "100%",
+					"desc": "你竭尽全力思考"
+				},
+				"dot": {
+					"id": "ganwudiaoluo",
+					"name":"竭力",
+					"duration": 5,
+					"dmg": "0~1",
+					"mod": {
+						"ganwu.rate": -20
+					}
+				}
+			},
+			{
+				"name": "无力",
+				"kind": "holy",
+				"dmg": "1~2",
+				"log": {
+					"%": "100%",
+					"desc": "你竭尽全力保持清醒"
+				},
+				"dot": {
+					"id": "shuxingdiaoluo",
+					"name":"无力",
+					"duration": 5,
+					"dmg": "1~1",
+					"mod": {
+						"heli.rate": -10,
+						"chaos.rate":-10
+					}
+				}
+			}
+		],
+		"resist": {
+			"heli": 20,
+			"chaos": 20
+		}
+	},
+	{
+		"id": "zhenyang",
+		"name": "真阳[筑基]",
+		"level": 20,
+		"kind": "sun",
+		"desc": "他是真阳",
+		"hp": 8000,
+		"tohit": 10,
+		"defense": 30,
+		"attack": [
+			{
+				"name": "真水",
+				"bonus_class": 1,
+				"kind": "water",
+				"dmg": "30~35",
+				"dot": {
+					"kind": "water",
+					"name": "真水",
+					"dmg": "3~5",
+					"duration": 60
+				}
+			},
+			{
+				"name": "真火",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "30~35",
+				"dot": {
+					"kind": "fire",
+					"name": "真火",
+					"dmg": "5~7",
+					"duration": 60
+				}
+			},
+			{
+				"name": "锐金",
+				"kind": "gold",
+				"dmg": "30~35",
+				"dot": {
+					"kind": "gold",
+					"name": "锐金",
+					"dmg": "5~7",
+					"duration": 60
+				}
+			},
+			{
+				"name": "源泉",
+				"bonus_class": 1,
+				"kind": "wood",
+				"dmg": "30~35",
+				"dot": {
+					"kind": "wood",
+					"name": "源泉",
+					"dmg": "5~7",
+					"duration": 60
+				}
+			},
+			{
+				"name": "厚土",
+				"kind": "land",
+				"dmg": "30~35",
+				"dot": {
+					"kind": "land",
+					"name": "厚土",
+					"dmg": "5~7",
+					"duration": 60
+				}
+			}
+		],
+		"resist": {
+			"heli": 20,
+			"chaos": 20
+		}
+	},
+	{
+		"id": "luor",
+		"name": "落日[筑基]",
+		"level": 20,
+		"kind": "sun",
+		"desc": "他是落日",
+		"hp": 8000,
+		"tohit": 10,
+		"defense": 20,
+		"attack": [
+			{
+				"name": "至始",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "30~35",
+				"dot": {
+					"kind": "heli",
+					"name": "至始",
+					"dmg": "3~5",
+					"duration": 60
+				}
+			},
+			{
+				"name": "至终",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "30~35",
+				"dot": {
+					"kind": "heli",
+					"name": "至终",
+					"dmg": "5~7",
+					"duration": 60
+				}
+			},
+			{
+				"name": "无始",
+				"kind": "chaos",
+				"dmg": "30~35",
+				"dot": {
+					"kind": "chaos",
+					"name": "无始",
+					"dmg": "3~5",
+					"duration": 60
+				}
+			},
+			{
+				"name": "无终",
+				"kind": "chaos",
+				"dmg": "30~35",
+				"dot": {
+					"kind": "chaos",
+					"name": "无终",
+					"dmg": "5~7",
+					"duration": 60
+				}
+			}
+		],
+		"resist": {
+			"heli": 20,
+			"chaos": 20
+		}
+	},
+	{
+		"id": "gold_man",
+		"name": "金石傀儡[筑基]",
+		"level": 20,
+		"kind": "gold",
+		"desc": "神秘的庞大傀儡,没人知道是谁建造的",
+		"hp": 160,
+		"tohit": 10,
+		"defense": 40,
+		"attack": [
+			{
+				"name": "猛砸",
+				"kind": "gold",
+				"dmg": "20~22",
+				"targets": "enemies"
+			},
+			{
+				"name": "锐利之意",
+				"kind": "gold",
+				"dmg": "0~1",
+				"dot": {
+					"kind": "gold",
+					"name": "锐利伤痕",
+					"dmg": "10~20",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"zero_crystal": 10,
+			"cbjs": 6
+		}
+	},
+	{
+		"id": "fire_bird",
+		"name": "火羽鸟[筑基]",
+		"level": 17,
+		"kind": "fire",
+		"desc": "浑身散发着火焰的危险鸟类",
+		"hp": 100,
+		"tohit": 10,
+		"defense": 28,
+		"attack": [
+			{
+				"name": "灼烧",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "22~26",
+				"targets": "enemies"
+			},
+			{
+				"name": "黄炎",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "7~39",
+				"dot": {
+					"kind": "fire",
+					"name": "炎",
+					"dmg": "10~10",
+					"duration": 20
+				}
+			}
+		],
+		"loot": {
+			"zero_crystal": 10,
+			"lxue": 2,
+			"snp_data": 9,
+			"yxls": 6
+		}
+	},
+	{
+		"id": "tu_bird",
+		"name": "古老岩雀[筑基]",
+		"level": 17,
+		"kind": "land",
+		"desc": "有着坚硬无比的羽毛",
+		"hp": 200,
+		"tohit": 10,
+		"defense": 25,
+		"attack": [
+			{
+				"name": "土壤掩埋",
+				"kind": "land",
+				"dmg": "20~22",
+				"targets": "enemies"
+			},
+			{
+				"name": "厚土",
+				"kind": "land",
+				"dmg": "22~29",
+				"dot": {
+					"kind": "land",
+					"name": "窒息",
+					"dmg": "2~13",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"zero_crystal": 10,
+			"lxue": 2,
+			"snp_data": 9,
+			"zdht": 6
+		}
+	},
+	{
+		"id": "lake_wheel",
+		"name": "洪泽巨鱼[筑基]",
+		"level": 17,
+		"kind": "chaos",
+		"desc": "大泽中的大鱼",
+		"hp": 150,
+		"tohit": 10,
+		"defense": 25,
+		"attack": [
+			{
+				"name": "压迫",
+				"kind": "water",
+				"dmg": "12~12",
+				"targets": "enemies"
+			},
+			{
+				"name": "洪泽水流",
+				"bonus_class": 1,
+				"kind": "water",
+				"dmg": "10~20",
+				"dot": {
+					"kind": "water",
+					"name": "窒息",
+					"dmg": "1~2",
+					"duration": 20
+				}
+			}
+		],
+		"loot": {
+			"zero_crystal": 10,
+			"lxue": 2,
+			"snp_data": 9,
+			"wgys": 6
+		}
+	},
+	{
+		"id": "river_wheel",
+		"name": "荒芜鲸[筑基]",
+		"level": 17,
+		"kind": "chaos",
+		"desc": "庞大的鱼,生活在荒芜大河中",
+		"hp": 100,
+		"tohit": 10,
+		"defense": 25,
+		"attack": [
+			{
+				"name": "压迫",
+				"kind": "chaos",
+				"dmg": "12~12",
+				"targets": "enemies"
+			},
+			{
+				"name": "荒芜水流",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "10~20",
+				"dot": {
+					"kind": "chaos",
+					"name": "窒息",
+					"dmg": "1~2",
+					"duration": 20
+				}
+			}
+		],
+		"loot": {
+			"zero_crystal": 6,
+			"lxue": 6,
+			"snp_data": 9,
+			"back_dream": 3
+		}
+	},
+	{
+		"id": "hanhai_youl",
+		"name": "瀚海幽灵[筑基]",
+		"level": 25,
+		"kind": "chaos",
+		"desc": "",
+		"hp": 280,
+		"tohit": 10,
+		"defense": 50,
+		"attack": [
+			{
+				"name": "压迫",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "12~12",
+				"targets": "enemies"
+			},
+			{
+				"name": "瀚海",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "10~20",
+				"dot": {
+					"kind": "chaos",
+					"name": "窒息",
+					"dmg": "1~2",
+					"duration": 20
+				}
+			}
+		],
+		"loot": {
+			"hunti_core": 0.1,
+			"lxue": 3,
+			"snp_data": 9,
+			"back_dream": 3
+		}
+	},
+	{
+		"id": "hanhai_juxiang",
+		"name": "瀚海巨象[筑基]",
+		"level": 25,
+		"kind": "chaos",
+		"desc": "",
+		"hp": 500,
+		"tohit": 40,
+		"defense": 70,
+		"attack": [
+			{
+				"name": "碾压",
+				"kind": "chaos",
+				"dmg": "31~37",
+				"targets": "enemies"
+			},
+			{
+				"name": "瀚海",
+				"kind": "chaos",
+				"dmg": "23~29",
+				"dot": {
+					"kind": "chaos",
+					"name": "窒息",
+					"dmg": "4~5",
+					"duration": 12
+				}
+			}
+		],
+		"loot": {
+			"hunti_core": 2,
+			"lxue": 3,
+			"shuaibai_core": 2,
+			"snp_data": 9,
+			"back_dream": 3
+		}
+	},
+	{
+		"id": "dreamloot",
+		"name": "归梦者",
+		"level": 15,
+		"kind": "chaos",
+		"desc": "从底层梦境返回现实的神秘人",
+		"hp": 55,
+		"tohit": 10,
+		"defense": 29,
+		"attack": [
+			{
+				"name": "合理飞弹",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "5~12",
+				"targets": "enemies"
+			},
+			{
+				"name": "混沌飞弹",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "10~20"
+			}
+		],
+		"loot": {
+			"zero_crystal": 5,
+			"snp_data": 10,
+			"back_dream": 2
+		}
+	},
+	{
+		"id": "zhuohun_1",
+		"name": "灼魂",
+		"level": 38,
+		"desc": "",
+		"kind": "body",
+		"hp": 1800,
+		"speed": 22,
+		"tohit": 200,
+		"defense": 300,
+		"attack": [
+			{
+				"name": "灼神",
+				"bonus_class": 1,
+				"kind": "body",
+				"dmg": "150~220",
+				"targets": "enemies"
+			},
+			{
+				"name": "灼我",
+				"targets": "self",
+				"result": {
+					"hp": 20
+				}
+			}
+		],
+		"loot": {
+			"body_soulcore_pice":0.05,
+			"hunti_core": 0.5,
+			"shenglingshi": 10,
+			"lxue": 10
+		},
+		"resist": {
+			"fire": 30,
+			"gold": 30,
+			"wood": 30,
+			"water": 30,
+			"land": 30
+		}
+	},
+	{
+		"id": "zhuohun_2",
+		"name": "灼魂之灵",
+		"level": 38,
+		"desc": "",
+		"kind": "body",
+		"hp": 2500,
+		"speed": 22,
+		"tohit": 200,
+		"defense": 100,
+		"attack": [
+			{
+				"name": "灼神",
+				"kind": "body",
+				"dmg": "360~420",
+				"targets": "enemies"
+			},
+			{
+				"name": "灼我",
+				"targets": "self",
+				"result": {
+					"hp": 20
+				}
+			}
+		],
+		"loot": {
+			"body_soulcore_pice":0.3,
+			"hunti_core": 7,
+			"shenglingshi": 10,
+			"lxue": 10
+		},
+		"resist": {
+			"fire": 30,
+			"gold": 30,
+			"wood": 30,
+			"water": 30,
+			"land": 30
+		}
+	},
+	{
+		"id": "gongwei_1",
+		"name": "共位之灾",
+		"level": 38,
+		"desc": "",
+		"kind": "heli",
+		"hp": 1700,
+		"speed": 22,
+		"tohit": 200,
+		"defense": 100,
+		"attack": [
+			{
+				"name": "合害",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "150~220",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"heli_soulcore_pice":0.05,
+			"shenglingshi": 10,
+			"lxue": 10
+		},
+		"resist": {
+			"heli": 99
+		}
+	},
+	{
+		"id": "gongwei_2",
+		"name": "共位之幸",
+		"level": 38,
+		"desc": "",
+		"kind": "heli",
+		"hp": 900,
+		"speed": 22,
+		"tohit": 200,
+		"defense": 200,
+		"attack": [
+			{
+				"name": "混幸",
+				"kind": "chaos",
+				"dmg": "150~220",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"hundun_soulcore_pice":0.05,
+			"shenglingshi": 10,
+			"lxue": 10
+		},
+		"resist": {
+			"chaos": 99
+		}
+	},
+	{
+		"id": "gongwei_3",
+		"name": "共位之灵",
+		"level": 38,
+		"desc": "免疫99%合理以及混沌伤害",
+		"kind": "heli",
+		"hp": 2000,
+		"speed": 22,
+		"tohit": 160,
+		"defense": 150,
+		"attack": [
+			{
+				"name": "混沌之理",
+				"bonus_class": 1,
+				"kind": "chaos",
+				"dmg": "170~320",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"hundun_soulcore_pice":1,
+			"heli_soulcore_pice":1,
+			"shenglingshi": 10,
+			"lxue": 10
+		},
+		"resist": {
+			"heli": 99,
+			"chaos": 99
+		}
+	},
+	{
+		"id": "tiaoxiezhiling_0",
+		"name": "寻何物?",
+		"level": 38,
+		"desc": "",
+		"kind": "wuhuan",
+		"hp": 1,
+		"speed": 1,
+		"tohit": 1,
+		"defense": 1,
+		"attack": [
+			{
+				"name": "可憎之影",
+				"bonus_class": 1,
+				"kind": "wuhuan",
+				"dmg": "5000~5200",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"lxue": 1
+		},
+		"resist": {
+			"fire": 100,
+			"gold": 100,
+			"water": 100,
+			"wood": 100,
+			"land": 100
+		}
+	},
+	{
+		"id": "tiaoxiezhiling",
+		"name": "正灵宿本位",
+		"level": 38,
+		"desc": "开虚张弓影",
+		"kind": "wuhuan",
+		"hp": 4000,
+		"speed": 22,
+		"tohit": 200,
+		"defense": 300,
+		"attack": [
+			{
+				"name": "谁役使万灵",
+				"bonus_class": 1,
+				"kind": "wuhuan",
+				"dmg": "340~520",
+				"targets": "enemies"
+			},
+			{
+				"name": "五元难伤神",
+				"kind": "wuhuan",
+				"dmg": "340~520",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"fire_soulcore_pice":1,
+			"gold_soulcore_pice":1,
+			"water_soulcore_pice":1,
+			"wood_soulcore_pice":1,
+			"land_soulcore_pice":1,
+			"shenglingshi": 10,
+			"lxue": 10
+		},
+		"resist": {
+			"fire": 99,
+			"gold": 99,
+			"water": 99,
+			"wood": 99,
+			"land": 99
+		}
+	},
+	{
+		"id": "zaodongzhiling",
+		"name": "躁动之灵",
+		"level": 38,
+		"desc": "",
+		"kind": "fire",
+		"hp": 2000,
+		"speed": 22,
+		"tohit": 200,
+		"defense": 150,
+		"attack": [
+			{
+				"name": "攻击",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "160~320",
+				"targets": "enemies"
+			}
+		],
+		"loot": {
+			"speed_soulcore_pice": 0.05,
+			"spell_soulcore_pice": 0.05,
+			"shenglingshi": 1,
+			"lxue": 1
+		},
+		"resist": {
+			"fire": 20
+		}
+	},
+	{
+		"id": "un_shadow",
+		"name": "无影",
+		"tags": "无影",
+		"level": 1,
+		"desc": "",
+		"kind": "blood",
+		"hp": 350,
+		"speed": 22,
+		"tohit": 80,
+		"defense": 60,
+		"attack": [
+			{
+				"name": "攻击",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "10~120",
+				"targets": "enemies"
+			}
+		],
+		"resist": {
+			"fire": 20
+		}
+	},
+	{
+		"id": "xuejieliutianling_mon",
+		"name": "血界-流天灵",
+		"level": 38,
+		"desc": "",
+		"kind": "fire",
+		"hp": 1200,
+		"speed": 22,
+		"tohit": 120,
+		"defense": 120,
+		"attack": [
+			{
+				"name": "血界爆裂",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "160~320",
+				"targets": "enemies",
+				"dot": {
+					"%": "20%",
+					"id": "s_weak",
+					"name": "虚弱",
+					"mod": {
+						"defense": -20
+					},
+					"duration": 10
+				}
+			}
+		],
+		"resist": {
+			"fire": 20
+		}
+	},
+	{
 		"id": "newt",
 		"level": 0.2,
 		"kind": "beast",

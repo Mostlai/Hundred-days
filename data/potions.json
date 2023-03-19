@@ -1,772 +1,442 @@
-[
+[	
 	{
-		"id": "pot_remedy",
-		"name": "救济",
-		"desc": "Cures most common ailments and fortifies the body.",
-		"require": "g.potions>=8",
-		"level": 10,
+		"id": "element_wuhuan_juhe",
+		"name": "聚合五环",
+		"desc": "凝聚五环元素成衍生元素-五环点",
+		"tags": "元素制作",
+		"equneed": "g.adv_mix_1>=1",
+		"require": "g.xiulian_space_ysys>=1 && g.xiulian_space_yswd>=1 && g.xiulian_space_ysch>=1",
+		"level": 1,
 		"buy": {
-			"gold": 2500,
-			"research": 3000,
-			"potionessence": 1
+			"sp":10,
+			"life_crystal": 5,
+			"star_map_1": 10,
+			"yjdl": 20,
+			"cbclb": 30,
+			"money": 1500,
+			"ganwu": 400
 		},
 		"cost": {
-			"herbs": 50,
-			"nature": 10,
-			"naturegem": 15,
-			"gems": 5,
-			"potionessence": 1
+			"money": 200,
+			"jls": 50,
+			"gwl": 10,
+			"cbclb": 10,
+			"element_gold": 5,
+			"element_wood": 5,
+			"element_water": 5,
+			"element_fire": 5,
+			"element_land": 5
+		},
+		"result":{
+			"time": 33,
+			"element_wuhuan": 3.9
+		},
+		"flavor": "需要1级纠缠实验室"
+	},
+	{
+		"id": "element_wuhuan_niuqu",
+		"name": "五环扭曲",
+		"desc": "扭曲五环点成衍生不稳定元素-落日点【该配方初始成本较贵,需要建造家具或解锁升级降低成本】",
+		"tags": "元素制作",
+		"equneed": "g.adv_mix_1>=1",
+		"require": "g.xiulian_fc_niuquhanshu>=1 &&g.xiulian_fc_niuqushuxues>=1",
+		"level": 1,
+		"buy": {
+			"element_wuhuan": 5,
+			"life_crystal": 5,
+			"star_map_1": 10,
+			"yjdl": 30,
+			"cbclb": 30,
+			"money": 1500,
+			"ganwu": 400
+		},
+		"cost": {
+			"qiyiyeti": 10,
+			"money": 1300,
+			"life_crystal": 4,
+			"zero_crystal": 30,
+			"jls": 80,
+			"gwl": 20,
+			"cbclb": 20,
+			"element_wuhuan": 10
+		},
+		"result":{
+			"time": 33,
+			"ele_confusion": 5,
+			"element_luor": 1
+		},
+		"flavor": "需要1级纠缠实验室"
+	},
+	{
+		"id": "kqs",
+		"name": "矿泉水",
+		"desc": "一瓶矿泉水",
+		"equneed": "g.mix_1>=1",
+		"require": "g.yaolixue>=1",
+		"level": 1,
+		"dr": 0.2,
+		"sell":{
+			"money": 30
+		},
+		"buy": {
+			"sp":1,
+			"money": 600,
+			"ganwu": 400
+		},
+		"cost": {
+			"money": 4,
+			"element_fire": 2,
+			"element_water": 1,
+			"shuiyinhua": 1
 		},
 		"use": {
-			"action": {
-				"cure": [
-					"paralysis",
-					"enrage",
-					"charmed",
-					"fear",
-					"silence",
-					"sick"
-				],
-				"targets": "self"
-			},
+			"drug_resist": 0.2,
+			"hp": 30
+		},
+		"flavor": "需要1级元素混合器"
+	},
+	{
+		"id": "goodguozhi",
+		"name": "好果汁",
+		"desc": "好果汁会变质吗",
+		"equneed": "g.mix_1>=1",
+		"require": "g.yaolixue>=1",
+		"level": 1,
+		"dr": 0.1,
+		"sell":{
+			"money": 60
+		},
+		"buy": {
+			"sp":1,
+			"money": 600,
+			"ganwu": 400
+		},
+		"cost": {
+			"money": 10,
+			"element_fire": 2,
+			"element_wood": 1,
+			"element_water": 1,
+			"diluhua": 1
+		},
+		"use": {
+			"drug_resist": 0.1,
+			"hp": 10
+		},
+		"flavor": "需要1级元素混合器"
+	},
+	{
+		"id": "gold_jiu",
+		"name": "黄金酒",
+		"desc": "金色液体",
+		"equneed": "g.mix_1>=1",
+		"require": "g.yaolixue>=1",
+		"level": 1,
+		"dr": 2,
+		"sell":{
+			"money": 60
+		},
+		"buy": {
+			"sp":1,
+			"money": 600,
+			"ganwu": 400
+		},
+		"cost": {
+			"money": 10,
+			"element_fire": 2.5,
+			"element_gold": 2,
+			"element_water": 2
+		},
+		"use": {
+			"drug_resist": 2,
+			"dot": {
+				"duration": 600,
+				"effect": {
+					"money": 3
+				}
+			}
+		},
+		"flavor": "需要1级元素混合器"
+	},
+	{
+		"id": "liaoshangyao",
+		"name": "疗伤散",
+		"desc": "一小瓶疗伤散",
+		"equneed": "g.mix_1>=1",
+		"require": "g.yaolixue>=1",
+		"level": 1,
+		"dr": 1,
+		"sell":{
+			"money": 30
+		},
+		"buy": {
+			"sp":1,
+			"money": 600,
+			"ganwu": 400
+		},
+		"cost": {
+			"element_wood": 2.5,
+			"element_water": 1
+		},
+		"use": {
+			"drug_resist": 1,
 			"dot": {
 				"duration": 300,
 				"effect": {
-					"hp": 1
-				},
-				"mod": {
-					"hp.max": 100
+					"hp": 9
 				}
 			}
-		}
+		},
+		"flavor": "需要1级元素混合器"
 	},
 	{
-		"id": "pot_midas",
-		"name": "sip of gold",
-		"desc": "Temporarily grants you an impeccable ability to acquire valuables.",
-		"require": "g.potions>=9",
-		"level": 10,
-		"buy": {
-			"gold": 5000,
-			"research": 6000,
-			"potionessence": 1
-		},
-		"cost": {
-			"herbs": 50,
-			"gold": 2000,
-			"gems": 40,
-			"spirit": 15,
-			"potionessence": 2
-		},
-		"use": {
-			"dot": {
-				"duration": 1200,
-				"effect": {
-					"gold": 5,
-					"gems": 0.1
-				}
-			}
-		}
-	},
-	{
-		"id": "pot_souls",
-		"name": "soulbind essence",
-		"desc": "A measure of this sickly green substance can significantly improve the effects of soul traps.",
-		"require": "g.potions>=6&&g.evil>0",
-		"level": 10,
-		"buy": {
-			"gold": 2500,
-			"research": 3000,
-			"potionessence": 1
-		},
-		"cost": {
-			"souls": 15,
-			"gold": 500,
-			"spiritgem": 5,
-			"spirit": 15,
-			"shadowgem": 5,
-			"potionessence": 1
-		},
-		"use": {
-			"dot": {
-				"duration": 1800,
-				"mod": {
-					"trapsoul.run.bonedust": -0.2,
-					"trapsoul.length": -5,
-					"trapsoul.result.souls.max": 0.25
-				}
-			}
-		}
-	},
-	{
-		"id": "pot_metallicizer",
-		"name": "liquid metal",
-		"desc": "A flask of metal that stays liquid even in the coldest weather. Converts organic materials to more liquid metal. Becomes inert after some time.",
-		"require": "g.puppet_enhancedlabs>0&&g.potions>0",
-		"level": 10,
-		"buy": {
-			"gold": 4500,
-			"research": 3000,
-			"potionessence": 1
-		},
-		"cost": {
-			"herbs": 50,
-			"gold": 2500,
-			"gems": 25,
-			"mana": 15,
-			"potionessence": 1
-		},
-		"use": {
-			"dot": {
-				"id": "metallicize",
-				"name": "liquidation",
-				"duration": 120,
-				"effect": {
-					"bodies": -1,
-					"herbs": -1,
-					"hp": -2
-				},
-				"mod": {
-					"gatherherbs.result.herbs": -0.2,
-					"gatherherbs.result.gold": 4,
-					"murder.result.bodies": -1,
-					"murder.result.gold": 200
-				}
-			}
-		}
-	},
-	{
-		"id": "pot_invisibility",
-		"name": "vial of invisibility",
-		"desc": "Appears to contain nothing at all.",
-		"require": "g.madcap>0&&g.potions>0",
-		"level": 10,
-		"buy": {
-			"gold": 2500,
-			"research": 3000,
-			"potionessence": 1
-		},
-		"cost": {
-			"herbs": 50,
-			"gold": 2500,
-			"spiritgem": 25,
-			"hp": 150,
-			"spirit": 15,
-			"potionessence": 1
-		},
-		"use": {
-			"dot": {
-				"id": "pot_invisibility_effect",
-				"name": "invisibility",
-				"duration": 1800,
-				"mod": {
-					"player.dodge": 25,
-					"player.speed": 15,
-					"heist.result.gems.min": 1,
-					"heist.result.gems.max": 1,
-					"heist.length": -25
-				}
-			}
-		}
-	},
-	{
-		"id": "pot_breath1",
-		"name": "portion of waterbreathing",
-		"desc": "Unusually, prepared by baking special herbs into a brownie.",
-		"require": "g.potions>=1",
-		"buy": {
-			"gold": 25,
-			"research": 50
-		},
-		"cost": {
-			"herbs": 10
-		},
-		"use": {
-			"dot": {
-				"duration": 120,
-				"effect": {
-					"breath": 3,
-					"water": 0.1
-				}
-			}
-		}
-	},
-	{
-		"id": "pot_mana1",
-		"name": "draught of mana",
-		"require": "g.potions>=1",
-		"buy": {
-			"gold": 25,
-			"research": 50
-		},
-		"cost": {
-			"herbs": 10
-		},
-		"use": {
-			"mana": 5
-		}
-	},
-	{
-		"id": "pot_manadot",
-		"name": "drip of mana",
-		"desc": "Raw mana injected right into the veins of a mage can allow for sustained casting, if one disregards the side-effects",
-		"require": "g.potions>=8",
-		"buy": {
-			"gold": 250,
-			"research": 500
-		},
-		"cost": {
-			"herbs": 25,
-			"managem": 5
-		},
-		"use": {
-			"dot": {
-				"id": "dotmana",
-				"name": "mana drip",
-				"duration": 900,
-				"effect": {
-					"mana": 1,
-					"hp": -1
-				}
-			}
-		}
-	},
-	{
-		"id": "pot_stamdot",
-		"name": "potion of bull's tenacity",
-		"desc": "This reddish potion causes a surge of energy in the imbiber, at the expense of health",
-		"require": "g.potions>=8",
-		"buy": {
-			"gold": 250,
-			"research": 500
-		},
-		"cost": {
-			"herbs": 25,
-			"managem": 5,
-			"bloodgem": 5
-		},
-		"use": {
-			"dot": {
-				"id": "fount",
-				"name": "bull's tenacity",
-				"duration": 900,
-				"effect": {
-					"stamina": 2.25,
-					"hp": -1
-				}
-			}
-		}
-	},
-	{
-		"id": "pot_fake",
-		"name": "potion of eternal youth",
-		"desc": "Ensures the drinker never becomes old. For sale only",
-		"require": "g.potions>=1&&g.evil>0",
-		"buy": {
-			"gold": 250,
-			"research": 500,
-			"potionessence": 1
-		},
-		"cost": {
-			"herbs": 25,
-			"bodies": 15,
-			"shadowgem": 2,
-			"potionessence": 1
-		},
-		"sell": {
-			"gold": 2000,
-			"gems": 25
-		},
-		"use": {
-			"dot": {
-				"id": "fakeeternalyouth",
-				"name": "eternal youth",
-				"duration": 150,
-				"effect": {
-					"hp": -50
-				}
-			}
-		}
-	},
-	{
-		"id": "pot_manaburn",
-		"name": "potion of mana burn",
-		"desc": "Violently expells all mana from user's body for a time.",
-		"require": "g.potions>=999",
-		"buy": {
-			"gold": 250,
-			"research": 500
-		},
-		"cost": {
-			"herbs": 10
-		},
-		"use": {
-			"dot": {
-				"id": "manaburn",
-				"name": "mana burn",
-				"duration": 600,
-				"mod": {
-					"manas.max": -1000
-				},
-				"effect": {
-					"manas": -50
-				}
-			}
-		}
-	},
-	{
-		"id": "pot_cparalysis",
-		"name": "tincture of limberness",
-		"desc": "Removes most forms of inisidious motion impairment.",
-		"level": 5,
-		"require": "g.potions>=5",
-		"cost": {
-			"herbs": 1,
-			"managem": 1
-		},
-		"use": "cureparalyze"
-	},
-	{
-		"id": "pot_csilence",
-		"name": "echoing flask",
-		"desc": "Amplifies even significantly muffled sounds.",
-		"level": 7,
-		"require": "g.potions>=5",
-		"cost": {
-			"herbs": 1,
-			"airgem": 1
-		},
-		"use": "speak"
-	},
-	{
-		"id": "pot_heal1",
-		"buy": {
-			"gold": 25,
-			"research": 50
-		},
+		"id": "wangyoushui",
+		"name": "忘忧水",
+		"desc": "一小瓶忘忧水",
+		"equneed": "g.mix_1>=1",
+		"require": "g.yaolixue>=1",
 		"level": 1,
-		"cost": {
-			"herbs": 10
+		"dr": 1,
+		"sell":{
+			"money": 30
 		},
-		"name": "minor healing",
-		"require": "g.potions>0",
-		"use": {
-			"hp": 75
-		}
-	},
-	{
-		"id": "pot_stam1",
-		"name": "draught of stamina",
-		"require": "g.potions>0",
-		"level": 1,
 		"buy": {
-			"gold": 25,
-			"research": 50
+			"sp":1,
+			"money": 600,
+			"ganwu": 400
 		},
 		"cost": {
-			"herbs": 10
+			"element_gold": 1,
+			"element_wood": 2,
+			"element_land": 2,
+			"element_water": 1
 		},
 		"use": {
-			"stamina": 10
-		}
-	},
-	{
-		"id": "pot_sp",
-		"name": "philter of clarity",
-		"desc": "A master's skill in liquid form",
-		"require": "g.potions>0",
-		"level": 1,
-		"buy": {
-			"gold": 250,
-			"research": 500,
-			"potionessence": 1
-		},
-		"cost": {
-			"herbs": 10,
-			"potionessence": 4
-		},
-		"use": {
-			"sp": 1
-		}
-	},
-	{
-		"id": "pot_sp_sink",
-		"name": "phial of skillfulness",
-		"desc": "Converts passive information into short-term benefit",
-		"require": "g.potions>=9",
-		"level": 5,
-		"buy": {
-			"gold": 2500,
-			"research": 5000,
-			"sp": 100,
-			"potionessence": 1
-		},
-		"cost": {
-			"sp": 50,
-			"potionessence": 1
-		},
-		"use": {
-			"research": 2000,
-			"manas": 250,
-			"stamina": 250
-		}
-	},
-	{
-		"id": "pot_explodium",
-		"name": "volatile concoction",
-		"desc": "Holding it seems dangerous. Not holding it, even more so.",
-		"require": "g.potions>=999",
-		"level": 5,
-		"buy": {
-			"gold": 1500,
-			"research": 1200
-		},
-		"cost": {
-			"fire": 5,
-			"air": 5,
-			"herbs": 25,
-			"water": 5
-		},
-		"use": {
-			"attack": {
-				"targets": "all",
-				"dmg": "50~90"
-			}
-		}
-	},
-	{
-		"id": "pot_stam2",
-		"name": "potion of monster's stamina",
-		"require": "g.potions>=5",
-		"level": 5,
-		"buy": {
-			"gold": 300,
-			"research": 500,
-			"codices": 30
-		},
-		"cost": {
-			"herbs": 30,
-			"watergem": 1
-		},
-		"use": {
-			"stamina": 50
-		},
-		"flavor": "Magnum"
-	},
-	{
-		"id": "pot_adamant",
-		"name": "adamant salve",
-		"require": "g.potions>=7",
-		"level": 10,
-		"buy": {
-			"gold": 2500,
-			"tomes": 15,
-			"earthgem": 5
-		},
-		"cost": {
-			"herbs": 30,
-			"gems": 1
-		},
-		"use": {
-			"dot": {
-				"id": "toughskin",
-				"name": "adamant salve",
-				"duration": 1800,
-				"mod": {
-					"self.defense": 50
-				}
-			}
-		}
-	},
-	{
-		"id": "hestiabrew",
-		"name": "hestia's homebrew",
-		"require": "witch",
-		"level": 4,
-		"buy": {
-			"gold": 25,
-			"research": 150
-		},
-		"cost": {
-			"herbs": 15
-		},
-		"use": {
-			"dot": {
-				"duration": 50,
-				"effect": {
-					"hp": 2,
-					"nature": 0.5
-				}
-			}
-		}
-	},
-	{
-		"id": "pot_heal3",
-		"name": "healing potion",
-		"require": "g.potions>=9",
-		"buy": {
-			"gold": 100,
-			"lightgem": 1,
-			"research": 500
-		},
-		"level": 7,
-		"cost": {
-			"herbs": 25,
-			"gems": 3
-		},
-		"use": {
-			"hp": 200
-		}
-	},
-	{
-		"id": "pot_truestrike",
-		"name": "true striking",
-		"level": 10,
-		"require": "g.potions>=10",
-		"buy": {
-			"gold": 500,
-			"tomes": 3,
-			"research": 500,
-			"ichor": 1
-		},
-		"cost": {
-			"spiritgem": 1,
-			"ichor": 1
-		},
-		"use": {
-			"dot": {
-				"mod": {
-					"player.tohit": 25
-				},
-				"duration": 1800
-			}
-		}
-	},
-	{
-		"id": "pot_serenity",
-		"name": "serenity",
-		"level": 11,
-		"require": "g.potions>=10",
-		"buy": {
-			"gold": 500,
-			"tomes": 5,
-			"research": 500,
-			"ichor": 1
-		},
-		"cost": {
-			"lightgem": 1,
-			"ichor": 1
-		},
-		"use": {
+			"drug_resist": 1,
 			"dot": {
 				"mod": {
 					"stress.rate": -2
 				},
-				"duration": 1800
+				"duration": 600
 			}
-		}
+		},
+		"flavor": "需要1级元素混合器"
 	},
 	{
-		"id": "pot_godspeed",
-		"name": "godspeed",
-		"level": 15,
-		"require": "g.potions>=10",
+		"id": "kuoxuedan",
+		"name": "扩血丹",
+		"desc": "短时间内提高气血上限",
+		"equneed": "g.mix_1>=1",
+		"require": "g.yaolixue>=2",
+		"level": 1,
+		"dr": 1,
+		"sell":{
+			"money": 30
+		},
 		"buy": {
-			"gold": 500,
-			"tomes": 5,
-			"research": 500,
-			"ichor": 1
+			"sp":1,
+			"money": 600,
+			"ganwu": 400
 		},
 		"cost": {
-			"airgem": 1,
-			"ichor": 1
+			"element_gold": 2,
+			"element_wood": 2,
+			"element_land": 2,
+			"element_water": 2
 		},
 		"use": {
+			"drug_resist": 1,
 			"dot": {
-				"mod": {
-					"speed": 25
+				"duration": 180,
+				"effect": {
+					"hp": 1
 				},
-				"duration": 1800
+				"mod": {
+					"hp.max": 20
+				}
 			}
-		}
+		},
+		"flavor": "需要1级元素混合器"
 	},
 	{
-		"id": "pot_godsblood",
-		"name": "god's blood",
-		"level": 12,
-		"require": "g.potions>=10",
+		"id": "wuhuankangx",
+		"name": "🔅五环抗性丹",
+		"desc": "五环抗性+70%",
+		"equneed": "g.mix_1>=1",
+		"require": "g.yaolixue>=3",
+		"level": 1,
+		"dr": 4,
+		"sell":{
+			"money": 120
+		},
 		"buy": {
-			"gold": 500,
-			"tomes": 5,
-			"research": 500,
-			"ichor": 1
+			"sp":1,
+			"shenglingshi": 2,
+			"money": 600,
+			"ganwu": 400
 		},
 		"cost": {
-			"herbs": 50,
-			"ichor": 1
+			"element_gold": 4,
+			"element_wood": 4,
+			"element_land": 4,
+			"element_water": 4,
+			"element_fire": 4
 		},
 		"use": {
+			"drug_resist": 4,
 			"dot": {
 				"mod": {
-					"hp.max": 300
+					"self.resist.gold": 70,
+					"self.resist.wood": 70,
+					"self.resist.water": 70,
+					"self.resist.fire": 70,
+					"self.resist.land": 70
 				},
-				"duration": 3600
+				"duration": 60
 			}
-		}
+		},
+		"flavor": "需要1级元素混合器"
 	},
 	{
-		"id": "pot_weaponmeld",
-		"name": "weaponmeld salve",
-		"desc": "Applied to a weapon, lets the wielder utilize his skills to the fullest extent.",
-		"level": 12,
-		"require": "g.potions>=10&&(g.bladelore+g.hammerlore)>5",
+		"id": "ssbxdan",
+		"name": "🔅生生不息丹",
+		"desc": "每秒恢复15气血",
+		"equneed": "g.mix_1>=1",
+		"require": "g.yaolixue>=4",
+		"level": 1,
+		"dr": 4,
+		"sell":{
+			"money": 120
+		},
 		"buy": {
-			"gold": 500,
-			"tomes": 5,
-			"research": 500,
-			"potionessence": 1
+			"sp":2,
+			"shenglingshi": 2,
+			"money": 600,
+			"ganwu": 400
 		},
 		"cost": {
-			"herbs": 50,
-			"hp": 150,
-			"earth": 15,
-			"bloodgem": 50,
-			"potionessence": 3
+			"element_gold": 4,
+			"element_wood": 4,
+			"element_land": 4,
+			"element_water": 4,
+			"element_fire": 4
 		},
 		"use": {
+			"drug_resist": 4,
+			"dot": {
+				"effect": {
+					"hp": 15
+				},
+				"duration": 90
+			}
+		},
+		"flavor": "需要1级元素混合器"
+	},
+	{
+		"id": "qiehundan",
+		"name": "🔅祛混丹",
+		"desc": "每秒减少1混乱度",
+		"equneed": "g.mix_1>=1",
+		"require": "g.yaolixue>=5",
+		"level": 1,
+		"dr": 1,
+		"sell":{
+			"money": 120
+		},
+		"buy": {
+			"sp":2,
+			"shenglingshi": 1,
+			"money": 600,
+			"ganwu": 400
+		},
+		"cost": {
+			"element_gold": 1,
+			"element_wood": 1,
+			"element_land": 5,
+			"element_water": 1,
+			"element_fire": 1
+		},
+		"use": {
+			"drug_resist": 1,
+			"dot": {
+				"effect": {
+					"ele_confusion": -3
+				},
+				"duration": 30
+			}
+		},
+		"flavor": "需要1级元素混合器"
+	},
+	{
+		"id": "shenglingdan",
+		"name": "💠生灵专注丹",
+		"desc": "生灵石做成的丹药,有着极强的提神醒脑效果[专注收益提高30exp]",
+		"equneed": "g.mix_1>=1",
+		"require": "g.xiulian_life_slylyj>=1",
+		"level": 1,
+		"dr": 4,
+		"sell":{
+			"money": 120
+		},
+		"buy": {
+			"sp":1,
+			"shenglingshi": 2,
+			"money": 600,
+			"ganwu": 400
+		},
+		"cost": {
+			"shenglingshi": 0.5,
+			"element_gold": 2,
+			"element_wood": 2,
+			"element_land": 2,
+			"element_water": 2,
+			"element_fire": 3
+		},
+		"use": {
+			"drug_resist": 4,
 			"dot": {
 				"mod": {
-					"bladelore.mod.player.bonuses.slash": 0.5,
-					"bladelore.mod.player.hits.slash": 0.5,
-					"hammerlore.mod.player.bonuses.blunt": 0.5,
-					"hammerlore.mod.player.hits.blunt": 0.5
+					"focus.result.runner.exp": 30
 				},
 				"duration": 600
 			}
-		}
+		},
+		"flavor": "需要1级元素混合器"
 	},
 	{
-		"id": "pot_perfection",
-		"name": "flask of perfection",
-		"desc": "Reshapes your body to make it ever so slightly more ideal.",
-		"level": 25,
-		"require": "g.potions>=999",
+		"id": "shenglingwanzhid",
+		"name": "💠生灵万智丹",
+		"desc": "生灵石做成的丹药,有着极强的提神醒脑效果[技能自然学习速度+500%]",
+		"equneed": "g.mix_1>=1",
+		"require": "g.xiulian_life_slylyj>=1",
+		"level": 1,
+		"dr": 4,
+		"sell":{
+			"money": 150
+		},
 		"buy": {
-			"gold": 5000,
-			"tomes": 50,
-			"research": 5000,
-			"firegem": 50,
-			"airgem": 50,
-			"watergem": 50,
-			"earthgem": 50,
-			"potionessence": 1
+			"sp":1,
+			"shenglingshi": 5,
+			"money": 600,
+			"ganwu": 400
 		},
 		"cost": {
-			"herbs": 50,
-			"hp": 150,
-			"research": 15000,
-			"gold": 10000,
-			"bloodgem": 50,
-			"potionessence": 5
+			"shenglingshi": 1.5,
+			"life_crystal": 1,
+			"element_gold": 4,
+			"element_wood": 4,
+			"element_land": 4,
+			"element_water": 4,
+			"element_fire": 3
 		},
 		"use": {
-			"effect": {
-				"hp.max": 2
-			}
-		}
-	},
-	{
-		"id": "pot_bigbrain",
-		"name": "bubble of mind expansion",
-		"desc": "Expands your mind's capacity for knowledge.",
-		"level": 25,
-		"require": "g.potions>=999",
-		"buy": {
-			"gold": 5000,
-			"tomes": 50,
-			"research": 5000,
-			"firegem": 50,
-			"airgem": 50,
-			"watergem": 50,
-			"earthgem": 50,
-			"potionessence": 1
-		},
-		"cost": {
-			"herbs": 50,
-			"hp": 150,
-			"research": 15000,
-			"gold": 10000,
-			"managem": 50,
-			"potionessence": 5
-		},
-		"use": {
-			"effect": {
-				"research.max": 250,
-				"research.rate": 1
+			"drug_resist": 4,
+			"dot": {
+				"mod": {
+					"skill.rate": "500%"
+				},
+				"duration": 600
 			}
 		},
-		"flavor": "It's big brain time."
-	},
-	{
-		"id": "pot_vileempowerment",
-		"name": "vile concoction",
-		"desc": "What was theirs is now yours.",
-		"level": 25,
-		"require": "g.potions>=999&&g.evil>0",
-		"buy": {
-			"gold": 5000,
-			"tomes": 50,
-			"research": 5000,
-			"souls": 150,
-			"potionessence": 1
-		},
-		"cost": {
-			"herbs": 50,
-			"research": 15000,
-			"bodies": 100,
-			"souls": 100,
-			"bloodgem": 50,
-			"potionessence": 5
-		},
-		"use": {
-			"effect": {
-				"hp.max": 1,
-				"element.max": 0.1
-			}
-		}
-	},
-	{
-		"id": "pot_attunement",
-		"name": "vial of attunement",
-		"desc": "Causes you to become more attuned to the world's elements. Harmful to one's physical body.",
-		"level": 25,
-		"require": "g.potions>=999",
-		"buy": {
-			"gold": 5000,
-			"tomes": 50,
-			"research": 5000,
-			"firegem": 50,
-			"airgem": 50,
-			"watergem": 50,
-			"earthgem": 50,
-			"potionessence": 1
-		},
-		"cost": {
-			"herbs": 50,
-			"hp": 150,
-			"research": 15000,
-			"gold": 10000,
-			"firegem": 50,
-			"airgem": 50,
-			"watergem": 50,
-			"earthgem": 50,
-			"potionessence": 5
-		},
-		"use": {
-			"effect": {
-				"hp.max": -4,
-				"element.max": 0.25
-			}
-		}
+		"flavor": "需要1级元素混合器"
 	}
 ]
