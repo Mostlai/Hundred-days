@@ -18,7 +18,7 @@
 		"id": "beast",
 		"name": "野兽",
 		"race_mod":{
-			"hardiness": -0.02,
+			"hardiness": -0.01,
 			"defense": 0.7,
 			"speed": 0.6,
 			"dodge": 0.4
@@ -128,8 +128,8 @@
 		"max_muti": 25
 	},
 	{
-		"id": "elderich_1",
-		"name": "灼魂恐魔",
+		"id": "elderich",
+		"name": "埃尔德里奇",
 		"race_mod":{
 			"name": "·灼魂",
 			"hp.max": 1000,
