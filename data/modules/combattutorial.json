@@ -292,7 +292,7 @@
 			{
 				"id": "tramp",
 				"name": "流浪汉",
-				"kind": "humanlite/human",
+				"kind": "humanoid/human",
 				"desc": "一个四处漂泊的人",
 				"level": 0,
 				"speed": -10,
@@ -307,7 +307,7 @@
 			{
 				"id": "wasteland_walker",
 				"name": "荒地流浪者",
-				"kind": "humanlite/human",
+				"kind": "humanoid/human",
 				"desc": "一个四处漂泊的人",
 				"level": 0,
 				"speed": -6,
@@ -322,7 +322,7 @@
 			{
 				"id": "robber",
 				"name": "强盗",
-				"kind": "humanlite/human",
+				"kind": "humanoid/human",
 				"desc": "强盗",
 				"level": 0,
 				"speed": -10,
