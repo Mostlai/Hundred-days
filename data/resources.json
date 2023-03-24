@@ -3180,5 +3180,13 @@
 		"desc": "Nothingness. No current use.",
 		"flavor": "",
 		"max": 0
+	},
+	{
+		"id": "overlord_symbol",
+		"name": "霸者之誓",
+		"desc": "霸者之誓",
+		"group": "霸者",
+		"locked": true,
+		"max": 0
 	}
 ]

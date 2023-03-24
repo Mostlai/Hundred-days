@@ -1733,7 +1733,13 @@
 		"desc": "勇猛之姿。当此状态存在时，每次造成伤害时，有1%几率额外造成你55%气血上限的伤害，当对方的层级高于你时，触发几率提升至2%。此效果触发时，降低自身60气血。",
 		"locked": true,
 		"buy": {
-			"ganwu": 60
+			"shenshi": 10,
+			"ganwu": 2000,
+			"paper": 200,
+			"books": 50,
+			"jingdian": 20,
+			"super_mind": 20,
+			"sp": 3
 		},
 		"cost": {
 			"shenshi": 10
@@ -1755,6 +1761,36 @@
 					},
 					"bonus_class": 1
 				}
+			}
+		},
+		"flavor": ""
+	},
+	{
+		"id": "overlord_symbol_1",
+		"name":"天誓",
+		"school": "神识",
+		"level": 9,
+		"desc": "霸王天誓，必承霸者之重。",
+		"locked": false,
+		"buy": {
+			"shenshi": 20
+		},
+		"cost": {
+			"shenshi": 10
+		},
+		"dot": {
+			"id": "effect_overlord_symbol_1",
+			"name": "天誓",
+			"desc":"霸王天誓，必承霸者之重。此效果存在时，额外受到30%伤害，遇到的敌人将获得额外加强效果。",
+			"duration": 10000,
+			"dot_effect":{
+				"be_damage_scale":{
+					"num": 1.3
+				}
+			},
+			"mod": {
+				"overlord_symbol.max": 1,
+				"overlord_symbol": 1
 			}
 		},
 		"flavor": ""
