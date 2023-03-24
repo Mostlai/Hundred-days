@@ -922,7 +922,7 @@
 	},
 	{
 		"id": "paddedarmor",
-		"name": "padded armor",
+		"name": "鼓甲",
 		"armor": 3,
 		"slot": "chest",
 		"tags": "t_paddedarmor,d_paddedarmor",
@@ -932,6 +932,7 @@
 	},
 	{
 		"id": "chainmail",
+		"name": "锁甲",
 		"armor": 5,
 		"slot": "chest",
 		"tags": "t_chainmail,d_chainmail",
@@ -941,7 +942,7 @@
 	},
 	{
 		"id": "platemail",
-		"name": "plate mail",
+		"name": "平甲",
 		"armor": 8,
 		"slot": "chest",
 		"tags": "t_platemail,d_platemail",
@@ -951,6 +952,7 @@
 	},
 	{
 		"id": "robe",
+		"name": "长袍",
 		"armor": 0,
 		"slot": "chest",
 		"tags": "t_robe,d_robe",
@@ -960,7 +962,7 @@
 	},
 	{
 		"id": "conicalhelm",
-		"name": "conical helm",
+		"name": "锥形头盔",
 		"armor": 3,
 		"slot": "head",
 		"tags": "t_conicalhelm,d_conicalhelm",
@@ -969,6 +971,7 @@
 	},
 	{
 		"id": "belt",
+		"name": "皮带",
 		"armor": 0,
 		"slot": "waist",
 		"tags": "t_belt,d_belt",
@@ -977,6 +980,7 @@
 	},
 	{
 		"id": "girdle",
+		"name": "腰带",
 		"armor": 1,
 		"slot": "waist",
 		"tags": "t_girdle,d_girdle",
@@ -984,6 +988,7 @@
 	},
 	{
 		"id": "cincture",
+		"name": "束带",
 		"armor": 1,
 		"slot": "waist",
 		"tags": "t_cincture,d_cincture",
@@ -992,6 +997,7 @@
 	},
 	{
 		"id": "sash",
+		"name": "护腰",
 		"armor": 0,
 		"slot": "waist",
 		"tags": "t_sash,d_sash",
@@ -1001,6 +1007,7 @@
 	},
 	{
 		"id": "cape",
+		"name": "披风",
 		"armor": 0,
 		"slot": "back",
 		"tags": "t_cape,d_cape",
@@ -1010,6 +1017,7 @@
 	},
 	{
 		"id": "cloak",
+		"name": "斗篷",
 		"armor": 1,
 		"slot": "back",
 		"tags": "t_cloak,d_cloak",
@@ -1019,6 +1027,7 @@
 	},
 	{
 		"id": "wings",
+		"name": "假翅",
 		"armor": 1,
 		"slot": "back",
 		"tags": "t_wings,d_wings",
@@ -1029,6 +1038,7 @@
 	},
 	{
 		"id": "greaves",
+		"name": "皮护胫",
 		"armor": 1,
 		"slot": "shins",
 		"tags": "t_greaves,d_greaves",
@@ -1036,6 +1046,7 @@
 	},
 	{
 		"id": "pendant",
+		"name": "吊坠",
 		"armor": 0,
 		"slot": "neck",
 		"tags": "t_pendant,d_pendant",
@@ -1045,6 +1056,7 @@
 	},
 	{
 		"id": "collar",
+		"name": "领子",
 		"armor": 1,
 		"slot": "neck",
 		"tags": "t_collar,d_collar",
@@ -1053,6 +1065,7 @@
 	},
 	{
 		"id": "amulet",
+		"name": "护颈",
 		"armor": 0,
 		"slot": "neck",
 		"tags": "t_amulet,d_amulet",
@@ -1063,6 +1076,7 @@
 	},
 	{
 		"id": "necklace",
+		"name": "项链",
 		"armor": 0,
 		"slot": "neck",
 		"tags": "t_necklace,d_necklace",
@@ -1072,6 +1086,7 @@
 	},
 	{
 		"id": "band",
+		"name": "护手带",
 		"armor": 0,
 		"slot": "fingers",
 		"tags": "t_band,d_band",
@@ -1083,6 +1098,7 @@
 	},
 	{
 		"id": "loop",
+		"name": "指圈",
 		"armor": 0,
 		"slot": "fingers",
 		"tags": "t_loop,d_loop",
@@ -1093,6 +1109,7 @@
 	},
 	{
 		"id": "ring",
+		"name": "指环",
 		"armor": 0,
 		"slot": "fingers",
 		"tags": "t_ring,d_ring",
