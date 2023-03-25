@@ -2719,14 +2719,14 @@
 	{
 		"id": "exchange_code_1",
 		"desc": "2022兑换码",
-		"info": "2022新年快乐,2022个钱币请收下!",
+		"info": "2022新年快乐",
 		"useinfo": "兑换码已经被使用或者达到上限",
 		"hide": true,
 		"name": "code",
 		"val":0,
 		"max": 1,
 		"coderesult":{
-			"money": 2022
+			"money": 22
 		}
 	},
 	{
@@ -2850,6 +2850,33 @@
 		"max": 1,
 		"coderesult":{
 			"player.exp": 3
+		}
+	},
+	{
+		"id": "exchange_code_10",
+		"desc": "?",
+		"info": "?",
+		"needinfo": "你还不能兑换此兑换码",
+		"useinfo": "兑换码已经被使用或者达到上限",
+		"hide": true,
+		"name": "code",
+		"val":0,
+		"max": 1,
+		"coderesult":{
+			"ganwu": 100
+		}
+	},
+	{
+		"id": "exchange_code_11",
+		"desc": "2023兑换码",
+		"info": "2023新年快乐",
+		"useinfo": "兑换码已经被使用或者达到上限",
+		"hide": true,
+		"name": "code",
+		"val":0,
+		"max": 1,
+		"coderesult":{
+			"money": 2023
 		}
 	},
 	{

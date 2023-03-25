@@ -1,0 +1,32 @@
+[
+	{
+		"id": "stout",
+		"name": "强健",
+		"perk_info":{
+			"name": "强健",
+			"template": "stout",
+			"info":{
+				"气血上限": 2000
+			}
+		},
+		"mod": {
+			"self.hp.max": 2000
+		}
+	},
+	{
+		"id": "jijisu",
+		"name": "急速",
+		"perk_info":{
+			"name": "急速",
+			"template": "jijisu",
+			"info":{
+				"合理上限": 2000,
+				"气血上限": 2000
+			}
+		},
+		"mod": {
+			"heli.max": 2000,
+			"self.hp.max": 2000
+		}
+	}
+]
