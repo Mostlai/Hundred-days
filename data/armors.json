@@ -148,6 +148,7 @@
 		"slot": "trinket",
 		"enchants": 3,
 		"cost": 10,
+		"unique": true,
 		"level": 20,
 		"alter": {
 			"mod": {
@@ -169,7 +170,8 @@
 		"slot": "trinket",
 		"enchants": 6,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 25,
 		"alter": {
 			"mod": {
 				"yxls.rate": -0.01,
@@ -190,7 +192,8 @@
 		"slot": "trinket",
 		"enchants": 6,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 26,
 		"alter": {
 			"mod": {
 				"yxls.rate": -0.01,
@@ -211,6 +214,7 @@
 		"slot": "head",
 		"enchants": 3,
 		"cost": 10,
+		"unique": true,
 		"level": 20,
 		"alter": {
 			"mod": {
@@ -237,6 +241,7 @@
 		"slot": "head",
 		"enchants": 3,
 		"cost": 10,
+		"unique": true,
 		"level": 30,
 		"alter": {
 			"mod": {
@@ -259,6 +264,7 @@
 		"slot": "head",
 		"enchants": 3,
 		"cost": 10,
+		"unique": true,
 		"level": 30,
 		"alter": {
 			"mod": {
@@ -281,7 +287,8 @@
 		"slot": "head",
 		"enchants": 6,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 25,
 		"alter": {
 			"mod": {
 				"f_power": 20,
@@ -309,7 +316,8 @@
 		"slot": "head",
 		"enchants": 0,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 25,
 		"alter": {
 			"mod": {
 				"f_power": 40,
@@ -334,7 +342,8 @@
 		"slot": "head",
 		"enchants": 0,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 30,
 		"alter": {
 			"mod": {
 				"f_power": 60,
@@ -359,7 +368,8 @@
 		"slot": "back",
 		"enchants": 3,
 		"cost": 10,
-		"level": 30,
+		"unique": true,
+		"level": 22,
 		"alter": {
 			"mod": {
 				"f_power": 5,
@@ -381,7 +391,8 @@
 		"slot": "waist",
 		"enchants": 2,
 		"cost": 10,
-		"level": 30,
+		"unique": true,
+		"level": 22,
 		"alter": {
 			"mod": {
 				"f_power": 5,
@@ -403,7 +414,8 @@
 		"slot": "waist",
 		"enchants": 10,
 		"cost": 10,
-		"level": 60,
+		"unique": true,
+		"level": 22,
 		"alter": {
 			"mod": {
 				"f_power": 20,
@@ -428,7 +440,8 @@
 		"slot": "chest",
 		"enchants": 3,
 		"cost": 10,
-		"level": 20,
+		"unique": true,
+		"level": 12,
 		"alter": {
 			"mod": {
 				"f_power": 10,
@@ -454,7 +467,8 @@
 		"slot": "chest",
 		"enchants": 3,
 		"cost": 10,
-		"level": 30,
+		"unique": true,
+		"level": 22,
 		"alter": {
 			"mod": {
 				"f_power": 10,
@@ -476,7 +490,8 @@
 		"slot": "chest",
 		"enchants": 3,
 		"cost": 10,
-		"level": 30,
+		"unique": true,
+		"level": 22,
 		"alter": {
 			"mod": {
 				"f_power": 10,
@@ -498,7 +513,8 @@
 		"slot": "chest",
 		"enchants": 6,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 25,
 		"alter": {
 			"mod": {
 				"f_power": 25,
@@ -526,7 +542,8 @@
 		"slot": "chest",
 		"enchants": 0,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 30,
 		"alter": {
 			"mod": {
 				"f_power": 100,
@@ -553,7 +570,8 @@
 		"slot": "shins",
 		"enchants": 3,
 		"cost": 10,
-		"level": 20,
+		"unique": true,
+		"level": 15,
 		"alter": {
 			"mod": {
 				"f_power": 7,
@@ -579,7 +597,8 @@
 		"slot": "shins",
 		"enchants": 3,
 		"cost": 10,
-		"level": 30,
+		"unique": true,
+		"level": 20,
 		"alter": {
 			"mod": {
 				"f_power": 7,
@@ -601,7 +620,8 @@
 		"slot": "shins",
 		"enchants": 0,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 30,
 		"alter": {
 			"mod": {
 				"f_power": 60,
@@ -628,7 +648,8 @@
 		"slot": "shins",
 		"enchants": 3,
 		"cost": 10,
-		"level": 30,
+		"unique": true,
+		"level": 22,
 		"alter": {
 			"mod": {
 				"f_power": 7,
@@ -650,7 +671,8 @@
 		"slot": "hands",
 		"enchants": 3,
 		"cost": 10,
-		"level": 30,
+		"unique": true,
+		"level": 22,
 		"alter": {
 			"mod": {
 				"f_power": 7,
@@ -672,7 +694,8 @@
 		"slot": "feet",
 		"enchants": 3,
 		"cost": 10,
-		"level": 20,
+		"unique": true,
+		"level": 15,
 		"alter": {
 			"mod": {
 				"f_power": 4,
@@ -698,7 +721,8 @@
 		"slot": "feet",
 		"enchants": 0,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 30,
 		"alter": {
 			"mod": {
 				"f_power": 40,
@@ -725,7 +749,8 @@
 		"slot": "hands",
 		"enchants": 3,
 		"cost": 10,
-		"level": 30,
+		"unique": true,
+		"level": 22,
 		"alter": {
 			"mod": {
 				"f_power": 4,
@@ -748,7 +773,8 @@
 		"slot": "hands",
 		"enchants": 3,
 		"cost": 10,
-		"level": 30,
+		"unique": true,
+		"level": 15,
 		"alter": {
 			"mod": {
 				"laser_ene.rate": 0.5,
@@ -772,7 +798,8 @@
 		"slot": "hands",
 		"enchants": 3,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 10,
 		"alter": {
 			"mod": {
 				"laser_ene.rate": 0.7,
@@ -796,7 +823,7 @@
 		"slot": "back",
 		"enchants": 1,
 		"cost": 10,
-		"level": 20,
+		"level": 15,
 		"alter": {
 			"mod": {
 				"f_power": 2,
@@ -814,7 +841,8 @@
 		"slot": "back",
 		"enchants": 6,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 25,
 		"alter": {
 			"mod": {
 				"f_power": 15,
@@ -836,7 +864,8 @@
 		"slot": "back",
 		"enchants": 3,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 10,
 		"alter": {
 			"mod": {
 				"jisu_zhushe.max":1,
@@ -858,7 +887,7 @@
 		"slot": "neck",
 		"enchants": 1,
 		"cost": 10,
-		"level": 20,
+		"level": 11,
 		"alter": {
 			"mod": {
 				"f_power": 2,
@@ -876,7 +905,7 @@
 		"kind": "ring",
 		"enchants": 1,
 		"cost": 10,
-		"level": 20,
+		"level": 11,
 		"alter": {
 			"mod": {
 				"f_power": 2,
@@ -894,7 +923,8 @@
 		"slot": "fingers",
 		"enchants": 6,
 		"cost": 10,
-		"level": 55,
+		"unique": true,
+		"level": 22,
 		"alter": {
 			"mod": {
 				"f_power": 7,
@@ -912,7 +942,7 @@
 		"slot": "hands",
 		"enchants": 1,
 		"cost": 10,
-		"level": 20,
+		"level": 11,
 		"alter": {
 			"mod": {
 				"f_power": 2,
@@ -1047,7 +1077,7 @@
 	{
 		"id": "pendant",
 		"name": "吊坠",
-		"armor": 0,
+		"armor": 1,
 		"slot": "neck",
 		"tags": "t_pendant,d_pendant",
 		"cost": 300,
@@ -1066,7 +1096,7 @@
 	{
 		"id": "amulet",
 		"name": "护颈",
-		"armor": 0,
+		"armor": 6,
 		"slot": "neck",
 		"tags": "t_amulet,d_amulet",
 		"cost": 500,
@@ -1077,7 +1107,7 @@
 	{
 		"id": "necklace",
 		"name": "项链",
-		"armor": 0,
+		"armor": 1,
 		"slot": "neck",
 		"tags": "t_necklace,d_necklace",
 		"cost": 50,
@@ -1087,7 +1117,7 @@
 	{
 		"id": "band",
 		"name": "护手带",
-		"armor": 0,
+		"armor": 1,
 		"slot": "fingers",
 		"tags": "t_band,d_band",
 		"kind": "ring",
@@ -1099,7 +1129,7 @@
 	{
 		"id": "loop",
 		"name": "指圈",
-		"armor": 0,
+		"armor": 1,
 		"slot": "fingers",
 		"tags": "t_loop,d_loop",
 		"kind": "ring",
@@ -1110,7 +1140,7 @@
 	{
 		"id": "ring",
 		"name": "指环",
-		"armor": 0,
+		"armor": 3,
 		"slot": "fingers",
 		"tags": "t_ring,d_ring",
 		"kind": "ring",

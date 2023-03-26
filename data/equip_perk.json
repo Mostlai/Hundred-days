@@ -1,32 +1,423 @@
 [
+
 	{
-		"id": "stout",
-		"name": "强健",
+		"id": "paralysis",
+		"name": "麻痹",
+		"adj": "麻痹之",
+		"weight": 4,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
 		"perk_info":{
-			"name": "强健",
-			"template": "stout",
+			"name": "麻痹",
+			"template": "paralysis",
 			"info":{
-				"气血上限": 2000
+				"躲闪": -6
+			},
+			"assign":{
+				"0": 1
 			}
 		},
 		"mod": {
-			"self.hp.max": 2000
+			"self.dodge": -6
 		}
 	},
 	{
-		"id": "jijisu",
-		"name": "急速",
+		"id": "atrophy",
+		"name": "萎缩",
+		"adj": "萎缩之",
+		"weight": 5,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
 		"perk_info":{
-			"name": "急速",
-			"template": "jijisu",
+			"name": "萎缩",
+			"template": "atrophy",
 			"info":{
-				"合理上限": 2000,
-				"气血上限": 2000
+				"躲闪": -3
+			},
+			"assign":{
+				"0": 1
 			}
 		},
 		"mod": {
-			"heli.max": 2000,
-			"self.hp.max": 2000
+			"self.dodge": -3
+		}
+	},
+	{
+		"id": "dexterity",
+		"name": "熟练",
+		"adj": "熟练之",
+		"weight": 10,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "熟练",
+			"template": "dexterity",
+			"info":{
+				"躲闪": 3
+			},
+			"assign":{
+				"0": 1
+			}
+		},
+		"mod": {
+			"self.dodge": 3
+		}
+	},
+	{
+		"id": "accuracy",
+		"name": "准确",
+		"adj": "准确之",
+		"weight": 6,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "准确",
+			"template": "accuracy",
+			"info":{
+				"躲闪": 4,
+				"命中": 2
+			},
+			"assign":{
+				"0": 1,
+				"1": 1
+			}
+		},
+		"mod": {
+			"self.dodge": 4,
+			"self.tohit": 2
+		}
+	},
+	{
+		"id": "precision",
+		"name": "精准",
+		"adj": "精准之",
+		"weight": 5,
+		"rank": 2,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "准确",
+			"template": "precision",
+			"info":{
+				"躲闪": 6,
+				"命中": 4
+			},
+			"assign":{
+				"0": 1,
+				"1": 1
+			}
+		},
+		"mod": {
+			"self.dodge": 6,
+			"self.tohit": 4
+		}
+	},
+	{
+		"id": "the_fool",
+		"name": "愚钝",
+		"adj": "愚钝之",
+		"weight": 5,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "愚钝",
+			"template": "the_fool",
+			"info":{
+				"法术强度": -10
+			},
+			"assign":{
+				"0": 1
+			}
+		},
+		"mod": {
+			"self.spell_class": -10
+		}
+	},
+	{
+		"id": "dyslexia",
+		"name": "障碍",
+		"adj": "障碍之",
+		"weight": 6,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "障碍",
+			"template": "dyslexia",
+			"info":{
+				"法术强度": -6
+			},
+			"assign":{
+				"0": 1
+			}
+		},
+		"mod": {
+			"self.spell_class": -6
+		}
+	},
+	{
+		"id": "the_mind",
+		"name": "智力",
+		"adj": "智力之",
+		"weight": 10,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "智力",
+			"template": "the_mind",
+			"info":{
+				"法术强度": 4
+			},
+			"assign":{
+				"0": 1
+			}
+		},
+		"mod": {
+			"self.spell_class": 4
+		}
+	},
+	{
+		"id": "sorcery",
+		"name": "奥术",
+		"adj": "奥术之",
+		"weight": 7,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "奥术",
+			"template": "sorcery",
+			"info":{
+				"法术强度": 6
+			},
+			"assign":{
+				"0": 1
+			}
+		},
+		"mod": {
+			"self.spell_class": 6
+		}
+	},
+	{
+		"id": "wizardry",
+		"name": "秘法",
+		"adj": "秘法之",
+		"weight": 3,
+		"rank": 2,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "秘法",
+			"template": "wizardry",
+			"info":{
+				"法术强度": 7,
+				"法术抵抗": 4
+			},
+			"assign":{
+				"0": 1,
+				"1": 1
+			}
+		},
+		"mod": {
+			"self.spell_class": 7,
+			"self.spell_save": 4
+		}
+	},
+	{
+		"id": "wizardry_1",
+		"name": "秘法",
+		"adj": "秘法之",
+		"weight": 3,
+		"rank": 2,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "秘法",
+			"template": "wizardry_1",
+			"info":{
+				"命中": 4,
+				"法术抵抗": 7
+			},
+			"assign":{
+				"0": 1,
+				"1": 1
+			}
+		},
+		"mod": {
+			"self.tohit": 4,
+			"self.spell_save": 7
+		}
+	},
+	{
+		"id": "frailty",
+		"name": "脆弱",
+		"adj": "脆弱之",
+		"weight": 5,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "脆弱",
+			"template": "frailty",
+			"info":{
+				"物理强度": -10
+			},
+			"assign":{
+				"0": 1
+			}
+		},
+		"mod": {
+			"self.physical_class": -10
+		}
+	},
+	{
+		"id": "weakness",
+		"name": "虚弱",
+		"adj": "虚弱之",
+		"weight": 6,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "虚弱",
+			"template": "weakness",
+			"info":{
+				"物理强度": -6
+			},
+			"assign":{
+				"0": 1
+			}
+		},
+		"mod": {
+			"self.physical_class": -6
+		}
+	},
+	{
+		"id": "strength",
+		"name": "力量",
+		"adj": "力量之",
+		"weight": 10,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "力量",
+			"template": "strength",
+			"info":{
+				"物理强度": 4
+			},
+			"assign":{
+				"0": 1
+			}
+		},
+		"mod": {
+			"self.physical_class": 4
+		}
+	},
+	{
+		"id": "might",
+		"name": "威力",
+		"adj": "威力之",
+		"weight": 7,
+		"rank": 1,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "威力",
+			"template": "might",
+			"info":{
+				"物理强度": 6
+			},
+			"assign":{
+				"0": 1
+			}
+		},
+		"mod": {
+			"self.physical_class": 6
+		}
+	},
+	{
+		"id": "giants",
+		"name": "巨人",
+		"adj": "巨人之",
+		"weight": 2,
+		"rank": 2,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "巨人",
+			"template": "giants",
+			"info":{
+				"物理强度": 7,
+				"物理抵抗": 4
+			},
+			"assign":{
+				"0": 1,
+				"1": 1
+			}
+		},
+		"mod": {
+			"self.physical_class": 7,
+			"self.physical_save": 4
+		}
+	},
+	{
+		"id": "giants_1",
+		"name": "巨人",
+		"adj": "巨人之",
+		"weight": 2,
+		"rank": 2,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "巨人",
+			"template": "giants_1",
+			"info":{
+				"体型": 1,
+				"物理抵抗": 7
+			},
+			"assign":{
+				"0": 1,
+				"1": 1
+			}
+		},
+		"mod": {
+			"self.shape": 1,
+			"self.physical_save": 7
+		}
+	},
+	{
+		"id": "giants_2",
+		"name": "巨人",
+		"adj": "巨人之",
+		"weight": 1,
+		"rank": 2,
+		"perk_slot": 1,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"name": "巨人",
+			"template": "giants_2",
+			"info":{
+				"体型": 1,
+				"物理强度": 4,
+				"物理抵抗": 3
+			},
+			"assign":{
+				"0": 1,
+				"1": 1,
+				"2": 1
+			}
+		},
+		"mod": {
+			"self.shape": 1,
+			"self.physical_class": 3,
+			"self.physical_save": 3
 		}
 	}
 ]
