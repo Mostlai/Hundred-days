@@ -4,6 +4,10 @@
 		"name": "类人生物"
 	},
 	{
+		"id": "summoned",
+		"name": "召唤生物"
+	},
+	{
 		"id": "aberration",
 		"name": "异怪",
 		"race_mod":{
