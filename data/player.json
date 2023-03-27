@@ -30,6 +30,7 @@
 			"hallPoints": 0.1,
 			"spelllist.max": 1,
 			"stamina.max": 1,
+			"player.shiled_max": 0.5,
 			"player.tohit": 1,
 			"player.dodge": 0.5,
 			"player.physical_class": 0.35,
@@ -354,25 +355,11 @@
 		"stat": true
 	},
 	{
-		"id": "extra_state_hp_max_val",
-		"name": "气血上限",
+		"id": "bounse_to_sky_living",
+		"name": "对天空生物伤害加成",
 		"val": 0,
 		"hide": true,
 		"locked": false,
-		"stat": true,
-		"mod":{
-			"hp.max": 1
-		}
-	},
-	{
-		"id": "extra_state_hp_max_pct",
-		"name": "气血上限(%)",
-		"val": 0,
-		"hide": true,
-		"locked": false,
-		"stat": true,
-		"mod":{
-			"hp.max": "1%"
-		}
+		"stat": true
 	}
 ]
