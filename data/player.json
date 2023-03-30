@@ -319,6 +319,14 @@
 		"val": 0
 	},
 	{
+		"id": "summoned_max",
+		"name": "召唤物最大同时存在数量",
+		"hide": true,
+		"locked": false,
+		"stat": true,
+		"val": 4
+	},
+	{
 		"id": "player_idf",
 		"name": "player_idf",
 		"hide": true,
@@ -350,14 +358,6 @@
 		"name": "hidegundong",
 		"max":1,
 		"val":1,
-		"hide": true,
-		"locked": false,
-		"stat": true
-	},
-	{
-		"id": "bounse_to_sky_living",
-		"name": "对天空生物伤害加成",
-		"val": 0,
 		"hide": true,
 		"locked": false,
 		"stat": true
