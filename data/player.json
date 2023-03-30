@@ -361,5 +361,27 @@
 		"hide": true,
 		"locked": false,
 		"stat": true
+	},
+	{
+		"id": "tohit_bonus",
+		"name": "额外命中加成",
+		"hide": true,
+		"locked": false,
+		"stat": true,
+		"val": 0,
+		"mod":{
+			"player.tohit": 1
+		}
+	},
+	{
+		"id": "damage_bonus",
+		"name": "额外全局伤害加成",
+		"hide": true,
+		"locked": false,
+		"stat": true,
+		"val": 0,
+		"mod":{
+			"player.damage": 1
+		}
 	}
 ]

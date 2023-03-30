@@ -10,12 +10,12 @@
 		"perk_info":{
 			"info":{
 				"真火抗性%": 3,
-				"锐金抗性%": 2
+				"锐金抗性%": 1
 			}
 		},
 		"mod": {
 			"self.resist.fire": 3,
-			"self.resist.gold": 2
+			"self.resist.gold": 1
 		}
 	},
 	{
@@ -29,12 +29,412 @@
 		"perk_info":{
 			"info":{
 				"真火抗性%": 5,
-				"锐金抗性%": 4
+				"锐金抗性%": 2
 			}
 		},
 		"mod": {
 			"self.resist.fire": 5,
-			"self.resist.gold": 4
+			"self.resist.gold": 2
+		}
+	},
+	{
+		"id": "crimson_1",
+		"name": "深红",
+		"adj": "深红",
+		"weight": 1,
+		"rank": 2,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"真火抗性%": 3,
+				"真火伤害加成": 1
+			}
+		},
+		"mod": {
+			"self.resist.fire": 6,
+			"player.bonuses.fire": 1
+		}
+	},
+	{
+		"id": "blue",
+		"name": "蓝色",
+		"adj": "蓝色",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"真水抗性%": 3,
+				"真火抗性%": 1
+			}
+		},
+		"mod": {
+			"self.resist.water": 3,
+			"self.resist.fire": 1
+		}
+	},
+	{
+		"id": "blue_1",
+		"name": "蓝色",
+		"adj": "蓝色",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"真水抗性%": 3,
+				"电能恢复": 0.3
+			}
+		},
+		"mod": {
+			"self.resist.water": 3,
+			"self.elect.rate": 0.3
+		}
+	},
+	{
+		"id": "azure",
+		"name": "天蓝",
+		"adj": "天蓝",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"真水抗性%": 5,
+				"真火抗性%": 2,
+				"合理恢复" : 1
+			}
+		},
+		"mod": {
+			"self.resist.water": 5,
+			"self.resist.fire": 2,
+			"heli.rate": 1
+		}
+	},
+	{
+		"id": "lapis",
+		"name": "深蓝",
+		"adj": "深蓝",
+		"weight": 2,
+		"rank": 2,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"真水抗性%": 6,
+				"真水伤害加成": 1
+			}
+		},
+		"mod": {
+			"self.resist.water": 6,
+			"player.bonuses.water": 1
+		}
+	},
+	{
+		"id": "green",
+		"name": "绿色",
+		"adj": "绿色",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"源泉抗性%": 3,
+				"厚土抗性%": 1
+			}
+		},
+		"mod": {
+			"self.resist.wood": 3,
+			"self.resist.land": 1
+		}
+	},
+	{
+		"id": "viridity",
+		"name": "翠绿",
+		"adj": "翠绿",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"源泉抗性%": 5,
+				"气血恢复": 0.5
+			}
+		},
+		"mod": {
+			"self.resist.wood": 5,
+			"self.hp.rate": 0.5
+		}
+	},
+	{
+		"id": "drakgreen",
+		"name": "深绿",
+		"adj": "深绿",
+		"weight": 2,
+		"rank": 2,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"源泉抗性%": 5,
+				"气血上限": 2
+			}
+		},
+		"mod": {
+			"self.resist.wood": 5,
+			"self.hp.max": 2
+		}
+	},
+	{
+		"id": "yellowlight",
+		"name": "浅黄",
+		"adj": "浅黄",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"厚土抗性%": 3,
+				"真水抗性%": 1
+			}
+		},
+		"mod": {
+			"self.resist.land": 3,
+			"self.resist.water": 1
+		}
+	},
+	{
+		"id": "yello",
+		"name": "黄色",
+		"adj": "黄色",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"厚土抗性%": 5,
+				"防御": 2
+			}
+		},
+		"mod": {
+			"self.resist.land": 5,
+			"player.defense": 2
+		}
+	},
+	{
+		"id": "drakyellow",
+		"name": "深黄",
+		"adj": "深黄",
+		"weight": 2,
+		"rank": 2,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"厚土抗性%": 2,
+				"物理抗性": 5
+			}
+		},
+		"mod": {
+			"self.resist.land": 5,
+			"self.resist.psychic": 5
+		}
+	},
+	{
+		"id": "goldlite",
+		"name": "淡金色",
+		"adj": "淡金色",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"锐金抗性%": 3,
+				"源泉抗性%": 1
+			}
+		},
+		"mod": {
+			"self.resist.gold": 3,
+			"self.resist.wood": 1
+		}
+	},
+	{
+		"id": "goldcolor",
+		"name": "金色",
+		"adj": "金色",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon,armor",
+		"perk_info":{
+			"info":{
+				"锐金抗性%": 5,
+				"命中": 2
+			}
+		},
+		"mod": {
+			"self.resist.gold": 5,
+			"player.tohit": 2
+		}
+	},
+	{
+		"id": "lightgold",
+		"name": "亮金",
+		"adj": "亮金",
+		"weight": 2,
+		"rank": 2,
+		"perk_slot": 2,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"锐金抗性%": 1,
+				"命中": 7,
+				"防御": -5
+			}
+		},
+		"mod": {
+			"self.resist.gold": 1,
+			"player.tohit": 7,
+			"self.defense": -5
+		}
+	},
+	{
+		"id": "uncolor",
+		"name": "失色",
+		"adj": "失色",
+		"weight": 1,
+		"rank": 2,
+		"perk_slot": 2,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"锐金抗性%": -6,
+				"源泉抗性%": -6,
+				"真火抗性%": -6,
+				"真水抗性%": -6,
+				"厚土抗性%": -6,
+				"命中": 5,
+				"全局伤害加成": 5
+			}
+		},
+		"mod": {
+			"self.resist.gold": -6,
+			"self.resist.wood": -6,
+			"self.resist.fire": -6,
+			"self.resist.water": -6,
+			"self.resist.land": -6,
+			"player.tohit_bonus": 5,
+			"player.damage_bonus": 5
+		}
+	},
+	{
+		"id": "color_plating",
+		"name": "镀彩",
+		"adj": "镀彩",
+		"weight": 1,
+		"rank": 2,
+		"perk_slot": 2,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"锐金抗性%": 1,
+				"源泉抗性%": 1,
+				"真火抗性%": 1,
+				"真水抗性%": 1,
+				"厚土抗性%": 1
+			}
+		},
+		"mod": {
+			"self.resist.gold": 1,
+			"self.resist.wood": 1,
+			"self.resist.fire": 1,
+			"self.resist.water": 1,
+			"self.resist.land": 1
+		}
+	},
+	{
+		"id": "heavyarmor",
+		"name": "沉重",
+		"adj": "沉重",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"防御": 2,
+				"闪避": -3
+			}
+		},
+		"mod": {
+			"self.defense": 2,
+			"self.dodge": -3
+		}
+	},
+	{
+		"id": "goodmannered",
+		"name": "厚重",
+		"adj": "厚重",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"防御": 2,
+				"速度": -2
+			}
+		},
+		"mod": {
+			"self.defense": 2,
+			"self.speed": -3
+		}
+	},
+	{
+		"id": "lightarmor",
+		"name": "轻质",
+		"adj": "轻质",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"防御": -2,
+				"速度": 2
+			}
+		},
+		"mod": {
+			"self.defense": -2,
+			"self.speed": 2
+		}
+	},
+	{
+		"id": "xuanbu",
+		"name": "玄布",
+		"adj": "轻质",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"防御": -2,
+				"闪避": 2
+			}
+		},
+		"mod": {
+			"self.defense": -2,
+			"self.dodge": 2
 		}
 	},
 	{
@@ -91,7 +491,7 @@
 		},
 		"mod": {
 			"self.dodge": -3,
-			"self.tohit": -5
+			"self.tohit": 5
 		}
 	},
 	{
@@ -488,7 +888,7 @@
 		"perk_info":{
 			"info":{
 				"气血上限": 4,
-				"气血回复速度": 1,
+				"气血恢复": 1,
 				"体力上限": 1
 			}	
 		},
@@ -509,7 +909,7 @@
 		"perk_info":{
 			"info":{
 				"气血上限": 6,
-				"气血回复速度": 2,
+				"气血恢复": 2,
 				"精力上限": 2,
 				"体力上限": 3
 			}
@@ -635,7 +1035,7 @@
 		"perk_info":{
 			"info":{
 				"气血上限": 5,
-				"气血回复速度":1,
+				"气血恢复":1,
 				"物理抵抗": 5,
 				"法术抵抗": 5
 			}
