@@ -91,7 +91,7 @@
 		},
 		"mod": {
 			"self.resist.water": 3,
-			"self.elect.rate": 0.3
+			"elect.rate": 0.3
 		}
 	},
 	{
@@ -308,6 +308,105 @@
 		}
 	},
 	{
+		"id": "electthrough",
+		"name": "通电",
+		"adj": "通电",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"电击抗性%": -7,
+				"电能恢复": 3
+			}
+		},
+		"mod": {
+			"self.resist.elect": -7,
+			"elect.rate": 3
+		}
+	},
+	{
+		"id": "electunthrough",
+		"name": "阻电",
+		"adj": "阻电",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"电击抗性%": 5,
+				"电能恢复": -2
+			}
+		},
+		"mod": {
+			"self.resist.elect": 5,
+			"elect.rate": -2
+		}
+	},
+	{
+		"id": "whitelight",
+		"name": "淡白色",
+		"adj": "淡白色",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"合理抗性%": 2,
+				"混沌抗性%": 1
+			}
+		},
+		"mod": {
+			"self.resist.heli": 2,
+			"self.resist.chaos": 1
+		}
+	},
+	{
+		"id": "black",
+		"name": "黑色",
+		"adj": "黑色",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"混沌抗性%": 2,
+				"合理抗性%": 1
+			}
+		},
+		"mod": {
+			"self.resist.chaos": 2,
+			"self.resist.heli": 1
+		}
+	},
+	{
+		"id": "doublehate",
+		"name": "双厌",
+		"adj": "双厌",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"混沌抗性%": -3,
+				"合理抗性%": -3,
+				"气血恢复": -1,
+				"气血上限": 5
+			}
+		},
+		"mod": {
+			"self.resist.chaos": -3,
+			"self.resist.heli": -3,
+			"self.hp.rate": -1,
+			"self.hp.max": 5
+		}
+	},
+	{
 		"id": "uncolor",
 		"name": "失色",
 		"adj": "失色",
@@ -372,7 +471,7 @@
 		"perk_info":{
 			"info":{
 				"防御": 2,
-				"闪避": -3
+				"躲闪": -3
 			}
 		},
 		"mod": {
@@ -429,7 +528,7 @@
 		"perk_info":{
 			"info":{
 				"防御": -2,
-				"闪避": 2
+				"躲闪": 2
 			}
 		},
 		"mod": {
@@ -448,12 +547,216 @@
 		"perk_info":{
 			"info":{
 				"防御": 1,
-				"护盾上限": 20
+				"护盾上限": 13
 			}
 		},
 		"mod": {
 			"self.defense": 1,
-			"player.shiled_max": 20
+			"player.shiled_max": 13
+		}
+	},
+	{
+		"id": "fohuo",
+		"name": "附火",
+		"adj": "附火",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"真火伤害加成": 2
+			}
+		},
+		"mod": {
+			"player.bonuses.fire": 2
+		}
+	},
+	{
+		"id": "foshui",
+		"name": "附水",
+		"adj": "附水",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"真火伤害加成": 2
+			}
+		},
+		"mod": {
+			"player.bonuses.water": 2
+		}
+	},
+	{
+		"id": "fomuwood",
+		"name": "附木",
+		"adj": "附木",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"源泉伤害加成": 2
+			}
+		},
+		"mod": {
+			"player.bonuses.wood": 2
+		}
+	},
+	{
+		"id": "foland",
+		"name": "附土",
+		"adj": "附土",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"厚土伤害加成": 2
+			}
+		},
+		"mod": {
+			"player.bonuses.land": 2
+		}
+	},
+	{
+		"id": "fogold",
+		"name": "附金",
+		"adj": "附金",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"锐金伤害加成": 2
+			}
+		},
+		"mod": {
+			"player.bonuses.gold": 2
+		}
+	},
+	{
+		"id": "kanghuo",
+		"name": "抗火",
+		"adj": "抗火",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"真火抗性%": 1
+			}
+		},
+		"mod": {
+			"player.resist.fire": 1
+		}
+	},
+	{
+		"id": "kangshui",
+		"name": "抗水",
+		"adj": "抗水",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"真火抗性%": 1
+			}
+		},
+		"mod": {
+			"player.resist.water": 1
+		}
+	},
+	{
+		"id": "fomuwood",
+		"name": "抗木",
+		"adj": "抗木",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"源泉抗性%": 1
+			}
+		},
+		"mod": {
+			"player.resist.wood": 1
+		}
+	},
+	{
+		"id": "kangland",
+		"name": "抗土",
+		"adj": "抗土",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"厚土抗性%": 1
+			}
+		},
+		"mod": {
+			"player.resist.land": 1
+		}
+	},
+	{
+		"id": "kanggold",
+		"name": "抗金",
+		"adj": "抗金",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"锐金抗性%": 1
+			}
+		},
+		"mod": {
+			"player.resist.gold": 1
+		}
+	},
+	{
+		"id": "guangzheng",
+		"name": "光整",
+		"adj": "光整",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"防御": 1
+			}
+		},
+		"mod": {
+			"player.defense": 1
+		}
+	},
+	{
+		"id": "rongyin",
+		"name": "融影",
+		"adj": "融影",
+		"weight": 2,
+		"rank": 1,
+		"perk_slot": 3,
+		"perk_for": "armor",
+		"perk_info":{
+			"info":{
+				"躲闪": 0.5
+			}
+		},
+		"mod": {
+			"player.dodge": 0.5
 		}
 	},
 	{
@@ -504,11 +807,11 @@
 		"perk_for": "weapon,armor",
 		"perk_info":{
 			"info":{
-				"躲闪": 3
+				"躲闪": 2
 			}
 		},
 		"mod": {
-			"self.dodge": 3
+			"self.dodge": 2
 		}
 	},
 	{
@@ -521,11 +824,11 @@
 		"perk_for": "weapon,armor",
 		"perk_info":{
 			"info":{
-				"躲闪": 4,
+				"躲闪": 3,
 				"命中": 2
 			}		},
 		"mod": {
-			"self.dodge": 4,
+			"self.dodge": 3,
 			"self.tohit": 2
 		}
 	},
@@ -539,12 +842,12 @@
 		"perk_for": "weapon,armor",
 		"perk_info":{
 			"info":{
-				"躲闪": 6,
+				"躲闪": 4,
 				"命中": 4
 			}
 		},
 		"mod": {
-			"self.dodge": 6,
+			"self.dodge": 4,
 			"self.tohit": 4
 		}
 	},
@@ -852,8 +1155,8 @@
 		},
 		"mod": {
 			"self.hp.max": -4,
-			"self.stamina.max": 2,
-			"self.tili.max": 2
+			"stamina.max": 2,
+			"tili.max": 2
 		}
 	},
 	{
@@ -873,8 +1176,8 @@
 		},
 		"mod": {
 			"self.hp.max": 4,
-			"self.stamina.max": 1,
-			"self.tili.max": 1
+			"stamina.max": 1,
+			"tili.max": 1
 		}
 	},
 	{
@@ -895,7 +1198,7 @@
 		"mod": {
 			"self.hp.max": 4,
 			"self.hp.rate": 1,
-			"self.tili.max": 1
+			"tili.max": 1
 		}
 	},
 	{
@@ -917,8 +1220,8 @@
 		"mod": {
 			"self.hp.max": 6,
 			"self.hp.rate": 2,
-			"self.stamina.max": 2,
-			"self.tili.max": 3
+			"stamina.max": 2,
+			"tili.max": 3
 		}
 	},
 	{
@@ -940,8 +1243,8 @@
 		"mod": {
 			"self.hp.max": 6,
 			"self.heli.max": 2,
-			"self.stamina.max": 2,
-			"self.tili.max": 3
+			"stamina.max": 2,
+			"tili.max": 3
 		}
 	},
 	{
@@ -993,7 +1296,7 @@
 		"weight": 10,
 		"rank": 1,
 		"perk_slot": 1,
-		"perk_for": "weapon,armor",
+		"perk_for": "weapon",
 		"perk_info":{
 			"info":{
 				"物理强度": 4,
@@ -1012,7 +1315,7 @@
 		"weight": 6,
 		"rank": 1,
 		"perk_slot": 1,
-		"perk_for": "weapon,armor",
+		"perk_for": "weapon",
 		"perk_info":{
 			"info":{
 				"物理强度": 7,
@@ -1066,6 +1369,82 @@
 			"player.shiled_max": 10,
 			"self.physical_save": 12,
 			"self.spell_save": 12
+		}
+	},
+	{
+		"id": "tianlan_1",
+		"name": "【财源】",
+		"adj": "【财源】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"钱币上限": 100,
+				"钱币增加速率": 10
+			}
+		},
+		"mod": {
+			"money.max": 100,
+			"money.rate":10
+		}
+	},
+	{
+		"id": "tianlan_2",
+		"name": "【权兆】",
+		"adj": "【权兆】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"人力上限": 100,
+				"计算力上限": 100,
+				"地板空间加成": 20
+			}
+		},
+		"mod": {
+			"human_power.max": 100,
+			"alculation.max":100,
+			"space.max": 20
+		}
+	},
+	{
+		"id": "stromagel_1",
+		"name": "【风暴之鹰】",
+		"adj": "【风暴之鹰】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"电击伤害加成": 10,
+				"躲闪": 5,
+				"命中": 5
+			}
+		},
+		"mod": {
+			"player.bonuses.elect": 10,
+			"player.dodge":5,
+			"player.tohit": 5
+		}
+	},
+	{
+		"id": "stromagel_2",
+		"name": "【霸天之禽】",
+		"adj": "【霸天之禽】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"对天空生物伤害加成": 15,
+				"对陆生生物伤害加成": 5
+			}
+		},
+		"mod": {
+			"sky_living.damage_bonus": 15,
+			"land_living.damage_bonus":5
 		}
 	}
 ]

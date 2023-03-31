@@ -24,7 +24,7 @@ def perkPercent(data, rank, slot, allweight):
 
 
 data = loadJson()
-rank = 1
+rank = 2
 perk_slot = 1
 allweight = calculateAllWeight(data, rank, perk_slot)
 perkPercent(data, rank, perk_slot, allweight)
