@@ -9,9 +9,209 @@
 		"slot": "back",
 		"name_keep": true,
 		"regular_perk": true,
+		"alter": {
+			"mod": {
+				"self.hardiness": 0.1
+			}
+		},
 		"perk1": "tianlan_1",
 		"perk2": "tianlan_2",
 		"level": 5,
+		"enchants":0,
+		"sell": {
+			"money": 1000
+		}
+	},
+	{
+		"id": "mutengjia",
+		"name": "木藤甲",
+		"desc": "奇异木藤编制的护甲",
+		"color": "#FFD700",
+		"type": "armor",
+		"armor": 15,
+		"slot": "chest",
+		"name_keep": true,
+		"regular_perk": true,
+		"alter": {
+			"mod": {
+				"self.hardiness": 0.3
+			}
+		},
+		"perk1": "mutengjia_perk",
+		"level": 10,
+		"enchants":0,
+		"sell": {
+			"money": 200
+		}
+	},
+	{
+		"id": "huoshangyaodai",
+		"name": "伤火护腰",
+		"desc": "火山深处找到的腰带",
+		"color": "#FFD700",
+		"type": "armor",
+		"armor": 3,
+		"slot": "waist",
+		"name_keep": true,
+		"regular_perk": true,
+		"alter": {
+			"mod": {
+				"self.hardiness": 0.1
+			}
+		},
+		"perk1": "huoshangyaodai_perk",
+		"level": 10,
+		"enchants":0,
+		"sell": {
+			"money": 200
+		}
+	},
+	{
+		"id": "gentu_feet",
+		"name": "根土",
+		"desc": "穿上去难以移动",
+		"color": "#FFD700",
+		"type": "armor",
+		"armor": 3,
+		"slot": "feet",
+		"name_keep": true,
+		"regular_perk": true,
+		"alter": {
+			"mod": {
+				"self.hardiness": 0.25
+			}
+		},
+		"perk1": "gentu_feet_perk",
+		"level": 10,
+		"enchants":0,
+		"sell": {
+			"money": 200
+		}
+	},
+	{
+		"id": "jinyijian",
+		"name": "金意剑",
+		"desc": "纯白金石天然形成的利器",
+		"color": "#FFD700",
+		"type": "weapon",
+		"attack": {
+			"kind": "gold",
+			"isweapon": true,
+			"damage": "29~30"
+		},
+		"alter": {
+			"mod": {
+				"self.tohit": 3
+			}
+		},
+		"name_keep": true,
+		"regular_perk": true,
+		"perk1": "jinyijian_perk",
+		"level": 10,
+		"enchants":0,
+		"sell": {
+			"money": 200
+		}
+	},
+	{
+		"id": "shuiliu_armor",
+		"name": "水流",
+		"desc": "由不断流动的水组成的护腿",
+		"color": "#FFD700",
+		"type": "armor",
+		"armor": 7,
+		"slot": "shins",
+		"name_keep": true,
+		"regular_perk": true,
+		"alter": {
+			"mod": {
+				"self.hardiness": 0.1
+			}
+		},
+		"perk1": "shuiliu_armor_perk",
+		"level": 10,
+		"enchants":0,
+		"sell": {
+			"money": 200
+		}
+	},
+	{
+		"id": "blood_trinket",
+		"name": "血渍护身符",
+		"desc": "从渴血的野兽身上取下的护身符，沾满了血渍。\n在未见村，人们喜爱佩戴护身符驱散邪恶。",
+		"color": "#FFD700",
+		"type": "armor",
+		"armor": 1,
+		"slot": "trinket",
+		"name_keep": true,
+		"regular_perk": true,
+		"perk1": "blood_trinket_perk_1",
+		"perk2": "blood_trinket_perk_2",
+		"level": 35,
+		"enchants":0,
+		"sell": {
+			"money": 1000
+		}
+	},
+	{
+		"id": "silver_scale_wrister",
+		"name": "银鳞护腕",
+		"desc": "银蛇的鳞片制成的护腕。",
+		"color": "#FFD700",
+		"type": "hands",
+		"armor": 0,
+		"slot": "trinket",
+		"name_keep": true,
+		"regular_perk": true,
+		"perk1": "ssw_perk_1",
+		"level": 35,
+		"enchants":0,
+		"sell": {
+			"money": 1000
+		}
+	},
+	{
+		"id": "back_homeland",
+		"name": "归国",
+		"desc": "我行远地，茫茫其雪。\n问于青白，何以决绝？",
+		"color": "#FFD700",
+		"type": "weapon",
+		"attack": {
+			"kind": "land",
+			"isweapon": true,
+			"bonus_class": 1,
+			"damage": "34~37"
+		},
+		"name_keep": true,
+		"regular_perk": true,
+		"perk1": "back_homeland_perk_1",
+		"perk2": "back_homeland_perk_2",
+		"level": 35,
+		"enchants":0,
+		"sell": {
+			"money": 1000
+		}
+	},
+	{
+		"id": "heavy_guben_sword",
+		"name": "沉重灭刃【AL-T】",
+		"desc": "巨大的刀刃，能对所有敌人同时造成伤害，同时重到难以想象....",
+		"equneed":"g.ALT>=1",
+		"color": "#FFD700",
+		"type": "weapon",
+		"attack": {
+			"id": "hgs_attack",
+			"name": "灭刃挥击",
+			"kind": "land",
+			"isweapon": true,
+			"targets": "enemies",
+			"damage": "42~56"
+		},
+		"name_keep": true,
+		"regular_perk": true,
+		"perk1": "hgw_perk_1",
+		"perk2": "hgw_perk_2",
+		"level": 35,
 		"enchants":0,
 		"sell": {
 			"money": 1000

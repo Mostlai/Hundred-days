@@ -471,7 +471,7 @@
 		"perk_info":{
 			"info":{
 				"防御": 2,
-				"躲闪": -3
+				"闪避": -3
 			}
 		},
 		"mod": {
@@ -528,7 +528,7 @@
 		"perk_info":{
 			"info":{
 				"防御": -2,
-				"躲闪": 2
+				"闪避": 2
 			}
 		},
 		"mod": {
@@ -752,7 +752,7 @@
 		"perk_for": "armor",
 		"perk_info":{
 			"info":{
-				"躲闪": 0.5
+				"闪避": 0.5
 			}
 		},
 		"mod": {
@@ -769,7 +769,7 @@
 		"perk_for": "weapon,armor",
 		"perk_info":{
 			"info":{
-				"躲闪": -6,
+				"闪避": -6,
 				"命中": 3
 			}
 		},
@@ -788,7 +788,7 @@
 		"perk_for": "weapon,armor",
 		"perk_info":{
 			"info":{
-				"躲闪": -3,
+				"闪避": -3,
 				"命中": 5
 			}
 		},
@@ -807,7 +807,7 @@
 		"perk_for": "weapon,armor",
 		"perk_info":{
 			"info":{
-				"躲闪": 2
+				"闪避": 2
 			}
 		},
 		"mod": {
@@ -824,7 +824,7 @@
 		"perk_for": "weapon,armor",
 		"perk_info":{
 			"info":{
-				"躲闪": 3,
+				"闪避": 3,
 				"命中": 2
 			}		},
 		"mod": {
@@ -842,7 +842,7 @@
 		"perk_for": "weapon,armor",
 		"perk_info":{
 			"info":{
-				"躲闪": 4,
+				"闪避": 4,
 				"命中": 4
 			}
 		},
@@ -1410,6 +1410,264 @@
 		}
 	},
 	{
+		"id": "mutengjia_perk",
+		"name": "【木藤】",
+		"adj": "【木藤】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"气血恢复": 10,
+				"源泉抗性%": 10,
+				"源泉伤害加成": 10
+			}
+		},
+		"mod": {
+			"self.hp.rate": 10,
+			"self.resist.wood": 10,
+			"player.bonuses.wood": 10
+		}
+	},
+	{
+		"id": "huoshangyaodai_perk",
+		"name": "【伤火】",
+		"adj": "【伤火】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"真火抗性%": 10,
+				"感悟恢复": 10,
+				"灵光恢复": 0.3
+			}
+		},
+		"mod": {
+			"self.resist.fire": 10,
+			"ganwu.rate": 10,
+			"lg.rate": 0.3
+		}
+	},
+	{
+		"id": "gentu_feet_perk",
+		"name": "【根土】",
+		"adj": "【根土】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"厚土抗性%": 10,
+				"防御": 26,
+				"闪避": -10,
+				"速度": -6,
+				"命中": -5
+			}
+		},
+		"mod": {
+			"self.resist.land": 10,
+			"player.defense": 26,
+			"player.dodge": -10,
+			"player.speed": -6,
+			"player.tohit_bonus": -5
+		}
+	},
+	{
+		"id": "jinyijian_perk",
+		"name": "【金意】",
+		"adj": "【金意】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"锐金抗性%": 10,
+				"命中": 10,
+				"全局伤害加成": 5
+			}
+		},
+		"mod": {
+			"self.resist.gold": 10,
+			"player.tohit_bonus": 10,
+			"player.damage_bonus": 5
+		}
+	},
+	{
+		"id": "shuiliu_armor_perk",
+		"name": "【水流】",
+		"adj": "【水流】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"真水抗性%": 10,
+				"命中": 2,
+				"闪避": 2,
+				"速度": 2
+			}
+		},
+		"mod": {
+			"self.resist.water": 20,
+			"player.tohit_bonus": 2,
+			"player.dodge": 2,
+			"player.speed": 2
+		}
+	},
+	{
+		"id": "blood_trinket_perk_1",
+		"name": "【攫取之血】",
+		"adj": "【攫取之血】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"气血上限": -20,
+				"气血恢复": -5,
+				"召唤物上限": 2
+			}
+		},
+		"mod": {
+			"self.hp.max": -20,
+			"self.hp.rate": -5,
+			"player.summoned_max": 2
+		}
+	},
+	{
+		"id": "blood_trinket_perk_2",
+		"name": "【染血护符】",
+		"adj": "【染血护符】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"合理抗性%": -20,
+				"混沌抗性%": -20,
+				"召唤物造成伤害加成%": 15
+			}
+		},
+		"mod": {
+			"self.resist.heli": -20,
+			"self.resist.chaos": -20,
+			"player.summoned_damage": 15
+		}
+	},
+	{
+		"id": "ssw_perk_1",
+		"name": "【贪婪银蛇】",
+		"adj": "【贪婪银蛇】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"闪避": 1,
+				"命中": 1,
+				"气血恢复": -5,
+				"游空真魂恢复": 0.2,
+				"钱币增加速率": 5,
+				"钱币上限": 100
+			}
+		},
+		"mod": {
+			"player.dodge": 1,
+			"player.tohit_bonus": 1,
+			"self.hp.rate": -5,
+			"zhenhun_pice_1.rate": 0.2,
+			"money.rate": 5,
+			"money.max": 100
+		}
+	},
+	{
+		"id": "back_homeland_perk_1",
+		"name": "【昔火于雪】",
+		"adj": "【昔火于雪】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"命中": 5,
+				"厚土伤害加成": 12,
+				"真火伤害加成": 3,
+				"物理强度": 15
+			}
+		},
+		"mod": {
+			"player.tohit_bonus": 5,
+			"player.bonuses.land": 12,
+			"player.bonuses.fire": 3,
+			"self.physical_class": 15
+		}
+	},
+	{
+		"id": "back_homeland_perk_2",
+		"name": "【归国】",
+		"adj": "【归国】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"命中": 1,
+				"物理抵抗": 10,
+				"法术强度": 15
+			}
+		},
+		"mod": {
+			"player.tohit_bonus": 1,
+			"self.physical_save": 10,
+			"self.spell_class": 20
+		}
+	},
+	{
+		"id": "hgw_perk_1",
+		"name": "【古本重剑】",
+		"adj": "【古本重剑】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"命中": -15,
+				"闪避": -18,
+				"速度": -20,
+				"厚土伤害加成": 25,
+				"物理强度": 30
+			}
+		},
+		"mod": {
+			"player.tohit_bonus": -15,
+			"player.dodge": -18,
+			"player.speed": -20,
+			"player.bonuses.land": 25,
+			"self.physical_class": 30
+		}
+	},
+	{
+		"id": "hgw_perk_2",
+		"name": "【险灵锋芒】",
+		"adj": "【险灵锋芒】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"perk_info":{
+			"info":{
+				"物理暴击率%": 6,
+				"暴击伤害加成%": 10,
+				"武器伤害加成": 15
+			}
+		},
+		"mod": {
+			"player.physical_critical": 6,
+			"player.critical_damage": 5,
+			"player.weapon_bonus": 35
+		}
+	},
+	{
 		"id": "stromagel_1",
 		"name": "【风暴之鹰】",
 		"adj": "【风暴之鹰】",
@@ -1419,7 +1677,7 @@
 		"perk_info":{
 			"info":{
 				"电击伤害加成": 10,
-				"躲闪": 5,
+				"闪避": 5,
 				"命中": 5
 			}
 		},

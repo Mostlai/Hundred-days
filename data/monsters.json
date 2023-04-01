@@ -285,11 +285,12 @@
 		"defense": 100,
 		"attack": {
 			"name": "攻击",
-			"bonus_class": 1,
+			"bonus_class": 2,
 			"kind": "heli",
 			"dmg": "123~156"
 		},
 		"loot": {
+			"back_homeland": "8%",
 			"shenglingshi": 10,
 			"dirty_lingti": 10
 		}
@@ -430,6 +431,7 @@
 			}
 		],
 		"loot": {
+			"blood_trinket": "15%",
 			"shenglingshi": 10,
 			"lxue": 15,
 			"money": 500
@@ -572,6 +574,7 @@
 			}
 		],
 		"loot": {
+			"silver_scale_wrister": "10%",
 			"shenglingshi": 10,
 			"lxue": 15,
 			"money": 1000
@@ -1073,6 +1076,7 @@
 			}
 		],
 		"loot": {
+			"heavy_guben_sword": "10%",
 			"gubenxianling": 9,
 			"shenglingshi": 10,
 			"lxue": 10,
@@ -2122,6 +2126,46 @@
 		}
 	},
 	{
+		"id": "tree_man_big",
+		"name": "巨型树人[筑基]",
+		"level": 25,
+		"kind": "humanoid/plant",
+		"rank": 2,
+		"desc": "巨大的树人,颤抖的大地",
+		"hp": 200,
+		"tohit": 10,
+		"defense": 40,
+		"shape": 15,
+		"attack": [
+			{
+				"name": "树木",
+				"bonus_class": 1,
+				"kind": "wood",
+				"dmg": "28~32",
+				"targets": "enemies"
+			},
+			{
+				"name": "百年木",
+				"bonus_class": 1,
+				"kind": "wood",
+				"dmg": "22~29",
+				"dot": {
+					"kind": "wood",
+					"name": "震撼",
+					"dmg": "6~9",
+					"duration": 5
+				}
+			}
+		],
+		"loot": {
+			"mutengjia": "10%",
+			"zero_crystal": 4,
+			"lxue": 5,
+			"yqlm": 5
+		}
+	},
+
+	{
 		"id": "mujie_1",
 		"name": "木劫",
 		"level": 20,
@@ -2648,6 +2692,7 @@
 		"desc": "神秘的庞大傀儡,没人知道是谁建造的",
 		"rank": 2,
 		"hp": 160,
+		"shape": 15,
 		"tohit": 10,
 		"defense": 40,
 		"attack": [
@@ -2670,6 +2715,7 @@
 			}
 		],
 		"loot": {
+			"jinyijian": "10%",
 			"zero_crystal": 10,
 			"cbjs": 6
 		}
@@ -2713,6 +2759,45 @@
 		}
 	},
 	{
+		"id": "fire_bird_big",
+		"name": "烈羽鸟[筑基]",
+		"level": 22,
+		"kind": "beast/sky_living",
+		"desc": "浑身散发着火焰的危险鸟类",
+		"rank": 2,
+		"hp": 160,
+		"tohit": 27,
+		"defense": 28,
+		"attack": [
+			{
+				"name": "灼烧",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "26~32",
+				"targets": "enemies"
+			},
+			{
+				"name": "黄炎",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "7~39",
+				"dot": {
+					"kind": "fire",
+					"name": "炎",
+					"dmg": "10~10",
+					"duration": 20
+				}
+			}
+		],
+		"loot": {
+			"huoshangyaodai": "10%",
+			"zero_crystal": 10,
+			"lxue": 2,
+			"snp_data": 9,
+			"yxls": 6
+		}
+	},
+	{
 		"id": "tu_bird",
 		"name": "古老岩雀[筑基]",
 		"level": 17,
@@ -2742,6 +2827,43 @@
 			}
 		],
 		"loot": {
+			"zero_crystal": 10,
+			"lxue": 2,
+			"snp_data": 9,
+			"zdht": 6
+		}
+	},
+	{
+		"id": "tu_bird_big",
+		"name": "原始岩雀[筑基]",
+		"level": 25,
+		"kind": "beast/sky_living",
+		"desc": "有着坚硬无比的羽毛",
+		"rank": 2,
+		"hp": 300,
+		"tohit": 10,
+		"defense": 25,
+		"attack": [
+			{
+				"name": "土壤掩埋",
+				"kind": "land",
+				"dmg": "32~44",
+				"targets": "enemies"
+			},
+			{
+				"name": "厚土",
+				"kind": "land",
+				"dmg": "22~29",
+				"dot": {
+					"kind": "land",
+					"name": "窒息",
+					"dmg": "2~13",
+					"duration": 10
+				}
+			}
+		],
+		"loot": {
+			"gentu_feet": "15%",
 			"zero_crystal": 10,
 			"lxue": 2,
 			"snp_data": 9,
@@ -2779,6 +2901,7 @@
 			}
 		],
 		"loot": {
+			"shuiliu_armor": "10%",
 			"zero_crystal": 10,
 			"lxue": 2,
 			"snp_data": 9,

@@ -1214,7 +1214,7 @@
 	},
 	{
 		"id": "yqwks",
-		"name": "云气望空式[初归]",
+		"name": "云气望空式",
 		"school": "归藏",
 		"require": "g.canglanxiezou>=1",
 		"level": 4,
@@ -1231,7 +1231,7 @@
 			"kind": "body",
 			"dot": {
 				"kind": "body",
-				"name": "云气望空式[初归]",
+				"name": "云气望空式",
 				"duration": 1,
 				"damage": 14
 			}
@@ -1239,7 +1239,7 @@
 	},
 	{
 		"id": "cdfxs",
-		"name": "抽刀封隙式[初归]",
+		"name": "抽刀封隙式",
 		"school": "归藏",
 		"require": "g.canglanxiezou>=1",
 		"level": 5,
@@ -1263,7 +1263,7 @@
 	},
 	{
 		"id": "lzgxs",
-		"name": "浪子归乡式[初归]",
+		"name": "浪子归乡式",
 		"desc": "短时间内提升大量躲闪和速度",
 		"school": "归藏",
 		"require": "g.canglanxiezou>=1",
@@ -1286,6 +1286,126 @@
 				"self": {
 					"dodge": 50,
 					"speed": 60
+				}
+			}
+		}
+	},
+	{
+		"id": "assault_attack",
+		"name": "惊神斩击",
+		"desc": "快速冲向敌人,造成120%的基础武器伤害。如果此次攻击命中,那么目标会被恍惚10s(减少30躲闪和20命中)。",
+		"school": "归藏",
+		"require": "g.guixuan>=1",
+		"level": 5,
+		"cd": 7,
+		"buy": {
+			"canglan": 3,
+			"huiguang": 3,
+			"huiguangzy": 1
+		},
+		"cost": {
+			"tili": 12,
+			"stamina": 7
+		},
+		"attack": {
+			"damage": "(a.weapon.damage+a.weapon_bonus)*1.2",
+			"kind": "body",
+			"bonus_class": 0,
+			"dot": {
+				"id": "assault_attack_bf",
+				"name": "恍惚",
+				"desc": "减少30躲闪和20命中",
+				"duration": 10,
+				"mod": {
+					"self": {
+						"dodge": -30,
+						"tohit": -20
+					}
+				}
+			}
+		}
+	},
+	{
+		"id": "accuracy_tohit",
+		"name": "精准打击",
+		"desc": "你集中精神攻击，减少你10%速度并增加你25点命中和9%物理暴击率。",
+		"school": "归藏",
+		"require": "g.guixuan>=1",
+		"level": 5,
+		"cd": 20,
+		"buy": {
+			"canglan": 3,
+			"huiguang": 3,
+			"huiguangzy": 1
+		},
+		"cost": {
+			"tili": 25,
+			"stamina": 7
+		},
+		"dot": {
+			"id": "accuracy_tohit_bf",
+			"name": "精准打击",
+			"desc": "你集中精神攻击，减少你10%速度并增加你25点命中和9%物理暴击率。",
+			"duration": 10000,
+			"mod": {
+				"self": {
+					"physical_critical": 9,
+					"speed": "-10%",
+					"tohit": 25
+				}
+			}
+		}
+	},
+	{
+		"id": "perfect_tohit",
+		"name": "完美打击",
+		"desc": "你已经学会专注你的攻击来命中目标,在10s内增加你的30点命中。",
+		"school": "归藏",
+		"require": "g.guixuan>=1",
+		"level": 5,
+		"cd": 20,
+		"buy": {
+			"canglan": 3,
+			"huiguang": 3,
+			"huiguangzy": 1
+		},
+		"cost": {
+			"tili": 20
+		},
+		"dot": {
+			"id": "perfect_tohit_bf",
+			"name": "完美打击",
+			"duration": 10,
+			"mod": {
+				"self": {
+					"tohit": 30
+				}
+			}
+		}
+	},
+	{
+		"id": "speed_up",
+		"name": "急速",
+		"desc": "通过严格的训练你已经学会在短时间内爆发你的速度，10s内提高你15速度。",
+		"school": "归藏",
+		"require": "g.guixuan>=1",
+		"level": 5,
+		"cd": 15,
+		"buy": {
+			"canglan": 3,
+			"huiguang": 3,
+			"huiguangzy": 1
+		},
+		"cost": {
+			"tili": 20
+		},
+		"dot": {
+			"id": "speed_up_bf",
+			"name": "急速",
+			"duration": 10,
+			"mod": {
+				"self": {
+					"speed": 15
 				}
 			}
 		}
@@ -1695,7 +1815,7 @@
 		"name":"弱点侦察",
 		"school": "神识",
 		"level": 9,
-		"desc": "使用神识感知敌人弱点。当此状态存在时，每次造成的最终伤害有5%几率提高20%。",
+		"desc": "使用神识感知敌人弱点。当此状态存在时，物理暴击率和法术暴击率提高5%。",
 		"require": "g.techo_phy_sszdyy>=1",
 		"buy": {
 			"shenshi": 10,
@@ -1710,6 +1830,19 @@
 			"shenshi": 10
 		},
 		"dot": {
+			"id": "effect_ruodianzhencha",
+			"name": "弱点侦察",
+			"desc":"当此状态存在时，物理暴击率和法术暴击率提高5%。",
+			"duration": 10000,
+			"duration": 10,
+			"mod": {
+				"self": {
+					"physical_critical": 5,
+					"spell_critical": 5
+				}
+			}
+		},
+		"dot_unused": {
 			"id": "effect_ruodianzhencha",
 			"name": "弱点侦察",
 			"desc":"当此状态存在时，每次造成的最终伤害有5%几率提高20%。",

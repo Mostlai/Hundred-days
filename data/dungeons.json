@@ -336,7 +336,7 @@
 			"lingrang": "2~4",
 			"yangluzhu": 5
 		},
-		"boss": ["tree_man","tree_man"],
+		"boss": ["tree_man","tree_man","tree_man_big"],
 		"spawns": [
 			[
 				"small_tree_man",
@@ -444,7 +444,7 @@
 			"hongshan": 4,
 			"huoshangteng": 5
 		},
-		"boss": "fire_bird",
+		"boss": "fire_bird_big",
 		"spawns": [
 			[
 				"fireb",
@@ -551,7 +551,7 @@
 			"yanhuo": 4,
 			"shuiyinhua": 5
 		},
-		"boss": "tu_bird",
+		"boss": "tu_bird_big",
 		"spawns": [
 			[
 				"wggg",
