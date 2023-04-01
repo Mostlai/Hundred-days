@@ -471,6 +471,11 @@
 		"id": "wand",
 		"name": "生锈长杖",
 		"cost": 10,
+		"attack": {
+			"isweapon": true,
+			"kind": "psychic",
+			"damage": 1
+		},
 		"hands": 1,
 		"level": 0,
 		"enchants": 4,
@@ -480,6 +485,11 @@
 		"id": "rod",
 		"name": "生锈长杆",
 		"cost": 30,
+		"attack": {
+			"isweapon": true,
+			"kind": "psychic",
+			"damage": 1
+		},
 		"hands": 1,
 		"level": 4,
 		"enchants": 5,
@@ -489,6 +499,11 @@
 		"id": "fetish",
 		"name": "残破雕像",
 		"cost": 100,
+		"attack": {
+			"isweapon": true,
+			"kind": "psychic",
+			"damage": 1
+		},
 		"hands": 1,
 		"level": 5,
 		"only": "wood,natural",
@@ -499,6 +514,11 @@
 		"id": "weap_orb",
 		"name": "残破法球",
 		"cost": 100,
+		"attack": {
+			"isweapon": true,
+			"kind": "psychic",
+			"damage": 1
+		},
 		"hands": 2,
 		"level": 8,
 		"enchants": 7,
@@ -508,6 +528,11 @@
 		"id": "greatstaff",
 		"name": "生锈权杖",
 		"cost": 50,
+		"attack": {
+			"isweapon": true,
+			"kind": "psychic",
+			"damage": 1
+		},
 		"hands": 2,
 		"level": 6,
 		"enchants": 5,

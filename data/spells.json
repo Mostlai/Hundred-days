@@ -52,6 +52,32 @@
 		"flavor": ""
 	},
 	{
+		"id": "tiaoxie_perk_dot",
+		"name":"宿位玉璧效果",
+		"school": "效果",
+		"level": 1,
+		"desc": "",
+		"locked": true,
+		"buy": {
+			"ganwu": 20
+		},
+		"cost": {
+			"shenshi": 10
+		},
+		"dot": {
+			"id": "e_e_tpd",
+			"name": "调谐",
+			"desc":"当此状态存在时，抗性效果上升5%。",
+			"duration": 10000,
+			"dot_effect":{
+				"resist_mod_val":{
+					"num": 0.05
+				}
+			}
+		},
+		"flavor": ""
+	},
+	{
 		"id": "heli_enchant_1",
 		"name": "合理之行",
 		"level": 1,
@@ -1904,7 +1930,7 @@
 		"school": "神识",
 		"level": 1,
 		"desc": "霸王天誓，必承霸者之重。施法后，额外受到30%伤害，遇到的敌人将获得额外加强效果。敌人死亡后掉落稀有装备。",
-		"locked": false,
+		"require": "g.xiulian_zhuji_2_1>=1",
 		"buy": {
 			"shenshi": 20
 		},

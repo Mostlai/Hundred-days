@@ -470,5 +470,12 @@
 		"mod":{
 			"weapon.damage": 1
 		}
+	},
+	{
+		"id": "equip_dot_count",
+		"name": "物品DOT",
+		"hide": true,
+		"locked": false,
+		"stat": true
 	}
 ]

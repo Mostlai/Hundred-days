@@ -346,6 +346,148 @@
 		}
 	},
 	{
+		"id": "zaodong",
+		"name": "躁动",
+		"adj": "躁动",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"物理暴击率%": 5
+			}
+		},
+		"mod": {
+			"player.physical_critical": 5
+		}
+	},
+	{
+		"id": "kuangbao",
+		"name": "狂暴",
+		"adj": "狂暴",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"法术暴击率%": -3,
+				"物理暴击率%": 8
+			}
+		},
+		"mod": {
+			"player.spell_critical": -3,
+			"player.physical_critical": 8
+		}
+	},
+	{
+		"id": "mineng",
+		"name": "秘能",
+		"adj": "秘能",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"法术暴击率%": 5
+			}
+		},
+		"mod": {
+			"player.spell_critical": 5
+		}
+	},
+	{
+		"id": "ruomi",
+		"name": "弱秘",
+		"adj": "弱秘",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"物理暴击率%": -3,
+				"法术暴击率%": 8
+			}
+		},
+		"mod": {
+			"player.physical_critical": -3,
+			"player.spell_critical": 8
+		}
+	},
+	{
+		"id": "mozhan",
+		"name": "魔战",
+		"adj": "魔战",
+		"weight": 1,
+		"rank": 2,
+		"perk_slot": 2,
+		"perk_for": "weapon",
+		"perk_info":{
+			"info":{
+				"物理暴击率%": 6,
+				"法术暴击率%": 6
+			}
+		},
+		"mod": {
+			"player.physical_critical": 6,
+			"player.spell_critical": 6
+		}
+	},
+	{
+		"id": "huixing_1",
+		"name": "会心",
+		"adj": "会心",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "neck",
+		"perk_info":{
+			"info":{
+				"暴击伤害加成%": 3
+			}
+		},
+		"mod": {
+			"player.critical_damage": 3
+		}
+	},
+	{
+		"id": "huixing_2",
+		"name": "会心",
+		"adj": "会心",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "neck",
+		"perk_info":{
+			"info":{
+				"物理暴击率%": 3
+			}
+		},
+		"mod": {
+			"player.physical_critical": 3
+		}
+	},
+	{
+		"id": "huixing_3",
+		"name": "会心",
+		"adj": "会心",
+		"weight": 1,
+		"rank": 1,
+		"perk_slot": 2,
+		"perk_for": "neck",
+		"perk_info":{
+			"info":{
+				"法术暴击率%": 3
+			}
+		},
+		"mod": {
+			"player.spell_critical": 3
+		}
+	},
+	{
 		"id": "whitelight",
 		"name": "淡白色",
 		"adj": "淡白色",
@@ -1703,6 +1845,27 @@
 		"mod": {
 			"sky_living.damage_bonus": 15,
 			"land_living.damage_bonus":5
+		}
+	},
+	{
+		"id": "sulingjingcui_perk",
+		"name": "【调谐】",
+		"adj": "【调谐】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"adddot": "tiaoxie_perk_dot",
+		"perk_info":{
+			"info":{
+				"法术暴击率%": 5,
+				"暴击伤害加成%": 5,
+				"装备后获得调谐状态，所有抗性效果提升5%h": 1
+			}
+		},
+		"mod": {
+			"player.spell_critical": 5,
+			"player.critical_damage": 5,
+			"player.equip_dot_count": 1
 		}
 	}
 ]
