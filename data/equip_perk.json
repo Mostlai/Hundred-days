@@ -1848,6 +1848,29 @@
 		}
 	},
 	{
+		"id": "zuoyanzhihuan_perk",
+		"name": "【灼魂火焰】",
+		"adj": "【灼魂火焰】",
+		"weight": 0,
+		"rank": 0,
+		"perk_slot": 2,
+		"adddot": "zuoyanzhihuan_perk_dot",
+		"perk_info":{
+			"info":{
+				"真火抗性%": -20,
+				"真火伤害加成": -10,
+				"归藏伤害加成": 10,
+				"装备后获得灼焰状态，每被敌人攻击命中时，10%几率对敌人释放法术(灼魂),对敌人造成40%物理属性的基础武器伤害并尝试附加10s的烧伤状态h": 1
+			}
+		},
+		"mod": {
+			"player.resist.fire": -20,
+			"player.bonuses.fire": -10,
+			"player.bonuses.body": 10,
+			"player.equip_dot_count": 1
+		}
+	},
+	{
 		"id": "sulingjingcui_perk",
 		"name": "【调谐】",
 		"adj": "【调谐】",

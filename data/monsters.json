@@ -3116,6 +3116,7 @@
 			}
 		],
 		"loot": {
+			"zuoyanzhihuan": "20%",
 			"body_soulcore_pice":0.3,
 			"hunti_core": 7,
 			"shenglingshi": 10,

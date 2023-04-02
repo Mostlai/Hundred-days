@@ -22,8 +22,7 @@
 					"num": 0.85
 				}
 			}
-		},
-		"flavor": ""
+		}
 	},
 	{
 		"id": "e_spe_overload",
@@ -48,12 +47,11 @@
 					"num": -0.2
 				}
 			}
-		},
-		"flavor": ""
+		}
 	},
 	{
 		"id": "tiaoxie_perk_dot",
-		"name":"宿位玉璧效果",
+		"name":"调谐晶粹效果",
 		"school": "效果",
 		"level": 1,
 		"desc": "",
@@ -65,7 +63,7 @@
 			"shenshi": 10
 		},
 		"dot": {
-			"id": "e_e_tpd",
+			"id": "equip_txpd_tpd",
 			"name": "调谐",
 			"desc":"当此状态存在时，抗性效果上升5%。",
 			"duration": 10000,
@@ -74,8 +72,61 @@
 					"num": 0.05
 				}
 			}
+		}
+	},
+	{
+		"id": "zuoyanzhihuan_perk_dot",
+		"name":"灼焰之环效果",
+		"school": "效果",
+		"level": 1,
+		"desc": "",
+		"locked": true,
+		"buy": {
+			"ganwu": 20
 		},
-		"flavor": ""
+		"cost": {
+			"shenshi": 10
+		},
+		"dot": {
+			"id": "equip_zyzhpd_tpd",
+			"name": "灼焰",
+			"desc":"当此状态存在时，每被敌人攻击命中时，10%几率对敌人释放法术(灼魂),对敌人造成40%物理属性的基础武器伤害并尝试附加10s的烧伤状态。",
+			"duration": 10000,
+			"dot_effect":{
+				"cast_spell":{
+					"if": "bedmg",
+					"spell": "zuoyanzhihuan_perk_spell",
+					"num": 1,
+					"percent": 10
+				}
+			}
+		}
+	},
+	{
+		"id": "zuoyanzhihuan_perk_spell",
+		"name":"灼魂",
+		"school": "效果",
+		"level": 1,
+		"desc": "",
+		"locked": true,
+		"buy": {
+			"ganwu": 20
+		},
+		"cost": {
+			"tili": 1
+		},
+		"attack": {
+			"damage": "(a.weapon.damage+a.weapon_bonus)*0.4",
+			"kind": "physical",
+			"bonus_class": 0,
+			"dot": {
+				"id": "syzhps_dot__bf",
+				"name": "烧伤",
+				"kind": "fire",
+				"duration": 10,
+				"damage": 20
+			}
+		}
 	},
 	{
 		"id": "heli_enchant_1",
@@ -139,7 +190,6 @@
 			"exe_paper": 1,
 			"zero_crystal":1
 		},
-		"flavor": "低能级....",
 		"cost": {
 			"heli": 2
 		},
@@ -168,7 +218,6 @@
 			"exe_paper": 2,
 			"zero_crystal":2
 		},
-		"flavor": "低能级....",
 		"cost": {
 			"chaos": 2
 		},

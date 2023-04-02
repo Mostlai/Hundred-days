@@ -242,6 +242,24 @@
 		}
 	},
 	{
+		"id": "zuoyanzhihuan",
+		"name": "灼焰之环【BASE】",
+		"desc": "这条火红的束带不断的往外吐出火舌，炙烤着胆敢接近他的敌人。当心别被烧着了。",
+		"equneed":"g.base>=1",
+		"color": "#FFD700",
+		"type": "armor",
+		"armor": 1,
+		"slot": "waist",
+		"name_keep": true,
+		"regular_perk": true,
+		"perk1": "zuoyanzhihuan_perk",
+		"level": 35,
+		"enchants":0,
+		"sell": {
+			"money": 1000
+		}
+	},
+	{
 		"id": "sulingjingcui",
 		"name": "调谐晶粹【AL-T】",
 		"desc": "从调谐之灵处取得的晶粹，摸上去有些凉...",
