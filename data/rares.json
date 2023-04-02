@@ -244,11 +244,11 @@
 	{
 		"id": "zuoyanzhihuan",
 		"name": "灼焰之环【BASE】",
-		"desc": "这条火红的束带不断的往外吐出火舌，炙烤着胆敢接近他的敌人。当心别被烧着了。",
+		"desc": "这条火红的束带不断的往外吐出火舌，装备者虽不会被其伤害，但也会对火焰产生一些畏惧。",
 		"equneed":"g.base>=1",
 		"color": "#FFD700",
 		"type": "armor",
-		"armor": 1,
+		"armor": 4,
 		"slot": "waist",
 		"name_keep": true,
 		"regular_perk": true,

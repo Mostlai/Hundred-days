@@ -3382,6 +3382,78 @@
 		}
 	},
 	{
+		"id": "secret_realm_monster_1",
+		"name": "沸金之灵",
+		"level": 20,
+		"desc": "",
+		"kind": "aberration/soul_form",
+		"rank": 1,
+		"hp": 110,
+		"tohit": 45,
+		"dodge": 20,
+		"defense": 50,
+		"attack": [
+			{
+				"name": "攻击",
+				"bonus_class": 1,
+				"kind": "gold",
+				"dmg": "54~56"
+			},
+			{
+				"name": "攻击",
+				"bonus_class": 1,
+				"kind": "fire",
+				"dmg": "54~56"
+			}
+		]
+	},
+	{
+		"id": "secret_realm_monster_2",
+		"name": "洪地之灵",
+		"level": 20,
+		"desc": "",
+		"kind": "aberration/soul_form",
+		"rank": 1,
+		"hp": 110,
+		"tohit": 45,
+		"dodge": 20,
+		"defense": 50,
+		"attack": [
+			{
+				"name": "攻击",
+				"bonus_class": 1,
+				"kind": "land",
+				"dmg": "54~56"
+			},
+			{
+				"name": "攻击",
+				"bonus_class": 1,
+				"kind": "water",
+				"dmg": "54~56"
+			}
+		]
+	},
+	{
+		"id": "secret_realm_monster_3",
+		"name": "具尘者",
+		"level": 20,
+		"desc": "大量的雾气环绕在他周围，你能看见一双蓝色的眼睛在雾中盯着你",
+		"kind": "aberration/soul_form",
+		"rank": 1,
+		"hp": 350,
+		"tohit": 45,
+		"dodge": 33,
+		"defense": 78,
+		"attack": [
+			{
+				"name": "雾气",
+				"bonus_class": 1,
+				"kind": "heli",
+				"dmg": "64~66"
+			}
+		]
+	},
+	{
 		"id": "newt",
 		"level": 0.2,
 		"kind": "beast",
