@@ -195,7 +195,7 @@
 		},
 		"attack": {
 			"bonus_class": 1,
-			"damage": "3~5",
+			"damage": "10~12",
 			"dot": {
 				"kind": "heli",
 				"duration": 10,
@@ -223,7 +223,7 @@
 		},
 		"attack": {
 			"bonus_class": 1,
-			"damage": "6~8"
+			"damage": "15~18"
 		}
 	},
 	{
@@ -380,7 +380,7 @@
 		},
 		"attack": {
 			"bonus_class": 1,
-			"damage": "8~9",
+			"damage": "19~22",
 			"dot": {
 				"kind": "chaos",
 				"duration": 3,
@@ -531,7 +531,7 @@
 			"heli": 5
 		},
 		"attack": {
-			"damage": "16~22",
+			"damage": "19~25",
 			"kind": "wood",
 			"bonus_class": 1,
 			"dot": {
@@ -1850,7 +1850,6 @@
 		"require": "g.techo_phy_sszdyy>=1",
 		"buy": {
 			"ganwu": 2000,
-			"ganwu": 2000,
 			"paper": 200,
 			"books": 50,
 			"jingdian": 20,
@@ -1909,7 +1908,6 @@
 			"name": "弱点侦察",
 			"desc":"当此状态存在时，物理暴击率和法术暴击率提高5%。",
 			"duration": 10000,
-			"duration": 10,
 			"mod": {
 				"self": {
 					"physical_critical": 5,
@@ -2010,7 +2008,7 @@
 		"level": 10,
 		"desc": "鞞鼓喧兮从夜达明，胡风浩浩兮暗塞营。感今伤昔兮三拍成，衔悲畜恨兮何时平。\n对周围敌人造成150%基础武器伤害,此攻击获得3命中加成,如果此次攻击未命中,为自己叠加一层胡笳起势,每层增加2气血恢复。",
 		"cd": 1,
-		"locked":false,
+		"locked":true,
 		"buy": {
 			"ganwu": 2000
 		},
