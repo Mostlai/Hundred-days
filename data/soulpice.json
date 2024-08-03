@@ -4,6 +4,7 @@
 		"id": "blood_soulcore_pice",
 		"name": "血核碎片",
 		"desc": "",
+		"more_info":"未见村副本掉落",
 		"val": 0,
 		"max": 10,
 		"locked": false,

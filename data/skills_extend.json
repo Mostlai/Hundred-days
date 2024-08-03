@@ -1,0 +1,32 @@
+[
+	{
+		"id":"ske_c_elysium_radiance",
+		"name":"乐土光辉",
+		"isCategory": true,
+		"factor": 1
+	},
+	{
+		"id":"ske_c_elysium_radiance_1",
+		"name":"乐土光辉",
+		"desc":"你的体内充满了了来自至福乐土的光芒，对合理以及真水的抗性得到了提升，并对真火伤害中的一部分进行吸收。",
+		"max": 5,
+		"postion": 1,
+		"mod":{
+			"self.resist.heli":1,
+			"self.resist.water":2
+		}
+	},
+	{
+		"id":"ske_c_elysium_radiance_2",
+		"name":"乐土裁决",
+		"desc":"向所有敌人发起乐土裁决。造成你此技能等级*武器伤害/3的真火伤害，并治疗你10%伤害量的生命值。所有被你的裁决击中的目标都将受到光的照耀，降低此技能等级*10的全豁免，降低25%+此技能等级*5%的暴击伤害，受到的真火伤害将会对另外一个敌人产生溅射，造成20%+此技能等级*2%的伤害，持续10s。",
+		"max": 5,
+		"postion": 2
+	},
+	{
+		"id":"ske_c_elysium_dreaming",
+		"name":"乐土幻梦",
+		"isCategory": true,
+		"factor": 1
+	}
+]

@@ -1,0 +1,362 @@
+[
+	{
+		"id":"ske_c_twoside_dream",
+		"name":"二相之梦",
+		"isCategory": true,
+		"factor": 1
+	},
+	{
+		"id":"ske_c_towside_dream_1",
+		"name":"彼处",
+		"desc":"你对梦境的了解使你能同时获得两个床提供的加成",
+		"max": 1,
+		"postion": 1,
+		"belong": "ske_c_twoside_dream",
+		"cost":{
+			"jihun": 1,
+			"sp": 10,
+			"ganwu": 2500
+		},
+		"mod":{
+			"bed.max": 1
+		}
+	},
+	{
+		"id":"ske_c_towside_dream_2",
+		"name":"二相仪式",
+		"desc":"你掌握了一系列的来自梦中彼界的休息方式。\n等级1时：解锁彼界渗透\n等级2时：解锁彼界超知\n等级3时：解锁彼界超形\n",
+		"max": 3,
+		"postion": 2,
+		"belong": "ske_c_twoside_dream",
+		"cost":{
+			"jihun": 1,
+			"sp": 2,
+			"ganwu": 2500
+		}
+	},
+	{
+		"id":"ske_c_towside_dream_3",
+		"name":"梦我双生",
+		"desc":"你对梦的研究让你能够延缓自己的衰败并且能够加快获取灵光的速度。同时，来自梦中彼界的环境让你能够使用更多的电能。",
+		"max": 5,
+		"postion": 3,
+		"belong": "ske_c_twoside_dream",
+		"cost":{
+			"jihun": 1,
+			"sp": 3,
+			"ganwu": 2500
+		},
+		"mod":{
+			"lg.rate": 1,
+			"shuaibai.rate": -0.2,
+			"elect.rate": 4
+		}
+	},
+	{
+		"id":"ske_c_towside_dream_4",
+		"name":"彼界降临",
+		"desc":"你对梦的研究让你能把梦中彼界也就是黄泉的一部分拖入战场。\n此攻击获得10命中加成,如果此次攻击未命中,在10s内为自己增加10命中。\n攻击造成{10+l*17}的混沌伤害，并更改战斗环境为彼界\n位于彼界环境下的生物对类人生物造成的伤害+30，防御和闪避下降10，气血每秒降低10，混沌速率+10。",
+		"max": 10,
+		"postion": 4,
+		"belong": "ske_c_twoside_dream",
+		"cost":{
+			"jihun": 1,
+			"sp": 2,
+			"ganwu": 2500
+		}
+	},
+	{
+		"id":"ske_c_ascend",
+		"name":"登升",
+		"isCategory": true,
+		"factor": 1
+	},
+	{
+		"id":"ske_c_ascend_1",
+		"name":"登升之印",
+		"desc":"此法术获得50额外强度加值和50命中加值，释放之后，标记一个敌人使其获得「登升」印记，拥有标记的敌人死亡时，如果可以进行登升，则此敌人进入「登升」形态",
+		"max": 1,
+		"postion": 1,
+		"belong": "ske_c_ascend",
+		"cost":{
+			"jihun": 1,
+			"sp": 10,
+			"ganwu": 2500
+		},
+		"mod":{
+			"bed.max": 1
+		}
+	},
+	{
+		"id":"ske_c_ascend_2",
+		"name":"攀见石术",
+		"desc":"对登升者的特殊仪式。释放之后，如果目标具有「登升」印记，降低他{10+15*l}的防御和闪避。",
+		"max": 5,
+		"postion": 2,
+		"belong": "ske_c_ascend",
+		"cost":{
+			"jihun": 1,
+			"sp": 2,
+			"ganwu": 2500
+		}
+	},
+	{
+		"id":"ske_c_ascend_3",
+		"name":"朝蛇之印",
+		"desc":"对登升者的特殊仪式。释放之后，如果目标具有「登升」印记，则释放者获得「朝蛇」印记，「朝蛇」印记提供{15*l}的气血上限和{5*l}的气血恢复速度以及{l}的物理暴击率。",
+		"max": 10,
+		"postion": 3,
+		"belong": "ske_c_ascend",
+		"cost":{
+			"jihun": 1,
+			"sp": 3,
+			"ganwu": 2500
+		},
+		"mod":{
+			"lg.rate": 1,
+			"shuaibai.rate": -0.2,
+			"elect.rate": 4
+		}
+	},
+	{
+		"id":"ske_c_ascend_4",
+		"name":"拙降",
+		"desc":"释放之后，如果敌人具有「登升」印记，则造成{10+25*l}的混沌伤害并移除「登升」印记。",
+		"max": 10,
+		"postion": 4,
+		"belong": "ske_c_ascend",
+		"cost":{
+			"jihun": 1,
+			"sp": 2,
+			"ganwu": 2500
+		}
+	},
+	{
+		"id":"ske_c_wuhuanxuezhe",
+		"name":"五环奇术",
+		"isCategory": true,
+		"factor": 1
+	},
+	{
+		"id":"ske_c_wuhuanxuezhe_1",
+		"name":"冰霜之躯",
+		"desc":"",
+		"max": 5,
+		"postion": 1,
+		"belong": "ske_c_wuhuanxuezhe",
+		"cost":{
+			"jihun": 1,
+			"sp": 10,
+			"ganwu": 2500
+		}
+	},
+	{
+		"id":"ske_c_wuhuanxuezhe_2",
+		"name":"金形",
+		"desc":"",
+		"max": 5,
+		"postion": 1,
+		"belong": "ske_c_wuhuanxuezhe",
+		"cost":{
+			"jihun": 1,
+			"sp": 10,
+			"ganwu": 2500
+		}
+	},
+	{
+		"id":"ske_c_wuhuanxuezhe_3",
+		"name":"山倾",
+		"desc":"",
+		"max": 5,
+		"postion": 1,
+		"belong": "ske_c_wuhuanxuezhe",
+		"cost":{
+			"jihun": 1,
+			"sp": 10,
+			"ganwu": 2500
+		}
+	},
+	{
+		"id":"ske_c_wuhuanxuezhe_4",
+		"name":"初等源泉形态",
+		"desc":"你使用周围的源泉要素改造自己，在{10+l*2}秒内种族转变为初等源泉/类人生物/植物。\n持续时间内自身源泉伤害增加{5+l*5},护甲值上升{20+l},真火抗性-70%,闪避降低{30-l*3}。",
+		"max": 5,
+		"postion": 1,
+		"belong": "ske_c_wuhuanxuezhe",
+		"cost":{
+			"sp": 1
+		}
+	},
+	{
+		"id":"ske_c_wuhuanxuezhe_5",
+		"name":"火之灾",
+		"desc":"",
+		"max": 5,
+		"postion": 1,
+		"belong": "ske_c_wuhuanxuezhe",
+		"cost":{
+			"jihun": 1,
+			"sp": 10,
+			"ganwu": 2500
+		}
+	},
+	{
+		"id":"ske_c_wuhuanxuezhe_6",
+		"name":"天江尘五劫",
+		"desc":"引动天江座的力量，对敌人强制进行渡劫。\n此法术分为六次攻击。\n1.对敌人造成{l*10}的真火伤害，并尝试添加火印\n2.对敌人造成{l*10}的源泉伤害，并尝试添加木印\n3.对敌人造成{l*10}的厚土伤害，并尝试添加土印\n4.对敌人造成{l*10}的锐金伤害，并尝试添加金印\n5.对敌人造成{l*10}的真水伤害，并尝试添加水印\n6.对敌人造成{l*10}的天江劫伤害，不可被除了全体抗性之外的任何抗性抵抗，敌人每有一个上述印记，伤害乘以170%(加算)，并降低1s此法术冷却",
+		"max": 5,
+		"postion": 1,
+		"belong": "ske_c_wuhuanxuezhe",
+		"cost":{
+			"money": 1
+		}
+	},
+	{
+		"id":"ske_c_elysium_radiance",
+		"name":"乐土光辉",
+		"isCategory": true,
+		"factor": 1
+	},
+	{
+		"id":"ske_c_elysium_radiance_1",
+		"name":"光辉",
+		"desc":"你的体内充满了了来自至福乐土的光芒，对合理以及真水的抗性得到了提升，并对光系伤害中的一部分进行吸收。",
+		"max": 5,
+		"postion": 1,
+		"belong": "ske_c_elysium_radiance",
+		"cost":{
+			"jihun": 1,
+			"sp": 4,
+			"ganwu": 2500,
+			"elysium_air": 3000
+		},
+		"mod":{
+			"self.resist.heli":1,
+			"self.resist.water":1,
+			"self.absorbPercent.light":1
+		}
+	},
+	{
+		"id":"ske_c_elysium_radiance_2",
+		"name":"裁决",
+		"desc":"向一位敌人发起乐土裁决。\n造成{l}*武器伤害/3的光系伤害，并治疗你10%伤害量的生命值。\n所有被你的裁决击中的目标都将受到光的照耀，降低{l*10}的全抵抗，降低{25%+l*5%}的暴击伤害，拥有裁决效果时受到光系伤害将会对另外一个敌人产生溅射，造成{20%+l*2%}的光系伤害。\n持续10s。",
+		"max": 5,
+		"postion": 2,
+		"belong": "ske_c_elysium_radiance",
+		"cost":{
+			"jihun": 1,
+			"sp": 5,
+			"ganwu": 2500,
+			"elysium_air": 4000
+		}
+	},
+	{
+		"id":"ske_c_elysium_radiance_3",
+		"name":"灼烧",
+		"desc":"你强大的光辉灼烧其中的目标，对一个敌人造成{30+l*10}的真火伤害，被这一效果影响的敌人会有{8%+l*4%}的几率被致盲，致盲效果持续10s。",
+		"max": 5,
+		"postion": 3,
+		"belong": "ske_c_elysium_radiance",
+		"cost":{
+			"jihun": 1,
+			"sp": 6,
+			"ganwu": 2500,
+			"elysium_air": 4000
+		}
+	},
+	{
+		"id":"ske_c_elysium_radiance_4",
+		"name":"照明",
+		"desc":"光辉可以让任何敌人无处遁形，被此光辉笼罩的敌人，闪避值降低{27+l*4}，此外，你的真火伤害额外增加{2%+l*2%}，并且无视敌人{10%+l*2%}的真火抗性。",
+		"max": 5,
+		"postion": 4,
+		"belong": "ske_c_elysium_radiance",
+		"cost":{
+			"jihun": 1,
+			"sp": 7,
+			"ganwu": 2500,
+			"elysium_air": 4000
+		}
+	},
+	{
+		"id":"ske_c_elysium_dreaming",
+		"name":"乐土幻梦",
+		"isCategory": true,
+		"factor": 1
+	},
+	{
+		"id":"ske_c_artisan",
+		"name":"工匠",
+		"isCategory": true,
+		"factor": 1
+	},
+	{
+		"id":"ske_c_artisan_1",
+		"name":"制图师",
+		"desc":"你拥有十分丰富的制图经验，这让你可以自动获得测绘资料",
+		"max": 5,
+		"postion": 1,
+		"belong": "ske_c_artisan",
+		"cost":{
+			"sp": 1,
+			"snp_data": 10,
+			"ganwu": 50
+		},
+		"mod":{
+			"snp_data.rate": 0.1
+		}
+	},
+	{
+		"id":"ske_c_artisan_2",
+		"name":"挖掘者",
+		"desc":"你拥有十分丰富的挖掘经验，这让你可以自动获得零结晶",
+		"max": 5,
+		"postion": 1,
+		"belong": "ske_c_artisan",
+		"cost":{
+			"sp": 1,
+			"zero_crystal": 5,
+			"ganwu": 50
+		},
+		"mod":{
+			"zero.rate": 0.05
+		}
+	},
+	{
+		"id":"ske_c_artisan_3",
+		"name":"思想者",
+		"desc":"你可以自动获取稿纸和经验记录，这也会提高你的感悟速率",
+		"max": 5,
+		"postion": 1,
+		"belong": "ske_c_artisan",
+		"cost":{
+			"sp": 1,
+			"paper": 10,
+			"exe_paper": 10,
+			"ganwu": 50
+		},
+		"mod":{
+			"paper.rate": 0.1,
+			"exe_paper.rate": 0.1,
+			"ganwu.rate": 1
+		}
+	},
+	{
+		"id":"ske_c_artisan_4",
+		"name":"合成巧匠",
+		"desc":"你能够自动获取神经材料以及合成金属F-C",
+		"max": 2,
+		"postion": 1,
+		"belong": "ske_c_artisan",
+		"cost":{
+			"sp": 1,
+			"iron_copper": 10,
+			"sj_met": 5,
+			"ganwu": 50
+		},
+		"mod":{
+			"iron_copper.rate": 0.1,
+			"sj_met.rate": 0.05
+		}
+	}
+]

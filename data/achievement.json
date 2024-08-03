@@ -922,7 +922,6 @@
 		"require" : "g.ach_space_1>0",
 		"val":0,
 		"max": 1,
-		
 		"result":{
 			"ap": 0.3,
 			"space.max": 130
@@ -938,7 +937,6 @@
 		"require" : "g.ach_space_2>0",
 		"val":0,
 		"max": 1,
-		
 		"result":{
 			"ap": 0.3,
 			"space.max": 130
@@ -954,7 +952,6 @@
 		"require" : "g.ach_space_3>0",
 		"val":0,
 		"max": 1,
-		
 		"result":{
 			"ap": 0.3,
 			"space.max": 200
@@ -963,14 +960,13 @@
 	{
 		"id": "ach_space_5",
 		"name": "建设工厂",
-		"desc": "用地面积达到28000",
+		"desc": "用地面积达到12000",
 		"target_item": "space",
 		"target_val": 12000,
 		"hide": true,
 		"require" : "g.ach_space_4>0",
 		"val":0,
 		"max": 1,
-		
 		"result":{
 			"ap": 0.3,
 			"space.max": 250
@@ -1072,6 +1068,7 @@
 		"name": "三言两语",
 		"desc": "你看好这是你什么人",
 		"target_item": "exchange_code_5",
+		"require": "g.exchange_code_5>=1",
 		"target_val": 1,
 		"hide": true,
 		"locked": false,
@@ -1088,6 +1085,7 @@
 		"name": "时间漫游指南",
 		"desc": "用特殊方法让时间倒退10年",
 		"target_item": "exchange_code_3",
+		"require": "g.exchange_code_3>=1",
 		"target_val": 1,
 		"hide": true,
 		"locked": false,
@@ -1104,6 +1102,7 @@
 		"name": "电报员",
 		"desc": "滴滴滴滴",
 		"target_item": "exchange_code_2",
+		"require": "g.exchange_code_2>=1",
 		"target_val": 1,
 		"hide": true,
 		"locked": false,
@@ -1120,6 +1119,7 @@
 		"name": "老实人",
 		"desc": "默认的输入",
 		"target_item": "exchange_code_7",
+		"require": "g.exchange_code_7>=1",
 		"target_val": 1,
 		"hide": true,
 		"locked": false,
@@ -1166,6 +1166,7 @@
 		"desc": "捡钱2022次",
 		"target_item": "exchange_code_6",
 		"target_val": 2022,
+		"require": "g.exchange_code_6>=1",
 		"hide": true,
 		"locked": false,
 		"val":0,

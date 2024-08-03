@@ -86,6 +86,7 @@
 		"group": "真魂",
 		"desc": "游离的微弱真魂碎片,虽然无法直接吸收里面的能量,但还是可以用于强化或者合成真魂",
 		"require": "g.xiulian_lj_zhenhun_6>=1",
+		"more_info":"在市场购买【五轮】后，在铭刻处对其镶嵌对应玉珠获得游空真魂",
 		"val":0,
 		"max": 0
 	},
@@ -911,8 +912,8 @@
 	},
 	{
 		"id": "xiulian_eye_zhuji_1",
-		"name": "外置扩展眼镜",
-		"desc": "外置扩展眼镜",
+		"name": "扩展视野",
+		"desc": "扩展视野",
 		"hide": true,
 		"group": "修行",
 		"tags": "",

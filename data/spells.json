@@ -50,6 +50,25 @@
 		}
 	},
 	{
+		"id": "ske_normal_attack",
+		"name":"普通攻击模板",
+		"school": "越层效果",
+		"level": 1,
+		"desc": "",
+		"locked": true,
+		"buy": {
+			"ganwu": 20
+		},
+		"cost": {
+			"shenshi": 10
+		},
+		"attack": {
+			"bonus_class": 1,
+			"kind": "heli",
+			"damage": 1
+		}
+	},
+	{
 		"id": "tiaoxie_perk_dot",
 		"name":"调谐晶粹效果",
 		"school": "效果",
@@ -919,7 +938,7 @@
 	{
 		"id": "kss",
 		"name": "困兽术[筑基]",
-		"desc": "降低敌人的速度",
+		"desc": "降低敌人的速度和闪避",
 		"school": "厚土",
 		"require": "g.htgcx>=4",
 		"level": 5,
@@ -941,7 +960,8 @@
 				"duration": 30,
 				"dmg": "5~9",
 				"mod": {
-					"self.speed": -5
+					"self.speed": -5,
+					"self.dodge": -5
 				}
 			}
 		}
@@ -1695,7 +1715,7 @@
 		"level": 10,
 		"desc": "而人自幽诸秘史观诸生灵，知彼之伤衰残寡孤害，汝当庆贺见证三害三败。",
 		"cd": 25,
-		"locked":true,
+		"require": "g.crzj_zhujierchong>=1",
 		"buy": {
 			"ganwu": 2000,
 			"gubenxianling": 5,
@@ -2035,6 +2055,366 @@
 				}
 			}
 		}
+	},
+	{
+		"id": "thunder_light",
+		"name": "闪空雷光",
+		"school": "真水",
+		"level": 10,
+		"desc": "用法力引动雷电攻击一名敌人,并将战斗环境更改为雷天。\n此攻击获得-10命中加成,如果此次攻击未命中,为自己增加5命中10s。",
+		"cd": 4,
+		"locked":true,
+		"buy": {
+			"ganwu": 2000
+		},
+		"cost": {
+			"tili": 15,
+			"heli": 15,
+			"alculation": 5,
+			"shenshi": 1
+		},
+		"attack": {
+			"damage": "120",
+			"kind": "water",
+			"tohit": -10,
+			"bonus_class": 1,
+			"unhit_dot": {
+				"add_target": "self",
+				"id": "thunder_light_bf",
+				"name": "闪空雷光",
+				"desc": "增加5命中",
+				"duration": 10,
+				"mod": {
+					"self.tohit": 5
+				}
+			},
+			"change_env":"env_thunder",
+			"change_env_log":"天空布满乌云"
+		}
+	},
+	{
+		"id": "land_shake",
+		"name": "地震",
+		"school": "厚土",
+		"level": 10,
+		"desc": "引发地震攻击所有敌人,并将战斗环境更改为地震。",
+		"cd": 4,
+		"locked":true,
+		"buy": {
+			"ganwu": 2000
+		},
+		"cost": {
+			"tili": 15,
+			"heli": 15,
+			"alculation": 5,
+			"shenshi": 1
+		},
+		"attack": {
+			"damage": "110",
+			"kind": "land",
+			"targets": "enemies",
+			"bonus_class": 0,
+			"change_env":"env_landshake",
+			"change_env_log":"大地摇晃"
+		}
+	},
+	{
+		"id": "spell_ske_c_elysium_radiance_2",
+		"name": "裁决-乐土光辉",
+		"school": "光",
+		"level": 10,
+		"desc":"向一位敌人发起乐土裁决。\n造成l*武器伤害/3的光系伤害，并治疗你10%伤害量的生命值。\n所有被你的裁决击中的目标都将受到光的照耀，降低{l*10}的全抵抗，降低{25%+l*5%}的暴击伤害，拥有裁决效果时受到光系伤害将会对另外一个敌人产生溅射，造成{20%+l*2%}的光系伤害。\n持续10s。",
+		"cd": 8,
+		"belong": "ske_c_elysium_radiance_2",
+		"show_require": "g.ske_c_elysium_radiance_2>0",
+		"require": "g.ske_c_elysium_radiance_2>0",
+		"cost": {
+			"tili": 20,
+			"heli": 20,
+			"alculation": 10,
+			"shenshi": 1
+		},
+		"attack": {
+			"damage": "a.ske.ske_c_elysium_radiance_2*((a.weapon.damage+a.weapon_bonus)/3)",
+			"belong": "ske_c_elysium_radiance_2",
+			"kind": "light",
+			"bonus_class": 1,
+			"leech_msg":"耀眼之光携带着生命的气息。",
+			"leech": 0.1,
+			"a_dot": {
+				"id": "dot_spell_ske_c_elysium_radiance_2",
+				"name": "裁决",
+				"duration": 10,
+				"mod": {
+					"self.physical_save": -10,
+					"self.spell_save": -10,
+					"self.critical_damage": -25
+				}
+			}
+		}
+	},
+	{
+		"id": "spell_ske_c_towside_dream_4",
+		"name": "彼界降临",
+		"school": "混沌",
+		"level": 10,
+		"desc":"你对梦的研究让你能把梦中彼界也就是黄泉的一部分拖入战场。\n此攻击获得10命中加成,如果此次攻击未命中,在10s内为自己增加10命中。\n攻击造成{10+l*17}的混沌伤害，并更改战斗环境为彼界\n位于彼界环境下的生物对类人生物造成的伤害+30，防御和闪避下降10，气血每秒降低10，混沌速率+10。",
+		"cd": 6,
+		"belong": "ske_c_towside_dream_4",
+		"show_require": "g.ske_c_towside_dream_4>0",
+		"require": "g.ske_c_towside_dream_4>0",
+		"cost": {
+			"tili": 20,
+			"chaos": 40,
+			"alculation": 20,
+			"shenshi": 3
+		},
+		"attack": {
+			"damage": "10+a.ske.ske_c_towside_dream_4*17",
+			"kind": "chaos",
+			"tohit": 10,
+			"bonus_class": 1,
+			"unhit_dot": {
+				"add_target": "self",
+				"id": "spell_ske_c_towside_dream_4_bf",
+				"name": "彼界降临",
+				"desc": "增加10命中",
+				"duration": 10,
+				"mod": {
+					"self.tohit": 10
+				}
+			},
+			"change_env":"env_ske_c_towside_dream_4_all",
+			"change_env_log":"双世交汇，同坠黄泉。"
+		}
+	},
+	{
+		"id": "spell_ske_c_wuhuanxuezhe_4",
+		"name":"初等源泉形态",
+		"school": "源泉",
+		"level": 10,
+		"desc":"你使用周围的源泉要素改造自己，在{10+l*2}秒内种族转变为初等源泉/类人生物/植物。\n持续时间内自身源泉伤害增加{5+l*5},护甲值上升{20+l},真火抗性-70%,闪避降低{30-l*3}。",
+		"cd": 19,
+		"belong": "ske_c_wuhuanxuezhe_4",
+		"show_require": "g.ske_c_wuhuanxuezhe_4>0",
+		"require": "g.ske_c_wuhuanxuezhe_4>0",
+		"cost": {
+			"tili": 50,
+			"heli": 10,
+			"alculation": 10,
+			"shenshi": 5
+		},
+		"dot": {
+			"id": "effect_spell_ske_c_wuhuanxuezhe_4",
+			"name": "初等源泉形态",
+			"desc":"你使用周围的源泉要素改造自己，在10+天理等级*2秒内种族转变为初等源泉/类人生物/植物。\n持续时间内自身源泉伤害增加5+天理等级*5,护甲值上升20+天理等级,真火抗性-70%,闪避降低30-天理等级*3。",
+			"duration": 10,
+			"race_transform":"woodform_1/humanoid/plant",
+			"mod": {
+				"self.resist.fire": -70,
+				"self.dodge": -20,
+				"player.bonuses.wood": 5,
+				"self.defense": 20
+			}
+		},
+		"flavor": ""
+	},
+	{
+		"id": "spell_ske_c_wuhuanxuezhe_6",
+		"name":"天江尘五劫",
+		"school": "合理",
+		"level": 10,
+		"desc":"引动天江座的力量，对敌人强制进行渡劫。\n此法术分为六次攻击。\n1.对敌人造成{l*10}的真火伤害，并尝试添加火印\n2.对敌人造成{l*10}的源泉伤害，并尝试添加木印\n3.对敌人造成{l*10}的厚土伤害，并尝试添加土印\n4.对敌人造成{l*10}的锐金伤害，并尝试添加金印\n5.对敌人造成{l*10}的真水伤害，并尝试添加水印\n6.对敌人造成{l*10}的天江劫伤害，不可被除了全体抗性之外的任何抗性抵抗，敌人每有一个上述印记，伤害乘以170%(加算)，并降低1s此法术冷却",
+		"cd": 19,
+		"belong": "ske_c_wuhuanxuezhe_6",
+		"show_require": "g.ske_c_wuhuanxuezhe_6>0",
+		"require": "g.ske_c_wuhuanxuezhe_6>0",
+		"cost": {
+			"tili": 10,
+			"heli": 40,
+			"alculation": 50,
+			"shenshi": 5
+		},
+		"attack": {
+			"damage": "5",
+			"kind": "physical",
+			"belong": "ske_c_wuhuanxuezhe_6",
+			"belong_spell": "spell_ske_c_wuhuanxuezhe_6",
+			"tohit": 10,
+			"bonus_class": 1
+		},
+		"attack1": {
+			"name": "火劫",
+			"kind": "fire",
+			"damage": 10,
+			"msg":"天江星等四三，三日同炼真火",
+			"dot": {
+				"%": "55%",
+				"id": "spell_ske_c_wuhuanxuezhe_6_fire",
+				"name":"火印",
+				"duration": 10
+			}
+		},
+		"attack2": {
+			"name": "木劫",
+			"kind": "wood",
+			"damage": 10,
+			"msg":"天地颠倒推，万木莫可知",
+			"dot": {
+				"%": "55%",
+				"id": "spell_ske_c_wuhuanxuezhe_6_wood",
+				"name":"木印",
+				"duration": 10
+			}
+		},
+		"attack3": {
+			"name": "土劫",
+			"kind": "land",
+			"damage": 10,
+			"msg":"地烈练出分浊厚，上雷下火太无情",
+			"dot": {
+				"%": "55%",
+				"id": "spell_ske_c_wuhuanxuezhe_6_land",
+				"name":"土印",
+				"duration": 10
+			}
+		},
+		"attack4": {
+			"name": "金劫",
+			"kind": "gold",
+			"damage": 10,
+			"msg":"兵戈杀劫不可阻，须臾形化更难禁",
+			"dot": {
+				"%": "55%",
+				"id": "spell_ske_c_wuhuanxuezhe_6_gold",
+				"name":"金印",
+				"duration": 10
+			}
+		},
+		"attack5": {
+			"name": "水劫",
+			"kind": "water",
+			"damage": 10,
+			"msg":"遥星之洪泽，今世没千山",
+			"dot": {
+				"%": "55%",
+				"id": "spell_ske_c_wuhuanxuezhe_6_water",
+				"name":"水印",
+				"duration": 10
+			}
+		},
+		"attack_final": {
+			"final": true,
+			"name": "天江劫",
+			"msg":"五劫今成，动心不灭，千年修为也作尘。",
+			"kind": "天江劫",
+			"damage": 10
+		}
+	},
+	{
+		"id": "spell_ske_c_ascend_1",
+		"name":"登升之印",
+		"school": "合理",
+		"level": 10,
+		"desc":"此法术获得50额外强度加值和50命中加值，释放之后，标记一个敌人使其获得「登升」印记，拥有标记的敌人死亡时，如果可以进行登升，则此敌人进入「登升」形态",
+		"cd": 1,
+		"belong": "ske_c_ascend_1",
+		"show_require": "g.ske_c_ascend_1>0",
+		"require": "g.ske_c_ascend_1>0",
+		"cost": {
+			"tili": 25,
+			"heli": 25,
+			"alculation": 100
+		},
+		"attack": {
+			"tohit": 50,
+			"dot": {
+				"id": "effect_spell_ske_c_ascend_1",
+				"name": "「登升」",
+				"kind": "heli",
+				"class_bonus": 50,
+				"duration": 600
+			}
+		},
+		"flavor": ""
+	},
+	{
+		"id": "spell_ske_c_ascend_2",
+		"name":"攀见石术",
+		"school": "合理",
+		"level": 10,
+		"desc":"对登升者的特殊仪式。释放之后，如果目标具有「登升」印记，降低他{10+15*l}的防御和闪避。",
+		"cd": 33,
+		"belong": "ske_c_ascend_2",
+		"show_require": "g.ske_c_ascend_2>0",
+		"require": "g.ske_c_ascend_2>0",
+		"cost": {
+			"tili": 25,
+			"heli": 25,
+			"alculation": 100
+		},
+		"attack": {
+			"dot": {
+				"id": "effect_spell_ske_c_ascend_1",
+				"name": "「登升」",
+				"kind": "heli",
+				"duration": 600,
+				"damage": "2~4"
+			}
+		},
+		"flavor": ""
+	},
+	{
+		"id": "spell_ske_c_ascend_3",
+		"name":"朝蛇之印",
+		"school": "合理",
+		"level": 10,
+		"desc":"对登升者的特殊仪式。释放之后，如果目标具有「登升」印记，则释放者获得「朝蛇」印记，「朝蛇」印记提供{15*l}的气血上限和{5*l}的气血恢复速度以及{l}的物理暴击率。",
+		"cd": 33,
+		"belong": "ske_c_ascend_3",
+		"show_require": "g.ske_c_ascend_3>0",
+		"require": "g.ske_c_ascend_3>0",
+		"cost": {
+			"tili": 25,
+			"heli": 25,
+			"alculation": 100
+		},
+		"attack": {
+			"dot": {
+				"id": "effect_spell_ske_c_ascend_1",
+				"name": "「登升」",
+				"kind": "heli",
+				"duration": 600,
+				"damage": "2~4"
+			}
+		},
+		"flavor": ""
+	},
+	{
+		"id": "spell_ske_c_ascend_4",
+		"name":"拙降",
+		"school": "合理",
+		"level": 10,
+		"desc":"释放之后，如果敌人具有「登升」印记，则造成{10+25*l}的混沌伤害并移除「登升」印记。",
+		"cd": 33,
+		"belong": "ske_c_ascend_4",
+		"show_require": "g.ske_c_ascend_4>0",
+		"require": "g.ske_c_ascend_4>0",
+		"cost": {
+			"tili": 25,
+			"heli": 25,
+			"alculation": 100
+		},
+		"attack": {
+			"dot": {
+				"id": "effect_spell_ske_c_ascend_1",
+				"name": "「登升」",
+				"kind": "heli",
+				"duration": 600,
+				"damage": "2~4"
+			}
+		},
+		"flavor": ""
 	},
 	{
 		"id": "stam1",

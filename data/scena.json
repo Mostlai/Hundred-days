@@ -1,0 +1,49 @@
+[
+	{
+	  "id": "scena_1",
+	  "name": "分配属性",
+	  "desc": "分配属性",
+	  "branches": [
+	    {
+	      "id": "scena_1_1",
+	      "role": "寒气",
+	      "text": "醒来....",
+	      "choices": [
+	        {
+	          "id": "choice_scena_1_1_1",
+	          "text": "你是谁",
+	          "response_role":"",
+	          "response": "我是你，从你内心走来。",
+	          "next_branch_id": "scena_1_1"
+	        },
+	        {
+	          "id": "choice_scena_1_1_31",
+	          "text": "买个包子",
+	          "check": "money,600",
+	          "response_role":"",
+	          "response": "",
+	          "response_success": "买到了包子",
+	          "response_fail": "没买到",
+	          "next_branch_id": "scena_1_1"
+	        },
+	        {
+	          "id": "choice_scena_1_1_2",
+	          "text": "我在哪",
+	          "check": "heli,50",
+	          "response_role":"",
+	          "response": "",
+	          "response_success": "你记得这个地方，在你精神幻想的一瞬，停留在半梦半醒的时分，这是你意识领域的天然分界，午后的阳光刺透了你的眼，你停留在那虚幻和现实的边界线。",
+	          "response_fail": "头痛欲裂，纷乱的思绪袭来，你什么也感知不到",
+	          "next_branch_id": "scena_1_1"
+	        },
+	        {
+	          "id": "choice_scena_1_1_3",
+	          "text": "你想干什么",
+	          "response": "Response to Choice 1.2",
+	          "next_branch_id": "scena_1_2"
+	        }
+	      ]
+	    }
+	  ]
+	}
+]

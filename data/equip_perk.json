@@ -1805,8 +1805,8 @@
 		},
 		"mod": {
 			"player.physical_critical": 6,
-			"player.critical_damage": 5,
-			"player.weapon_bonus": 35
+			"player.critical_damage": 10,
+			"player.weapon_bonus": 15
 		}
 	},
 	{

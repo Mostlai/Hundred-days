@@ -1,0 +1,265 @@
+[
+	{
+		"id":"tile_water_0",
+		"walk_speed": 1,
+		"tindex": [866],
+		"walk_speed": 0.6,
+		"name": "水[深度:浅]"
+	},
+	{
+		"id":"tile_water_1",
+		"walk_speed": 1,
+		"tindex": [867],
+		"walk_speed": 0.5,
+		"name": "水[深度:普通]"
+	},
+	{
+		"id":"tile_water_2",
+		"walk_speed": 1,
+		"tindex": [993],
+		"walk_speed": 0.4,
+		"name": "水[深度:略深]"
+	},
+	{
+		"id":"tile_water_3",
+		"walk_speed": 1,
+		"tindex": [1041],
+		"walk_speed": 0.2,
+		"name": "水[深度:深]"
+	},
+	{
+		"id":"tile_plain",
+		"walk_speed": 1,
+		"tindex": [726,813,814],
+		"walk_speed": 1,
+		"name": "平原"
+	},
+	{
+		"id":"tile_hm",
+		"walk_speed": 1,
+		"tindex": [897],
+		"walk_speed": 0.75,
+		"name": "荒漠"
+	},
+	{
+		"id":"tile_river",
+		"walk_speed": 1,
+		"tindex": [724],
+		"walk_speed": 0.6,
+		"name": "河流[深度:浅]"
+	},
+	{
+		"id":"tile_lake",
+		"walk_speed": 1,
+		"tindex": [868],
+		"walk_speed": 0.5,
+		"name": "湖泊"
+	},
+	{
+		"id":"tile_road",
+		"walk_speed": 1,
+		"tindex": [727,728],
+		"walk_speed": 1.5,
+		"name": "道路"
+	},
+	{
+		"id":"tile_sandwave",
+		"walk_speed": 1,
+		"tindex": [915,916],
+		"walk_speed": 0.3,
+		"name": "沙浪"
+	},
+	{
+		"id":"tile_deathland",
+		"walk_speed": 1,
+		"tindex": [733,734,735,749,750,751],
+		"walk_speed": 0.1,
+		"name": "死地"
+	},
+	{
+		"id":"tile_snow",
+		"walk_speed": 1,
+		"tindex": [377],
+		"walk_speed": 0.7,
+		"name": "雪原"
+	},
+	{
+		"id":"tile_snowwater",
+		"walk_speed": 1,
+		"tindex": [376],
+		"walk_speed": 0.5,
+		"name": "浮冰"
+	},
+	{
+		"id":"tile_desert",
+		"walk_speed": 1,
+		"tindex": [864],
+		"walk_speed": 0.3,
+		"name": "沙漠"
+	},
+	{
+		"id":"tile_swamp",
+		"walk_speed": 1,
+		"tindex": [378,379,380],
+		"walk_speed": 0.4,
+		"name": "沼泽"
+	},
+	{
+		"id":"tile_island",
+		"walk_speed": 1,
+		"tindex": [336,337,338,352,353,354,368,369,370],
+		"walk_speed": 1,
+		"name": "岛"
+	},
+	{
+		"id":"tile_b_none",
+		"walk_speed": 1,
+		"tindex": [-1],
+		"walk_speed": 1,
+		"name": "无"
+	},
+	{
+		"id":"tile_water_wave",
+		"walk_speed": 1,
+		"tindex": [1011,1012],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "水浪[深度:略深]"
+	},
+	{
+		"id":"tile_water_wave_1",
+		"walk_speed": 1,
+		"tindex": [1059,1060],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "水浪[深度:深]"
+	},
+	{
+		"id":"tile_b_mountain",
+		"walk_speed": 1,
+		"tindex": [535,536,537,551,552,553,567,568,569,583,584,585],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 0,
+		"name": "山脉"
+	},
+	{
+		"id":"tile_b_tree",
+		"walk_speed": 1,
+		"tindex": [469,470,471,485,486,487,501,502,503,517,518,519,875,876,329,330,331,332],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "树林"
+	},
+	{
+		"id":"tile_b_town",
+		"walk_speed": 1,
+		"tindex": [169,170,185,186],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "城镇"
+	},
+	{
+		"id":"tile_b_castle",
+		"walk_speed": 1,
+		"tindex": [171,172,187,188],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "堡垒"
+	},
+	{
+		"id":"tile_b_dungeon",
+		"walk_speed": 1,
+		"tindex": [635,636,651,652],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "秘境"
+	},
+	{
+		"id":"tile_b_house",
+		"walk_speed": 1,
+		"tindex": [548,549,550,628],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "村镇"
+	},
+	{
+		"id":"tile_b_bridge",
+		"walk_speed": 1,
+		"tindex": [181],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "桥梁"
+	},
+	{
+		"id":"tile_b_underworld",
+		"walk_speed": 1,
+		"tindex": [835],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "矿洞"
+	},
+	{
+		"id":"tile_b_crop",
+		"walk_speed": 1,
+		"tindex": [858,859,860,861],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "农田"
+	},
+	{
+		"id":"tile_b_tower",
+		"walk_speed": 1,
+		"tindex": [610],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "塔楼"
+	},
+	{
+		"id":"tile_b_tumb",
+		"walk_speed": 1,
+		"tindex": [667,668,669,690,683,684,685,686],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "坟场"
+	},
+	{
+		"id":"tile_b_bush",
+		"walk_speed": 1,
+		"tindex": [599,600,601,602,615,616,617,618,729,730,731,732,873,874],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "灌木"
+	},
+	{
+		"id":"tile_b_tree_1",
+		"walk_speed": 1,
+		"tindex": [878,890,780,781,782],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "宏伟之树"
+	},
+	{
+		"id":"tile_b_boat",
+		"walk_speed": 1,
+		"tindex": [7,8,23,24,39,40,55,56],
+		"walk_speed": 1,
+		"isbuild": true,
+		"walk_speed": 1,
+		"name": "船只"
+	}
+]

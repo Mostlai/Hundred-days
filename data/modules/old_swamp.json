@@ -230,7 +230,7 @@
                 "flavor": "需要1级炼化台"
             }
         ],
-        "potions":[
+        "consumables":[
             {
                 "id": "oldswamp_p_1",
                 "name": "雪毒汁",
@@ -409,8 +409,8 @@
 					"time": -2
 				},
                 "result": {
-                    "age.max": 2400,
-                    "age": 2400
+                    "age.max": 2900,
+                    "age": 2900
                 }
 			},
             {
@@ -438,8 +438,8 @@
 					"time": -2
 				},
                 "result": {
-                    "age.max": 3000,
-                    "age": 3000
+                    "age.max": 3600,
+                    "age": 3600
                 }
 			}
 		],
@@ -617,7 +617,8 @@
 				"dist": 1000,
 				"run": {
                     "hp": 5,
-					"stamina": 2
+					"stamina": 2,
+                    "time": -0.02
 				},
 				"length": 35,
 				"result": {
@@ -644,7 +645,8 @@
 				"dist": 1000,
 				"run": {
                     "hp": 5,
-					"stamina": 2
+					"stamina": 2,
+                    "time": -0.02
 				},
 				"length": 35,
 				"result": {

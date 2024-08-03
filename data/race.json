@@ -108,6 +108,10 @@
 		"name": "精怪"
 	},
 	{
+		"id": "woodform_1",
+		"name": "初等源泉"
+	},
+	{
 		"id": "soul_form",
 		"name": "魂魄体",
 		"race_mod":{

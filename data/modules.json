@@ -22,7 +22,7 @@
 		"materials",
 		"enchants",
 		"sections",
-		"potions",
+		"consumables",
 		"market",
 		"adv_weapon",
 		"conquer",
@@ -38,7 +38,6 @@
 		"herbal",
 		"achievement",
 		"missions",
-		"metal",
 		"fight",
 		"obstacles",
 		"weapon_factory",
@@ -51,7 +50,12 @@
 		"factory",
 		"player_res",
 		"techo",
-		"ap_upgrade"
+		"ap_upgrade",
+		"environment",
+		"map",
+		"tile",
+		"scena",
+		"skill_extend"
 	],
 	"modules": [
 		"patrons",
@@ -65,8 +69,10 @@
 		"winter",
 		"legacy",
 		"officialdom",
+		"officialdom_ex",
 		"blackcat_extend",
 		"old_swamp",
-		"thatwood"
+		"thatwood",
+		"elysium"
 	]
 }
